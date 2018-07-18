@@ -1,0 +1,80 @@
+@import "../../style/variables";
+
+.menuButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  button {
+    min-width: 100px; width: 40%;
+    padding-top: $margin; padding-bottom: $margin;
+    border: none;
+    background-color: white; color: $cyan;
+    font: bold 20px 'Roboto';
+    cursor: pointer;
+  }
+
+  button.current {
+    background-color: $cyan; color: white;
+    box-shadow: $shadow;
+  }
+
+  button:focus {
+    outline: none;
+  }
+}
+
+/deep/ .mat-form-field-label:not(.mat-form-field-empty),
+/deep/ .mat-focused .mat-form-field-label {
+  color: $cyan !important;
+}
+
+/deep/ .mat-form-field-underline,
+/deep/ .mat-form-field-ripple {
+  background: $cyan !important;
+}
+
+.loginForm {
+  margin-top: $margin;
+  text-align: center;
+
+  .loginInput {
+    width: 60%;
+    margin: $margin auto;
+  }
+
+  .buttonGroup {
+    display: flex;
+    justify-content: space-around;
+
+    button {
+      font: bold 16px 'Roboto';
+      padding: $margin (3 * $margin);
+    }
+
+    .forgetButton {
+      background-color: white; color: $cyan;
+      border: 2px $cyan solid;
+    }
+
+    .loginButton {
+      background-color: $cyan; color: white;
+      border: none;
+    }
+  }
+
+  .signUpButton button {
+    background-color: $cyan; color: white;
+    border: none;
+    font: bold 16px 'Roboto';
+    padding: $margin (3 * $margin);
+  }
+
+  .agreement {
+    width: 60%;
+    margin: 0 20% $margin;
+    font-size: 11px;
+    color: lightgray;
+    text-align: left;
+  }
+}

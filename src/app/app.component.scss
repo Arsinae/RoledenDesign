@@ -1,0 +1,93 @@
+@import "../style/variables";
+
+.header {
+  margin: 0;
+  text-transform: capitalize;
+  background-color: $dark-blue;
+  color: white;
+  padding: $margin;
+  position: relative;
+  box-shadow: $shadow;
+
+  .headerBar {
+    width: 90%;
+    z-index: 1;
+    position: relative;
+    height: 100%;
+
+    .menu {
+      display: inline-block;
+      width: 5%;
+      min-width: 40px;
+      position: absolute;
+      left: 0; top: 0;
+      height: 100%;
+
+      span {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .title {
+      text-transform: uppercase;
+      margin-left: 10%;
+      display: inline-block;
+      width: 90%;
+      text-align: center;
+    }
+  }
+
+  .headerColor {
+    z-index: 0;
+    position: absolute;
+    width: 10%; min-width: 100px;
+    height: 100%;
+    top: 0; right: 0;
+
+    &>* {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+    }
+
+    .cyanBlock {
+      background-color: $cyan;
+    }
+
+    .goldBlock {
+      background-color: $gold;
+    }
+
+    .contact {
+      position: relative;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    font-size: 25px;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .header {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    font-size: 16px;
+  }
+}

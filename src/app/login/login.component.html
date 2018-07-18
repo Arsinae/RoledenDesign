@@ -1,0 +1,45 @@
+<div class="menuButton">
+  <button [class.current]="login" (click)="login = true">Login</button>
+  <button [class.current]="!login" (click)="login = false">Register</button>
+</div>
+
+<div *ngIf="login" class="loginForm">
+  <div>
+    <mat-form-field class="loginInput">
+      <input matInput placeholder="Username">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="loginInput">
+      <input matInput type="password" placeholder="Password">
+    </mat-form-field>
+  </div>
+  <div class="buttonGroup">
+    <button class="forgetButton">Forgot Password?</button>
+    <button class="loginButton">Login</button>
+  </div>
+</div>
+
+<div *ngIf="!login" class="loginForm">
+  <div>
+    <mat-form-field class="loginInput">
+      <input matInput placeholder="Username">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="loginInput">
+      <input matInput placeholder="Email">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="loginInput">
+      <input matInput type="password" placeholder="Password">
+    </mat-form-field>
+  </div>
+  <div class="agreement">
+    By signing you up, you accept the terms of service of Roleden Society.
+  </div>
+  <div class="signUpButton">
+    <button>Sign Up</button>
+  </div>
+</div>
