@@ -6,11 +6,13 @@ import {ListModule} from './list/list.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import {MatDialogModule, MatInputModule} from '@angular/material';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

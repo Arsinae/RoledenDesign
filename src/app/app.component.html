@@ -1,18 +1,30 @@
-<div class="header">
-  <div class="headerColor">
-    <div class="cyanBlock"></div>
-    <div class="goldBlock contact" (click)="openLogin()">
-      <span><i class="fas fa-user"></i></span>
+<div class="roleden">
+  <div class="header">
+    <div class="headerColor">
+      <div class="cyanBlock"></div>
+      <div class="goldBlock contact" (click)="openLogin()">
+        <span><i class="fas fa-user"></i></span>
+      </div>
+    </div>
+    <div class="headerBar">
+      <div class="menu">
+        <span (click)="menu = !menu">
+          <span *ngIf="!menu"><i class="fas fa-bars"></i></span>
+          <span *ngIf="menu"><i class="fas fa-times"></i></span>
+        </span>
+      </div>
+      <div class="title">
+        <span>Roleden</span>
+      </div>
     </div>
   </div>
-  <div class="headerBar">
-    <div class="menu">
-      <span><i class="fas fa-bars"></i></span>
+
+  <div class="mainContent">
+    <div class="sideBar" [class.open]="menu">
+      <app-sidebar *ngIf="menu"></app-sidebar>
     </div>
-    <div class="title">
-      <span>Roleden</span>
+    <div class="page">
+      <app-list></app-list>
     </div>
   </div>
 </div>
-
-<app-list></app-list>

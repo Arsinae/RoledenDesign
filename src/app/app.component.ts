@@ -9,6 +9,8 @@ import {LoginComponent} from './login/login.component';
 })
 export class AppComponent {
 
+  public menu = false;
+
   constructor(public dialog: MatDialog) {
   }
 

@@ -1,5 +1,9 @@
 @import "../style/variables";
 
+.roleden {
+  min-height: 100vh;
+}
+
 .header {
   margin: 0;
   text-transform: capitalize;
@@ -73,9 +77,34 @@
   }
 }
 
+.mainContent {
+  display: flex;
+  min-height: 100%;
+  position: relative;
+
+  .sideBar {
+    background-color: $dark-blue;
+    width: 0;
+    transition: width 0.5s;
+    position: relative;
+
+    &.open {
+      box-shadow: $shadow;
+    }
+  }
+
+  .page {
+    flex: 1;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .header {
     font-size: 25px;
+  }
+
+  .sideBar.open {
+    width: 120px !important;
   }
 }
 
@@ -84,10 +113,18 @@
   .header {
     font-size: 20px;
   }
+
+  .sideBar.open {
+    width: 100px !important;
+  }
 }
 
 @media screen and (max-width: 650px) {
   .header {
     font-size: 16px;
+  }
+
+  .sideBar.open {
+    width: 80px !important;
   }
 }

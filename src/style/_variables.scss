@@ -11,3 +11,15 @@ $colored-red: #ba5a5a;
 $margin: 6px;
 
 $shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin centered() {
+  position: absolute;
+  top: 50%; left: 50%;
+  @include transform(translate(-50%, -50%));
+}
