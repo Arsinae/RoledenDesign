@@ -13,6 +13,7 @@
     position: relative;
     text-align: center;
     color: white;
+    cursor: pointer;
 
     .icon {
       font-size: 40px;
@@ -36,11 +37,20 @@
     }
   }
 
-  &:hover {
+  @media screen and (min-width: 750px) {
+    &:hover {
+      .navItem .text {
+        opacity: 1;
+        transform: translateX(0);
+        transition: transform 0.5s;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
     .navItem .text {
       opacity: 1;
       transform: translateX(0);
-      transition: transform 0.5s;
     }
   }
 }
