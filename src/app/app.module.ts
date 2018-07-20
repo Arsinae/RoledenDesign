@@ -7,12 +7,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import {MatDialogModule, MatInputModule} from '@angular/material';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { RollingDiceComponent } from './rolling-dice/rolling-dice.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SidebarComponent
+    SidebarComponent,
+    RollingDiceComponent
   ],
   imports: [
     BrowserModule,
