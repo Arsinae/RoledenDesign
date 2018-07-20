@@ -19,7 +19,9 @@ export class RollingDiceComponent implements OnInit {
   rollDice() {
     this.dice.classList.remove('roll1', 'roll2', 'roll3', 'roll4', 'roll5', 'roll6');
     const random = Math.floor(Math.random() * 10 % 6) + 1;
-    void this.dice.offsetWidth;
+    const newOne = this.dice.cloneNode(true);
+    this.dice.parentNode.replaceChild(newOne, this.dice);
+    this.dice = newOne;
     this.dice.classList.add('roll' + random);
   }
 

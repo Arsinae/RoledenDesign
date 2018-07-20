@@ -1,7 +1,7 @@
 @import "../../style/variables";
 
 @keyframes spin {
-  0% { transform: translateZ(-100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.8); }
+  0% { transform: translateZ(-100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1); }
   16% { transform: translateZ(-100px) rotateX(180deg) rotateY(180deg) rotateZ(0deg) scale(0.8); }
   33% { transform: translateZ(-100px) rotateX(360deg) rotateY(90deg) rotateZ(180deg) scale(0.8); }
   50% { transform: translateZ(-100px) rotateX(360deg) rotateY(360deg) rotateZ(360deg) scale(0.8); }
