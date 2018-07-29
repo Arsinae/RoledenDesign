@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "roleden-component": [
+        "dist/roleden-component"
+      ],
+      "roleden-component/*": [
+        "dist/roleden-component/*"
+      ]
+    }
   }
 }

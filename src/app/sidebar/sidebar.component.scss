@@ -16,7 +16,7 @@
     cursor: pointer;
 
     .icon {
-      font-size: 40px;
+      font-size: 30px;
     }
 
     .text {
@@ -24,11 +24,12 @@
       text-transform: uppercase;
       opacity: 0;
       transform: translateX(-100%);
+      transition: all 0.5s;
     }
 
     &:hover {
       .icon {
-        font-size: 38px;
+        font-size: 28px;
       }
 
       .text {
@@ -37,12 +38,11 @@
     }
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 768px) {
     &:hover {
       .navItem .text {
         opacity: 1;
         transform: translateX(0);
-        transition: transform 0.5s;
       }
     }
   }

@@ -125,6 +125,46 @@
           }
         }
       }
+    },
+    "roleden-component": {
+      "root": "projects/roleden-component",
+      "sourceRoot": "projects/roleden-component/src",
+      "projectType": "library",
+      "prefix": "rd",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/roleden-component/tsconfig.lib.json",
+            "project": "projects/roleden-component/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/roleden-component/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/roleden-component/src/test.ts",
+            "tsConfig": "projects/roleden-component/tsconfig.spec.json",
+            "karmaConfig": "projects/roleden-component/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/roleden-component/tsconfig.lib.json",
+              "projects/roleden-component/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "RoledenDesign"

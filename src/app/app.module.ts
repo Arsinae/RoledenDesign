@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import {MatDialogModule, MatInputModule} from '@angular/material';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RollingDiceComponent } from './rolling-dice/rolling-dice.component';
+import {RoledenComponentModule} from 'roleden-component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RollingDiceComponent } from './rolling-dice/rolling-dice.component';
     BrowserAnimationsModule,
     ListModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    RoledenComponentModule
   ],
   entryComponents: [LoginComponent],
   providers: [],
