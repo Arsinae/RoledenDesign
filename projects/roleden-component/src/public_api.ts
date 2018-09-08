@@ -5,3 +5,4 @@
 export * from './lib/roleden-component.service';
 export * from './lib/roleden-component.module';
 export * from './lib/dice/dice.component';
+export * from './lib/small-card/small-card.component';

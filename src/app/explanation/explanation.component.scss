@@ -1,0 +1,28 @@
+@import "../../style/variables";
+
+.explanation {
+  width: 100%;
+
+  .div {
+    width: 100%;
+  }
+
+  .content {
+    transition: max-height 0.2s ease-out;
+
+    &:not(.expand) {
+      overflow: hidden;
+      max-height: 0;
+    }
+  }
+
+  .expandButton {
+    padding: $margin;
+    text-align: center;
+    box-shadow: $shadow;
+
+    span {
+      padding-left: $margin;
+    }
+  }
+}

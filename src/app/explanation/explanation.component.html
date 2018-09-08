@@ -1,0 +1,14 @@
+<div class="explanation">
+  <div class="expandButton" (click)="expand = !expand">
+    Info
+    <ng-container *ngIf="!expand">
+      <span><i class="fas fa-angle-double-down"></i></span>
+    </ng-container>
+    <ng-container *ngIf="expand">
+      <span><i class="fas fa-angle-double-up"></i></span>
+    </ng-container>
+  </div>
+  <div class="content" [class.expand]="expand">
+    <ng-content></ng-content>
+  </div>
+</div>

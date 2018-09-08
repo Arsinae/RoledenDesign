@@ -1,143 +1,52 @@
 <div class="titlePart">
-  <span>List of elements</span>
+  <span>Small Card</span>
 </div>
 
 <div class="listContainer">
   <div class="elementList">
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 1</div>
-        <div>Script</div>
-      </div>
+
+    <div class="cardList">
+      <rd-small-card [color]="'gold'"></rd-small-card>
     </div>
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 2</div>
-        <div>Character</div>
-      </div>
+    <div class="cardList">
+      <rd-small-card [color]="'green'"></rd-small-card>
     </div>
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 3</div>
-        <div>City</div>
-      </div>
+    <div class="cardList">
+      <rd-small-card [color]="'red'"></rd-small-card>
     </div>
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 1</div>
-        <div>Script</div>
-      </div>
+    <div class="cardList">
+      <rd-small-card [color]="'blue'"></rd-small-card>
     </div>
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 2</div>
-        <div>Character</div>
-      </div>
+    <div class="cardList">
+      <rd-small-card [color]="'purple'" [icon]="'fa-edit'"></rd-small-card>
     </div>
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 3</div>
-        <div>City</div>
-      </div>
-    </div>
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 1</div>
-        <div>Script</div>
-      </div>
-    </div>
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 2</div>
-        <div>Character</div>
-      </div>
-    </div>
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 3</div>
-        <div>City</div>
-      </div>
-    </div>
+
   </div>
-</div>
 
-<div class="titlePart">
-  <span>List of colored elements</span>
-</div>
+  <div class="explanation">
+    <app-explanation>
+      <div class="titlePart">
+        <span>HTML Tag</span>
+      </div>
 
-<div class="listContainer">
-  <div class="elementList">
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 1</div>
-        <div>Script</div>
+      <div><b>rd-small-card</b></div>
+
+      <div class="titlePart">
+        <span>Parameters:</span>
       </div>
-    </div>
-    <div class="objectButton buttonList green">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 2</div>
-        <div>Character</div>
+
+      <div class="option">
+        <table>
+          <tr>
+            <td>@Input() color</td>
+            <td>gold(default), green, red, blue, purple</td>
+          </tr>
+          <tr>
+            <td>@Input() icon</td>
+            <td>fa-times(default), Any Font Awesome 5 Solid Icon (fas)</td>
+          </tr>
+        </table>
       </div>
-    </div>
-    <div class="objectButton buttonList blue">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 3</div>
-        <div>City</div>
-      </div>
-    </div>
-    <div class="objectButton buttonList red">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 1</div>
-        <div>Script</div>
-      </div>
-    </div>
-    <div class="objectButton buttonList purple">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 2</div>
-        <div>Character</div>
-      </div>
-    </div>
-    <div class="objectButton buttonList">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 3</div>
-        <div>City</div>
-      </div>
-    </div>
-    <div class="objectButton buttonList blue">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 1</div>
-        <div>Script</div>
-      </div>
-    </div>
-    <div class="objectButton buttonList green">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 2</div>
-        <div>Character</div>
-      </div>
-    </div>
-    <div class="objectButton buttonList red">
-      <span class="iconList"><i class="fas fa-times"></i></span>
-      <div class="text">
-        <div>Test 3</div>
-        <div>City</div>
-      </div>
-    </div>
+    </app-explanation>
   </div>
 </div>

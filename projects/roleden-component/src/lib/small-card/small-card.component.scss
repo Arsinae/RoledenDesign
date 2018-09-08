@@ -1,0 +1,83 @@
+@import "../style/variables";
+
+.card {
+  width: 100%;
+}
+
+.cardList {
+  font-size: 20px;
+  padding: $margin;
+  cursor: pointer;
+  position: relative;
+  box-shadow: $shadow;
+  box-sizing: border-box;
+
+  .iconList {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    min-width: 40px;
+    text-align: center;
+    height: calc(100% + 1px);
+
+    &>* {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .text {
+    font-size: 18px;
+    width: calc(100% - 40px);
+
+    div:nth-child(2) {
+      font-size: 14px;
+      padding-left: $margin;
+    }
+  }
+}
+
+.objectCard {
+  background-color: $light-gray;
+  color: black;
+  border: 1px $gold solid;
+
+  .iconList {
+    background-color: $gold;
+    color: white;
+  }
+}
+
+.objectCard.green {
+  border-color: $colored-green;
+
+  .iconList {
+    background-color: $colored-green;
+  }
+}
+
+.objectCard.blue {
+  border: 1px $colored-blue solid;
+
+  .iconList {
+    background-color: $colored-blue;
+  }
+}
+
+.objectCard.red {
+  border: 1px $colored-red solid;
+
+  .iconList {
+    background-color: $colored-red;
+  }
+}
+
+.objectCard.purple {
+  border: 1px $colored-purple solid;
+
+  .iconList {
+    background-color: $colored-purple;
+  }
+}

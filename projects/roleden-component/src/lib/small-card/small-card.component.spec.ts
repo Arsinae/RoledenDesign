@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RollingDiceComponent } from './rolling-dice.component';
+import { SmallCardComponent } from './small-card.component';
 
-describe('RollingDiceComponent', () => {
-  let component: RollingDiceComponent;
-  let fixture: ComponentFixture<RollingDiceComponent>;
+describe('SmallCardComponent', () => {
+  let component: SmallCardComponent;
+  let fixture: ComponentFixture<SmallCardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RollingDiceComponent ]
+      declarations: [ SmallCardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RollingDiceComponent);
+    fixture = TestBed.createComponent(SmallCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

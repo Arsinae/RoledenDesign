@@ -95,6 +95,16 @@
 
   .page {
     flex: 1;
+
+    .title {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $gold;
+      margin-bottom: 2 * $margin;
+      margin-top: 3 * $margin;
+      text-align: center;
+      font-size: 28px;
+    }
   }
 }
 

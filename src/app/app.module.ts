@@ -7,15 +7,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import {MatDialogModule, MatInputModule} from '@angular/material';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { RollingDiceComponent } from './rolling-dice/rolling-dice.component';
 import {RoledenComponentModule} from 'roleden-component';
+import {HighlightModule} from 'ngx-highlightjs';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SidebarComponent,
-    RollingDiceComponent
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +22,8 @@ import {RoledenComponentModule} from 'roleden-component';
     ListModule,
     MatDialogModule,
     MatInputModule,
-    RoledenComponentModule
+    RoledenComponentModule,
+    HighlightModule.forRoot({ theme: 'default' })
   ],
   entryComponents: [LoginComponent],
   providers: [],
