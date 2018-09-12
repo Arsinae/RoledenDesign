@@ -1,0 +1,24 @@
+<div id="wysiwyg">
+  <div id="editButtons">
+    <div class="buttonGroup">
+      <button (click)="addTextStyle('italic')" id="italic"><i class="fas fa-italic"></i></button>
+      <button (click)="addTextStyle('bold')" id="bold"><i class="fas fa-bold"></i></button>
+      <button (click)="addTextStyle('underline')" id="underline"><i class="fas fa-underline"></i></button>
+      <button (click)="addTextStyle('strikethrough')" id="strikethrough"><i class="fas fa-strikethrough"></i></button>
+    </div>
+
+    <div class="buttonGroup">
+      <button (click)="addTextStyle('justifyLeft')" id="justifyLeft"><i class="fas fa-align-left"></i></button>
+      <button (click)="addTextStyle('justifyCenter')" id="justifyCenter"><i class="fas fa-align-center"></i></button>
+      <button (click)="addTextStyle('justifyRight')" id="justifyRight"><i class="fas fa-align-right"></i></button>
+      <button (click)="addTextStyle('justifyFull')" id="justifyFull"><i class="fas fa-align-justify"></i></button>
+    </div>
+
+    <div class="buttonGroup">
+      <input [(ngModel)]="size" [style.width]="'30px'">
+      <button (click)="changeFontSize()"><i class="fas fa-check"></i></button>
+    </div>
+
+  </div>
+  <div (keydown)="changeEnter($event)" (keyup)="pushText()" class="editContent" #textEditor contenteditable="true" [innerHTML]="textTmp"></div>
+</div>

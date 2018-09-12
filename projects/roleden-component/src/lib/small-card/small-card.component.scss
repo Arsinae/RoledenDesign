@@ -66,6 +66,14 @@
   }
 }
 
+.objectCard.blue-light {
+  border: 1px $colored-blue-light solid;
+
+  .iconList {
+    background-color: $colored-blue-light;
+  }
+}
+
 .objectCard.red {
   border: 1px $colored-red solid;
 
@@ -79,5 +87,13 @@
 
   .iconList {
     background-color: $colored-purple;
+  }
+}
+
+.objectCard.orange {
+  border: 1px $colored-orange solid;
+
+  .iconList {
+    background-color: $colored-orange;
   }
 }

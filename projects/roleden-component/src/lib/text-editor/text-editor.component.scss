@@ -1,0 +1,54 @@
+@import "../style/variables";
+
+#wysiwyg {
+  width: 100%;
+  max-width: 100%;
+}
+
+#editButtons {
+  background-color: $dark-blue;
+  border: lightgray 1px solid;
+}
+
+.buttonGroup {
+  display: inline-block;
+  margin: 5px;
+}
+
+.buttonGroup>* {
+  cursor: pointer;
+  padding: 6px 8px;
+  background-color: $cyan;
+  color: white;
+  border-left: none;
+  border-bottom: lightgray 1px solid;
+  border-top: lightgray 1px solid;
+  border-right: lightgray 1px solid;
+}
+
+.buttonGroup>*:first-child {
+  border-left: lightgray 1px solid;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.buttonGroup>*:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.editContent {
+  box-sizing: border-box;
+  padding: $margin;
+  word-break: normal;
+  width: 100%;
+  max-width: 100%;
+  border: lightgray 1px solid;
+  height: 200px;
+  overflow-y: auto;
+  display: inline-block;
+}
+
+.editContent * {
+  color: black !important;
+}

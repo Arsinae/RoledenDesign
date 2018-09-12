@@ -18,7 +18,13 @@
       <rd-small-card [color]="'blue'"></rd-small-card>
     </div>
     <div class="cardList">
+      <rd-small-card [color]="'blue-light'"></rd-small-card>
+    </div>
+    <div class="cardList">
       <rd-small-card [color]="'purple'" [icon]="'fa-edit'"></rd-small-card>
+    </div>
+    <div class="cardList">
+      <rd-small-card [color]="'orange'" [icon]="'fa-edit'"></rd-small-card>
     </div>
 
   </div>
@@ -38,11 +44,11 @@
       <div class="option">
         <table>
           <tr>
-            <td>@Input() color</td>
-            <td>gold(default), green, red, blue, purple</td>
+            <td>@Input() color: string</td>
+            <td>gold(default), green, red, blue, blue-light purple, orange</td>
           </tr>
           <tr>
-            <td>@Input() icon</td>
+            <td>@Input() icon: string</td>
             <td>fa-times(default), Any Font Awesome 5 Solid Icon (fas)</td>
           </tr>
         </table>
