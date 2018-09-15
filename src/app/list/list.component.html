@@ -6,25 +6,46 @@
   <div class="elementList">
 
     <div class="cardList">
-      <rd-small-card [color]="'gold'"></rd-small-card>
+      <rd-small-card [color]="'gold'">
+        <div role="title">My story - gold</div>
+        <div role="type">Script</div>
+      </rd-small-card>
     </div>
     <div class="cardList">
-      <rd-small-card [color]="'green'"></rd-small-card>
+      <rd-small-card [color]="'green'">
+        <div role="title">My story - green</div>
+        <div role="type">Script</div>
+      </rd-small-card>
     </div>
     <div class="cardList">
-      <rd-small-card [color]="'red'"></rd-small-card>
+      <rd-small-card [color]="'red'">
+        <div role="title">My story - red</div>
+        <div role="type">Script</div>
+      </rd-small-card>
     </div>
     <div class="cardList">
-      <rd-small-card [color]="'blue'"></rd-small-card>
+      <rd-small-card [color]="'blue'">
+        <div role="title">My story - blue</div>
+        <div role="type">Script</div>
+      </rd-small-card>
     </div>
     <div class="cardList">
-      <rd-small-card [color]="'blue-light'"></rd-small-card>
+      <rd-small-card [color]="'blue-light'">
+        <div role="title">My story - blue-light</div>
+        <div role="type">Script</div>
+      </rd-small-card>
     </div>
     <div class="cardList">
-      <rd-small-card [color]="'purple'" [icon]="'fa-edit'"></rd-small-card>
+      <rd-small-card [color]="'purple'" [icon]="'fa-edit'">
+        <div role="title">My story - purple</div>
+        <div role="type">Script</div>
+      </rd-small-card>
     </div>
     <div class="cardList">
-      <rd-small-card [color]="'orange'" [icon]="'fa-edit'"></rd-small-card>
+      <rd-small-card [color]="'orange'" [icon]="'fa-edit'">
+        <div role="title">My story - orange</div>
+        <div role="type">Script</div>
+      </rd-small-card>
     </div>
 
   </div>
@@ -44,12 +65,28 @@
       <div class="option">
         <table>
           <tr>
+            <td>Content title</td>
+            <td>Inside a div with role="title"</td>
+          </tr>
+          <tr>
+            <td>Content type</td>
+            <td>Inside a div with role="type"</td>
+          </tr>
+          <tr>
             <td>@Input() color: string</td>
             <td>gold(default), green, red, blue, blue-light purple, orange</td>
           </tr>
           <tr>
             <td>@Input() icon: string</td>
             <td>fa-times(default), Any Font Awesome 5 Solid Icon (fas)</td>
+          </tr>
+          <tr>
+            <td>@Output() textClick</td>
+            <td>Event emitted by clicking on the text</td>
+          </tr>
+          <tr>
+            <td>@Output() iconClick</td>
+            <td>Event emitted by clicking on the icon</td>
           </tr>
         </table>
       </div>

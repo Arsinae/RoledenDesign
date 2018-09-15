@@ -1,9 +1,9 @@
 <div class="card">
   <div [class]="colorClass()">
-    <span class="iconList"><i [class]="iconClass()"></i></span>
-    <div class="text">
-      <div>Test 1</div>
-      <div>Script</div>
+    <span class="iconList" (click)="iconClick.emit()"><i [class]="iconClass()"></i></span>
+    <div class="text" (click)="textClick.emit()">
+      <ng-content select="div[role=title]"></ng-content>
+      <ng-content select="div[role=type]"></ng-content>
     </div>
   </div>
 </div>

@@ -43,6 +43,17 @@
     margin: $margin auto;
   }
 
+  .forgetPassword {
+    font-size: 11px;
+    color: lightgray;
+    padding: $margin;
+    cursor: pointer;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+
   .buttonGroup {
     display: flex;
     justify-content: space-around;
@@ -50,11 +61,7 @@
     button {
       font: bold 16px 'Roboto';
       padding: $margin (3 * $margin);
-    }
-
-    .forgetButton {
-      background-color: white; color: $cyan;
-      border: 2px $cyan solid;
+      cursor: pointer;
     }
 
     .loginButton {
@@ -68,6 +75,7 @@
     border: none;
     font: bold 16px 'Roboto';
     padding: $margin (3 * $margin);
+    cursor: pointer;
   }
 
   .agreement {

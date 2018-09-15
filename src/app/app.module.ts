@@ -7,11 +7,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import {MatDialogModule, MatInputModule} from '@angular/material';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import {RoledenComponentModule} from 'roleden-component';
 import {ListModule} from './list/list.module';
 import { TextEditorComponent } from './text-editor/text-editor.component';
 import {ExplanationModule} from './explanation/explanation.module';
 import { DiceComponent } from './dice/dice.component';
+import {RoledenComponentModule} from 'roleden-component';
 
 @NgModule({
   declarations: [
