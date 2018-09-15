@@ -16,7 +16,8 @@ export class AppComponent {
 
   openLogin() {
     this.dialog.open(LoginComponent, {
-      width: '60%'
+      width: '60%',
+      position: {top: '5%'}
     });
   }
 }
