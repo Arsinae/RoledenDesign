@@ -9,10 +9,16 @@
 
   .content {
     transition: max-height 0.2s ease-out;
+    width: 100%;
+    padding: 0 $margin $margin;
 
     &:not(.expand) {
       overflow: hidden;
       max-height: 0;
+    }
+
+    &.expand {
+      box-shadow: $shadow;
     }
   }
 

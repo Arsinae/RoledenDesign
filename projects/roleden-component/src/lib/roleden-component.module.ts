@@ -4,6 +4,7 @@ import {CommonModule} from '@angular/common';
 import { SmallCardComponent } from './small-card/small-card.component';
 import { TextEditorComponent } from './text-editor/text-editor.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ListModule} from './list/list.module';
 
 @NgModule({
   imports: [
@@ -11,7 +12,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [DiceComponent, SmallCardComponent, TextEditorComponent],
-  exports: [DiceComponent, SmallCardComponent, TextEditorComponent]
+  declarations: [
+    DiceComponent,
+    SmallCardComponent,
+    TextEditorComponent
+  ],
+  exports: [
+    DiceComponent,
+    SmallCardComponent,
+    ListModule,
+    TextEditorComponent
+  ]
 })
 export class RoledenComponentModule { }

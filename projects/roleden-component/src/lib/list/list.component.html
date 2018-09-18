@@ -1,0 +1,21 @@
+<div>
+
+  <ng-container *ngIf="search">
+    <div class="searchField">
+      <input [(ngModel)]="searchText" placeholder="Search">
+    </div>
+  </ng-container>
+
+  <div *ngIf="currentList.length === 0" class="noResult">Empty List</div>
+  <ng-container *ngFor="let elem of currentList; let i = index">
+    <ng-container *ngIf="i !== 0">
+      <div class="limiter"></div>
+    </ng-container>
+
+    <div class="elemContent {{elem.color}}" (click)="selectFile(elem)">
+      <span class="elemIcon"><i [class]="elem.icon"></i></span>
+      <div class="elemTitle">{{elem.title}}</div>
+    </div>
+
+  </ng-container>
+</div>

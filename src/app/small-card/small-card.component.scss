@@ -23,7 +23,22 @@
   }
 }
 
-.listContainer, .explanation {
+.elementList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow-y: auto;
+
+  .cardList {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: $shadow;
+    box-sizing: border-box;
+  }
+}
+
+.explanation {
   width: 80%;
   margin: $margin 10%;
 }

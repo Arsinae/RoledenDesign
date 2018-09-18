@@ -1,0 +1,87 @@
+@import "../style/variables";
+
+.searchField {
+  min-width: 250px; width: 30%;
+  float: right;
+  margin-right: 5%;
+  border-bottom: 1px lightgray solid;
+
+  input {
+    width: 100%;
+    border: none;
+  }
+}
+
+.noResult {
+  width: 100%;
+  text-align: center;
+  padding: 3 * $margin;
+}
+
+.limiter {
+  width: 100%;
+  border-top: 2px lightgray solid;
+}
+
+.elemContent {
+  width: 100%;
+  padding: $margin;
+  display: flex;
+  cursor: pointer;
+
+  * {
+    padding: 0 $margin;
+  }
+
+  .elemIcon {
+    font-size: 17px;
+  }
+
+  &.gold {
+    .elemIcon, .elemTitle:hover {
+      color: $gold;
+    }
+  }
+
+  &.blue {
+    .elemIcon, .elemTitle:hover {
+      color: $colored-blue;
+    }
+  }
+
+  &.green {
+    .elemIcon, .elemTitle:hover {
+      color: $colored-green;
+    }
+  }
+
+  &.blue-light {
+    .elemIcon, .elemTitle:hover {
+      color: $colored-blue-light;
+    }
+  }
+
+  &.red {
+    .elemIcon, .elemTitle:hover {
+      color: $colored-red;
+    }
+  }
+
+  &.purple {
+    .elemIcon, .elemTitle:hover {
+      color: $colored-purple;
+    }
+  }
+
+  &.orange {
+    .elemIcon, .elemTitle:hover {
+      color: $colored-orange;
+    }
+  }
+
+  &.black {
+    .elemIcon, .elemTitle:hover {
+      color: black;
+    }
+  }
+}

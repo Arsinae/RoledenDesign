@@ -11,7 +11,8 @@ import {ListModule} from './list/list.module';
 import { TextEditorComponent } from './text-editor/text-editor.component';
 import {ExplanationModule} from './explanation/explanation.module';
 import { DiceComponent } from './dice/dice.component';
-import {RoledenComponentModule} from 'roleden-component';
+import {RoledenComponentModule} from '../../projects/roleden-component/src/lib/roleden-component.module';
+import { SmallCardComponent } from './small-card/small-card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {RoledenComponentModule} from 'roleden-component';
     LoginComponent,
     SidebarComponent,
     TextEditorComponent,
-    DiceComponent
+    DiceComponent,
+    SmallCardComponent
   ],
   imports: [
     BrowserModule,
