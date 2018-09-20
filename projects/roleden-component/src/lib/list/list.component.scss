@@ -5,6 +5,7 @@
   float: right;
   margin-right: 5%;
   border-bottom: 1px lightgray solid;
+  background: none;
 
   input {
     width: 100%;
@@ -23,64 +24,102 @@
   border-top: 2px lightgray solid;
 }
 
-.elemContent {
+.sortHeader {
+  border-bottom: 3px lightgray solid;
+  width: 100%;
+  padding: $margin;
+  display: flex;
+  box-sizing: border-box;
+  font-size: 17px;
+
+  .sortName {
+    width: 60%;
+    cursor: pointer;
+    padding: 0 $margin;
+  }
+
+  .sortArrow {
+    padding: 0 $margin;
+  }
+
+  .sortAuthor {
+    width: 40%;
+    padding: 0 $margin;
+  }
+}
+
+.elemListContent {
   width: 100%;
   padding: $margin;
   display: flex;
   cursor: pointer;
+  box-sizing: border-box;
 
   * {
     padding: 0 $margin;
   }
 
-  .elemIcon {
+  .elemListIcon, .elemListTitle, .elemListAuthor {
     font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  &.gold {
-    .elemIcon, .elemTitle:hover {
+  .elemListName {
+    width: 60%;
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  .elemListAuthor {
+    width: 40%;
+    box-sizing: border-box;
+  }
+
+  &.goldList {
+    .elemListIcon, .elemListTitle:hover {
       color: $gold;
     }
   }
 
-  &.blue {
-    .elemIcon, .elemTitle:hover {
+  &.blueList {
+    .elemListIcon, .elemListTitle:hover {
       color: $colored-blue;
     }
   }
 
-  &.green {
-    .elemIcon, .elemTitle:hover {
+  &.greenList {
+    .elemListIcon, .elemListTitle:hover {
       color: $colored-green;
     }
   }
 
-  &.blue-light {
-    .elemIcon, .elemTitle:hover {
+  &.blue-lightList {
+    .elemListIcon, .elemListTitle:hover {
       color: $colored-blue-light;
     }
   }
 
-  &.red {
-    .elemIcon, .elemTitle:hover {
+  &.redList {
+    .elemListIcon, .elemListTitle:hover {
       color: $colored-red;
     }
   }
 
-  &.purple {
-    .elemIcon, .elemTitle:hover {
+  &.purpleList {
+    .elemListIcon, .elemListTitle:hover {
       color: $colored-purple;
     }
   }
 
-  &.orange {
-    .elemIcon, .elemTitle:hover {
+  &.orangeList {
+    .elemListIcon, .elemListTitle:hover {
       color: $colored-orange;
     }
   }
 
-  &.black {
-    .elemIcon, .elemTitle:hover {
+  &.blackList {
+    .elemListIcon, .elemListTitle:hover {
       color: black;
     }
   }

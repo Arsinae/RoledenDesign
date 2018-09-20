@@ -3,7 +3,7 @@
 </div>
 
 <div class="listContainer">
-  <rd-list [data]="data" [search]="true"></rd-list>
+  <rd-list [data]="data" [search]="true" [sort]="true"></rd-list>
 </div>
 
 
@@ -30,6 +30,10 @@
           <td>Enable the search field; false(default)</td>
         </tr>
         <tr>
+          <td>@Input() sort: boolean</td>
+          <td>Enable the sort header; false(default)</td>
+        </tr>
+        <tr>
           <td>@Output() fileSelect</td>
           <td>Event emitted by clicking on an list item; Get the item's file parameter</td>
         </tr>
@@ -49,6 +53,10 @@
         <tr>
           <td>color: string</td>
           <td>gold(default), green, red, blue, blue-light purple, orange, black</td>
+        </tr>
+        <tr>
+          <td>author: string</td>
+          <td>me(default)</td>
         </tr>
         <tr>
           <td>file: string</td>

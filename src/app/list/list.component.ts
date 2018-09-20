@@ -8,8 +8,8 @@ import {ListElementDirective} from 'roleden-component';
 })
 export class ListComponent implements OnInit {
 
-  public data: Array<ListElementDirective> = [{color: 'blue', title: 'Super Character', file: '', icon: 'fas fa-male'},
-{color: 'red', title: 'Awesome Adventure', file: '', icon: 'fas fa-file'}, new ListElementDirective()];
+  public data: Array<ListElementDirective> = [{color: 'blue', title: 'Super Character', file: '', icon: 'fas fa-male', author: 'me'},
+{color: 'red', title: 'Awesome Adventure', file: '', icon: 'fas fa-file', author: 'me'}, new ListElementDirective()];
 
   constructor() { }
 
