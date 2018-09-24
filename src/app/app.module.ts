@@ -13,6 +13,7 @@ import {ExplanationModule} from './explanation/explanation.module';
 import { DiceComponent } from './dice/dice.component';
 import {RoledenComponentModule} from '../../projects/roleden-component/src/lib/roleden-component.module';
 import { SmallCardComponent } from './small-card/small-card.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SmallCardComponent } from './small-card/small-card.component';
     SidebarComponent,
     TextEditorComponent,
     DiceComponent,
-    SmallCardComponent
+    SmallCardComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

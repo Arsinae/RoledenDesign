@@ -1,0 +1,39 @@
+@import "../style/variables";
+
+.rdButton {
+  border: none;
+  box-shadow: $shadow;
+  width: 100%;
+  padding: $margin;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.goldButton {
+  background-color: $gold;
+}
+
+.blueButton {
+  background-color: $colored-blue;
+}
+
+.greenButton {
+  background-color: $colored-green;
+}
+
+.blue-lightButton {
+  background-color: $colored-blue-light;
+}
+
+.redButton {
+  background-color: $colored-red;
+}
+
+.purpleButton {
+  background-color: $colored-purple;
+}
+
+.orangeButton {
+  background-color: $colored-orange;
+}

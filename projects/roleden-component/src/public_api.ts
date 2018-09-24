@@ -9,3 +9,4 @@ export * from './lib/small-card/small-card.component';
 export * from './lib/text-editor/text-editor.component';
 export * from './lib/list/list.component';
 export * from './lib/list/list-element.directive';
+export * from './lib/button/button.component';
