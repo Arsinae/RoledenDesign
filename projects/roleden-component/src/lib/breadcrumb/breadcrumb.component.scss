@@ -1,0 +1,78 @@
+@import "../style/variables";
+
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  * {
+    padding: $margin;
+  }
+
+  .stepText {
+    cursor: pointer;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: transparent;
+    border-radius: 15px;
+    transition: color 0.4s, background-color 0.3s;
+  }
+
+  .stepText:hover {
+    background-color: lightgray;
+  }
+
+  .stepper {
+    font-weight: bold;
+  }
+}
+
+.gold {
+  .stepText:hover, .stepper {
+    color: $gold;
+  }
+}
+
+.blue {
+  .stepText:hover, .stepper {
+    color: $colored-blue;
+  }
+}
+
+.green {
+  .stepText:hover, .stepper {
+    color: $colored-green;
+  }
+}
+
+.blue-light {
+  .stepText:hover, .stepper {
+    color: $colored-blue-light;
+  }
+}
+
+.red {
+  .stepText:hover, .stepper {
+    color: $colored-red;
+  }
+}
+
+.purple {
+  .stepText:hover, .stepper {
+    color: $colored-purple;
+  }
+}
+
+.orange {
+  .stepText:hover, .stepper {
+    color: $colored-orange;
+  }
+}
+
+.black {
+  .stepText:hover, .stepper {
+    color: black;
+  }
+}

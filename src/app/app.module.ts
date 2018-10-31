@@ -14,6 +14,7 @@ import { DiceComponent } from './dice/dice.component';
 import {RoledenComponentModule} from '../../projects/roleden-component/src/lib/roleden-component.module';
 import { SmallCardComponent } from './small-card/small-card.component';
 import { ButtonComponent } from './button/button.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ButtonComponent } from './button/button.component';
     TextEditorComponent,
     DiceComponent,
     SmallCardComponent,
-    ButtonComponent
+    ButtonComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,
