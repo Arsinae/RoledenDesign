@@ -4,12 +4,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-  * {
-    padding: $margin;
-  }
+  align-items: center;
 
   .stepText {
+    padding: $margin;
     cursor: pointer;
     max-width: 300px;
     white-space: nowrap;
@@ -26,53 +24,90 @@
 
   .stepper {
     font-weight: bold;
+    border-top: 3px solid;
+    border-right: 3px solid;
+    width: 8px; height: 8px;
+    transform: rotate(45deg);
+    margin-right: $margin;
   }
 }
 
 .gold {
-  .stepText:hover, .stepper {
+  .stepText:hover {
     color: $gold;
+  }
+
+  .stepper {
+    border-color: $gold;
   }
 }
 
 .blue {
-  .stepText:hover, .stepper {
+  .stepText:hover {
     color: $colored-blue;
+  }
+
+  .stepper {
+    border-color: $colored-blue;
   }
 }
 
 .green {
-  .stepText:hover, .stepper {
+  .stepText:hover {
     color: $colored-green;
+  }
+
+  .stepper {
+    border-color: $colored-green;
   }
 }
 
 .blue-light {
-  .stepText:hover, .stepper {
+  .stepText:hover {
     color: $colored-blue-light;
+  }
+
+  .stepper {
+    border-color: $colored-blue-light;
   }
 }
 
 .red {
-  .stepText:hover, .stepper {
+  .stepText:hover {
     color: $colored-red;
+  }
+
+  .stepper {
+    border-color: $colored-red;
   }
 }
 
 .purple {
-  .stepText:hover, .stepper {
+  .stepText:hover {
     color: $colored-purple;
+  }
+
+  .stepper {
+    border-color: $colored-purple;
   }
 }
 
 .orange {
-  .stepText:hover, .stepper {
+  .stepText:hover {
     color: $colored-orange;
+  }
+
+  .stepper {
+    border-color: $colored-orange;
   }
 }
 
 .black {
-  .stepText:hover, .stepper {
+  .stepText:hover {
     color: black;
+  }
+
+  .stepper {
+    border-color: black;
   }
 }
