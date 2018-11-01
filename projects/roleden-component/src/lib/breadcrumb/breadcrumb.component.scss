@@ -1,6 +1,6 @@
 @import "../style/variables";
 
-.breadcrumb {
+.rd-breadcrumb {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -16,6 +16,10 @@
     background-color: transparent;
     border-radius: 15px;
     transition: color 0.4s, background-color 0.3s;
+  }
+
+  .stepText:last-child {
+    font-weight: bold;
   }
 
   .stepText:hover {

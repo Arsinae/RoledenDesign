@@ -1,4 +1,4 @@
-<div class="breadcrumb {{color}}">
+<div class="rd-breadcrumb {{color}}">
   <ng-container *ngFor="let step of data; let lastStep = last;">
     <div class="stepText" (click)="fileSelect.emit(step.file)">{{step.name}}</div>
     <div class="stepper" *ngIf="!lastStep"></div>
