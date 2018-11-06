@@ -28,6 +28,8 @@
   flex-wrap: wrap;
   flex-direction: row;
   overflow-y: auto;
+  width: 80%;
+  margin: $margin 10%;
 
   .cardList {
     font-size: 20px;
