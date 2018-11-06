@@ -15,6 +15,7 @@ import {RoledenComponentModule} from '../../projects/roleden-component/src/lib/r
 import { SmallCardComponent } from './small-card/small-card.component';
 import { ButtonComponent } from './button/button.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { MusicPlayerComponent } from './music-player/music-player.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     DiceComponent,
     SmallCardComponent,
     ButtonComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    MusicPlayerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,47 @@
+@import "../../style/variables";
+
+.titlePart {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $gold;
+  margin-bottom: 2 * $margin;
+  margin-top: 3 * $margin;
+
+  span {
+    position: relative;
+    margin-left: calc(5% + 6px);
+
+    &:after {
+      content: '';
+      width: 120%;
+      height: 2px;
+      background-color: $gold;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+    }
+  }
+}
+
+.musicPlayer ,.explanation {
+  width: 80%;
+  margin: $margin 10%;
+}
+
+.option {
+
+  table, tr {
+    width: 100%;
+    padding: $margin;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  td {
+    padding: $margin;
+    width: 50%;
+  }
+}
+

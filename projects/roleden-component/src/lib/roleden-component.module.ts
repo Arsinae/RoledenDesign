@@ -6,8 +6,8 @@ import { TextEditorComponent } from './text-editor/text-editor.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ListModule} from './list/list.module';
 import { ButtonComponent } from './button/button.component';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
-import { BreadcrumbElementDirective } from './breadcrumb/breadcrumb-element.directive';
+import {MusicPlayerModule} from './music-player/music-player.module';
+import {BreadcrumbModule} from './breadcrumb/breadcrumb.module';
 
 @NgModule({
   imports: [
@@ -19,18 +19,16 @@ import { BreadcrumbElementDirective } from './breadcrumb/breadcrumb-element.dire
     DiceComponent,
     SmallCardComponent,
     TextEditorComponent,
-    ButtonComponent,
-    BreadcrumbComponent,
-    BreadcrumbElementDirective
+    ButtonComponent
   ],
   exports: [
     DiceComponent,
     SmallCardComponent,
     ListModule,
+    MusicPlayerModule,
     TextEditorComponent,
     ButtonComponent,
-    BreadcrumbComponent,
-    BreadcrumbElementDirective
+    BreadcrumbModule
   ]
 })
 export class RoledenComponentModule { }
