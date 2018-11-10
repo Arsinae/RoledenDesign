@@ -1,3 +1,7 @@
-<p>
-  music-player works!
-</p>
+<div class="videoContainer" #videoContainer>
+  <div id="ytPlayer"></div>
+</div>
+<span (click)="changeLectureState()"><i class="fas fa-pause"></i></span>
+<span>{{displayTime(currentTime)}} {{displayTime(timeMax)}}</span>
+
+<div >{{tmp}}</div>
