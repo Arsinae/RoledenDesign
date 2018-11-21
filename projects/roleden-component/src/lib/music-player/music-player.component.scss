@@ -4,3 +4,33 @@
     max-width: 100px;
     // display: none;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &>* {
+    margin: $margin;
+  }
+}
+
+.controlPanel {
+  text-align: center;
+}
+
+.timeController {
+  display: flex;
+  flex-direction: row;
+
+  .progressBar {
+    flex: 1;
+    height: $margin * 2;
+    margin: 0 $margin;
+    background-color: $light-gray;
+
+    .innerProgress {
+      background-color: $gold;
+      height: 100%;
+    }
+  }
+}

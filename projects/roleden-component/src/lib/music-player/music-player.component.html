@@ -1,7 +1,16 @@
 <div class="videoContainer" #videoContainer>
   <div id="ytPlayer"></div>
 </div>
-<span (click)="changeLectureState()"><i class="fas fa-pause"></i></span>
-<span>{{displayTime(currentTime)}} {{displayTime(timeMax)}}</span>
-
-<div >{{tmp}}</div>
+<div class="wrapper">
+  <div class="controlPanel">
+      <span (click)="changeLectureState()" *ngIf="state === 'play'"><i class="fas fa-pause"></i></span>
+      <span (click)="changeLectureState()" *ngIf="state !== 'play'"><i class="fas fa-play"></i></span>
+    </div>
+  <div class="timeController">
+    <span>{{displayTime(currentTime)}}</span>
+    <div class="progressBar" #progressBar (click)="changeSeek($event)">
+      <div class="innerProgress" [style.width]="getProgress()"></div>
+    </div>
+    <span>{{displayTime(timeMax)}}</span>
+  </div>
+</div>

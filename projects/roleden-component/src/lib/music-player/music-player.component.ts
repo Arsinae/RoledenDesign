@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, ViewChild, ChangeDetectorRef } from '@angular/core';
-import noframe from 'reframe.js';
 import { MusicElementDirective } from './music-element.directive';
 
 @Component({
@@ -10,8 +9,10 @@ import { MusicElementDirective } from './music-element.directive';
 export class MusicPlayerComponent implements OnInit {
 
   @Input() playlist: Array<MusicElementDirective> = [];
+  @Input() color = 'gold';
 
   @ViewChild('videoContainer') videoContainer;
+  @ViewChild('progressBar') progressBar;
 
   public YT: any;
   public player: any;
@@ -32,9 +33,6 @@ export class MusicPlayerComponent implements OnInit {
       this.player = new window['YT'].Player('ytPlayer', {
         videoId: '6vfP_4u7zik',
         host: 'http://www.youtube.com',
-        playerVars: {
-          controls: 0
-        },
         events: {
           'onStateChange': this.onPlayerStateChange.bind(this),
           'onError': this.onPlayerError.bind(this),
@@ -59,6 +57,7 @@ export class MusicPlayerComponent implements OnInit {
     } else {
       this.state = 'pause';
     }
+    this.changesDetector.detectChanges();
   }
 
   onPlayerError(event) {
@@ -68,6 +67,7 @@ export class MusicPlayerComponent implements OnInit {
   changeLectureState() {
     if (this.player.getPlayerState() === this.YT.PlayerState.PLAYING) {
       this.player.pauseVideo();
+      this.state = 'pause';
     } else {
       this.player.playVideo();
     }
@@ -76,13 +76,29 @@ export class MusicPlayerComponent implements OnInit {
   moveSeekYoutube() {
     const timeInterval = setInterval(() => {
       if (this.state === 'play') {
-        this.currentTime += 1;
-        console.log(this.currentTime);
+        this.currentTime = Math.round(this.player.getCurrentTime());
         this.changesDetector.detectChanges();
       } else {
         clearInterval(timeInterval);
       }
     }, 1000);
+  }
+
+  changeSeek(event) {
+    if (this.timeMax !== 0) {
+      const percent = (event.clientX - this.progressBar.nativeElement.offsetLeft) / this.progressBar.nativeElement.clientWidth;
+      const second = Math.round(this.timeMax * percent);
+      this.currentTime = second;
+      this.player.seekTo(second, true);
+      this.changesDetector.detectChanges();
+    }
+  }
+
+  getProgress() {
+    if (this.currentTime === 0) {
+      return '0%';
+    }
+    return (this.currentTime / this.timeMax) * 100 + '%';
   }
 
   displayTime(time) {
