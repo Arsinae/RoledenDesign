@@ -3,8 +3,10 @@
 </div>
 <div class="wrapper">
   <div class="controlPanel">
+      <span (click)="changeSong(-1)"><i class="fas fa-angle-left"></i></span>
       <span (click)="changeLectureState()" *ngIf="state === 'play'"><i class="fas fa-pause"></i></span>
       <span (click)="changeLectureState()" *ngIf="state !== 'play'"><i class="fas fa-play"></i></span>
+      <span (click)="changeSong(1)"><i class="fas fa-angle-right"></i></span>
     </div>
   <div class="timeController">
     <span>{{displayTime(currentTime)}}</span>

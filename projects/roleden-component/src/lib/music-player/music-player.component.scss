@@ -16,6 +16,10 @@
 
 .controlPanel {
   text-align: center;
+
+  &>* {
+    padding: $margin/2 $margin;
+  }
 }
 
 .timeController {

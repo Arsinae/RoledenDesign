@@ -14,6 +14,8 @@ export class MusicPlayerComponent implements OnInit {
   @ViewChild('videoContainer') videoContainer;
   @ViewChild('progressBar') progressBar;
 
+  private cursor = 0;
+
   public YT: any;
   public player: any;
 
@@ -30,24 +32,36 @@ export class MusicPlayerComponent implements OnInit {
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     window['onYouTubeIframeAPIReady'] = (e) => {
       this.YT = window['YT'];
-      this.player = new window['YT'].Player('ytPlayer', {
-        videoId: '6vfP_4u7zik',
-        host: 'http://www.youtube.com',
-        events: {
-          'onStateChange': this.onPlayerStateChange.bind(this),
-          'onError': this.onPlayerError.bind(this),
-          'onReady': this.onPlayerReady.bind(this)
+      if (this.playlist.length > 0) {
+        if (this.currentSongType() === 'youTube') {
+          this.initYoutubeVideo(this.playlist[this.cursor]);
         }
-      });
+      }
     };
   }
 
+  currentSongType() {
+    return this.playlist[this.cursor].type;
+  }
+
+  initYoutubeVideo(video) {
+    this.player = new window['YT'].Player('ytPlayer', {
+      videoId: video.url,
+      host: 'http://www.youtube.com',
+      events: {
+        'onStateChange': this.onPlayerStateChange.bind(this),
+        'onError': this.onPlayerError.bind(this),
+        'onReady': this.onPlayerReady.bind(this)
+      }
+    });
+  }
+
   onPlayerReady(event) {
-    this.timeMax = Math.round(this.player.getDuration());
   }
 
   onPlayerStateChange(event) {
     if (event.data === this.YT.PlayerState.PLAYING) {
+      this.timeMax = Math.round(this.player.getDuration());
       this.state = 'play';
       this.currentTime = Math.round(this.player.getCurrentTime());
       this.changesDetector.detectChanges();
@@ -65,11 +79,13 @@ export class MusicPlayerComponent implements OnInit {
   }
 
   changeLectureState() {
-    if (this.player.getPlayerState() === this.YT.PlayerState.PLAYING) {
-      this.player.pauseVideo();
-      this.state = 'pause';
-    } else {
-      this.player.playVideo();
+    if (this.currentSongType() === 'youTube') {
+      if (this.player.getPlayerState() === this.YT.PlayerState.PLAYING) {
+        this.player.pauseVideo();
+        this.state = 'pause';
+      } else {
+        this.player.playVideo();
+      }
     }
   }
 
@@ -89,8 +105,18 @@ export class MusicPlayerComponent implements OnInit {
       const percent = (event.clientX - this.progressBar.nativeElement.offsetLeft) / this.progressBar.nativeElement.clientWidth;
       const second = Math.round(this.timeMax * percent);
       this.currentTime = second;
-      this.player.seekTo(second, true);
+      if (this.currentSongType() === 'youTube') {
+        this.player.seekTo(second, true);
+      }
       this.changesDetector.detectChanges();
+    }
+  }
+
+  changeSong(index) {
+    this.cursor += index;
+    this.cursor = (this.cursor >= this.playlist.length) ? (0) : (this.cursor < 0) ? (this.playlist.length - 1) : (this.cursor);
+    if (this.currentSongType() === 'youTube') {
+      this.player.loadVideoById(this.playlist[this.cursor].url);
     }
   }
 
