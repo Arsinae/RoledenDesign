@@ -31,6 +31,7 @@
     height: $margin * 2;
     margin: 0 $margin;
     background-color: $light-gray;
+    transition: width 0.1s ease-in-out;
 
     .innerProgress {
       background-color: $gold;

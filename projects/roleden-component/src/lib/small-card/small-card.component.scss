@@ -2,6 +2,13 @@
 
 .card {
   width: 100%;
+  box-shadow: $shadow;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    transform: translateY(-$margin);
+    box-shadow: $big-shadow;
+  }
 }
 
 .cardList {
@@ -9,7 +16,6 @@
   padding: $margin;
   cursor: pointer;
   position: relative;
-  box-shadow: $shadow;
   box-sizing: border-box;
 
   .iconList {
