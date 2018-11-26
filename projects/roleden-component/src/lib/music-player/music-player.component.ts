@@ -24,6 +24,8 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   public timeMax = 0;
   public currentTime = 0;
 
+  public random = false;
+
   constructor(private changesDetector: ChangeDetectorRef) { }
 
   ngOnInit() {
@@ -34,7 +36,7 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
     window['onYouTubeIframeAPIReady'] = (e) => {
       this.YT = window['YT'];
       if (this.playlist.length > 0) {
-        this.localPlaylist = this.playlist;
+        this.localPlaylist = this.playlist.slice();
         if (this.currentSongType() === 'youTube') {
           this.initYoutubeVideo(this.localPlaylist[this.cursor]);
         }
@@ -44,7 +46,10 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes) {
     if (changes['playlist']) {
-      this.localPlaylist = this.playlist;
+      this.localPlaylist = this.playlist.slice();
+      if (this.random) {
+        this.shufflePlaylist();
+      }
     }
   }
 
@@ -130,6 +135,28 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
     this.cursor = (this.cursor >= this.localPlaylist.length) ? (0) : (this.cursor < 0) ? (this.localPlaylist.length - 1) : (this.cursor);
     if (this.currentSongType() === 'youTube') {
       this.player.loadVideoById(this.localPlaylist[this.cursor].url);
+    }
+  }
+
+  shufflePlaylist() {
+    if (this.random) {
+      const playlist = [];
+      playlist.push(this.localPlaylist[this.cursor]);
+      this.localPlaylist.splice(this.cursor, 1);
+      for (let i = 0; i < this.localPlaylist.length; i++) {
+        const index = Math.round(Math.random() * (this.localPlaylist.length - 1));
+        playlist.push(this.localPlaylist[index]);
+        this.localPlaylist.splice(index, 1);
+      }
+      this.localPlaylist = playlist;
+      this.cursor = 0;
+    } else {
+      let i = 0;
+      while (this.localPlaylist[this.cursor]  !== this.playlist[i] && i < this.playlist.length) {
+        i++;
+      }
+      this.cursor = (i < this.playlist.length) ? i : 0;
+      this.localPlaylist = this.playlist.slice();
     }
   }
 

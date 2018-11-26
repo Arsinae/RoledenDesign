@@ -13,7 +13,7 @@
       <span (click)="changeSong(1)"><i class="fas fa-angle-right"></i></span>
     </div>
     <div>
-        <span><i class="fas fa-random"></i></span>
+        <span (click)="random = !random;shufflePlaylist()" [class.random]="random"><i class="fas fa-random"></i></span>
         <span><i class="fas fa-volume-up"></i></span>
       </div>
   </div>
