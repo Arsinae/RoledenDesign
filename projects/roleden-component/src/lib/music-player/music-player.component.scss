@@ -16,8 +16,10 @@
 
 .controlPanel {
   text-align: center;
+  display: flex;
+  justify-content: space-around;
 
-  &>* {
+  span {
     padding: $margin/2 $margin;
   }
 }

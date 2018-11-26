@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ChangeDetectorRef, OnChanges } from '@angular/core';
 import { MusicElementDirective } from './music-element.directive';
 
 @Component({
@@ -6,7 +6,7 @@ import { MusicElementDirective } from './music-element.directive';
   templateUrl: './music-player.component.html',
   styleUrls: ['./music-player.component.scss']
 })
-export class MusicPlayerComponent implements OnInit {
+export class MusicPlayerComponent implements OnInit, OnChanges {
 
   @Input() playlist: Array<MusicElementDirective> = [];
   @Input() color = 'gold';
@@ -14,6 +14,7 @@ export class MusicPlayerComponent implements OnInit {
   @ViewChild('videoContainer') videoContainer;
   @ViewChild('progressBar') progressBar;
 
+  private localPlaylist: Array<MusicElementDirective> = [];
   private cursor = 0;
 
   public YT: any;
@@ -33,15 +34,22 @@ export class MusicPlayerComponent implements OnInit {
     window['onYouTubeIframeAPIReady'] = (e) => {
       this.YT = window['YT'];
       if (this.playlist.length > 0) {
+        this.localPlaylist = this.playlist;
         if (this.currentSongType() === 'youTube') {
-          this.initYoutubeVideo(this.playlist[this.cursor]);
+          this.initYoutubeVideo(this.localPlaylist[this.cursor]);
         }
       }
     };
   }
 
+  ngOnChanges(changes) {
+    if (changes['playlist']) {
+      this.localPlaylist = this.playlist;
+    }
+  }
+
   currentSongType() {
-    return this.playlist[this.cursor].type;
+    return this.localPlaylist[this.cursor].type;
   }
 
   initYoutubeVideo(video) {
@@ -68,6 +76,7 @@ export class MusicPlayerComponent implements OnInit {
       this.moveSeekYoutube();
     } else if (event.data === this.YT.PlayerState.ENDED) {
       this.state = 'ended';
+      this.changeSong(1);
     } else {
       this.state = 'pause';
     }
@@ -76,6 +85,10 @@ export class MusicPlayerComponent implements OnInit {
 
   onPlayerError(event) {
     console.log('error', event);
+  }
+
+  getSongName() {
+    return (this.localPlaylist[this.cursor].title + ' - ' + this.localPlaylist[this.cursor].channel);
   }
 
   changeLectureState() {
@@ -114,9 +127,9 @@ export class MusicPlayerComponent implements OnInit {
 
   changeSong(index) {
     this.cursor += index;
-    this.cursor = (this.cursor >= this.playlist.length) ? (0) : (this.cursor < 0) ? (this.playlist.length - 1) : (this.cursor);
+    this.cursor = (this.cursor >= this.localPlaylist.length) ? (0) : (this.cursor < 0) ? (this.localPlaylist.length - 1) : (this.cursor);
     if (this.currentSongType() === 'youTube') {
-      this.player.loadVideoById(this.playlist[this.cursor].url);
+      this.player.loadVideoById(this.localPlaylist[this.cursor].url);
     }
   }
 

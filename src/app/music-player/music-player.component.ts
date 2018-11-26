@@ -10,7 +10,7 @@ export class MusicPlayerComponent implements OnInit {
 
   public playlist: Array<MusicElementDirective> = [
     {title: 'Fight Back', imageurl: '', channel: 'Neffex', url: '6vfP_4u7zik', type: 'youTube'},
-    {title: 'Fight Back', imageurl: '', channel: 'Neffex', url: 'lJkEF0_QigU', type: 'youTube'}
+    {title: 'Numb', imageurl: '', channel: 'Neffex', url: 'lJkEF0_QigU', type: 'youTube'}
   ];
 
   constructor() { }
