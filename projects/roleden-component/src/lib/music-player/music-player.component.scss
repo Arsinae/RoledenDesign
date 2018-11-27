@@ -2,15 +2,44 @@
 
 .videoContainer {
     max-width: 100px;
-    // display: none;
+    display: none;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
+  --main-color: #{$gold};
 
   &>* {
     margin: $margin;
+  }
+
+  &.blue-light {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.blue {
+    --main-color: #{$colored-blue};
+  }
+
+  &.green {
+    --main-color: #{$colored-green};
+  }
+
+  &.purple {
+    --main-color: #{$colored-purple};
+  }
+
+  &.red {
+    --main-color: #{$colored-red};
+  }
+
+  &.orange {
+    --main-color: #{$colored-orange};
+  }
+
+  &.black {
+    --main-color: black;
   }
 }
 
@@ -19,12 +48,63 @@
   display: flex;
   justify-content: space-around;
 
+  &>div, .volumeController {
+    display: flex;
+  }
+
+  .namePanel {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   span {
     padding: $margin/2 $margin;
   }
 
   .random {
-    color: $colored-blue-light;
+    color: var(--main-color);
+  }
+}
+
+.volumeController {
+
+  .slideContainer {
+    opacity: 0;
+
+    #volumeSelector {
+      -webkit-appearance: none;
+      outline: none;
+
+      &::-webkit-slider-thumb {
+        border: none;
+        border-radius: 50%;
+        width: 12px; height: 12px;
+        background: var(--main-color);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          width: 15px; height: 15px;
+        }
+      }
+
+      &::-moz-range-thumb {
+        border-radius: 50%;
+        width: 12px; height: 12px;
+        background: var(--main-color);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          width: 15px; height: 15px;
+        }
+      }
+    }
+  }
+
+  &:hover .slideContainer {
+    opacity: 1;
   }
 }
 
@@ -40,7 +120,7 @@
     transition: width 0.1s ease-in-out;
 
     .innerProgress {
-      background-color: $gold;
+      background-color: var(--main-color);
       height: 100%;
     }
   }

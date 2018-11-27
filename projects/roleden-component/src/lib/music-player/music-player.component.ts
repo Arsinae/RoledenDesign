@@ -25,6 +25,7 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   public currentTime = 0;
 
   public random = false;
+  public volume = 50;
 
   constructor(private changesDetector: ChangeDetectorRef) { }
 
@@ -67,6 +68,7 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
         'onReady': this.onPlayerReady.bind(this)
       }
     });
+    this.player.setVolume(this.volume);
   }
 
   onPlayerReady(event) {
@@ -158,6 +160,10 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
       this.cursor = (i < this.playlist.length) ? i : 0;
       this.localPlaylist = this.playlist.slice();
     }
+  }
+
+  changeVolume() {
+    this.player.setVolume(this.volume);
   }
 
   getProgress() {
