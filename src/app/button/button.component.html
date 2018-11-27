@@ -4,8 +4,8 @@
 
 <div class="buttonContainer">
   <rd-button [color]="'red'">Delete</rd-button>
-  <rd-button [color]="'green'">Save</rd-button>
-  <rd-button [color]="'blue'">Edit</rd-button>
+  <rd-button [color]="'green'" [rounded]="true">Save</rd-button>
+  <rd-button [color]="'gradient-blue'">Edit</rd-button>
 </div>
 
 
@@ -25,7 +25,11 @@
       <table>
         <tr>
           <td>@Input() color: string</td>
-          <td>gold(default), green, red, blue, blue-light, purple, orange, black</td>
+          <td>gold(default), green, red, blue, blue-light, purple, orange, black, gradient-blue, gradient-peach</td>
+        </tr>
+        <tr>
+          <td>@Input() rounded: boolean</td>
+          <td>false(default)</td>
         </tr>
         <tr>
           <td>@Output() buttonClick</td>

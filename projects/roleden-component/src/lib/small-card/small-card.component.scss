@@ -50,10 +50,12 @@
 .objectCard {
   background-color: $light-gray;
   color: black;
-  border: 1px var(--main-color) solid;
+  border: 1px solid;
+  border-color: var(--main-color);
+  border-image: var(--main-color) 1;
 
   .iconList {
-    background-color: var(--main-color);
+    background: var(--main-color);
     color: white;
   }
 }
@@ -64,6 +66,10 @@
 
 .objectCard.blue {
   --main-color: #{$colored-blue};
+}
+
+.objectCard.gradient-blue {
+  --main-color: linear-gradient(45deg, #{$colored-blue-light}, #{$colored-blue});
 }
 
 .objectCard.blue-light {

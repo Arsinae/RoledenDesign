@@ -10,6 +10,9 @@ $colored-purple: #a25aba;
 $colored-red: #ba5a5a;
 $colored-orange: #ba8a5a;
 
+$gradient-blue: linear-gradient(45deg, #{$colored-blue-light}, #{$colored-blue});
+$gradient-peach: linear-gradient(45deg, #{$colored-orange} 20%, #{$colored-red} 80%);
+
 $margin: 6px;
 
 $shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
