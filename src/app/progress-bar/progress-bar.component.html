@@ -1,0 +1,37 @@
+<div class="titlePart">
+    <span>Progress bar</span>
+  </div>
+
+  <div class="progressBar">
+      <rd-progress-bar [color]="'purple'" [width]="25"></rd-progress-bar>
+      <rd-progress-bar></rd-progress-bar>
+      <rd-progress-bar [color]="'green'" [width]="75"></rd-progress-bar>
+    </div>
+
+
+  <div class="explanation">
+    <app-explanation>
+      <div class="titlePart">
+        <span>HTML Tag</span>
+      </div>
+
+      <div><b>rd-progress-bar</b></div>
+
+      <div class="titlePart">
+        <span>Parameters:</span>
+      </div>
+
+      <div class="option">
+        <table>
+          <tr>
+            <td>@Input() color: string</td>
+            <td>gold(default), green, red, blue, blue-light, purple, orange, black</td>
+          </tr>
+          <tr>
+            <td>@Input() width: Number</td>
+            <td>Percentage of completion</td>
+          </tr>
+        </table>
+      </div>
+    </app-explanation>
+  </div>

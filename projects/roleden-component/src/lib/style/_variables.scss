@@ -26,3 +26,11 @@ $big-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
   top: 50%; left: 50%;
   @include transform(translate(-50%, -50%));
 }
+
+@function lighten($color) {
+  @return mix($color, white, 90%);
+}
+
+@function darken($color) {
+  @return mix($color, black, 90%);
+}

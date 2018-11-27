@@ -16,6 +16,7 @@ import { SmallCardComponent } from './small-card/small-card.component';
 import { ButtonComponent } from './button/button.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MusicPlayerComponent } from './music-player/music-player.component';
     SmallCardComponent,
     ButtonComponent,
     BreadcrumbComponent,
-    MusicPlayerComponent
+    MusicPlayerComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,

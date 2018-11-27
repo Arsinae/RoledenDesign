@@ -1,0 +1,82 @@
+@import "../style/variables";
+
+.progressBar {
+  --main-color: #{$gold};
+
+  width: 100%; height: 15px;
+  background-color: $light-gray;
+  border-radius: 13px;
+  padding: $margin;
+
+  .progression {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: var(--main-color);
+    box-shadow:
+      inset 0 2px 6px  rgba(255,255,255,0.3),
+      inset 0 -2px 3px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background-image: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, .2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, .2) 50%,
+        rgba(255, 255, 255, .2) 75%,
+        transparent 75%,
+        transparent
+      );
+      z-index: 1;
+      background-size: 50px 50px;
+      animation: move 2s linear infinite;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      overflow: hidden;
+    }
+  }
+
+  &.blue {
+    --main-color: #{$colored-blue};
+  }
+
+  &.blue-light {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.red {
+    --main-color: #{$colored-red};
+  }
+
+  &.green {
+    --main-color: #{$colored-green};
+  }
+
+  &.orange {
+    --main-color: #{$colored-orange};
+  }
+
+  &.purple {
+    --main-color: #{$colored-purple};
+  }
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}

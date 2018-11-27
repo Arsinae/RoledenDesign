@@ -8,6 +8,7 @@ import {ListModule} from './list/list.module';
 import { ButtonComponent } from './button/button.component';
 import {MusicPlayerModule} from './music-player/music-player.module';
 import {BreadcrumbModule} from './breadcrumb/breadcrumb.module';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {BreadcrumbModule} from './breadcrumb/breadcrumb.module';
     DiceComponent,
     SmallCardComponent,
     TextEditorComponent,
-    ButtonComponent
+    ButtonComponent,
+    ProgressBarComponent
   ],
   exports: [
     DiceComponent,
@@ -28,7 +30,8 @@ import {BreadcrumbModule} from './breadcrumb/breadcrumb.module';
     MusicPlayerModule,
     TextEditorComponent,
     ButtonComponent,
-    BreadcrumbModule
+    BreadcrumbModule,
+    ProgressBarComponent
   ]
 })
 export class RoledenComponentModule { }
