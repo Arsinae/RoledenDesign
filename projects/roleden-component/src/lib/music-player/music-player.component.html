@@ -1,10 +1,10 @@
 <div class="videoContainer" #videoContainer>
   <div id="ytPlayer"></div>
 </div>
-<div class="wrapper {{color}}">
+<div class="wrapper {{color}}" #playerWrapper>
   <div class="controlPanel">
     <div class="namePanel">
-      <span>{{getSongName()}}</span>
+      <span>{{getSongName(cursor)}}</span>
     </div>
 
     <div class="songController">
@@ -16,6 +16,23 @@
 
     <div class="songController">
         <span (click)="random = !random;shufflePlaylist()" [class.random]="random"><i class="fas fa-random"></i></span>
+
+        <div class="playlistContainer">
+          <span (click)="showPlaylist($event)"><i class="fas fa-th-list"></i></span>
+          <div class="playlistMenu" #playlistMenu [style.width.px]="250" [style.maxHeight.px]="150">
+            <div *ngFor="let song of localPlaylist; let i = index">
+                <span *ngIf="i !== cursor" (click)="$event.stopPropagation();changeSong(i - cursor)">
+                  <i class="fas fa-play"></i>
+                  {{getSongName(i)}}
+                </span>
+                <span *ngIf="i === cursor">
+                  <i class="fas fa-pause"></i>
+                  {{getSongName(i)}}
+                </span>
+            </div>
+          </div>
+        </div>
+
         <div class="volumeController">
           <span *ngIf="volume === 0" (click)="volume = 50; changeVolume()"><i class="fas fa-volume-off"></i></span>
           <span *ngIf="volume !== 0 && volume < 50" (click)="volume = 0;changeVolume()"><i class="fas fa-volume-down"></i></span>
@@ -26,6 +43,7 @@
         </div>
       </div>
   </div>
+
   <div class="timeController">
     <span>{{displayTime(currentTime)}}</span>
     <div class="progressBar" #progressBar (click)="changeSeek($event)">

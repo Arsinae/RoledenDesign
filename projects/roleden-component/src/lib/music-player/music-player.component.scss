@@ -77,10 +77,18 @@
     opacity: 0;
 
     #volumeSelector {
-      -webkit-appearance: none;
       outline: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+
+      &::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        width: 100%;
+        background-color: $light-gray;
+      }
 
       &::-webkit-slider-thumb {
+        -webkit-appearance: none;
         border: none;
         border-radius: 50%;
         width: 12px; height: 12px;
@@ -94,6 +102,7 @@
       }
 
       &::-moz-range-thumb {
+        border: none;
         border-radius: 50%;
         width: 12px; height: 12px;
         background: var(--main-color);
@@ -109,6 +118,35 @@
 
   &:hover .slideContainer {
     opacity: 1;
+  }
+}
+
+.playlistContainer {
+  position: relative;
+  padding: $margin/2 $margin;
+
+  .playlistMenu {
+    position: absolute;
+    top: 0; left: 0;
+    transform: translateX(-50%);
+    box-shadow: $shadow;
+    display: none;
+    background-color: white;
+    text-align: start;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    div {
+      margin: $margin/2;
+      padding: $margin/3 $margin/2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    div:not(:last-child) {
+      border-bottom: 1px solid $light-gray;
+    }
   }
 }
 

@@ -12,10 +12,12 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   @Input() color = 'gold';
 
   @ViewChild('videoContainer') videoContainer;
+  @ViewChild('playerWrapper') playerWrapper;
+  @ViewChild('playlistMenu') playlistMenu;
   @ViewChild('progressBar') progressBar;
 
-  private localPlaylist: Array<MusicElementDirective> = [];
-  private cursor = 0;
+  public localPlaylist: Array<MusicElementDirective> = [];
+  public cursor = 0;
 
   public YT: any;
   public player: any;
@@ -68,10 +70,10 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
         'onReady': this.onPlayerReady.bind(this)
       }
     });
-    this.player.setVolume(this.volume);
   }
 
   onPlayerReady(event) {
+    this.player.setVolume(this.volume);
   }
 
   onPlayerStateChange(event) {
@@ -94,8 +96,8 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
     console.log('error', event);
   }
 
-  getSongName() {
-    return (this.localPlaylist[this.cursor].title + ' - ' + this.localPlaylist[this.cursor].channel);
+  getSongName(index) {
+    return (this.localPlaylist[index].title + ' - ' + this.localPlaylist[index].channel);
   }
 
   changeLectureState() {
@@ -145,7 +147,7 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
       const playlist = [];
       playlist.push(this.localPlaylist[this.cursor]);
       this.localPlaylist.splice(this.cursor, 1);
-      for (let i = 0; i < this.localPlaylist.length; i++) {
+      for (const i = 0; i < this.localPlaylist.length; i) {
         const index = Math.round(Math.random() * (this.localPlaylist.length - 1));
         playlist.push(this.localPlaylist[index]);
         this.localPlaylist.splice(index, 1);
@@ -154,7 +156,7 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
       this.cursor = 0;
     } else {
       let i = 0;
-      while (this.localPlaylist[this.cursor]  !== this.playlist[i] && i < this.playlist.length) {
+      while (this.localPlaylist[this.cursor] !== this.playlist[i] && i < this.playlist.length) {
         i++;
       }
       this.cursor = (i < this.playlist.length) ? i : 0;
@@ -164,6 +166,15 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
 
   changeVolume() {
     this.player.setVolume(this.volume);
+  }
+
+  showPlaylist(event) {
+    this.playlistMenu.nativeElement.style.display = 'block';
+    event.stopPropagation();
+    this.playerWrapper.nativeElement.onclick = () => {
+      this.playlistMenu.nativeElement.style.display = 'none';
+      this.playerWrapper.nativeElement.onclick = null;
+    };
   }
 
   getProgress() {
