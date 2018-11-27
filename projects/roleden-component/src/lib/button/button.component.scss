@@ -1,6 +1,8 @@
 @import "../style/variables";
 
 .rdButton {
+  --main-color: #{$gold};
+
   border: none;
   box-shadow: $shadow;
   width: 100%;
@@ -9,18 +11,12 @@
   color: white;
   cursor: pointer;
   transition: all 0.1s ease-in-out, background 0.8s ease-in-out;
+  background: var(--main-color) center;
 
   &:hover {
     transform: translateY(-$margin/2);
     box-shadow: $big-shadow;
-  }
-}
-
-.goldButton {
-  background: $gold center;
-
-  &:hover {
-    background: $gold radial-gradient(circle, transparent 0.4%, $gold 1%) center/15000%;
+    background: var(--main-color) radial-gradient(circle, transparent 0.4%, var(--main-color) 1%) center/15000%;
   }
 
   &:active {
@@ -31,85 +27,25 @@
 }
 
 .blueButton {
-  background: $colored-blue center;
-
-  &:hover {
-    background: $colored-blue radial-gradient(circle, transparent 0.4%, $colored-blue 1%) center/15000%;
-  }
-
-  &:active {
-    background-size: 100%;
-    transition: background 0s;
-    background-color: $light-gray;
-  }
+  --main-color: #{$colored-blue};
 }
 
 .greenButton {
-  background: $colored-green center;
-
-  &:hover {
-    background: $colored-green radial-gradient(circle, transparent 0.4%, $colored-green 1%) center/15000%;
-  }
-
-  &:active {
-    background-size: 100%;
-    transition: background 0s;
-    background-color: $light-gray;
-  }
+  --main-color: #{$colored-green};
 }
 
 .blue-lightButton {
-  background: $colored-blue-light center;
-
-  &:hover {
-    background: $colored-blue-light radial-gradient(circle, transparent 0.4%, $colored-blue-light 1%) center/15000%;
-  }
-
-  &:active {
-    background-size: 100%;
-    transition: background 0s;
-    background-color: $light-gray;
-  }
+  --main-color: #{$colored-blue-light};
 }
 
 .redButton {
-  background: $colored-red center;
-
-  &:hover {
-    background: $colored-red radial-gradient(circle, transparent 0.4%, $colored-red 1%) center/15000%;
-  }
-
-  &:active {
-    background-size: 100%;
-    transition: background 0s;
-    background-color: $light-gray;
-  }
+  --main-color: #{$colored-red};
 }
 
 .purpleButton {
-  background: $colored-purple center;
-
-  &:hover {
-    background: $colored-purple radial-gradient(circle, transparent 0.4%, $colored-purple 1%) center/15000%;
-  }
-
-  &:active {
-    background-size: 100%;
-    transition: background 0s;
-    background-color: $light-gray;
-  }
+  --main-color: #{$colored-purple};
 }
 
 .orangeButton {
-  background: $colored-orange center;
-
-  &:hover {
-    background: $colored-orange radial-gradient(circle, transparent 0.4%, $colored-orange 1%) center/15000%;
-  }
-
-  &:active {
-    background-size: 100%;
-    transition: background 0s;
-    background-color: $light-gray;
-  }
+  --main-color: #{$colored-orange};
 }

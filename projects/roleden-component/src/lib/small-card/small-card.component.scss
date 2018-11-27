@@ -18,6 +18,8 @@
   position: relative;
   box-sizing: border-box;
 
+  --main-color: #{$gold};
+
   .iconList {
     position: absolute;
     top: 0;
@@ -48,58 +50,34 @@
 .objectCard {
   background-color: $light-gray;
   color: black;
-  border: 1px $gold solid;
+  border: 1px var(--main-color) solid;
 
   .iconList {
-    background-color: $gold;
+    background-color: var(--main-color);
     color: white;
   }
 }
 
 .objectCard.green {
-  border-color: $colored-green;
-
-  .iconList {
-    background-color: $colored-green;
-  }
+  --main-color: #{$colored-green};
 }
 
 .objectCard.blue {
-  border: 1px $colored-blue solid;
-
-  .iconList {
-    background-color: $colored-blue;
-  }
+  --main-color: #{$colored-blue};
 }
 
 .objectCard.blue-light {
-  border: 1px $colored-blue-light solid;
-
-  .iconList {
-    background-color: $colored-blue-light;
-  }
+  --main-color: #{$colored-blue-light};
 }
 
 .objectCard.red {
-  border: 1px $colored-red solid;
-
-  .iconList {
-    background-color: $colored-red;
-  }
+  --main-color: #{$colored-red};
 }
 
 .objectCard.purple {
-  border: 1px $colored-purple solid;
-
-  .iconList {
-    background-color: $colored-purple;
-  }
+  --main-color: #{$colored-purple};
 }
 
 .objectCard.orange {
-  border: 1px $colored-orange solid;
-
-  .iconList {
-    background-color: $colored-orange;
-  }
+  --main-color: #{$colored-orange};
 }

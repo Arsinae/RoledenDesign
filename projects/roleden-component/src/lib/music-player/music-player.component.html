@@ -6,13 +6,15 @@
     <div class="namePanel">
       <span>{{getSongName()}}</span>
     </div>
-    <div>
+
+    <div class="songController">
       <span (click)="changeSong(-1)"><i class="fas fa-lg fa-angle-left"></i></span>
       <span (click)="changeLectureState()" *ngIf="state === 'play'"><i class="fas fa-pause"></i></span>
       <span (click)="changeLectureState()" *ngIf="state !== 'play'"><i class="fas fa-play"></i></span>
       <span (click)="changeSong(1)"><i class="fas fa-lg fa-angle-right"></i></span>
     </div>
-    <div>
+
+    <div class="songController">
         <span (click)="random = !random;shufflePlaylist()" [class.random]="random"><i class="fas fa-random"></i></span>
         <div class="volumeController">
           <span *ngIf="volume === 0" (click)="volume = 50; changeVolume()"><i class="fas fa-volume-off"></i></span>

@@ -55,6 +55,8 @@
   cursor: pointer;
   box-sizing: border-box;
 
+  --main-color: #{$gold};
+
   * {
     // padding: 0 $margin;
     padding: 0 1px;
@@ -78,51 +80,35 @@
     box-sizing: border-box;
   }
 
-  &.goldList {
-    .elemListIcon, .elemListTitle:hover {
-      color: $gold;
-    }
+  .elemListIcon, .elemListTitle:hover {
+    color: var(--main-color);
   }
 
   &.blueList {
-    .elemListIcon, .elemListTitle:hover {
-      color: $colored-blue;
-    }
+    --main-color: #{$colored-blue};
   }
 
   &.greenList {
-    .elemListIcon, .elemListTitle:hover {
-      color: $colored-green;
-    }
+    --main-color: #{$colored-green};
   }
 
   &.blue-lightList {
-    .elemListIcon, .elemListTitle:hover {
-      color: $colored-blue-light;
-    }
+    --main-color: #{$colored-blue-light};
   }
 
   &.redList {
-    .elemListIcon, .elemListTitle:hover {
-      color: $colored-red;
-    }
+    --main-color: #{$colored-red};
   }
 
   &.purpleList {
-    .elemListIcon, .elemListTitle:hover {
-      color: $colored-purple;
-    }
+    --main-color: #{$colored-purple};
   }
 
   &.orangeList {
-    .elemListIcon, .elemListTitle:hover {
-      color: $colored-orange;
-    }
+    --main-color: #{$colored-orange};
   }
 
   &.blackList {
-    .elemListIcon, .elemListTitle:hover {
-      color: black;
-    }
+    --main-color: black;
   }
 }

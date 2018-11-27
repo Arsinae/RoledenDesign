@@ -62,6 +62,10 @@
     padding: $margin/2 $margin;
   }
 
+  .songController span {
+    cursor: pointer;
+  }
+
   .random {
     color: var(--main-color);
   }
@@ -118,6 +122,7 @@
     margin: 0 $margin;
     background-color: $light-gray;
     transition: width 0.1s ease-in-out;
+    cursor: pointer;
 
     .innerProgress {
       background-color: var(--main-color);
