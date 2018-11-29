@@ -3,7 +3,7 @@
 .progressBar {
   --main-color: #{$gold};
 
-  width: 100%; height: 15px;
+  width: 100%;
   background-color: $light-gray;
   border-radius: 13px;
   padding: $margin;
@@ -45,6 +45,11 @@
       border-bottom-left-radius: 20px;
       overflow: hidden;
     }
+  }
+
+  #progressText {
+    @include centered();
+    color: white;
   }
 
   &.blue {

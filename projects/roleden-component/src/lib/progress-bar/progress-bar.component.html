@@ -1,3 +1,5 @@
-<div class="progressBar {{color}}">
-  <span class="progression" [style.width.%]="width"></span>
+<div class="progressBar {{color}}" [style.height.px]="height">
+  <span class="progression" [style.width.%]="width">
+    <span *ngIf="display" id="progressText">{{width}}%</span>
+  </span>
 </div>
