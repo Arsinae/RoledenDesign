@@ -127,8 +127,7 @@
 
   .playlistMenu {
     position: absolute;
-    top: 0; left: 0;
-    transform: translateX(-50%);
+    top: 0; right: 0;
     box-shadow: $shadow;
     display: none;
     background-color: white;

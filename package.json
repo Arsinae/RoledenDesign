@@ -27,6 +27,7 @@
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
     "express": "^4.16.3",
+    "howler": "^2.0.15",
     "path": "^0.12.7",
     "roleden-component": "^1.0.0",
     "rxjs": "^6.0.0",

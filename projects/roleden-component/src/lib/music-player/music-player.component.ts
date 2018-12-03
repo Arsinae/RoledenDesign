@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ChangeDetectorRef, OnChanges } from '@angular/core';
 import { MusicElementDirective } from './music-element.directive';
+import { Howl } from 'howler';
 
 @Component({
   selector: 'rd-music-player',
@@ -20,7 +21,9 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   public cursor = 0;
 
   public YT: any;
-  public player: any;
+  public player: any = null;
+
+  public sound: Howl = null;
 
   public state = 'pause';
   public timeMax = 0;
@@ -42,6 +45,8 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
         this.localPlaylist = this.playlist.slice();
         if (this.currentSongType() === 'youTube') {
           this.initYoutubeVideo(this.localPlaylist[this.cursor]);
+        } else {
+          this.initFreesoundAudio(this.localPlaylist[this.cursor], false);
         }
       }
     };
@@ -74,6 +79,7 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
 
   onPlayerReady(event) {
     this.player.setVolume(this.volume);
+    this.player.playVideo();
   }
 
   onPlayerStateChange(event) {
@@ -82,7 +88,7 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
       this.state = 'play';
       this.currentTime = Math.round(this.player.getCurrentTime());
       this.changesDetector.detectChanges();
-      this.moveSeekYoutube();
+      this.moveSeek();
     } else if (event.data === this.YT.PlayerState.ENDED) {
       this.state = 'ended';
       this.changeSong(1);
@@ -94,6 +100,30 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
 
   onPlayerError(event) {
     console.log('error', event);
+  }
+
+  initFreesoundAudio(audio, autoplay) {
+    this.sound = new Howl({
+      src: [audio.url],
+      volume: this.volume / 100,
+      onload: () => {
+        this.timeMax = this.sound.duration();
+        if (autoplay) {
+          this.sound.play();
+        }
+      },
+      onplay: () => {
+        this.timeMax = Math.round(this.sound.duration());
+        this.state = 'play';
+        this.currentTime = Math.round(this.sound.seek());
+        this.changesDetector.detectChanges();
+        this.moveSeek();
+      },
+      onend: () => {
+        this.state = 'ended';
+        this.changeSong(1);
+      }
+    });
   }
 
   getSongName(index) {
@@ -108,13 +138,25 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
       } else {
         this.player.playVideo();
       }
+    } else {
+      if (!this.sound.playing()) {
+        this.sound.play();
+        this.state = 'play';
+      } else {
+        this.sound.pause();
+        this.state = 'pause';
+      }
     }
   }
 
-  moveSeekYoutube() {
+  moveSeek() {
     const timeInterval = setInterval(() => {
       if (this.state === 'play') {
-        this.currentTime = Math.round(this.player.getCurrentTime());
+        if (this.currentSongType() === 'youTube') {
+          this.currentTime = Math.round(this.player.getCurrentTime());
+        } else {
+          this.currentTime = Math.round(this.sound.seek());
+        }
         this.changesDetector.detectChanges();
       } else {
         clearInterval(timeInterval);
@@ -129,6 +171,8 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
       this.currentTime = second;
       if (this.currentSongType() === 'youTube') {
         this.player.seekTo(second, true);
+      } else {
+        this.sound.seek(second);
       }
       this.changesDetector.detectChanges();
     }
@@ -137,8 +181,22 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   changeSong(index) {
     this.cursor += index;
     this.cursor = (this.cursor >= this.localPlaylist.length) ? (0) : (this.cursor < 0) ? (this.localPlaylist.length - 1) : (this.cursor);
+    this.currentTime = null;
+    this.timeMax = null;
+    if (this.player) {
+      this.player.pauseVideo();
+    }
+    if (this.sound) {
+      this.sound.pause();
+    }
     if (this.currentSongType() === 'youTube') {
-      this.player.loadVideoById(this.localPlaylist[this.cursor].url);
+      if (this.player) {
+        this.player.loadVideoById(this.localPlaylist[this.cursor].url);
+      } else {
+        this.initYoutubeVideo(this.localPlaylist[this.cursor]);
+      }
+    } else {
+      this.initFreesoundAudio(this.localPlaylist[this.cursor], true);
     }
   }
 
@@ -165,7 +223,12 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   }
 
   changeVolume() {
-    this.player.setVolume(this.volume);
+    if (this.player) {
+      this.player.setVolume(this.volume);
+    }
+    if (this.sound) {
+      this.sound.volume(this.volume / 100);
+    }
   }
 
   showPlaylist(event) {
@@ -185,7 +248,11 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   }
 
   displayTime(time) {
-    const second = time % 60 < 10 ? '0' + time % 60 : time % 60;
-    return (Math.floor(time / 60) + ':' + second);
+    if (time) {
+      const second = time % 60 < 10 ? '0' + time % 60 : time % 60;
+      return (Math.floor(time / 60) + ':' + second);
+    } else {
+      return '0:00';
+    }
   }
 }
