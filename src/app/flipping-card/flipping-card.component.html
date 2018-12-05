@@ -1,0 +1,73 @@
+<div class="titlePart">
+  <span>Flipping Card</span>
+</div>
+
+<div class="cardContainer">
+  <div class="card">
+    <rd-flipping-card>
+      <div front>
+        <div class="firstFront cardContent">
+          <span>Arrakis</span>
+        </div>
+      </div>
+      <div back>
+        <div class="firstBack cardContent">
+
+        </div>
+      </div>
+    </rd-flipping-card>
+  </div>
+
+  <div class="card">
+    <rd-flipping-card [rounded]="true">
+        <div front>AAAAA</div>
+        <div back>BBBBB</div>
+    </rd-flipping-card>
+  </div>
+
+  <div class="card">
+    <rd-flipping-card [bounce]="true">
+        <div class="front" front>AAAAA</div>
+        <div class="back" back>BBBBB</div>
+    </rd-flipping-card>
+  </div>
+</div>
+
+<div class="explanation">
+  <app-explanation>
+    <div class="titlePart">
+      <span>HTML Tag</span>
+    </div>
+
+    <div><b>rd-flipping-card</b></div>
+
+    <div class="titlePart">
+      <span>Parameters:</span>
+    </div>
+
+    <div class="option">
+      <table>
+        <tr>
+          <td>Content front</td>
+          <td>Front page of the card</td>
+        </tr>
+        <tr>
+          <td>Content back</td>
+          <td>Back page of the card</td>
+        </tr>
+        <tr>
+          <td>@Input() rounded: Boolean</td>
+          <td>Round the corner of the card, false by default</td>
+        </tr>
+        <tr>
+          <td>@Input() bounce: Boolean</td>
+          <td>Give a bounce animation on flip, false by default</td>
+        </tr>
+        <tr>
+          <td>@Input() height: Number</td>
+          <td>Height of the card</td>
+        </tr>
+      </table>
+    </div>
+  </app-explanation>
+</div>

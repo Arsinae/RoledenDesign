@@ -1,0 +1,52 @@
+@import "../style/variables";
+
+.cardContainer {
+  width: 100%;
+}
+
+.flipCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  transition-duration: .8s;
+  transition-property: transform;
+
+  &.flipped {
+    transform: rotateY(-180deg);
+  }
+
+  &.bounce {
+    transition-timing-function: cubic-bezier(.1, 0.6, 0.4, 1.2);
+  }
+
+  &.rounded>div {
+    border-radius: $margin*2;
+  }
+
+  .front, .back {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    color: white;
+    backface-visibility: hidden;
+    box-shadow: $shadow;
+  }
+
+  .front {
+    background: $colored-red;
+  }
+
+  .back {
+    background: $colored-blue;
+    transform: rotateY(180deg);
+  }
+
+  .cardContent {
+    height: 100%;
+  }
+}

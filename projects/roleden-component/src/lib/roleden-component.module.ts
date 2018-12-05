@@ -9,6 +9,7 @@ import { ButtonComponent } from './button/button.component';
 import {MusicPlayerModule} from './music-player/music-player.module';
 import {BreadcrumbModule} from './breadcrumb/breadcrumb.module';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { FlippingCardComponent } from './flipping-card/flipping-card.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     SmallCardComponent,
     TextEditorComponent,
     ButtonComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    FlippingCardComponent
   ],
   exports: [
     DiceComponent,
@@ -31,7 +33,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     TextEditorComponent,
     ButtonComponent,
     BreadcrumbModule,
-    ProgressBarComponent
+    ProgressBarComponent,
+    FlippingCardComponent
   ]
 })
 export class RoledenComponentModule { }

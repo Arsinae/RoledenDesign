@@ -17,6 +17,7 @@ import { ButtonComponent } from './button/button.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { FlippingCardComponent } from './flipping-card/flipping-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     ButtonComponent,
     BreadcrumbComponent,
     MusicPlayerComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    FlippingCardComponent
   ],
   imports: [
     BrowserModule,

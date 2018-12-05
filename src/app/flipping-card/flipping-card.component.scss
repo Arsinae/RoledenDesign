@@ -1,0 +1,82 @@
+@import "../../style/variables";
+
+.titlePart {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $gold;
+  margin-bottom: 2 * $margin;
+  margin-top: 3 * $margin;
+
+  span {
+    position: relative;
+    margin-left: calc(5% + 6px);
+
+    &:after {
+      content: '';
+      width: 120%;
+      height: 2px;
+      background-color: $gold;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+    }
+  }
+}
+
+.cardContainer ,.explanation {
+  width: 80%;
+  margin: $margin 10%;
+}
+
+.cardContainer {
+  display: flex;
+
+  .card {
+    flex: 1;
+    margin: $margin;
+  }
+}
+
+.cardContent {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  padding: $margin;
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  font-size: 25px;
+
+  &:hover {
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+    transition: all 0.5s;
+  }
+}
+
+.firstFront {
+  background-image: url('https://stmed.net/sites/default/files/dune-wallpapers-29516-4438731.jpg');
+
+  span {
+    @include centered();
+    text-shadow: 8px 8px 8px #000000;
+  }
+}
+
+.option {
+
+  table, tr {
+    width: 100%;
+    padding: $margin;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  td {
+    padding: $margin;
+    width: 50%;
+  }
+}
+

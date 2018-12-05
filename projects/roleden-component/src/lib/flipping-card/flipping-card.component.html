@@ -1,0 +1,11 @@
+<div class="cardContainer" [style.height.px]="height">
+  <div class="flipCard" [class.flipped]="isFlip" [class.bounce]="bounce" [class.rounded]="rounded"
+  (click)="isFlip = !isFlip">
+    <div class="front">
+      <ng-content select="[front]"></ng-content>
+    </div>
+    <div class="back">
+      <ng-content class="back" select="[back]"></ng-content>
+    </div>
+  </div>
+</div>
