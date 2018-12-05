@@ -79,7 +79,6 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
 
   onPlayerReady(event) {
     this.player.setVolume(this.volume);
-    this.player.playVideo();
   }
 
   onPlayerStateChange(event) {
@@ -124,6 +123,10 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
         this.changeSong(1);
       }
     });
+  }
+
+  getSongImage(index) {
+    return this.localPlaylist[index].imageurl;
   }
 
   getSongName(index) {
@@ -194,6 +197,7 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
         this.player.loadVideoById(this.localPlaylist[this.cursor].url);
       } else {
         this.initYoutubeVideo(this.localPlaylist[this.cursor]);
+        this.player.playVideo();
       }
     } else {
       this.initFreesoundAudio(this.localPlaylist[this.cursor], true);
