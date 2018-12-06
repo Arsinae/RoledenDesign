@@ -1,7 +1,7 @@
 <div class="videoContainer" #videoContainer>
   <div id="ytPlayer"></div>
 </div>
-<div class="wrapper {{color}}" #playerWrapper>
+<div class="wrapper {{color}}" #playerWrapper *ngIf="playlist.length > 0">
   <div class="controlPanel">
     <div class="namePanel">
       <img [src]="getSongImage(cursor)">

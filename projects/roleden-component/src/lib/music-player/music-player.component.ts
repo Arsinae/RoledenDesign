@@ -135,19 +135,27 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
 
   changeLectureState() {
     if (this.currentSongType() === 'youTube') {
-      if (this.player.getPlayerState() === this.YT.PlayerState.PLAYING) {
-        this.player.pauseVideo();
-        this.state = 'pause';
+      if (this.player) {
+        if (this.player.getPlayerState() === this.YT.PlayerState.PLAYING) {
+          this.player.pauseVideo();
+          this.state = 'pause';
+        } else {
+          this.player.playVideo();
+        }
       } else {
-        this.player.playVideo();
+        this.initYoutubeVideo(this.localPlaylist[this.cursor]);
       }
     } else {
-      if (!this.sound.playing()) {
-        this.sound.play();
-        this.state = 'play';
+      if (this.sound) {
+        if (!this.sound.playing()) {
+          this.sound.play();
+          this.state = 'play';
+        } else {
+          this.sound.pause();
+          this.state = 'pause';
+        }
       } else {
-        this.sound.pause();
-        this.state = 'pause';
+        this.initFreesoundAudio(this.localPlaylist[this.cursor], true);
       }
     }
   }
