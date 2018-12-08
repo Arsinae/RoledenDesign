@@ -96,6 +96,10 @@
     @include centered();
     width: 80%;
   }
+
+  &:hover {
+    transform: none;
+  }
 }
 
 .secondBack {

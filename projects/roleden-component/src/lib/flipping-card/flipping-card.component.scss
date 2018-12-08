@@ -35,6 +35,7 @@
     color: white;
     backface-visibility: hidden;
     box-shadow: $shadow;
+    overflow: hidden;
   }
 
   .front {
