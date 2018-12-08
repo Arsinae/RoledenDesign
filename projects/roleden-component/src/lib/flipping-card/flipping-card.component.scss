@@ -19,7 +19,7 @@
   }
 
   &.bounce {
-    transition-timing-function: cubic-bezier(.1, 0.6, 0.4, 1.2);
+    transition-timing-function: cubic-bezier(.1, 0.6, 0.4, 1.25);
   }
 
   &.rounded>div {

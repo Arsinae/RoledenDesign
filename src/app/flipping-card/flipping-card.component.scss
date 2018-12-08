@@ -30,10 +30,14 @@
 
 .cardContainer {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
   .card {
     flex: 1;
     margin: $margin;
+    min-width: 300px;
+    max-width: 350px;
   }
 }
 
@@ -54,13 +58,48 @@
   }
 }
 
-.firstFront {
+.firstFront, .thirdFront {
+  overflow: hidden;
   background-image: url('https://stmed.net/sites/default/files/dune-wallpapers-29516-4438731.jpg');
 
   span {
     @include centered();
     text-shadow: 8px 8px 8px #000000;
   }
+}
+
+.secondFront {
+  position: relative;
+  overflow: hidden;
+  background: $gold;
+
+  img {
+    @include centered();
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.thirdFront {
+  background-image: url('https://i.pinimg.com/originals/9c/65/07/9c65071899c8c179adda73ca7ab237b6.jpg');
+}
+
+.firstBack, .secondBack, .thirdBack {
+  font-size: 20px;
+  background-color: $light-gray;
+  color: black;
+  position: relative;
+
+  span {
+    @include centered();
+    width: 80%;
+  }
+}
+
+.secondBack {
+  font-size: 13px;
 }
 
 .option {
