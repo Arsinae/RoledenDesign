@@ -1,6 +1,15 @@
-<div (click)="changeState()" *ngIf="state">
-  <ng-content></ng-content>
-</div>
-<div *ngIf="!state" (click)="changeState()">
-  Open
+<div (click)="changeState()" class="panel" [class.open]="open" >
+  <div class="panelTitle">
+    <ng-content select="[title]"></ng-content>
+
+    <span class="openIcon">
+        <span *ngIf="open"><i class="fas fa-chevron-up"></i></span>
+        <span *ngIf="!open"><i class="fas fa-chevron-down"></i></span>
+      </span>
+  </div>
+  <div class="textContainer" #textContainer>
+    <div class="content" #textContent>
+      <ng-content></ng-content>
+    </div>
+  </div>
 </div>

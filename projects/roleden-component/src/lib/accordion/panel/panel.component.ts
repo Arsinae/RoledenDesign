@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, OnChanges } from '@angular/core';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'rd-panel',
@@ -9,7 +10,10 @@ export class PanelComponent implements OnInit {
 
   @Output() stateChange = new EventEmitter<any>();
 
-  state = false;
+  @ViewChild('textContainer') textContainer;
+  @ViewChild('textContent') textContent;
+
+  open = false;
 
   constructor() { }
 
@@ -17,8 +21,17 @@ export class PanelComponent implements OnInit {
   }
 
   changeState() {
-    this.state = !this.state;
-    this.stateChange.emit(this.state);
+    this.open = !this.open;
+    this.stateChange.emit(this.open);
+    this.changeTextContainerSize();
+  }
+
+  changeTextContainerSize() {
+    if (this.open) {
+      this.textContainer.nativeElement.style.height = this.textContent.nativeElement.clientHeight + 'px';
+    } else {
+      this.textContainer.nativeElement.style.height = '0px';
+    }
   }
 
 }

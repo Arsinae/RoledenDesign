@@ -1,0 +1,31 @@
+@import "../../style/variables";
+
+.panel {
+  width: 100%;
+  box-shadow: $small-shadow;
+  padding: $margin;
+
+  &.open {
+    box-shadow: $shadow;
+    margin: 2*$margin 0;
+
+    .panelTitle {
+      padding-bottom: $margin;
+    }
+  }
+
+  .panelTitle {
+    display: flex;
+    justify-content: space-between;
+
+    .openIcon {
+      padding-right: $margin;
+    }
+  }
+
+  .textContainer {
+    overflow: hidden;
+    transition: height 0.2s ease-in;
+    height: 0;
+  }
+}
