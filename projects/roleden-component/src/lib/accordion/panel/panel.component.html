@@ -1,0 +1,6 @@
+<div (click)="changeState()" *ngIf="state">
+  <ng-content></ng-content>
+</div>
+<div *ngIf="!state" (click)="changeState()">
+  Open
+</div>

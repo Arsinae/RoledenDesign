@@ -10,6 +10,7 @@ import {MusicPlayerModule} from './music-player/music-player.module';
 import {BreadcrumbModule} from './breadcrumb/breadcrumb.module';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FlippingCardComponent } from './flipping-card/flipping-card.component';
+import { AccordionModule } from './accordion/accordion.module';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { FlippingCardComponent } from './flipping-card/flipping-card.component';
     ButtonComponent,
     BreadcrumbModule,
     ProgressBarComponent,
-    FlippingCardComponent
+    FlippingCardComponent,
+    AccordionModule
   ]
 })
 export class RoledenComponentModule { }
