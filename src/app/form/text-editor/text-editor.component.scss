@@ -1,4 +1,4 @@
-@import "../../style/variables";
+@import "../../../style/variables";
 
 .titlePart {
   text-transform: uppercase;
@@ -23,7 +23,12 @@
   }
 }
 
-.breadcrumb ,.explanation {
+.editorContainer {
+  width: 80%;
+  margin: $margin auto;
+}
+
+.explanation {
   width: 80%;
   margin: $margin 10%;
 }
@@ -44,4 +49,3 @@
     width: 50%;
   }
 }
-

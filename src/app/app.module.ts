@@ -1,45 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { LoginComponent } from './login/login.component';
 import {MatDialogModule, MatInputModule} from '@angular/material';
+import { RoledenComponentModule } from './../../projects/roleden-component/src/lib/roleden-component.module';
+
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import {ListModule} from './list/list.module';
-import { TextEditorComponent } from './text-editor/text-editor.component';
-import {ExplanationModule} from './explanation/explanation.module';
-import { DiceComponent } from './dice/dice.component';
-import {RoledenComponentModule} from '../../projects/roleden-component/src/lib/roleden-component.module';
-import { SmallCardComponent } from './small-card/small-card.component';
-import { ButtonComponent } from './button/button.component';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
-import { MusicPlayerComponent } from './music-player/music-player.component';
-import { ProgressBarComponent } from './progress-bar/progress-bar.component';
-import { FlippingCardComponent } from './flipping-card/flipping-card.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { FormModule } from './form/form.module';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SidebarComponent,
-    TextEditorComponent,
-    DiceComponent,
-    SmallCardComponent,
-    ButtonComponent,
-    BreadcrumbComponent,
-    MusicPlayerComponent,
-    ProgressBarComponent,
-    FlippingCardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    ListModule,
-    ExplanationModule,
+    AppRoutingModule,
+    FormModule,
+    ComponentsModule,
     MatDialogModule,
     MatInputModule,
     RoledenComponentModule

@@ -1,4 +1,4 @@
-@import "../../style/variables";
+@import "../../../style/variables";
 
 .titlePart {
   text-transform: uppercase;
@@ -23,25 +23,18 @@
   }
 }
 
-.elementList {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  overflow-y: auto;
+.buttonContainer, .explanation {
   width: 80%;
   margin: $margin 10%;
-
-  .cardList {
-    font-size: 20px;
-    cursor: pointer;
-    position: relative;
-    box-sizing: border-box;
-  }
 }
 
-.explanation {
-  width: 80%;
-  margin: $margin 10%;
+.buttonContainer {
+  display: flex;
+
+  * {
+    width: 30%;
+    margin: 2% 1.5%;
+  }
 }
 
 .option {
@@ -58,29 +51,6 @@
   td {
     padding: $margin;
     width: 50%;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .cardList {
-    width: 30%;
-    margin: $margin (10% / 6);
-  }
-}
-
-
-@media screen and (max-width: 992px) {
-  .cardList {
-    width: 45%;
-    margin: $margin 2.5%;
-  }
-}
-
-
-@media screen and (max-width: 650px) {
-  .cardList {
-    width: 90%;
-    margin: $margin 5%;
   }
 }
 

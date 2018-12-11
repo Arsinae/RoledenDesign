@@ -1,4 +1,4 @@
-@import "../../style/variables";
+@import "../../../style/variables";
 
 .titlePart {
   text-transform: uppercase;
@@ -23,13 +23,9 @@
   }
 }
 
-.progressBar ,.explanation {
+.breadcrumb ,.explanation {
   width: 80%;
   margin: $margin 10%;
-}
-
-.progressBar>* {
-  margin: $margin;
 }
 
 .option {

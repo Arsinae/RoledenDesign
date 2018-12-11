@@ -1,4 +1,4 @@
-@import "../../style/variables";
+@import "../../../style/variables";
 
 .titlePart {
   text-transform: uppercase;
@@ -23,18 +23,13 @@
   }
 }
 
-.buttonContainer, .explanation {
+.progressBar ,.explanation {
   width: 80%;
   margin: $margin 10%;
 }
 
-.buttonContainer {
-  display: flex;
-
-  * {
-    width: 30%;
-    margin: 2% 1.5%;
-  }
+.progressBar>* {
+  margin: $margin;
 }
 
 .option {

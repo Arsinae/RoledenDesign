@@ -1,4 +1,4 @@
-@import "../../style/variables";
+@import "../../../style/variables";
 
 .titlePart {
   text-transform: uppercase;
@@ -23,7 +23,23 @@
   }
 }
 
-.listContainer, .explanation {
+.elementList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow-y: auto;
+  width: 80%;
+  margin: $margin 10%;
+
+  .cardList {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+  }
+}
+
+.explanation {
   width: 80%;
   margin: $margin 10%;
 }
