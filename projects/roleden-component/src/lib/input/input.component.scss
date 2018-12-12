@@ -1,0 +1,59 @@
+@import "../style/variables";
+
+.inputContainer {
+  position: relative;
+  margin-top: 20px;
+  --main-color: #{$gold};
+
+  .placeholder {
+    position: absolute;
+    transition: all 0.2s ease-in;
+    z-index: 0;
+
+    &.focus {
+      font-size: 12px;
+      transform: translateY(-100%);
+      color: var(--main-color);
+    }
+  }
+
+  .input {
+    border: none;
+    border-bottom: 1px $grey solid;
+    width: 100%;
+    z-index: 1;
+
+    &:focus {
+      border-bottom-width: 2px;
+      border-bottom-color: var(--main-color);
+    }
+  }
+
+  &.black {
+    --main-color: black;
+  }
+
+  &.green {
+    --main-color: #{$colored-green};
+  }
+
+  &.blue {
+    --main-color: #{$colored-blue};
+  }
+
+  &.blue-light {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.red {
+    --main-color: #{$colored-red};
+  }
+
+  &.purple {
+    --main-color: #{$colored-purple};
+  }
+
+  &.orange {
+    --main-color: #{$colored-orange};
+  }
+}

@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormComponent } from './form.component';
 import { RoledenComponentModule } from 'projects/roleden-component/src/lib/roleden-component.module';
+import { InputComponent } from './input/input.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { RoledenComponentModule } from 'projects/roleden-component/src/lib/roled
   declarations: [
     FormComponent,
     ButtonComponent,
-    TextEditorComponent
+    TextEditorComponent,
+    InputComponent
   ],
   exports: [FormComponent]
 })
