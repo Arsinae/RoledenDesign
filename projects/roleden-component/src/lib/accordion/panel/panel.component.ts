@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, ViewChild, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, OnChanges } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
@@ -7,6 +7,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   styleUrls: ['./panel.component.scss']
 })
 export class PanelComponent implements OnInit {
+
+  @Input() color = 'black';
 
   @Output() stateChange = new EventEmitter<any>();
 

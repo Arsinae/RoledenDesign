@@ -4,13 +4,24 @@
 
 <div class="accordion">
   <rd-accordion>
-    <rd-panel>
-      <div title>Title</div>
-      A
+    <rd-panel [color]="'red'">
+      <div class="panelTitle" title>House Atréides</div>
+      One of the Great Houses of the feudal interstellar empire known as the Padishah Empire (often referred to as the Imperium),
+      its members play a role in every novel in the series. It is suggested within the series that the root of the Atreides line is
+      the mythological Greek House of Atreus. In Homer's Iliad, the brothers Agamemnon and Menelaus are dubbed "the Atreides", meaning
+      "the sons of Atreus".
     </rd-panel>
-    <rd-panel>
-      <div title>Title</div>
-      B
+    <rd-panel [color]="'blue'">
+      <div class="panelTitle" title>House Harkonnen</div>
+      The Harkonnens are featured prominently in the original 1965 novel Dune, and are also a major presence in both the Prelude to Dune
+      (1999-2001) and Legends of Dune (2002-2004) prequel trilogies by Brian Herbert and Kevin J. Anderson. The Harkonnen bloodline itself
+      extends throughout all of the original Dune novels.
+    </rd-panel>
+    <rd-panel [color]="'gold'">
+      <div class="panelTitle" title>House Corrino</div>
+      Imperial House Corrino is a fictional noble family from the Dune universe created by Frank Herbert. The Corrinos come to power after
+      humanity's victory against the thinking machines at the Battle of Corrin (from which they take their name), and rule until deposed
+      by Paul Atreides approximately 10,000 years later during the events of the novel Dune.
     </rd-panel>
   </rd-accordion>
 </div>
@@ -32,18 +43,36 @@
     <div class="option">
       <table>
         <tr>
-          <td>@Input() data: Array&lt;BreadcrumbElementDirective&gt;</td>
-          <td>[ ](default)</td>
-        </tr>
-        <tr>
-          <td>@Input() color: string</td>
-          <td>gold(default), green, red, blue, blue-light, purple, orange, black</td>
-        </tr>
-        <tr>
-          <td>@Output() fileSelect</td>
-          <td>Event emitted by clicking on the button</td>
+          <td>Content &lt;rd-panel&gt;</td>
+          <td>The panels inside the accordions</td>
         </tr>
       </table>
     </div>
+    <div class="titlePart">
+        <span>HTML Tag</span>
+      </div>
+
+      <div><b>rd-panel</b></div>
+
+      <div class="titlePart">
+        <span>Parameters:</span>
+      </div>
+
+      <div class="option">
+        <table>
+          <tr>
+            <td>Content title</td>
+            <td>Title of the panel</td>
+          </tr>
+          <tr>
+            <td>@Input() color: string</td>
+            <td>black(default), green, red, blue, blue-light, purple, orange, gold</td>
+          </tr>
+          <tr>
+            <td>@Output() stateChange</td>
+            <td>Event emitted when the panel is closed or opened by clicking on it</td>
+          </tr>
+        </table>
+      </div>
   </app-explanation>
 </div>

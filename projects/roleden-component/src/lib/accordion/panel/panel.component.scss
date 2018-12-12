@@ -4,6 +4,7 @@
   width: 100%;
   box-shadow: $small-shadow;
   padding: $margin;
+  --main-color: black;
 
   &.open {
     box-shadow: $shadow;
@@ -17,6 +18,9 @@
   .panelTitle {
     display: flex;
     justify-content: space-between;
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 17px;
 
     .openIcon {
       padding-right: $margin;
@@ -27,5 +31,34 @@
     overflow: hidden;
     transition: height 0.2s ease-in;
     height: 0;
+    padding-right: 30px;
+  }
+
+  &.gold {
+    --main-color: #{$gold};
+  }
+
+  &.green {
+    --main-color: #{$colored-green};
+  }
+
+  &.blue {
+    --main-color: #{$colored-blue};
+  }
+
+  &.blue-light {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.red {
+    --main-color: #{$colored-red};
+  }
+
+  &.purple {
+    --main-color: #{$colored-purple};
+  }
+
+  &.orange {
+    --main-color: #{$colored-orange};
   }
 }

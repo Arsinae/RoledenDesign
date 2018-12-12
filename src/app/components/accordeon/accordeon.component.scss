@@ -26,6 +26,10 @@
 .accordion ,.explanation {
   width: 80%;
   margin: $margin 10%;
+
+  .panelTitle {
+    font-size: 18px;
+  }
 }
 
 .option {

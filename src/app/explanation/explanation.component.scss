@@ -11,6 +11,7 @@
     transition: max-height 0.2s ease-out;
     width: 100%;
     padding: 0 $margin $margin;
+    box-sizing: border-box;
 
     &:not(.expand) {
       overflow: hidden;
