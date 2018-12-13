@@ -1,5 +1,5 @@
 <div class="inputContainer {{color}}">
-    <span class="placeholder" [class.focus]="focus" (click)="changeFocus()">{{placeholder}}</span>
-    <input class="input" [type]="type" #input [ngModel]="value" (ngModelChange)="changeValue($event)"
+  <span class="placeholder" [class.focus]="focus" (click)="changeFocus()">{{placeholder}}</span>
+  <input class="input" [type]="type" #input [ngModel]="value" (ngModelChange)="changeValue($event)"
     (keydown)="pressKey($event)" (focus)="focusInput()" (focusout)="unfocusInput()">
 </div>
