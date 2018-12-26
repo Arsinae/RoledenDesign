@@ -13,6 +13,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FlippingCardComponent } from './flipping-card/flipping-card.component';
 import { AccordionModule } from './accordion/accordion.module';
 import { InputComponent } from './input/input.component';
+import { NotationComponent } from './notation/notation.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { InputComponent } from './input/input.component';
     ButtonComponent,
     ProgressBarComponent,
     FlippingCardComponent,
-    InputComponent
+    InputComponent,
+    NotationComponent
   ],
   exports: [
     DiceComponent,
@@ -40,7 +42,8 @@ import { InputComponent } from './input/input.component';
     ProgressBarComponent,
     FlippingCardComponent,
     AccordionModule,
-    InputComponent
+    InputComponent,
+    NotationComponent
   ]
 })
 export class RoledenComponentModule { }

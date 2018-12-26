@@ -1,0 +1,38 @@
+@import "../style/variables";
+
+.notationContainer {
+  --main-color: #{$gold};
+
+  .starSpan {
+    color: var(--main-color);
+    cursor: pointer;
+  }
+
+  &.blueStar {
+    --main-color: #{$colored-blue};
+  }
+
+  &.greenStar {
+    --main-color: #{$colored-green};
+  }
+
+  &.blue-lightStar {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.redStar {
+    --main-color: #{$colored-red};
+  }
+
+  &.purpleStar {
+    --main-color: #{$colored-purple};
+  }
+
+  &.orangeStar {
+    --main-color: #{$colored-orange};
+  }
+
+  &.blackStar {
+    --main-color: black;
+  }
+}

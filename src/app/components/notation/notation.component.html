@@ -1,0 +1,51 @@
+<div class="titlePart">
+    <span>Notation</span>
+  </div>
+
+  <div class="notationContainer">
+    <rd-notation></rd-notation>
+    <rd-notation [color]="'red'" [number]="6"></rd-notation>
+    <rd-notation [color]="'blue'" [number]="10" [(value)]="value" [size]="25"></rd-notation>
+    <span>Note: {{value}}/10</span>
+  </div>
+
+
+  <div class="explanation">
+    <app-explanation>
+      <div class="titlePart">
+        <span>HTML Tag</span>
+      </div>
+
+      <div><b>rd-notation</b></div>
+
+      <div class="titlePart">
+        <span>Parameters:</span>
+      </div>
+
+      <div class="option">
+        <table>
+          <tr>
+            <td>@Input() number: Integer</td>
+            <td>Maximum value of the notation; 5 by default</td>
+          </tr>
+          <tr>
+            <td>@Input() value: Integer</td>
+            <td>Value of the notation; 0 by default</td>
+          </tr>
+          <tr>
+            <td>@Input() size: Integer</td>
+            <td>Size of the stars; 20 by default</td>
+          </tr>
+          <tr>
+            <td>@Input() color: String</td>
+            <td>gold(default), green, red, blue, blue-light purple, orange, black</td>
+          </tr>
+          <tr>
+            <td>@Output() valueChange</td>
+            <td>Event emitted by clicking on a star; Get the value of the notation</td>
+          </tr>
+        </table>
+      </div>
+
+    </app-explanation>
+  </div>

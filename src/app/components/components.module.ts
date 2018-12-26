@@ -12,6 +12,7 @@ import { SmallCardComponent } from './small-card/small-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { RoledenComponentModule } from 'projects/roleden-component/src/lib/roleden-component.module';
 import { AccordeonComponent } from './accordeon/accordeon.component';
+import { NotationComponent } from './notation/notation.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { AccordeonComponent } from './accordeon/accordeon.component';
     MusicPlayerComponent,
     ProgressBarComponent,
     SmallCardComponent,
-    AccordeonComponent
+    AccordeonComponent,
+    NotationComponent
   ],
   exports: [
     ComponentsComponent
