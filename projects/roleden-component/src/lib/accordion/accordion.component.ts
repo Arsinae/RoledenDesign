@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChildren, AfterViewInit, QueryList } from '@angular/core';
+import { Component, OnInit, ContentChildren, AfterViewInit, QueryList, Input } from '@angular/core';
 import { PanelComponent } from './panel/panel.component';
 
 @Component({
@@ -7,6 +7,8 @@ import { PanelComponent } from './panel/panel.component';
   styleUrls: ['./accordion.component.scss']
 })
 export class AccordionComponent implements OnInit, AfterViewInit {
+
+  @Input() autoClose = true;
 
   @ContentChildren(PanelComponent) panels: QueryList<PanelComponent>;
 
@@ -26,12 +28,14 @@ export class AccordionComponent implements OnInit, AfterViewInit {
   }
 
   closePanel(current) {
-    this.panels.forEach(panel => {
-      if (panel !== current) {
-        panel.open = false;
-        panel.changeTextContainerSize();
-      }
-    });
+    if (this.autoClose) {
+      this.panels.forEach(panel => {
+        if (panel !== current) {
+          panel.open = false;
+          panel.changeTextContainerSize();
+        }
+      });
+    }
   }
 
 }

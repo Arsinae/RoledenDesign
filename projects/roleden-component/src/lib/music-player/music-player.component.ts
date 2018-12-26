@@ -20,7 +20,6 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   public localPlaylist: Array<MusicElementDirective> = [];
   public cursor = 0;
 
-  public YT: any;
   public player: any = null;
 
   public sound: Howl = null;
@@ -40,7 +39,6 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     window['onYouTubeIframeAPIReady'] = (e) => {
-      this.YT = window['YT'];
       if (this.playlist.length > 0) {
         this.localPlaylist = this.playlist.slice();
         if (this.currentSongType() === 'youTube') {
@@ -82,13 +80,13 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   }
 
   onPlayerStateChange(event) {
-    if (event.data === this.YT.PlayerState.PLAYING) {
+    if (event.data === window['YT'].PlayerState.PLAYING) {
       this.timeMax = Math.round(this.player.getDuration());
       this.state = 'play';
       this.currentTime = Math.round(this.player.getCurrentTime());
       this.changesDetector.detectChanges();
       this.moveSeek();
-    } else if (event.data === this.YT.PlayerState.ENDED) {
+    } else if (event.data === window['YT'].PlayerState.ENDED) {
       this.state = 'ended';
       this.changeSong(1);
     } else {
@@ -136,7 +134,7 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   changeLectureState() {
     if (this.currentSongType() === 'youTube') {
       if (this.player) {
-        if (this.player.getPlayerState() === this.YT.PlayerState.PLAYING) {
+        if (this.player.getPlayerState() === window['YT'].PlayerState.PLAYING) {
           this.player.pauseVideo();
           this.state = 'pause';
         } else {
