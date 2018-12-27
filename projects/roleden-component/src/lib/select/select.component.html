@@ -1,9 +1,8 @@
 <div class="selectContainer" [class.open]="open">
-  <div class="selectValue" (click)="open = !open">
-    {{value || 'Select'}}
+  <div class="selectValue" (click)="open = true">
+    {{text || 'Select'}}
   </div>
-  <div class="selectMenu" (click)="open = !open">
+  <div class="selectMenu" (click)="open = false">
     <ng-content></ng-content>
-    <span>AAA</span>
   </div>
 </div>

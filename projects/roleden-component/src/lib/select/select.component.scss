@@ -15,6 +15,7 @@
     background-color: white;
     box-shadow: $shadow;
     min-width: calc(100% - 12px);
+    padding: $margin 0;
   }
 
   &:not(.open)>.selectMenu {

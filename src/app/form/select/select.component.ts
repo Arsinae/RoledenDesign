@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectComponent implements OnInit {
 
+  public character = 'paul';
+
   constructor() { }
 
   ngOnInit() {

@@ -26,6 +26,14 @@
 .selectContainer {
   width: 80%;
   margin: $margin auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  &>* {
+    min-width: 200px;
+    flex: 1;
+    padding: 0 $margin;
+  }
 }
 
 .explanation {

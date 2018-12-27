@@ -1,11 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'rd-select-option',
   templateUrl: './select-option.component.html',
-  styleUrls: ['./select-option.component.css']
+  styleUrls: ['./select-option.component.scss']
 })
 export class SelectOptionComponent implements OnInit {
+
+  @Input() value = '';
+  @Input() text = '';
+
+  @Output() valueSelected: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
