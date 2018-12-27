@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormComponent } from './form.component';
 import { RoledenComponentModule } from 'projects/roleden-component/src/lib/roleden-component.module';
 import { InputComponent } from './input/input.component';
+import { SelectComponent } from './select/select.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { InputComponent } from './input/input.component';
     FormComponent,
     ButtonComponent,
     TextEditorComponent,
-    InputComponent
+    InputComponent,
+    SelectComponent
   ],
   exports: [FormComponent]
 })

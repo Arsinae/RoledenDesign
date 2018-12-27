@@ -1,5 +1,5 @@
-<div (click)="changeState()" class="panel {{color}}" [class.open]="open">
-  <div class="panelTitle">
+<div class="panel {{color}}" [class.open]="open">
+  <div class="panelTitle" (click)="changeState()">
     <ng-content select="[title]"></ng-content>
 
     <span class="openIcon">

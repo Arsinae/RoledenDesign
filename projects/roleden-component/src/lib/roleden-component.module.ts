@@ -14,6 +14,7 @@ import { FlippingCardComponent } from './flipping-card/flipping-card.component';
 import { AccordionModule } from './accordion/accordion.module';
 import { InputComponent } from './input/input.component';
 import { NotationComponent } from './notation/notation.component';
+import { SelectModule } from './select/select.module';
 
 @NgModule({
   imports: [
@@ -43,7 +44,8 @@ import { NotationComponent } from './notation/notation.component';
     FlippingCardComponent,
     AccordionModule,
     InputComponent,
-    NotationComponent
+    NotationComponent,
+    SelectModule
   ]
 })
 export class RoledenComponentModule { }

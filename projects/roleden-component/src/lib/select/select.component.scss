@@ -1,0 +1,23 @@
+@import "../style/variables";
+
+.selectContainer {
+  width: 100%;
+  position: relative;
+
+  .selectValue {
+    border-bottom: 1px $grey solid;
+  }
+
+  .selectMenu {
+    position: absolute;
+    top: 0;
+    left: $margin;
+    background-color: white;
+    box-shadow: $shadow;
+    min-width: calc(100% - 12px);
+  }
+
+  &:not(.open)>.selectMenu {
+    display: none;
+  }
+}
