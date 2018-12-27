@@ -10,6 +10,7 @@ export class SelectComponent implements OnInit, AfterViewInit, OnChanges {
 
   @Input() value = '';
   @Input() placeholder = '';
+  @Input() color = 'gold';
 
   @Output() valueChange: EventEmitter<any> = new EventEmitter<any>();
 

@@ -3,9 +3,31 @@
 .selectContainer {
   width: 100%;
   position: relative;
+  --main-color : #{$gold};
 
   .selectValue {
-    border-bottom: 1px $grey solid;
+    position: relative;
+    margin-top: 20px;
+    border-bottom: 1px var(--main-color) solid;
+    font-size: 16px;
+    height: 20px;
+
+    .placeholder {
+      position: absolute;
+      transition: all 0.2s ease-in;
+      z-index: 0;
+
+      &.focus {
+        font-size: 12px;
+        transform: translateY(-100%);
+        color: var(--main-color);
+      }
+    }
+
+    .input {
+      z-index: 1;
+      height: 100%;
+    }
   }
 
   .selectMenu {
@@ -20,5 +42,33 @@
 
   &:not(.open)>.selectMenu {
     display: none;
+  }
+
+  &.blackSelect {
+    --main-color: black;
+  }
+
+  &.greenSelect {
+    --main-color: #{$colored-green};
+  }
+
+  &.blueSelect {
+    --main-color: #{$colored-blue};
+  }
+
+  &.blue-lightSelect {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.redSelect {
+    --main-color: #{$colored-red};
+  }
+
+  &.purpleSelect {
+    --main-color: #{$colored-purple};
+  }
+
+  &.orangeSelect {
+    --main-color: #{$colored-orange};
   }
 }
