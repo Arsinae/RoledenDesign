@@ -34,6 +34,15 @@
     flex: 1;
     padding: 0 $margin;
   }
+
+  .option {
+    border-bottom: 1px $light-gray solid;
+    padding: $margin $margin/2;
+
+    &.last {
+      border: none;
+    }
+  }
 }
 
 .explanation {
