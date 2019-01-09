@@ -11,30 +11,31 @@
   </div>
   <ng-template #list>
     <div class="listContainer">
-    <div *ngIf="sort" class="sortHeader">
-      <div class="sortName" (click)="changeSort()">
-        <b>Name</b>
-        <span *ngIf="sortType === 'nameAsc'" class="sortArrow"><i class="fas fa-arrow-up"></i></span>
-        <span *ngIf="sortType === 'nameDesc'" class="sortArrow"><i class="fas fa-arrow-down"></i></span>
-      </div>
-      <div class="sortAuthor">
-        <b>Author</b>
-      </div>
-    </div>
-    <ng-container *ngFor="let elem of currentList; let i = index">
-      <ng-container *ngIf="i !== 0">
-        <div class="limiter"></div>
-      </ng-container>
-
-      <div class="elemListContent {{elem.color}}List" (click)="selectFile(elem)">
-        <div class="elemListName">
-          <span class="elemListIcon"><i [class]="elem.icon"></i></span>
-          <div class="elemListTitle">{{elem.title}}</div>
+      <div *ngIf="sort" class="sortHeader" [style.font-size.px]="size + 1">
+        <div class="sortName" (click)="changeSort()">
+          <b>Name</b>
+          <span *ngIf="sortType === 'nameAsc'" class="sortArrow"><i class="fas fa-arrow-up"></i></span>
+          <span *ngIf="sortType === 'nameDesc'" class="sortArrow"><i class="fas fa-arrow-down"></i></span>
         </div>
-        <div class="elemListAuthor">{{elem.author}}</div>
+        <div class="sortAuthor">
+          <b>Author</b>
+        </div>
       </div>
 
-    </ng-container>
+      <ng-container *ngFor="let elem of currentList; let i = index">
+        <ng-container *ngIf="i !== 0">
+          <div class="limiter"></div>
+        </ng-container>
+
+        <div class="elemListContent {{elem.color}}List" (click)="selectFile(elem)" [style.font-size.px]="size">
+          <div class="elemListName">
+            <span class="elemListIcon"><i [class]="elem.icon"></i></span>
+            <div class="elemListTitle">{{elem.title}}</div>
+          </div>
+          <div class="elemListAuthor">{{elem.author}}</div>
+        </div>
+
+      </ng-container>
     </div>
   </ng-template>
 </div>

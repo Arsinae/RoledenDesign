@@ -30,7 +30,6 @@
   padding: $margin;
   display: flex;
   box-sizing: border-box;
-  font-size: 17px;
 
   .sortName {
     width: 60%;
@@ -58,13 +57,10 @@
   --main-color: #{$gold};
 
   * {
-    // padding: 0 $margin;
     padding: 0 1px;
-    font-size: 20px;
   }
 
   .elemListIcon, .elemListTitle, .elemListAuthor {
-    font-size: 17px;
     overflow: hidden;
     text-overflow: ellipsis;
   }

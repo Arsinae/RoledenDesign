@@ -11,6 +11,7 @@ export class ListComponent implements OnInit {
   @Input() data: Array<ListElementDirective> = [];
   @Input() search = false;
   @Input() sort = false;
+  @Input() size = 16;
 
   @Output() fileSelect: EventEmitter<any> = new EventEmitter();
 
@@ -26,7 +27,8 @@ export class ListComponent implements OnInit {
     let list: Array<ListElementDirective> = [];
     if (this.search) {
       for (const elem of this.data) {
-        if (elem.title.toLowerCase().match(this.searchText.toLowerCase())) {
+        if (elem.title.toLowerCase().match(this.searchText.toLowerCase()) ||
+          elem.author.toLowerCase().match(this.searchText.toLowerCase())) {
           list.push(elem);
         }
       }
