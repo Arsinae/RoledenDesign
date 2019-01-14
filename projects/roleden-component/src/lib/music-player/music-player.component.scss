@@ -14,31 +14,31 @@
     margin: $margin;
   }
 
-  &.blue-light {
+  &.blue-lightPlaylist {
     --main-color: #{$colored-blue-light};
   }
 
-  &.blue {
+  &.bluePlaylist {
     --main-color: #{$colored-blue};
   }
 
-  &.green {
+  &.greenPlaylist {
     --main-color: #{$colored-green};
   }
 
-  &.purple {
+  &.purplePlaylist {
     --main-color: #{$colored-purple};
   }
 
-  &.red {
+  &.redPlaylist {
     --main-color: #{$colored-red};
   }
 
-  &.orange {
+  &.orangePlaylist {
     --main-color: #{$colored-orange};
   }
 
-  &.black {
+  &.blackPlaylist {
     --main-color: black;
   }
 }

@@ -32,31 +32,31 @@
     }
   }
 
-  &.black {
+  &.blackInput {
     --main-color: black;
   }
 
-  &.green {
+  &.greenInput {
     --main-color: #{$colored-green};
   }
 
-  &.blue {
+  &.blueInput {
     --main-color: #{$colored-blue};
   }
 
-  &.blue-light {
+  &.blue-lightInput {
     --main-color: #{$colored-blue-light};
   }
 
-  &.red {
+  &.redInput {
     --main-color: #{$colored-red};
   }
 
-  &.purple {
+  &.purpleInput {
     --main-color: #{$colored-purple};
   }
 
-  &.orange {
+  &.orangeInput {
     --main-color: #{$colored-orange};
   }
 }
