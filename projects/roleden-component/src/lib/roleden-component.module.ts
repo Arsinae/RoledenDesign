@@ -1,5 +1,4 @@
-import { RadioButtonModule } from './radio-button/radio-button.module';
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 
@@ -18,6 +17,9 @@ import { InputNumberComponent } from './input-number/input-number.component';
 import { NotationComponent } from './notation/notation.component';
 import { SelectModule } from './select/select.module';
 import { CheckBoxModule } from './check-box/check-box.module';
+import { RadioButtonModule } from './radio-button/radio-button.module';
+import { AlertModule } from './alert/alert.module';
+import { AlertService } from './alert/alert.service';
 
 @NgModule({
   imports: [
@@ -52,7 +54,15 @@ import { CheckBoxModule } from './check-box/check-box.module';
     NotationComponent,
     SelectModule,
     CheckBoxModule,
-    RadioButtonModule
+    RadioButtonModule,
+    AlertModule
   ]
 })
-export class RoledenComponentModule { }
+export class RoledenComponentModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: RoledenComponentModule,
+      providers: [ AlertService ]
+    };
+  }
+}

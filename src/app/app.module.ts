@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDialogModule, MatInputModule} from '@angular/material';
-import { RoledenComponentModule } from './../../projects/roleden-component/src/lib/roleden-component.module';
+import { RoledenComponentModule } from 'projects/roleden-component/src/lib/roleden-component.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -30,7 +30,7 @@ import { ComponentsModule } from './components/components.module';
     ComponentsModule,
     MatDialogModule,
     MatInputModule,
-    RoledenComponentModule
+    RoledenComponentModule.forRoot()
   ],
   entryComponents: [LoginComponent],
   providers: [],

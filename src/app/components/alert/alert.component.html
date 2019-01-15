@@ -1,0 +1,65 @@
+<div class="titlePart">
+  <span>Alert</span>
+</div>
+
+<div class="alertPanel">
+  <rd-button [color]="'red'" (buttonClick)="addDanger()">Danger</rd-button>
+  <rd-button [color]="'orange'" (buttonClick)="addWarning()">Warning</rd-button>
+  <rd-button [color]="'green'" (buttonClick)="addSuccess()">Success</rd-button>
+  <rd-button [color]="'blue'" (buttonClick)="addInfo()">Information</rd-button>
+</div>
+
+
+
+<div class="explanation">
+  <app-explanation>
+    <div class="titlePart">
+      <span>HTML Tag</span>
+    </div>
+
+    <div><b>rd-alert</b></div>
+
+    <div class="titlePart">
+      <span>Information:</span>
+    </div>
+
+    <div>
+      Add the rd-alert in the app-component.html to display alert across component.
+    </div>
+
+    <div class="titlePart">
+      <span>AlertService</span>
+    </div>
+
+    <div class="option">
+      <table>
+        <tr>
+          <td>function addAlert(alert: Alert)</td>
+          <td>Add an alert to display</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="titlePart">
+      <span>Alert</span>
+    </div>
+
+    <div class="option">
+      <table>
+        <tr>
+          <td>type</td>
+          <td>The type of the alert; danger, warning, success, info</td>
+        </tr>
+        <tr>
+          <td>title</td>
+          <td>The main title of the alert</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>The text of the alert</td>
+        </tr>
+      </table>
+    </div>
+
+  </app-explanation>
+</div>

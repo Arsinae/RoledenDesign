@@ -13,6 +13,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { RoledenComponentModule } from 'projects/roleden-component/src/lib/roleden-component.module';
 import { AccordeonComponent } from './accordeon/accordeon.component';
 import { NotationComponent } from './notation/notation.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { NotationComponent } from './notation/notation.component';
     ProgressBarComponent,
     SmallCardComponent,
     AccordeonComponent,
-    NotationComponent
+    NotationComponent,
+    AlertComponent
   ],
   exports: [
     ComponentsComponent

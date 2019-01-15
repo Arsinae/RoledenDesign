@@ -1,0 +1,46 @@
+@import "../style/variables";
+
+.alertContainer {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  width: 30%;
+
+  .alert {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    padding: $margin;
+    margin: $margin 0;
+    color: white;
+
+    .closeIcon {
+      position: absolute;
+      top: $margin; right: $margin;
+    }
+
+    .headerAlert {
+      width: 85%;
+    }
+
+    .headerAlert, .textAlert {
+      word-break: break-all;
+    }
+
+    &.dangerAlert {
+      background-color: rgba($colored-red, .7);
+    }
+
+    &.warningAlert {
+      background-color: rgba(#baba5a, .7);
+    }
+
+    &.successAlert {
+      background-color: rgba($colored-green, .7);
+    }
+
+    &.infoAlert {
+      background-color: rgba($colored-blue, .7)
+    }
+  }
+}

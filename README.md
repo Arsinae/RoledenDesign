@@ -10,12 +10,16 @@
 
 ### Release Notes
 
+#### 1.1.18
+#### News
+Add a `rd-alert` Component to the library;
+
 #### 1.1.17
 ##### News
 Add a `rd-input-number` Component to the library;
 
 ##### Corrective
-Change the position of the SelectMenu to `absolute`;
+Change the position of the SelectMenu to `absolute`;\
 Add a `disabled` property on the `rd-input`;
 
 #### 1.1.16
