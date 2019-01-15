@@ -10,17 +10,22 @@
 
 ### Release Notes
 
+#### 1.1.17
+##### Corrective
+CHange the position of the SelectMenu to `absolute`;
+
 #### 1.1.16
 ##### News
-Add a `rd-radio-button` Component to the library
+Add a `rd-radio-button` Component to the library;
 
 #### 1.1.15
 ##### News
-Add a `rd-check-box` Component to the library
+Add a `rd-check-box` Component to the library;
 
-#####Corrective
-Add `flex-wrap: wrap` on the control panel of the Music Player
+##### Corrective
+Add `flex-wrap: wrap` on the control panel of the Music Player;
 
 #### 1.1.14
 ##### Corrective
-Modify the color className for Input & Playlist
+Modify the color className for Input & Playlist;
+
