@@ -8,6 +8,7 @@ import { RoledenComponentModule } from 'projects/roleden-component/src/lib/roled
 import { InputComponent } from './input/input.component';
 import { SelectComponent } from './select/select.component';
 import { CheckBoxComponent } from './check-box/check-box.component';
+import { RadioButtonComponent } from './radio-button/radio-button.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { CheckBoxComponent } from './check-box/check-box.component';
     TextEditorComponent,
     InputComponent,
     SelectComponent,
-    CheckBoxComponent
+    CheckBoxComponent,
+    RadioButtonComponent
   ],
   exports: [FormComponent]
 })

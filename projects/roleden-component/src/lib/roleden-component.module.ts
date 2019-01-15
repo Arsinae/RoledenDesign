@@ -1,3 +1,4 @@
+import { RadioButtonModule } from './radio-button/radio-button.module';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
@@ -47,7 +48,8 @@ import { CheckBoxModule } from './check-box/check-box.module';
     InputComponent,
     NotationComponent,
     SelectModule,
-    CheckBoxModule
+    CheckBoxModule,
+    RadioButtonModule
   ]
 })
 export class RoledenComponentModule { }

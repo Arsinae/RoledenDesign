@@ -1,0 +1,67 @@
+@import "../../style/variables";
+
+.radioButtonContainer {
+  --main-color: #{$gold};
+  cursor: pointer;
+  padding: $margin/2;
+  position: relative;
+
+  &:hover {
+    color: var(--main-color);
+  }
+
+  &.line {
+    display: block;
+  }
+
+  .checkMark {
+    position: relative;
+    width: 21px; height: 21px;
+    background-color: $grey;
+    display: inline-block;
+    vertical-align: middle;
+    margin: $margin/2 $margin $margin/2 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    &:after {
+      content: '';
+      @include centered();
+      width: 12px; height: 12px;
+      border-radius: 50%;
+    }
+
+    &.checked {
+      border: 2px solid var(--main-color);
+
+      &:after {
+        background-color: var(--main-color);
+      }
+    }
+  }
+
+  &.blueRadioButton {
+    --main-color: #{$colored-blue};
+  }
+
+  &.greenRadioButton {
+    --main-color: #{$colored-green};
+  }
+
+  &.blue-lightRadioButton {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.redRadioButton {
+    --main-color: #{$colored-red};
+  }
+
+  &.purpleRadioButton {
+    --main-color: #{$colored-purple};
+  }
+
+  &.orangeRadioButton {
+    --main-color: #{$colored-orange};
+  }
+
+}
