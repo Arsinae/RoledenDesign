@@ -17,6 +17,7 @@ Add a `rd-radio-button` Component to the library
 #### 1.1.15
 ##### News
 Add a `rd-check-box` Component to the library
+
 #####Corrective
 Add `flex-wrap: wrap` on the control panel of the Music Player
 
