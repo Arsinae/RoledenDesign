@@ -1,0 +1,67 @@
+@import "../../style/variables";
+
+.checkBoxContainer {
+  --main-color: #{$gold};
+  cursor: pointer;
+  padding: $margin/2;
+  position: relative;
+
+  &:hover {
+    color: var(--main-color);
+  }
+
+  &.line {
+    display: block;
+  }
+
+  .checkMark {
+    position: relative;
+    width: 20px; height: 20px;
+    background-color: $grey;
+    display: inline-block;
+    vertical-align: middle;
+    margin: $margin/2 $margin $margin/2 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+    }
+
+    &.checked {
+      background-color: var(--main-color);
+
+      &:after {
+        width: 6px; height: 12px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        top: 2px; left: 6px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &.blueCheckBox {
+    --main-color: #{$colored-blue};
+  }
+
+  &.greenCheckBox {
+    --main-color: #{$colored-green};
+  }
+
+  &.blue-lightCheckBox {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.redCheckBox {
+    --main-color: #{$colored-red};
+  }
+
+  &.purpleCheckBox {
+    --main-color: #{$colored-purple};
+  }
+
+  &.orangeCheckBox {
+    --main-color: #{$colored-orange};
+  }
+
+}

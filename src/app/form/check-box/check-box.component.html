@@ -1,0 +1,75 @@
+<div class="titlePart">
+  <span>Checkbox</span>
+</div>
+
+<div class="checkBoxContainer">
+  <rd-check-box [(value)]="value" [color]="color">
+    <rd-check-box-option [value]="'Bene Gesserit'">Bene Gesserit</rd-check-box-option>
+    <rd-check-box-option [value]="'Bene Tleilax'">Bene Tleilax</rd-check-box-option>
+    <rd-check-box-option [value]="'Honored Matres'">Honored Matres</rd-check-box-option>
+  </rd-check-box>
+</div>
+
+
+<div class="explanation">
+  <app-explanation>
+    <div class="titlePart">
+      <span>HTML Tag</span>
+    </div>
+
+    <div><b>rd-check-box</b></div>
+
+    <div class="titlePart">
+      <span>Parameters:</span>
+    </div>
+
+    <div class="option">
+      <table>
+        <tr>
+          <td>Content &lt;rd-check-box-option&gt;</td>
+          <td>The options available</td>
+        </tr>
+        <tr>
+          <td>@Input() color: string</td>
+          <td>gold(default), green, red, blue, blue-light, purple, orange, black, gradient-blue, gradient-peach</td>
+        </tr>
+        <tr>
+          <td>@Input() value: Array&lt;string&gt;</td>
+          <td>empty by default</td>
+        </tr>
+        <tr>
+          <td>@Input() display: string</td>
+          <td>Display style: line (default), block</td>
+        </tr>
+        <tr>
+          <td>@Output() valueChange</td>
+          <td>Event emitted when the state of a box change</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="titlePart">
+      <span>HTML Tag</span>
+    </div>
+
+    <div><b>rd-check-box-option</b></div>
+
+    <div class="titlePart">
+      <span>Parameters:</span>
+    </div>
+
+    <div class="option">
+      <table>
+        <tr>
+          <td>@Input() value: string</td>
+          <td>empty by default</td>
+        </tr>
+        <tr>
+          <td>@Output() checkedChange</td>
+          <td>Event emitted when the state of the box change</td>
+        </tr>
+      </table>
+    </div>
+  </app-explanation>
+</div>
+

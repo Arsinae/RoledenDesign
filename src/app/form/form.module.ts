@@ -7,6 +7,7 @@ import { FormComponent } from './form.component';
 import { RoledenComponentModule } from 'projects/roleden-component/src/lib/roleden-component.module';
 import { InputComponent } from './input/input.component';
 import { SelectComponent } from './select/select.component';
+import { CheckBoxComponent } from './check-box/check-box.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { SelectComponent } from './select/select.component';
     ButtonComponent,
     TextEditorComponent,
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    CheckBoxComponent
   ],
   exports: [FormComponent]
 })

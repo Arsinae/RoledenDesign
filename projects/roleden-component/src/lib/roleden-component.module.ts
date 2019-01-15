@@ -15,6 +15,7 @@ import { AccordionModule } from './accordion/accordion.module';
 import { InputComponent } from './input/input.component';
 import { NotationComponent } from './notation/notation.component';
 import { SelectModule } from './select/select.module';
+import { CheckBoxModule } from './check-box/check-box.module';
 
 @NgModule({
   imports: [
@@ -45,7 +46,8 @@ import { SelectModule } from './select/select.module';
     AccordionModule,
     InputComponent,
     NotationComponent,
-    SelectModule
+    SelectModule,
+    CheckBoxModule
   ]
 })
 export class RoledenComponentModule { }
