@@ -24,6 +24,7 @@ export class CheckBoxComponent implements OnInit, AfterViewInit, OnChanges {
   ngAfterViewInit() {
     this.options.forEach(option => {
       this.setColorOption(option);
+      this.setDisplay(option);
       this.setChecked(option);
       this.subscribeToChecked(option);
     });
@@ -33,6 +34,7 @@ export class CheckBoxComponent implements OnInit, AfterViewInit, OnChanges {
     if (this.options) {
       this.options.forEach(option => {
         this.setColorOption(option);
+        this.setDisplay(option);
         this.setChecked(option);
         this.subscribeToChecked(option);
       });

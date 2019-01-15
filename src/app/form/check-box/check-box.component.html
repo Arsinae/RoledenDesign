@@ -8,6 +8,7 @@
     <rd-check-box-option [value]="'Bene Tleilax'">Bene Tleilax</rd-check-box-option>
     <rd-check-box-option [value]="'Honored Matres'">Honored Matres</rd-check-box-option>
   </rd-check-box>
+  Value: {{value.toString()}}
 </div>
 
 
@@ -60,6 +61,10 @@
 
     <div class="option">
       <table>
+        <tr>
+          <td>Content</td>
+          <td>The displayed text</td>
+        </tr>
         <tr>
           <td>@Input() value: string</td>
           <td>empty by default</td>
