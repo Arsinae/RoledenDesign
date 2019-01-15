@@ -47,6 +47,7 @@
   text-align: center;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   &>div, .volumeController {
     display: flex;
