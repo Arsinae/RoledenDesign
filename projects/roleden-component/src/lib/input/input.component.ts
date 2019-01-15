@@ -11,6 +11,7 @@ export class InputComponent implements OnInit, OnChanges {
   @Input() placeholder = '';
   @Input() type = 'text';
   @Input() color = 'gold';
+  @Input() disabled = false;
 
   @Output() valueChange = new EventEmitter<any>();
   @Output() pressEnter = new EventEmitter<any>();

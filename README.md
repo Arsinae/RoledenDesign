@@ -16,6 +16,7 @@ Add a `rd-input-number` Component to the library;
 
 ##### Corrective
 Change the position of the SelectMenu to `absolute`;
+Add a `disabled` property on the `rd-input`;
 
 #### 1.1.16
 ##### News
