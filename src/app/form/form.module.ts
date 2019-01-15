@@ -9,6 +9,7 @@ import { InputComponent } from './input/input.component';
 import { SelectComponent } from './select/select.component';
 import { CheckBoxComponent } from './check-box/check-box.component';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
+import { InputNumberComponent } from './input-number/input-number.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
     InputComponent,
     SelectComponent,
     CheckBoxComponent,
-    RadioButtonComponent
+    RadioButtonComponent,
+    InputNumberComponent
   ],
   exports: [FormComponent]
 })

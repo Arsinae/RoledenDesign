@@ -1,0 +1,61 @@
+<div class="titlePart">
+    <span>Input Number</span>
+  </div>
+
+  <div class="inputContainer">
+      <rd-input-number [label]="'Increment 1'" [color]="'blue'"></rd-input-number>
+      <rd-input-number [color]="'purple'" [label]="'Increment 2'" [min]="-20" [max]="20" [increment]="2" [display]="'single'"></rd-input-number>
+    </div>
+
+  <div class="explanation">
+    <app-explanation>
+
+      <div class="titlePart">
+        <span>HTML Tag</span>
+      </div>
+
+      <div><b>rd-input-number</b></div>
+
+      <div class="titlePart">
+        <span>Parameters:</span>
+      </div>
+
+      <div class="option">
+        <table>
+          <tr>
+            <td>@Input() value: string</td>
+            <td>Default value of the Input</td>
+          </tr>
+          <tr>
+            <td>@Input() label: string</td>
+            <td>Text of the Label</td>
+          </tr>
+          <tr>
+            <td>@Input() color: string</td>
+            <td>gold(default), green, red, blue, blue-light, purple, orange</td>
+          </tr>
+          <tr>
+            <td>@Input() display: string</td>
+            <td>Type of display for the incrementor; 'single', 'both'(default)</td>
+          </tr>
+          <tr>
+            <td>@Input() min, @Input() max: number</td>
+            <td>Min and Max value for the input; none by default</td>
+          </tr>
+          <tr>
+            <td>@Input() increment: number</td>
+            <td>The value incremented for each click; 1(default</td>
+          </tr>
+          <tr>
+            <td>@Input() disabled: boolean</td>
+            <td>Disable the input; false by default</td>
+          </tr>
+          <tr>
+            <td>@Output() valueChange: string</td>
+            <td>Event emitted when the text has been changed</td>
+          </tr>
+        </table>
+      </div>
+
+    </app-explanation>
+  </div>

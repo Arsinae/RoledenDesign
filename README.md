@@ -11,8 +11,11 @@
 ### Release Notes
 
 #### 1.1.17
+##### News
+Add a `rd-input-number` Component to the library;
+
 ##### Corrective
-CHange the position of the SelectMenu to `absolute`;
+Change the position of the SelectMenu to `absolute`;
 
 #### 1.1.16
 ##### News
@@ -27,5 +30,5 @@ Add `flex-wrap: wrap` on the control panel of the Music Player;
 
 #### 1.1.14
 ##### Corrective
-Modify the color className for Input & Playlist;
+Modify the color className for `rd-input` & `rd-music-player`;
 

@@ -1,0 +1,87 @@
+@import '../style/variables';
+
+.inputNumberContainer {
+  --main-color: #{$gold};
+
+  .labelInputNumber {
+    font-size: 13px;
+    padding-left: $margin;
+  }
+
+  &:hover .labelInputNumber {
+    color: var(--main-color);
+  }
+
+  .inputNumber {
+    display: flex;
+
+    .incrementorBoth {
+      color: white;
+      background-color: var(--main-color);
+      padding: $margin/2 $margin;
+      border-radius: 50% 0 0 50%;
+      cursor: pointer;
+
+      &:last-of-type {
+        border-radius: 0 50% 50% 0;
+      }
+    }
+
+    .incrementorSingle {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        cursor: pointer;
+        color: white;
+        background-color: var(--main-color);
+        padding: $margin/3 $margin/2;
+
+        &:last-of-type {
+          border: solid white;
+          border-width: 1px 0 0 0;
+        }
+      }
+    }
+
+    .numberContainer {
+      padding: $margin/2 $margin;
+      flex: 1;
+      border: 1px solid var(--main-color);
+      overflow: hidden;
+      position: relative;
+
+      span {
+        @include centered();
+      }
+    }
+
+    span.disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &.greenInputNumber {
+    --main-color: #{$colored-green};
+  }
+
+  &.blueInputNumber {
+    --main-color: #{$colored-blue};
+  }
+
+  &.blue-lightInputNumber {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.redInputNumber {
+    --main-color: #{$colored-red};
+  }
+
+  &.purpleInputNumber {
+    --main-color: #{$colored-purple};
+  }
+
+  &.orangeInputNumber {
+    --main-color: #{$colored-orange};
+  }
+}

@@ -14,6 +14,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FlippingCardComponent } from './flipping-card/flipping-card.component';
 import { AccordionModule } from './accordion/accordion.module';
 import { InputComponent } from './input/input.component';
+import { InputNumberComponent } from './input-number/input-number.component';
 import { NotationComponent } from './notation/notation.component';
 import { SelectModule } from './select/select.module';
 import { CheckBoxModule } from './check-box/check-box.module';
@@ -32,7 +33,8 @@ import { CheckBoxModule } from './check-box/check-box.module';
     ProgressBarComponent,
     FlippingCardComponent,
     InputComponent,
-    NotationComponent
+    NotationComponent,
+    InputNumberComponent
   ],
   exports: [
     DiceComponent,
@@ -46,6 +48,7 @@ import { CheckBoxModule } from './check-box/check-box.module';
     FlippingCardComponent,
     AccordionModule,
     InputComponent,
+    InputNumberComponent,
     NotationComponent,
     SelectModule,
     CheckBoxModule,

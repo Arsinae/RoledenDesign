@@ -1,0 +1,30 @@
+<div class="inputNumberContainer {{color}}InputNumber">
+  <div class="labelInputNumber" *ngIf="label">
+    {{label}}
+  </div>
+
+  <div class="inputNumber">
+    <ng-container *ngIf="display === 'both'">
+      <span class="incrementorBoth" [class.disabled]="disabled" (click)="incrementValue(-increment)">
+        <i class="fas fa-minus"></i>
+      </span>
+    </ng-container>
+    <div class="numberContainer">
+      <span>{{value}}</span>
+    </div>
+    <ng-container *ngIf="display === 'both'">
+      <span class="incrementorBoth" [class.disabled]="disabled" (click)="incrementValue(increment)">
+        <i class="fas fa-plus"></i>
+      </span>
+    </ng-container>
+    <div *ngIf="display === 'single'" class="incrementorSingle">
+      <span (click)="incrementValue(-increment)" [class.disabled]="disabled">
+        <i class="fas fa-minus"></i>
+      </span>
+      <span (click)="incrementValue(increment)" [class.disabled]="disabled">
+        <i class="fas fa-plus"></i>
+      </span>
+    </div>
+  </div>
+
+</div>
