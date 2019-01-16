@@ -12,7 +12,8 @@
 
 #### 1.1.18
 #### News
-Add a `rd-alert` Component to the library;
+Add a `rd-alert` Component to the library;\
+Add a `rd-snack-bar` Component to the library;
 
 #### 1.1.17
 ##### News
