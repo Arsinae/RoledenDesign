@@ -14,6 +14,7 @@ import { RoledenComponentModule } from 'projects/roleden-component/src/lib/roled
 import { AccordeonComponent } from './accordeon/accordeon.component';
 import { NotationComponent } from './notation/notation.component';
 import { AlertComponent } from './alert/alert.component';
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { AlertComponent } from './alert/alert.component';
     SmallCardComponent,
     AccordeonComponent,
     NotationComponent,
-    AlertComponent
+    AlertComponent,
+    SnackBarComponent
   ],
   exports: [
     ComponentsComponent

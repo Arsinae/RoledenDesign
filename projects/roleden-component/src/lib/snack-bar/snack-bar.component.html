@@ -1,0 +1,12 @@
+<div class="snackbarContainer" [@listAnimation]="snackBars.length">
+  <div *ngFor="let snackBar of snackBars; let i = index" class="snackBar {{snackBar.type}}SnackBar" (click)="closeSnackBar(i)">
+    <span class="closeIcon"><i class="fas fa-times"></i></span>
+    <div class="headerSnackBar">
+      <span><i class="{{getIcon(snackBar.type)}}"></i></span>
+      {{ snackBar.title }}
+    </div>
+    <div class="textSnackBar">
+      {{snackBar.text}}
+    </div>
+  </div>
+</div>

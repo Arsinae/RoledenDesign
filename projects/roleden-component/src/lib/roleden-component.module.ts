@@ -20,6 +20,8 @@ import { CheckBoxModule } from './check-box/check-box.module';
 import { RadioButtonModule } from './radio-button/radio-button.module';
 import { AlertModule } from './alert/alert.module';
 import { AlertService } from './alert/alert.service';
+import { SnackBarService } from './snack-bar/snack-bar.service';
+import { SnackBarModule } from './snack-bar/snack-bar.module';
 
 @NgModule({
   imports: [
@@ -55,14 +57,18 @@ import { AlertService } from './alert/alert.service';
     SelectModule,
     CheckBoxModule,
     RadioButtonModule,
-    AlertModule
+    AlertModule,
+    SnackBarModule
   ]
 })
 export class RoledenComponentModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: RoledenComponentModule,
-      providers: [ AlertService ]
+      providers: [
+        AlertService,
+        SnackBarService
+      ]
     };
   }
 }

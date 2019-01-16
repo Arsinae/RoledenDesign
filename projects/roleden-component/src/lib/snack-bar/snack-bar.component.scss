@@ -1,0 +1,50 @@
+@import "../style/variables";
+
+.snackbarContainer {
+  position: fixed;
+  bottom: 5%;
+  left: 25%;
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 1000;
+
+  .snackBar {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    padding: $margin;
+    margin: $margin 0;
+    color: white;
+    transition: all 0.3s ease-in-out;
+
+    .closeIcon {
+      position: absolute;
+      top: $margin; right: $margin;
+    }
+
+    .headerSnackBar {
+      width: 85%;
+    }
+
+    .headerSnackBar, .textSnackBar {
+      word-break: break-all;
+    }
+
+    &.dangerSnackBar {
+      background-color: $colored-red;
+    }
+
+    &.warningSnackBar {
+      background-color: #baba5a;
+    }
+
+    &.successSnackBar {
+      background-color: $colored-green;
+    }
+
+    &.infoSnackBar {
+      background-color: $colored-blue;
+    }
+  }
+}
