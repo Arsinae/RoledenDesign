@@ -8,25 +8,25 @@ import { AlertService } from 'projects/roleden-component/src/lib/alert/alert.ser
 })
 export class AlertComponent implements OnInit {
 
-  constructor(private alertSerrvice: AlertService) { }
+  constructor(private alertService: AlertService) { }
 
   ngOnInit() {
   }
 
   addDanger() {
-    this.alertSerrvice.addAlert('danger', 'Danger', 'Big problems inc.');
+    this.alertService.addAlert('danger', 'Danger', 'Big problems inc.');
   }
 
   addWarning() {
-    this.alertSerrvice.addAlert('warning', 'Warning', 'Take care');
+    this.alertService.addAlert('warning', 'Warning', 'Take care');
   }
 
   addSuccess() {
-    this.alertSerrvice.addAlert('success', 'Success', 'You achieve something');
+    this.alertService.addAlert('success', 'Success', 'You achieve something');
   }
 
   addInfo() {
-    this.alertSerrvice.addAlert('info', 'Information', 'Nice informations');
+    this.alertService.addAlert('info', 'Information', 'Nice informations');
   }
 
 }

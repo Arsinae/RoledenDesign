@@ -13,12 +13,12 @@ import { trigger, transition, query, stagger, animate, keyframes, style } from '
         query(':enter', stagger('300ms', [
           animate('.5s ease-in', keyframes([
             style({opacity: 0.2, transform: 'translateX(75%)', offset: 0}),
-            style({opacity: 1, transform: 'translateX(0)',     offset: 1.0}),
+            style({opacity: 1, transform: 'translateX(0)', offset: 1.0}),
           ]))]), {optional: true}),
           query(':leave', stagger('300ms', [
             animate('.5s ease-in', keyframes([
               style({opacity: 1, transform: 'translateX(0)', offset: 0}),
-              style({opacity: 0, transform: 'translateX(100%)',     offset: 1.0}),
+              style({opacity: 0, transform: 'translateX(100%)', offset: 1.0}),
             ]))]), {optional: true})
       ])
     ])
@@ -26,7 +26,7 @@ import { trigger, transition, query, stagger, animate, keyframes, style } from '
 })
 export class AlertComponent implements OnInit {
 
-  alerts = [];
+  public alerts: Array<Alert> = [];
 
   constructor(private alertService: AlertService) { }
 
