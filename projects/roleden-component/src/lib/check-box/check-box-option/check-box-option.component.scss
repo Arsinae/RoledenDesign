@@ -5,6 +5,7 @@
   cursor: pointer;
   padding: $margin/2;
   position: relative;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     color: var(--main-color);
@@ -21,6 +22,7 @@
     display: inline-block;
     vertical-align: middle;
     margin: $margin/2 $margin $margin/2 0;
+    transition: all 0.3s ease-in-out;
 
     &:after {
       content: '';
