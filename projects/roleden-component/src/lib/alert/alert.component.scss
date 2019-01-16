@@ -28,19 +28,19 @@
     }
 
     &.dangerAlert {
-      background-color: rgba($colored-red, .7);
+      background-color: rgba($colored-red, .8);
     }
 
     &.warningAlert {
-      background-color: rgba(#baba5a, .7);
+      background-color: rgba(#baba5a, .8);
     }
 
     &.successAlert {
-      background-color: rgba($colored-green, .7);
+      background-color: rgba($colored-green, .8);
     }
 
     &.infoAlert {
-      background-color: rgba($colored-blue, .7)
+      background-color: rgba($colored-blue, .8)
     }
   }
 }
