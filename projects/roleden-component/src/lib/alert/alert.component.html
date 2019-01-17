@@ -1,12 +1,12 @@
 <div class="alertContainer" [@listAnimation]="alerts.length">
-  <div *ngFor="let alert of alerts; let i = index" class="alert {{alert.type}}Alert" (click)="closeAlert(i)">
+  <div *ngFor="let alert of alerts; let i = index" class="alert {{alert.alert.type}}Alert" (click)="closeAlert(i)">
     <span class="closeIcon"><i class="fas fa-times"></i></span>
     <div class="headerAlert">
-      <span><i class="{{getIcon(alert.type)}}"></i></span>
-      {{ alert.title }}
+      <span><i class="{{getIcon(alert.alert.type)}}"></i></span>
+      {{ alert.alert.title }}
     </div>
     <div class="textAlert">
-      {{alert.text}}
+      {{alert.alert.text}}
     </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
 import { SnackBarService } from './snack-bar.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SnackBar } from './snack-bar.class';
 import { trigger, transition, query, stagger, animate, keyframes, style } from '@angular/animations';
 
@@ -26,17 +26,31 @@ import { trigger, transition, query, stagger, animate, keyframes, style } from '
 })
 export class SnackBarComponent implements OnInit {
 
-  public snackBars: Array<SnackBar> = [];
+  @Input() timer = 5;
+
+  public snackBars: Array<{snack: SnackBar, timer: any}> = [];
 
   constructor(private snackBarService: SnackBarService) { }
 
   ngOnInit() {
     this.snackBarService.getSnackBar().subscribe(snackBar => {
-      this.snackBars.push(snackBar);
+      const newSnack = {snack: snackBar, timer: setTimeout(() => {
+        this.deleteOnTimer(newSnack);
+      }, this.timer * 1000)};
+      this.snackBars.push(newSnack);
     });
   }
 
+  deleteOnTimer(closeAlert) {
+    for (let i = 0; i < this.snackBars.length; i++) {
+      if (this.snackBars[i].timer === closeAlert.timer) {
+        this.snackBars.splice(i, 1);
+      }
+    }
+  }
+
   closeSnackBar(index) {
+    clearTimeout(this.snackBars[index].timer);
     this.snackBars.splice(index, 1);
   }
 

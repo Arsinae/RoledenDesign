@@ -10,6 +10,11 @@
 
 ### Release Notes
 
+#### 1.1.19
+##### News
+Add animations on the `rd-list` Component;\
+Add timer on the `rd-alert` and `rd-snack-bar` Components;
+
 #### 1.1.18
 #### News
 Add a `rd-alert` Component to the library;\

@@ -60,6 +60,10 @@
     padding: 0 1px;
   }
 
+  &:active {
+    background-color: $grey;
+  }
+
   .elemListIcon, .elemListTitle, .elemListAuthor {
     overflow: hidden;
     text-overflow: ellipsis;

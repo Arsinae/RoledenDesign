@@ -1,5 +1,5 @@
 import { Alert } from './alert.class';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { AlertService } from './alert.service';
 import { trigger, transition, query, stagger, animate, keyframes, style } from '@angular/animations';
 
@@ -26,17 +26,31 @@ import { trigger, transition, query, stagger, animate, keyframes, style } from '
 })
 export class AlertComponent implements OnInit {
 
-  public alerts: Array<Alert> = [];
+  @Input() timer = 5;
+
+  public alerts: Array<{alert: Alert, timer: any}> = [];
 
   constructor(private alertService: AlertService) { }
 
   ngOnInit() {
     this.alertService.getAlert().subscribe((alert: Alert) => {
-      this.alerts.push(alert);
+      const newAlert = {alert: alert, timer: setTimeout(() => {
+        this.deleteOnTimer(newAlert);
+      }, this.timer * 1000)};
+      this.alerts.push(newAlert);
     });
   }
 
+  deleteOnTimer(closeAlert) {
+    for (let i = 0; i < this.alerts.length; i++) {
+      if (this.alerts[i].timer === closeAlert.timer) {
+        this.alerts.splice(i, 1);
+      }
+    }
+  }
+
   closeAlert(index) {
+    clearTimeout(this.alerts[index].timer);
     this.alerts.splice(index, 1);
   }
 
