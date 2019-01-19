@@ -15,6 +15,7 @@ import { AccordeonComponent } from './accordeon/accordeon.component';
 import { NotationComponent } from './notation/notation.component';
 import { AlertComponent } from './alert/alert.component';
 import { SnackBarComponent } from './snack-bar/snack-bar.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { SnackBarComponent } from './snack-bar/snack-bar.component';
     AccordeonComponent,
     NotationComponent,
     AlertComponent,
-    SnackBarComponent
+    SnackBarComponent,
+    CarouselComponent
   ],
   exports: [
     ComponentsComponent

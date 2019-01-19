@@ -1,0 +1,19 @@
+<div class="carouselWrapper">
+  <div class="dataContainer" [@carouselAnimation]="change" [style.height.px]="height">
+    <ng-content></ng-content>
+  </div>
+
+  <div class="arrow leftArrow" (click)="changeDisplay(-1, 'prev')">
+    <span><i class="fas fa-chevron-left fa-2x"></i></span>
+  </div>
+
+  <div class="arrow rightArrow" (click)="changeDisplay(1, 'next')">
+    <span><i class="fas fa-chevron-right fa-2x"></i></span>
+  </div>
+
+  <div class="stepper">
+    <div class="step" *ngFor="let i of carouselLength" [class.active]="i === displayedIndex"
+    (click)="changeStep(i)">
+    </div>
+  </div>
+</div>

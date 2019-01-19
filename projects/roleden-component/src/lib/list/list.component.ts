@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ListElementDirective} from './list-element.directive';
-import { trigger, transition, query, stagger, animate, keyframes, style } from '@angular/animations';
+import { trigger, transition, query, animate, keyframes, style } from '@angular/animations';
 
 @Component({
   selector: 'rd-list',

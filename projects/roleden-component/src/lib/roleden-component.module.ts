@@ -22,6 +22,7 @@ import { AlertModule } from './alert/alert.module';
 import { AlertService } from './alert/alert.service';
 import { SnackBarService } from './snack-bar/snack-bar.service';
 import { SnackBarModule } from './snack-bar/snack-bar.module';
+import { CarouselModule } from './carousel/carousel.module';
 
 @NgModule({
   imports: [
@@ -58,7 +59,8 @@ import { SnackBarModule } from './snack-bar/snack-bar.module';
     CheckBoxModule,
     RadioButtonModule,
     AlertModule,
-    SnackBarModule
+    SnackBarModule,
+    CarouselModule
   ]
 })
 export class RoledenComponentModule {

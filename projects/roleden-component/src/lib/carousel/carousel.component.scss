@@ -1,0 +1,53 @@
+@import '../style/variables';
+
+.carouselWrapper {
+  width: 100%;
+  position: relative;
+
+  .dataContainer {
+    width: 100%;
+    position: relative;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: $margin*3 $margin*2;
+    color: $grey;
+    background-color: rgba($dark-grey, .5);
+    cursor: pointer;
+
+    &.rightArrow {
+      left: auto;
+      right: 0;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .stepper {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+
+    .step {
+      width: 5px; height: 5px;
+      border: 1px solid $grey;
+      border-radius: 50%;
+      margin: $margin/2;
+      background-color: transparent;
+      cursor: pointer;
+
+      &.active {
+        background-color: $grey;
+      }
+    }
+  }
+}

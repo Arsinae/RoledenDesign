@@ -12,6 +12,7 @@
 
 #### 1.1.19
 ##### News
+Add a `rd-carousel` Component;\
 Add animations on the `rd-list` Component;\
 Add timer on the `rd-alert` and `rd-snack-bar` Components;
 
