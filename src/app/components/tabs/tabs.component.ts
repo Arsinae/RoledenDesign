@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsComponent implements OnInit {
 
+  public tabs = ['Leto Atréides', 'Jessica Atréides', 'Paul Atréides', 'Alia Atréides', 'Leto II Atréides', 'Ghanima Atréides'];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  cutTabs() {
+    this.tabs.splice(0, 1);
+  }
+
+  putTabs() {
+    this.tabs.push('a');
   }
 
 }

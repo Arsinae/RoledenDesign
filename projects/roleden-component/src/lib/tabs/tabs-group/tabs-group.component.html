@@ -1,6 +1,6 @@
-<div class="tabsContainer">
+<div class="tabsContainer {{color}}Tabs">
   <div class="tabsHeader">
-    <div class="arrow" *ngIf="tabs.length > displayedTitleNumber" (click)="changeTitlesIndex(-displayedTitleNumber)">
+    <div class="arrow" *ngIf="tabs.length > displayedTitleNumber" (click)="changeTitlesIndex(titleIndex - displayedTitleNumber)">
       <span><i class="fas fa-angle-left fa-lg"></i></span>
     </div>
     <div class="tabsTitleBar" [@fadeAnimation]="titleIndex">
@@ -9,7 +9,7 @@
         {{title}}
       </div>
     </div>
-    <div class="arrow" *ngIf="tabs.length > displayedTitleNumber" (click)="changeTitlesIndex(displayedTitleNumber)">
+    <div class="arrow" *ngIf="tabs.length > displayedTitleNumber" (click)="changeTitlesIndex(titleIndex + displayedTitleNumber)">
       <span><i class="fas fa-angle-right fa-lg"></i></span>
     </div>
   </div>

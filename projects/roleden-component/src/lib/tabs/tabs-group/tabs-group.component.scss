@@ -50,4 +50,32 @@
       }
     }
   }
+
+  &.greenTabs {
+    --main-color: #{$colored-green};
+  }
+
+  &.redTabs {
+    --main-color: #{$colored-red};
+  }
+
+  &.blueTabs {
+    --main-color: #{$colored-blue};
+  }
+
+  &.blue-lightTabs {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.purpleTabs {
+    --main-color: #{$colored-purple};
+  }
+
+  &.orangeTabs {
+    --main-color: #{$colored-orange};
+  }
+
+  &.blackTabs {
+    --main-color: black;
+  }
 }

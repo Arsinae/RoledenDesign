@@ -3,24 +3,9 @@
 </div>
 
 <div class="tabContainer">
-  <rd-tabs-group>
-    <rd-tabs [title]="'Leto Atréides'">
-      <div>Leto Atréides</div>
-    </rd-tabs>
-    <rd-tabs [title]="'Jessica Atréides'">
-      <div>Jessica Atréides</div>
-    </rd-tabs>
-    <rd-tabs [title]="'Paul Atréides'">
-      <div>Paul Atréides</div>
-    </rd-tabs>
-    <rd-tabs [title]="'Alia Atréides'">
-      <div>Alia Atréides</div>
-    </rd-tabs>
-    <rd-tabs [title]="'Leto II Atréides'">
-      <div>Leto II Atréides</div>
-    </rd-tabs>
-    <rd-tabs [title]="'Ghanima Atréides'">
-      <div>Ghanima Atréides</div>
+  <rd-tabs-group [color]="'purple'">
+    <rd-tabs *ngFor="let title of tabs" [title]="title">
+      <div>{{title}}</div>
     </rd-tabs>
   </rd-tabs-group>
 </div>
@@ -51,6 +36,10 @@
         <tr>
           <td>@Input() displayedTitleNumber: number</td>
           <td>The number of tab title displayed in th header; 5 by default</td>
+        </tr>
+        <tr>
+          <td>@Input() color: string</td>
+          <td>gold(default), green, red, blue, blue-light purple, orange, black</td>
         </tr>
         <tr>
           <td>@Output() displayedIndexChange</td>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ContentChildren, QueryList, AfterViewInit, OnChanges, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, ContentChildren, QueryList, AfterViewInit, OnChanges, Output, EventEmitter, AfterContentChecked } from '@angular/core';
 import { trigger, transition, query, animate, keyframes, style, group } from '@angular/animations';
 import { TabsComponent } from './../tabs.component';
 
@@ -35,10 +35,11 @@ import { TabsComponent } from './../tabs.component';
     ])
   ]
 })
-export class TabsGroupComponent implements OnInit, AfterViewInit, OnChanges {
+export class TabsGroupComponent implements OnInit, AfterViewInit, AfterContentChecked, OnChanges {
 
   @Input() displayedTitleNumber = 5;
   @Input() displayedIndex = 0;
+  @Input() color = 'gold';
 
   @Output() displayedIndexChange: EventEmitter<any> = new EventEmitter();
 
@@ -56,6 +57,25 @@ export class TabsGroupComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   ngOnChanges(changes) {
+    if (this.displayedIndex > this.tabs.length) {
+      this.displayedIndex = this.tabs.length - 1;
+      this.displayedIndexChange.emit(this.displayedIndex);
+    }
+    if (this.titleIndex + this.displayedTitleNumber > this.tabs.length) {
+      this.changeTitlesIndex(this.tabs.length - this.displayedTitleNumber);
+    }
+    this.setView();
+  }
+
+  ngAfterContentChecked() {
+    if (this.displayedIndex > this.tabs.length) {
+      this.displayedIndex = this.tabs.length - 1;
+      this.displayedIndexChange.emit(this.displayedIndex);
+    }
+    if (this.titleIndex + this.displayedTitleNumber > this.tabs.length) {
+      this.changeTitlesIndex(this.tabs.length - this.displayedTitleNumber);
+    }
+    this.setView();
   }
 
   get titleList() {
@@ -68,12 +88,8 @@ export class TabsGroupComponent implements OnInit, AfterViewInit, OnChanges {
     return titles;
   }
 
-  canChangeTitlesIndex(value) {
-    return (this.titleIndex + value > 0 && this.titleIndex + value < this.tabs.length);
-  }
-
   changeTitlesIndex(value) {
-    this.titleIndex += value;
+    this.titleIndex = value;
     if (this.titleIndex < 0) {
       this.titleIndex = 0;
     } else if (this.titleIndex + this.displayedTitleNumber > this.tabs.length) {
