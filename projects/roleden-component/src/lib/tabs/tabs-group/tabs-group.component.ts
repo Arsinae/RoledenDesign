@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, ContentChildren, QueryList, AfterViewInit, OnChanges, Output, EventEmitter, AfterContentChecked } from '@angular/core';
+import { Component, OnInit, Input, ContentChildren, QueryList, AfterViewInit, OnChanges,
+  Output, EventEmitter, AfterContentChecked } from '@angular/core';
 import { trigger, transition, query, animate, keyframes, style, group } from '@angular/animations';
 import { TabsComponent } from './../tabs.component';
 
