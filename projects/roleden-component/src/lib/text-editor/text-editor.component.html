@@ -20,5 +20,6 @@
     </div>
 
   </div>
-  <div (keydown)="changeEnter($event)" (keyup)="pushText()" class="editContent" #textEditor contenteditable="true" [innerHTML]="textTmp"></div>
+  <div (keydown)="changeEnter($event)" (keyup)="pushText()" class="editContent" [style.height.px]="height"
+  #textEditor contenteditable="true" [innerHTML]="textTmp"></div>
 </div>

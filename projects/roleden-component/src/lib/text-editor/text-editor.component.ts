@@ -9,6 +9,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class TextEditorComponent implements OnInit {
 
   @Input() text = '';
+  @Input() height = 200;
 
   @Output() textChange: EventEmitter<any> = new EventEmitter();
 
