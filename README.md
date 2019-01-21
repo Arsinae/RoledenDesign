@@ -12,7 +12,10 @@
 
 #### 1.1.20
 ##### News
+Add a `rd-tabs-group` Component;
 
+##### Corrective
+Add a height parameter ont the `rd-text-editor`;
 
 #### 1.1.19
 ##### News
