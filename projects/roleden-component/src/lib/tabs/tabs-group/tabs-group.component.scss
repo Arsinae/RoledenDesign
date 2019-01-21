@@ -1,0 +1,53 @@
+@import '../../style/variables';
+
+.tabsContainer {
+  width: 100%;
+  --main-color: #{$gold};
+
+  .tabsHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .tabsTitleBar {
+      flex: 1;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: hidden;
+
+      .tabTitle {
+        flex: 1;
+        box-sizing: border-box;
+        padding: $margin;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        cursor: pointer;
+        border-bottom: 1px solid $grey;
+        transition: border .3s ease-in-out;
+
+        &.active {
+          border-bottom-width: 2px;
+          border-bottom-color: var(--main-color);
+        }
+
+        &:hover {
+          background-color: $grey;
+          color: var(--main-color);
+        }
+      }
+    }
+
+    .arrow {
+      padding: $margin;
+      box-sizing: border-box;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $grey;
+      }
+    }
+  }
+}

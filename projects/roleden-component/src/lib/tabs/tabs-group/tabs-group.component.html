@@ -1,0 +1,16 @@
+<div class="tabsContainer">
+  <div class="tabsHeader">
+    <div class="arrow" *ngIf="tabs.length > displayedTitleNumber" (click)="changeTitlesIndex(-displayedTitleNumber)">
+      <span><i class="fas fa-angle-left fa-lg"></i></span>
+    </div>
+    <div class="tabsTitleBar">
+      <div class="tabTitle" *ngFor="let title of titleList; let i = index" [style.minWidth.%]="100 / displayedTitleNumber"
+      [class.active]="displayedIndex === i + titleIndex" (click)="changeDisplayedIndex(i + titleIndex)">
+        {{title}}
+      </div>
+    </div>
+    <div class="arrow" *ngIf="tabs.length > displayedTitleNumber" (click)="changeTitlesIndex(displayedTitleNumber)">
+      <span><i class="fas fa-angle-right fa-lg"></i></span>
+    </div>
+  </div>
+</div>

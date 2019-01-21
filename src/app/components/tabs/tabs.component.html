@@ -1,0 +1,83 @@
+<div class="titlePart">
+  <span>Tabs</span>
+</div>
+
+<div class="tabContainer">
+  <rd-tabs-group>
+    <rd-tabs [title]="'Leto Atréides'"></rd-tabs>
+    <rd-tabs [title]="'Jessica Atréides'"></rd-tabs>
+    <rd-tabs [title]="'Paul Atréides'"></rd-tabs>
+    <rd-tabs [title]="'Alia Atréides'"></rd-tabs>
+    <rd-tabs [title]="'Leto II Atréides'"></rd-tabs>
+    <rd-tabs [title]="'Ghanima Atréides'"></rd-tabs>
+  </rd-tabs-group>
+</div>
+
+
+<div class="explanation">
+  <app-explanation>
+    <div class="titlePart">
+      <span>HTML Tag</span>
+    </div>
+
+    <div><b>rd-tabs-group</b></div>
+
+    <div class="titlePart">
+      <span>Parameters:</span>
+    </div>
+
+    <div class="option">
+      <table>
+        <tr>
+          <td>@Input() data: Array&lt;ListElementDirective&gt;</td>
+          <td>[ ](default)</td>
+        </tr>
+        <tr>
+          <td>@Input() search: boolean</td>
+          <td>Enable the search field; false(default)</td>
+        </tr>
+        <tr>
+          <td>@Input() sort: boolean</td>
+          <td>Enable the sort header; false(default)</td>
+        </tr>
+        <tr>
+          <td>@Input() size: number</td>
+          <td>Size of the text inside the list; 16 by default</td>
+        </tr>
+        <tr>
+          <td>@Output() fileSelect</td>
+          <td>Event emitted by clicking on an list item; Get the item's file parameter</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="titlePart">
+      <span>ListElementDirective</span>
+    </div>
+
+    <div class="option">
+      <table>
+        <tr>
+          <td>title: string</td>
+          <td>Displayed text</td>
+        </tr>
+        <tr>
+          <td>color: string</td>
+          <td>gold(default), green, red, blue, blue-light purple, orange, black</td>
+        </tr>
+        <tr>
+          <td>author: string</td>
+          <td>me(default)</td>
+        </tr>
+        <tr>
+          <td>file: string</td>
+          <td>Reference to the corresponding element</td>
+        </tr>
+        <tr>
+          <td>icon: string</td>
+          <td>far fa-file(default); any Font Icon</td>
+        </tr>
+      </table>
+    </div>
+  </app-explanation>
+</div>

@@ -16,6 +16,7 @@ import { NotationComponent } from './notation/notation.component';
 import { AlertComponent } from './alert/alert.component';
 import { SnackBarComponent } from './snack-bar/snack-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     NotationComponent,
     AlertComponent,
     SnackBarComponent,
-    CarouselComponent
+    CarouselComponent,
+    TabsComponent
   ],
   exports: [
     ComponentsComponent
