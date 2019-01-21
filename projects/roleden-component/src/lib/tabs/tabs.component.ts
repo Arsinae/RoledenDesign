@@ -9,6 +9,8 @@ export class TabsComponent implements OnInit {
 
   @Input() title = '';
 
+  public display = false;
+
   constructor() { }
 
   ngOnInit() {

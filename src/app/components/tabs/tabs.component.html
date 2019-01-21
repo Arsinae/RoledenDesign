@@ -4,12 +4,24 @@
 
 <div class="tabContainer">
   <rd-tabs-group>
-    <rd-tabs [title]="'Leto Atréides'"></rd-tabs>
-    <rd-tabs [title]="'Jessica Atréides'"></rd-tabs>
-    <rd-tabs [title]="'Paul Atréides'"></rd-tabs>
-    <rd-tabs [title]="'Alia Atréides'"></rd-tabs>
-    <rd-tabs [title]="'Leto II Atréides'"></rd-tabs>
-    <rd-tabs [title]="'Ghanima Atréides'"></rd-tabs>
+    <rd-tabs [title]="'Leto Atréides'">
+      <div>Leto Atréides</div>
+    </rd-tabs>
+    <rd-tabs [title]="'Jessica Atréides'">
+      <div>Jessica Atréides</div>
+    </rd-tabs>
+    <rd-tabs [title]="'Paul Atréides'">
+      <div>Paul Atréides</div>
+    </rd-tabs>
+    <rd-tabs [title]="'Alia Atréides'">
+      <div>Alia Atréides</div>
+    </rd-tabs>
+    <rd-tabs [title]="'Leto II Atréides'">
+      <div>Leto II Atréides</div>
+    </rd-tabs>
+    <rd-tabs [title]="'Ghanima Atréides'">
+      <div>Ghanima Atréides</div>
+    </rd-tabs>
   </rd-tabs-group>
 </div>
 
@@ -29,53 +41,38 @@
     <div class="option">
       <table>
         <tr>
-          <td>@Input() data: Array&lt;ListElementDirective&gt;</td>
-          <td>[ ](default)</td>
+          <td>Content Array&lt;rd-tabs&gt;</td>
+          <td>The tabs</td>
         </tr>
         <tr>
-          <td>@Input() search: boolean</td>
-          <td>Enable the search field; false(default)</td>
+          <td>@Input() displayedIndex: number</td>
+          <td>The default index displayed in the tabs-group; 0 by default</td>
         </tr>
         <tr>
-          <td>@Input() sort: boolean</td>
-          <td>Enable the sort header; false(default)</td>
+          <td>@Input() displayedTitleNumber: number</td>
+          <td>The number of tab title displayed in th header; 5 by default</td>
         </tr>
         <tr>
-          <td>@Input() size: number</td>
-          <td>Size of the text inside the list; 16 by default</td>
-        </tr>
-        <tr>
-          <td>@Output() fileSelect</td>
-          <td>Event emitted by clicking on an list item; Get the item's file parameter</td>
+          <td>@Output() displayedIndexChange</td>
+          <td>Event emitted when the displayedIndex change</td>
         </tr>
       </table>
     </div>
 
     <div class="titlePart">
-      <span>ListElementDirective</span>
+      <span>HTML Tag</span>
     </div>
 
+    <div><b>rd-tabs</b></div>
+
+    <div class="titlePart">
+      <span>Parameters:</span>
+    </div>
     <div class="option">
       <table>
         <tr>
-          <td>title: string</td>
-          <td>Displayed text</td>
-        </tr>
-        <tr>
-          <td>color: string</td>
-          <td>gold(default), green, red, blue, blue-light purple, orange, black</td>
-        </tr>
-        <tr>
-          <td>author: string</td>
-          <td>me(default)</td>
-        </tr>
-        <tr>
-          <td>file: string</td>
-          <td>Reference to the corresponding element</td>
-        </tr>
-        <tr>
-          <td>icon: string</td>
-          <td>far fa-file(default); any Font Icon</td>
+          <td>@Input() title: string</td>
+          <td>Displayed title</td>
         </tr>
       </table>
     </div>
