@@ -13,66 +13,87 @@
 
 <div class="explanation">
   <app-explanation>
-    <div class="titlePart">
-      <span>HTML Tag</span>
-    </div>
+    <rd-tabs-group>
+      <rd-tabs [title]="'Informations'">
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
 
-    <div><b>rd-snack-bar</b></div>
+        <div><b>rd-snack-bar</b></div>
 
-    <div class="titlePart">
-      <span>Information:</span>
-    </div>
+        <div class="titlePart">
+          <span>Information:</span>
+        </div>
 
-    <div>
-      Add the rd-snack-bar in the app-component.html to display alert across component.
-    </div>
+        <div>
+          Add the rd-snack-bar in the app-component.html to display alert across component.
+        </div>
 
-    <div class="titlePart">
-      <span>Parameters: </span>
-    </div>
+        <div class="titlePart">
+          <span>Parameters: </span>
+        </div>
 
-    <div class="option">
-      <table>
-        <tr>
-          <td>@Input() timer: number</td>
-          <td>Number of seconds before the snackbar disappear automatically</td>
-        </tr>
-      </table>
-    </div>
+        <div class="option">
+          <table>
+            <tr>
+              <td>@Input() timer: number</td>
+              <td>Number of seconds before the snackbar disappear automatically</td>
+            </tr>
+          </table>
+        </div>
 
-    <div class="titlePart">
-      <span>SnackBarService</span>
-    </div>
+        <div class="titlePart">
+          <span>SnackBarService</span>
+        </div>
 
-    <div class="option">
-      <table>
-        <tr>
-          <td>function addSnackBar(type, title, text)</td>
-          <td>Add an alert to display</td>
-        </tr>
-      </table>
-    </div>
+        <div class="option">
+          <table>
+            <tr>
+              <td>function addSnackBar(type, title, text)</td>
+              <td>Add an alert to display</td>
+            </tr>
+          </table>
+        </div>
 
-    <div class="titlePart">
-      <span>SnackBar</span>
-    </div>
+        <div class="titlePart">
+          <span>SnackBar</span>
+        </div>
 
-    <div class="option">
-      <table>
-        <tr>
-          <td>type</td>
-          <td>The type of the SnackBar; danger, warning, success, info</td>
-        </tr>
-        <tr>
-          <td>title</td>
-          <td>The main title of the SnackBar</td>
-        </tr>
-        <tr>
-          <td>text</td>
-          <td>The text of the SnackBar</td>
-        </tr>
-      </table>
-    </div>
+        <div class="option">
+          <table>
+            <tr>
+              <td>type</td>
+              <td>The type of the SnackBar; danger, warning, success, info</td>
+            </tr>
+            <tr>
+              <td>title</td>
+              <td>The main title of the SnackBar</td>
+            </tr>
+            <tr>
+              <td>text</td>
+              <td>The text of the SnackBar</td>
+            </tr>
+          </table>
+        </div>
+      </rd-tabs>
 
+      <rd-tabs [title]="'Example'">
+        <div class="titlePart">
+          <span>Html</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+
+        <div class="titlePart">
+          <span>Typescript</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="tsCode"></code></pre>
+        </div>
+      </rd-tabs>
+    </rd-tabs-group>
   </app-explanation>
 </div>
