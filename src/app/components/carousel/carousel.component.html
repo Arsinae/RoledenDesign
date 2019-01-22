@@ -23,46 +23,60 @@
 
 <div class="explanation">
   <app-explanation>
-    <div class="titlePart">
-      <span>HTML Tag</span>
-    </div>
+    <rd-tabs-group>
+      <rd-tabs [title]="'Information'">
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
 
-    <div><b>rd-carousel</b></div>
+        <div><b>rd-carousel</b></div>
 
-    <div class="titlePart">
-      <span>Parameters:</span>
-    </div>
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
 
-    <div class="option">
-      <table>
-        <tr>
-          <td>Content rd-carousel-data</td>
-          <td>The carousel's pages</td>
-        </tr>
-        <tr>
-          <td>@Input() height: number</td>
-          <td>Height of the carousel; 250 by default</td>
-        </tr>
-      </table>
-    </div>
+        <div class="option">
+          <table>
+            <tr>
+              <td>Content rd-carousel-data</td>
+              <td>The carousel's pages</td>
+            </tr>
+            <tr>
+              <td>@Input() height: number</td>
+              <td>Height of the carousel; 250 by default</td>
+            </tr>
+          </table>
+        </div>
 
-    <div class="titlePart">
-      <span>HTML Tag</span>
-    </div>
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
 
-    <div><b>rd-carousel-data</b></div>
+        <div><b>rd-carousel-data</b></div>
 
-    <div class="titlePart">
-      <span>Parameters:</span>
-    </div>
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
 
-    <div class="option">
-      <table>
-        <tr>
-          <td>Content</td>
-          <td>Page data</td>
-        </tr>
-      </table>
-    </div>
+        <div class="option">
+          <table>
+            <tr>
+              <td>Content</td>
+              <td>Page data</td>
+            </tr>
+          </table>
+        </div>
+      </rd-tabs>
+
+      <rd-tabs [title]="'Example'">
+        <div class="titlePart">
+          <span>HTML</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+      </rd-tabs>
+    </rd-tabs-group>
   </app-explanation>
 </div>
