@@ -10,3 +10,5 @@ export * from './lib/text-editor/text-editor.component';
 export * from './lib/list/list.component';
 export * from './lib/list/list-element.directive';
 export * from './lib/button/button.component';
+export * from './lib/snack-bar/snack-bar.service';
+export * from './lib/alert/alert.service';

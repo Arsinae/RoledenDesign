@@ -4,11 +4,18 @@
 
 `$ npm i roleden-component --save`
 
+### Import
+Add `RoledenComponent.forRoot()` in your module;
+
 ### Demo
 
 [Live Demo](http://roleden-design.herokuapp.com/)
 
 ### Release Notes
+
+#### 1.1.21
+##### Corrective
+Export `AlertService` and `SnackBarService`;
 
 #### 1.1.20
 ##### News
