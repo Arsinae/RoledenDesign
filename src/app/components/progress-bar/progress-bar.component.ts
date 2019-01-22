@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressBarComponent implements OnInit {
 
-  public htmlCode = '<rd-progress-bar [color]="\'green\'" [width]="75" [height]="20"></rd-progress-bar>';
+  public htmlCode = '<rd-progress-bar [width]="75" [height]="20" [color]="\'green\'"></rd-progress-bar>';
 
   constructor() { }
 
