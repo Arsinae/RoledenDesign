@@ -6,10 +6,24 @@
 
 <div class="explanation">
   <app-explanation>
-    <div class="titlePart">
-      <span>HTML Tag</span>
-    </div>
+    <rd-tabs-group>
+      <rd-tabs [title]="'Informations'">
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
 
-    <div><b>rd-dice</b></div>
+        <div><b>rd-dice</b></div>
+      </rd-tabs>
+
+      <rd-tabs [title]="'Example'">
+        <div class="titlePart">
+          <span>HTML</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+      </rd-tabs>
+    </rd-tabs-group>
   </app-explanation>
 </div>

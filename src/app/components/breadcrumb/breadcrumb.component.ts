@@ -7,11 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BreadcrumbComponent implements OnInit {
 
-  data = [{name: 'Wiki', file: ''}, {name: 'Dune', file: ''}, {name: 'Sheana Brugh', file: ''}];
+  public data = [{name: 'Wiki', file: 'wiki'}, {name: 'Dune', file: 'duneWiki'}, {name: 'Sheana Brugh', file: 'sheanaFile'}];
+
+  public htmlCode = '<rd-breadcrumb [color]="\'blue\'" [data]="data"></rd-breadcrumb>';
+  public tsCode = 'public data = [\n  {name: \'Wiki\', file: \'wiki\'},\n' +
+    '  {name: \'Dune\', file: \'duneWiki\'},\n  {name: \'Sheana Brugh\', file: \'sheanaFile\'}\n];\n\n' +
+    'selectFile(file) {\n  console.log(\'Selected file.\', file);\n}\n';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectFile(file) {
+    console.log('Selected file.', file);
   }
 
 }

@@ -21,6 +21,16 @@ export class MusicPlayerComponent implements OnInit {
       channel: 'Neffex', url: '24C8r8JupYY', type: 'youTube'}
   ];
 
+  public htmlCode = '<rd-music-player [playlist]="playlist" [color]="\'red\'"></rd-music-player>';
+  public tsCode = 'public playlist: Array<MusicElementDirective> = [\n' +
+    '  {title: \'Fight Back\', imageurl: \'https://i.ytimg.com/vi/CYDP_8UTAus/default.jpg\',' +
+    ' channel: \'Neffex\', url: \'6vfP_4u7zik\', type: \'youTube\'},\n' +
+    '  {title: \'Numb\', imageurl: \'https://i.ytimg.com/vi/lJkEF0_QigU/default.jpg\',' +
+    ' channel: \'Neffex\', url: \'lJkEF0_QigU\', type: \'youTube\'},\n' +
+    '  {title: \'Piano Melody\', imageurl: \'https://freesound.org/data/displays/186/186942_2594536_wave_M.png\',' +
+    ' channel: \'Lemoncreme\', url: \'https://freesound.org/data/previews/186/186942_2594536-hq.mp3\', type: \'freeSounds\'}\n' +
+    '];\n';
+
   constructor() { }
 
   ngOnInit() {

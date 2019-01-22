@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiceComponent implements OnInit {
 
+  public htmlCode = '<rd-dice></rd-dice>';
+
   constructor() { }
 
   ngOnInit() {

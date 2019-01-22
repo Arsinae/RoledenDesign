@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotationComponent implements OnInit {
 
-  value = 5;
+  public value = 5;
+
+  public htmlCode = '<rd-notation [color]="\'blue\'" [number]="10" [(value)]="value" [size]="25"></rd-notation>\n' +
+    '<span>Note: {{value}}/10</span>';
+  public tsCode = 'public value = 5';
 
   constructor() { }
 
