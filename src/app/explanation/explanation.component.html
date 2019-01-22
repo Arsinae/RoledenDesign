@@ -8,7 +8,7 @@
       <span><i class="fas fa-angle-double-up"></i></span>
     </ng-container>
   </div>
-  <div class="content" [class.expand]="expand">
+  <div class="content" [class.expand]="expand" [@fadeAnimation]="expand">
     <ng-content></ng-content>
   </div>
 </div>

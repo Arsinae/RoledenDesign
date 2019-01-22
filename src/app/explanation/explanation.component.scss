@@ -7,6 +7,17 @@
     width: 100%;
   }
 
+  .expandButton {
+    padding: $margin;
+    text-align: center;
+    box-shadow: $shadow;
+    cursor: pointer;
+
+    span {
+      padding-left: $margin;
+    }
+  }
+
   .content {
     transition: max-height 0.2s ease-out;
     width: 100%;
@@ -20,16 +31,6 @@
 
     &.expand {
       box-shadow: $shadow;
-    }
-  }
-
-  .expandButton {
-    padding: $margin;
-    text-align: center;
-    box-shadow: $shadow;
-
-    span {
-      padding-left: $margin;
     }
   }
 }
