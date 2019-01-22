@@ -10,7 +10,6 @@ import typescript from 'highlight.js/lib/languages/typescript';
 import { ComponentsComponent } from './components.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
-import { ListModule } from './list/list.module';
 import { FlippingCardComponent } from './flipping-card/flipping-card.component';
 import { DiceComponent } from './dice/dice.component';
 import { SmallCardComponent } from './small-card/small-card.component';
@@ -22,6 +21,7 @@ import { AlertComponent } from './alert/alert.component';
 import { SnackBarComponent } from './snack-bar/snack-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { ListComponent } from './list/list.component';
 
 export function hljsLanguages() {
   return [
@@ -34,13 +34,13 @@ export function hljsLanguages() {
 @NgModule({
   imports: [
     CommonModule,
-    ListModule,
     ExplanationModule,
     RoledenComponentModule,
     HighlightModule.forRoot({languages: hljsLanguages})
   ],
   declarations: [
     ComponentsComponent,
+    ListComponent,
     BreadcrumbComponent,
     DiceComponent,
     FlippingCardComponent,
