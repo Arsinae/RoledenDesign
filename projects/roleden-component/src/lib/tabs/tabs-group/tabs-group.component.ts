@@ -58,14 +58,16 @@ export class TabsGroupComponent implements OnInit, AfterViewInit, AfterContentCh
   }
 
   ngOnChanges(changes) {
-    if (this.displayedIndex > this.tabs.length) {
-      this.displayedIndex = this.tabs.length - 1;
-      this.displayedIndexChange.emit(this.displayedIndex);
+    if (this.tabs) {
+      if (this.displayedIndex > this.tabs.length) {
+        this.displayedIndex = this.tabs.length - 1;
+        this.displayedIndexChange.emit(this.displayedIndex);
+      }
+      if (this.titleIndex + this.displayedTitleNumber > this.tabs.length) {
+        this.changeTitlesIndex(this.tabs.length - this.displayedTitleNumber);
+      }
+      this.setView();
     }
-    if (this.titleIndex + this.displayedTitleNumber > this.tabs.length) {
-      this.changeTitlesIndex(this.tabs.length - this.displayedTitleNumber);
-    }
-    this.setView();
   }
 
   ngAfterContentChecked() {

@@ -2,6 +2,11 @@ import { ExplanationModule } from './../explanation/explanation.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { HighlightModule } from 'ngx-highlightjs';
+import xml from 'highlight.js/lib/languages/xml';
+import scss from 'highlight.js/lib/languages/scss';
+import typescript from 'highlight.js/lib/languages/typescript';
+
 import { ComponentsComponent } from './components.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { MusicPlayerComponent } from './music-player/music-player.component';
@@ -18,12 +23,21 @@ import { SnackBarComponent } from './snack-bar/snack-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
 
+export function hljsLanguages() {
+  return [
+    {name: 'typescript', func: typescript},
+    {name: 'scss', func: scss},
+    {name: 'xml', func: xml}
+  ];
+}
+
 @NgModule({
   imports: [
     CommonModule,
     ListModule,
     ExplanationModule,
-    RoledenComponentModule
+    RoledenComponentModule,
+    HighlightModule.forRoot({languages: hljsLanguages})
   ],
   declarations: [
     ComponentsComponent,

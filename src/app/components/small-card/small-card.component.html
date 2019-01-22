@@ -52,44 +52,56 @@
 
   <div class="explanation">
     <app-explanation>
-      <div class="titlePart">
-        <span>HTML Tag</span>
-      </div>
+      <rd-tabs-group>
+        <rd-tabs [title]="'Informations'">
+          <div class="titlePart">
+            <span>HTML Tag</span>
+          </div>
 
-      <div><b>rd-small-card</b></div>
+          <div><b>rd-small-card</b></div>
 
-      <div class="titlePart">
-        <span>Parameters:</span>
-      </div>
+          <div class="titlePart">
+            <span>Parameters:</span>
+          </div>
 
-      <div class="option">
-        <table>
-          <tr>
-            <td>Content title</td>
-            <td>Inside a div with role="title"</td>
-          </tr>
-          <tr>
-            <td>Content type</td>
-            <td>Inside a div with role="type"</td>
-          </tr>
-          <tr>
-            <td>@Input() color: string</td>
-            <td>gold(default), green, red, blue, blue-light purple, orange</td>
-          </tr>
-          <tr>
-            <td>@Input() icon: string</td>
-            <td>fa-times(default), Any Font Awesome 5 Solid Icon (fas)</td>
-          </tr>
-          <tr>
-            <td>@Output() textClick</td>
-            <td>Event emitted by clicking on the text</td>
-          </tr>
-          <tr>
-            <td>@Output() iconClick</td>
-            <td>Event emitted by clicking on the icon</td>
-          </tr>
-        </table>
-      </div>
+          <div class="option">
+            <table>
+              <tr>
+                <td>Content title</td>
+                <td>Inside a div with role="title"</td>
+              </tr>
+              <tr>
+                <td>Content type</td>
+                <td>Inside a div with role="type"</td>
+              </tr>
+              <tr>
+                <td>@Input() color: string</td>
+                <td>gold(default), green, red, blue, blue-light purple, orange</td>
+              </tr>
+              <tr>
+                <td>@Input() icon: string</td>
+                <td>fa-times(default), Any Font Awesome 5 Solid Icon (fas)</td>
+              </tr>
+              <tr>
+                <td>@Output() textClick</td>
+                <td>Event emitted by clicking on the text</td>
+              </tr>
+              <tr>
+                <td>@Output() iconClick</td>
+                <td>Event emitted by clicking on the icon</td>
+              </tr>
+            </table>
+          </div>
+        </rd-tabs>
+
+        <rd-tabs [title]="'Example'">
+          <div class="titlePart">
+            <span>HTML</span>
+          </div>
+
+          <pre><code [highlight]="htmlCode" (highlighted)="onHighLight($event)"></code></pre>
+        </rd-tabs>
+      </rd-tabs-group>
     </app-explanation>
   </div>
 </div>

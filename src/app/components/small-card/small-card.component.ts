@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SmallCardComponent implements OnInit {
 
+  public htmlCode: string = '<rd-small-card [color]="\'orange\'" [icon]="\'fa-edit\'">\n' +
+    ' <div role="title">My story - orange</div>\n' +
+    ' <div role="type">Script</div>\n' +
+    '</rd-small-card>\n';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onHighLight(ev) {
+    console.log(ev);
   }
 
 }
