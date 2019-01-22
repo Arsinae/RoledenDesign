@@ -11,7 +11,7 @@
       the mythological Greek House of Atreus. In Homer's Iliad, the brothers Agamemnon and Menelaus are dubbed "the Atreides", meaning
       "the sons of Atreus".
     </rd-panel>
-    <rd-panel [color]="'blue'">
+    <rd-panel [color]="'blue'" (stateChange)="openHarkonnen($event)">
       <div class="panelTitle" title>House Harkonnen</div>
       The Harkonnens are featured prominently in the original 1965 novel Dune, and are also a major presence in both the Prelude to Dune
       (1999-2001) and Legends of Dune (2002-2004) prequel trilogies by Brian Herbert and Kevin J. Anderson. The Harkonnen bloodline itself
@@ -30,53 +30,75 @@
 
 <div class="explanation">
   <app-explanation>
-    <div class="titlePart">
-      <span>HTML Tag</span>
-    </div>
+    <rd-tabs-group>
+      <rd-tabs [title]="'Information'">
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
 
-    <div><b>rd-accordion</b></div>
+        <div><b>rd-accordion</b></div>
 
-    <div class="titlePart">
-      <span>Parameters:</span>
-    </div>
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
 
-    <div class="option">
-      <table>
-        <tr>
-          <td>@Input autoClose(): Boolean</td>
-          <td>Close the other panels when one is open; true by default</td>
-        </tr>
-        <tr>
-          <td>Content &lt;rd-panel&gt;</td>
-          <td>The panels inside the accordions</td>
-        </tr>
-      </table>
-    </div>
-    <div class="titlePart">
-        <span>HTML Tag</span>
-      </div>
+        <div class="option">
+          <table>
+            <tr>
+              <td>@Input autoClose(): Boolean</td>
+              <td>Close the other panels when one is open; true by default</td>
+            </tr>
+            <tr>
+              <td>Content &lt;rd-panel&gt;</td>
+              <td>The panels inside the accordions</td>
+            </tr>
+          </table>
+        </div>
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
 
-      <div><b>rd-panel</b></div>
+        <div><b>rd-panel</b></div>
 
-      <div class="titlePart">
-        <span>Parameters:</span>
-      </div>
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
 
-      <div class="option">
-        <table>
-          <tr>
-            <td>Content title</td>
-            <td>Title of the panel</td>
-          </tr>
-          <tr>
-            <td>@Input() color: string</td>
-            <td>black(default), green, red, blue, blue-light, purple, orange, gold</td>
-          </tr>
-          <tr>
-            <td>@Output() stateChange</td>
-            <td>Event emitted when the panel is closed or opened by clicking on it</td>
-          </tr>
-        </table>
-      </div>
+        <div class="option">
+          <table>
+            <tr>
+              <td>Content title</td>
+              <td>Title of the panel</td>
+            </tr>
+            <tr>
+              <td>@Input() color: string</td>
+              <td>black(default), green, red, blue, blue-light, purple, orange, gold</td>
+            </tr>
+            <tr>
+              <td>@Output() stateChange</td>
+              <td>Event emitted when the panel is closed or opened by clicking on it</td>
+            </tr>
+          </table>
+        </div>
+      </rd-tabs>
+
+      <rd-tabs [title]="'Example'">
+        <div class="titlePart">
+          <span>HTML</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+
+        <div class="titlePart">
+            <span>Typescript</span>
+          </div>
+
+          <div highlightChildren>
+            <pre><code [textContent]="tsCode"></code></pre>
+          </div>
+      </rd-tabs>
+    </rd-tabs-group>
   </app-explanation>
 </div>
