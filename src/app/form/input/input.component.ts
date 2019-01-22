@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
+  public htmlCode = '<rd-input [(value)]="inputValue" [placeholder]="\'Basic Text Input\'" [color]="\'red\'"></rd-input>\n';
+  public tsCode = 'public inputValue = \'test\';\n';
+
   constructor() { }
 
   ngOnInit() {

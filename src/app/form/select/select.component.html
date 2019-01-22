@@ -19,71 +19,92 @@
 
 <div class="explanation">
   <app-explanation>
+    <rd-tabs-group>
+      <rd-tabs [title]="'Informations'">
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
 
-    <div class="titlePart">
-      <span>HTML Tag</span>
-    </div>
+        <div><b>rd-select</b></div>
 
-    <div><b>rd-select</b></div>
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
 
-    <div class="titlePart">
-      <span>Parameters:</span>
-    </div>
+        <div class="option">
+          <table>
+            <tr>
+              <td>@Input() value: string</td>
+              <td>empty by default</td>
+            </tr>
+            <tr>
+              <td>@Input() placeholder: string</td>
+              <td>'Select' by default</td>
+            </tr>
+            <tr>
+              <td>@Input() color: string</td>
+              <td>gold(default), green, red, blue, blue-light, purple, orange, black</td>
+            </tr>
+            <tr>
+              <td>@Output() valueChange</td>
+              <td>Event emitted when the value has been changed</td>
+            </tr>
+            <tr>
+              <td>Content &lt;rd-select-option&gt;</td>
+              <td>The options inside the select menu</td>
+            </tr>
+          </table>
+        </div>
 
-    <div class="option">
-      <table>
-        <tr>
-          <td>@Input() value: string</td>
-          <td>empty by default</td>
-        </tr>
-        <tr>
-          <td>@Input() placeholder: string</td>
-          <td>'Select' by default</td>
-        </tr>
-        <tr>
-          <td>@Input() color: string</td>
-          <td>gold(default), green, red, blue, blue-light, purple, orange, black</td>
-        </tr>
-        <tr>
-          <td>@Output() valueChange</td>
-          <td>Event emitted when the value has been changed</td>
-        </tr>
-        <tr>
-          <td>Content &lt;rd-select-option&gt;</td>
-          <td>The options inside the select menu</td>
-        </tr>
-      </table>
-    </div>
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
 
-    <div class="titlePart">
-        <span>HTML Tag</span>
-      </div>
+        <div><b>rd-select-option</b></div>
 
-      <div><b>rd-select-option</b></div>
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
 
-      <div class="titlePart">
-        <span>Parameters:</span>
-      </div>
+        <div class="option">
+          <table>
+            <tr>
+              <td>@Input() value: string</td>
+              <td>value of the option</td>
+            </tr>
+            <tr>
+              <td>@Input() text: string</td>
+              <td>The text displayed when it's the selected element; The value by default</td>
+            </tr>
+            <tr>
+              <td>@Output() valueSelected</td>
+              <td>Event emitted when the value has been selected</td>
+            </tr>
+            <tr>
+              <td>Content</td>
+              <td>The content displayed inside the menu</td>
+            </tr>
+          </table>
+        </div>
+      </rd-tabs>
 
-      <div class="option">
-        <table>
-          <tr>
-            <td>@Input() value: string</td>
-            <td>value of the option</td>
-          </tr>
-          <tr>
-            <td>@Input() text: string</td>
-            <td>The text displayed when it's the selected element; The value by default</td>
-          </tr>
-          <tr>
-            <td>@Output() valueSelected</td>
-            <td>Event emitted when the value has been selected</td>
-          </tr>
-          <tr>
-            <td>Content</td>
-            <td>The content displayed inside the menu</td>
-          </tr>
-        </table>
-      </div>
+      <rd-tabs [title]="'Example'">
+        <div class="titlePart">
+          <span>HTML</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+
+        <div class="titlePart">
+          <span>Typescript</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="tsCode"></code></pre>
+        </div>
+      </rd-tabs>
+    </rd-tabs-group>
   </app-explanation>
 </div>

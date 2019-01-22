@@ -9,53 +9,73 @@
 
   <div class="explanation">
     <app-explanation>
+      <rd-tabs-group>
+        <rd-tabs [title]="'Information'">
+          <div class="titlePart">
+            <span>HTML Tag</span>
+          </div>
 
-      <div class="titlePart">
-        <span>HTML Tag</span>
-      </div>
+          <div><b>rd-input-number</b></div>
 
-      <div><b>rd-input-number</b></div>
+          <div class="titlePart">
+            <span>Parameters:</span>
+          </div>
 
-      <div class="titlePart">
-        <span>Parameters:</span>
-      </div>
+          <div class="option">
+            <table>
+              <tr>
+                <td>@Input() value: string</td>
+                <td>Default value of the Input</td>
+              </tr>
+              <tr>
+                <td>@Input() label: string</td>
+                <td>Text of the Label</td>
+              </tr>
+              <tr>
+                <td>@Input() color: string</td>
+                <td>gold(default), green, red, blue, blue-light, purple, orange</td>
+              </tr>
+              <tr>
+                <td>@Input() display: string</td>
+                <td>Type of display for the incrementor; 'single', 'both'(default)</td>
+              </tr>
+              <tr>
+                <td>@Input() min, @Input() max: number</td>
+                <td>Min and Max value for the input; none by default</td>
+              </tr>
+              <tr>
+                <td>@Input() increment: number</td>
+                <td>The value incremented for each click; 1(default</td>
+              </tr>
+              <tr>
+                <td>@Input() disabled: boolean</td>
+                <td>Disable the input; false by default</td>
+              </tr>
+              <tr>
+                <td>@Output() valueChange: string</td>
+                <td>Event emitted when the text has been changed</td>
+              </tr>
+            </table>
+          </div>
+        </rd-tabs>
 
-      <div class="option">
-        <table>
-          <tr>
-            <td>@Input() value: string</td>
-            <td>Default value of the Input</td>
-          </tr>
-          <tr>
-            <td>@Input() label: string</td>
-            <td>Text of the Label</td>
-          </tr>
-          <tr>
-            <td>@Input() color: string</td>
-            <td>gold(default), green, red, blue, blue-light, purple, orange</td>
-          </tr>
-          <tr>
-            <td>@Input() display: string</td>
-            <td>Type of display for the incrementor; 'single', 'both'(default)</td>
-          </tr>
-          <tr>
-            <td>@Input() min, @Input() max: number</td>
-            <td>Min and Max value for the input; none by default</td>
-          </tr>
-          <tr>
-            <td>@Input() increment: number</td>
-            <td>The value incremented for each click; 1(default</td>
-          </tr>
-          <tr>
-            <td>@Input() disabled: boolean</td>
-            <td>Disable the input; false by default</td>
-          </tr>
-          <tr>
-            <td>@Output() valueChange: string</td>
-            <td>Event emitted when the text has been changed</td>
-          </tr>
-        </table>
-      </div>
+        <rd-tabs [title]="'Example'">
+          <div class="titlePart">
+            <span>HTML</span>
+          </div>
 
+          <div highlightChildren>
+            <pre><code [textContent]="htmlCode"></code></pre>
+          </div>
+
+          <div class="titlePart">
+            <span>Typescript</span>
+          </div>
+
+          <div highlightChildren>
+            <pre><code [textContent]="tsCode"></code></pre>
+          </div>
+        </rd-tabs>
+      </rd-tabs-group>
     </app-explanation>
   </div>

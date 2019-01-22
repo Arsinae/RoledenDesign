@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextEditorComponent implements OnInit {
 
+  public htmlCode = '<rd-text-editor [(text)]="value" [height]="150"></rd-text-editor>\n' +
+    '<span>Text raw: {{value}}</span>';
+  public tsCode = 'public value = \'\';\n';
+
   constructor() { }
 
   ngOnInit() {

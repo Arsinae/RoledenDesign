@@ -11,31 +11,53 @@
 
 <div class="explanation">
   <app-explanation>
-    <div class="titlePart">
-      <span>HTML Tag</span>
-    </div>
+    <rd-tabs-group>
+      <rd-tabs [title]="'Example'">
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
 
-    <div><b>rd-button</b></div>
+        <div><b>rd-button</b></div>
 
-    <div class="titlePart">
-      <span>Parameters:</span>
-    </div>
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
 
-    <div class="option">
-      <table>
-        <tr>
-          <td>@Input() color: string</td>
-          <td>gold(default), green, red, blue, blue-light, purple, orange, black, gradient-blue, gradient-peach</td>
-        </tr>
-        <tr>
-          <td>@Input() rounded: boolean</td>
-          <td>false(default)</td>
-        </tr>
-        <tr>
-          <td>@Output() buttonClick</td>
-          <td>Event emitted by clicking on the button</td>
-        </tr>
-      </table>
-    </div>
+        <div class="option">
+          <table>
+            <tr>
+              <td>@Input() color: string</td>
+              <td>gold(default), green, red, blue, blue-light, purple, orange, black, gradient-blue, gradient-peach</td>
+            </tr>
+            <tr>
+              <td>@Input() rounded: boolean</td>
+              <td>false(default)</td>
+            </tr>
+            <tr>
+              <td>@Output() buttonClick</td>
+              <td>Event emitted by clicking on the button</td>
+            </tr>
+          </table>
+        </div>
+      </rd-tabs>
+
+      <rd-tabs [title]="'Example'">
+        <div class="titlePart">
+          <span>HTML</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+
+        <div class="titlePart">
+          <span>Typescript</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="tsCode"></code></pre>
+        </div>
+      </rd-tabs>
+    </rd-tabs-group>
   </app-explanation>
 </div>
