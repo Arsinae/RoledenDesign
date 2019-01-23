@@ -1,29 +1,54 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, OnChanges, Output } from '@angular/core';
+import { trigger, transition, animate, keyframes, style} from '@angular/animations';
 
 @Component({
   selector: 'rd-dice',
   templateUrl: './dice.component.html',
-  styleUrls: ['./dice.component.scss']
+  styleUrls: ['./dice.component.scss'],
+  animations: [
+    trigger('turnAnimation', [
+      transition('false => true', animate('2.5s linear', keyframes([
+        style({transform: 'translateZ(-100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)', offset: 0}),
+        style({transform: 'translateZ(-100px) rotateX(180deg) rotateY(180deg) rotateZ(0deg) scale(0.8)', offset: 0.16}),
+        style({transform: 'translateZ(-100px) rotateX(360deg) rotateY(90deg) rotateZ(180deg) scale(0.8)', offset: 0.33}),
+        style({transform: 'translateZ(-100px) rotateX(360deg) rotateY(360deg) rotateZ(360deg) scale(0.8)', offset: 0.5}),
+        style({transform: 'translateZ(-100px) rotateX(180deg) rotateY(360deg) rotateZ(270deg) scale(0.8)', offset: 0.66}),
+        style({transform: 'translateZ(-100px) rotateX(180deg) rotateY(180deg) rotateZ(180deg) scale(0.8)', offset: 0.83}),
+        ])),
+      )
+    ])
+  ]
 })
-export class DiceComponent implements OnInit {
+export class DiceComponent implements OnInit, OnChanges {
 
-  @ViewChild('dice') dice;
-  @ViewChild('wrapper') wrapper;
+  @Input() diceSize = 6;
+
+  @Output() rollValue: EventEmitter<any> = new EventEmitter();
+
+  public chosenValue = 1;
+  public rolling = false;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.wrapper.nativeElement.style.transform = 'scale(0.25)';
+  }
+
+  ngOnChanges(changes) {
+    console.log(changes);
+    this.diceSize = Math.max(Math.min(this.diceSize, 100), 6);
   }
 
   rollDice() {
-    this.dice.nativeElement.classList.remove('roll1', 'roll2', 'roll3', 'roll4', 'roll5', 'roll6');
-    const random = Math.floor(Math.random() * 10 % 6) + 1;
-    const newOne = this.dice.nativeElement.cloneNode(true);
-    this.dice.nativeElement.parentNode.replaceChild(newOne, this.dice.nativeElement);
-    this.dice.nativeElement = newOne;
-    this.dice.nativeElement.classList.add('roll' + random);
+    this.rolling = true;
+  }
+
+  resetChosenValue() {
+    if (this.rolling === true) {
+      this.chosenValue = Math.floor(Math.random() * 100 % this.diceSize) + 1;
+      this.rollValue.emit(this.chosenValue);
+      this.rolling = false;
+    }
   }
 
 }

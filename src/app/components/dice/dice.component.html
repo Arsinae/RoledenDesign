@@ -2,7 +2,10 @@
   <span>Rolling Dice</span>
 </div>
 
-<rd-dice></rd-dice>
+<div class="diceContainer">
+  <rd-dice [diceSize]="100" (rollValue)="rollValue($event)"></rd-dice>
+  <span>You roll a {{value}} on 100</span>
+</div>
 
 <div class="explanation">
   <app-explanation>
@@ -13,6 +16,23 @@
         </div>
 
         <div><b>rd-dice</b></div>
+
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
+
+        <div class="option">
+          <table>
+            <tr>
+              <td>@Input() diceSize: number</td>
+              <td>Maximum value of the dice; between 6(default) and 100</td>
+            </tr>
+            <tr>
+              <td>@Output() rollValue: number</td>
+              <td>Event emitted when the dice has rolled; Send the rolled value</td>
+            </tr>
+          </table>
+        </div>
       </rd-tabs>
 
       <rd-tabs [title]="'Example'">
@@ -22,6 +42,14 @@
 
         <div highlightChildren>
           <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+
+        <div class="titlePart">
+          <span>Typescript</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="tsCode"></code></pre>
         </div>
       </rd-tabs>
     </rd-tabs-group>
