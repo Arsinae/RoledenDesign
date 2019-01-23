@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlippingCardComponent implements OnInit {
 
-  public htmlCode = '<rd-flipping-card [rounded]="true" [bounce]="true">\n' +
+  public htmlCode = '<rd-flipping-card [rounded]="true" [bounce]="true" (cardFlipped)="cardFlip($event)">\n' +
     ' <div front>\n' +
     '   <img src="https://i.pinimg.com/originals/90/71/c4/9071c49a6950913ed32ada26f4c096e9.jpg">\n' +
     ' </div>\n' +
@@ -15,10 +15,15 @@ export class FlippingCardComponent implements OnInit {
     '   <span>I must not fear. Fear is the mind-killer... </span>\n' +
     ' </div>\n' +
     '</rd-flipping-card>';
+  public tsCode = 'cardFlip($event) {\n  console.log(\'Card Flipped\');\n}\n';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  cardFlip($event) {
+    console.log('Card Flipped');
   }
 
 }

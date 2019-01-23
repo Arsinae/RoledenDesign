@@ -35,7 +35,7 @@
   </div>
 
   <div class="card">
-    <rd-flipping-card [bounce]="true">
+    <rd-flipping-card [bounce]="true" (cardFlipped)="cardFlip($event)">
         <div class="front" front>
           <div class="thirdFront cardContent">
             <span>Caladan</span>
@@ -86,6 +86,10 @@
               <td>@Input() height: Number</td>
               <td>Height of the card</td>
             </tr>
+            <tr>
+              <td>@Output() cardFlipped</td>
+              <td>Event Emitted when the card is flipped;</td>
+            </tr>
           </table>
         </div>
       </rd-tabs>
@@ -97,6 +101,14 @@
 
         <div highlightChildren>
           <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+
+        <div class="titlePart">
+          <span>Typescript</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="tsCode"></code></pre>
         </div>
       </rd-tabs>
     </rd-tabs-group>
