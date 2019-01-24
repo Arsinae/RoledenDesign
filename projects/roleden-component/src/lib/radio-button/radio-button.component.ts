@@ -42,16 +42,16 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   setColorOption(option: RadioButtonOptionComponent) {
-    option.color = this.color;
+    Promise.resolve(null).then(() => option.color = this.color);
   }
 
   setDisplay(option: RadioButtonOptionComponent) {
-    option.display = this.display;
+    Promise.resolve(null).then(() => option.display = this.display);
   }
 
   setChecked(option: RadioButtonOptionComponent) {
     if (this.value === option.value) {
-      option.checked = true;
+      Promise.resolve(null).then(() => option.checked = true);
     }
   }
 

@@ -31,8 +31,10 @@ export class AccordionComponent implements OnInit, AfterViewInit {
     if (this.autoClose) {
       this.panels.forEach(panel => {
         if (panel !== current) {
-          panel.open = false;
-          panel.changeTextContainerSize();
+          Promise.resolve(null).then(() => {
+            panel.open = false;
+            panel.changeTextContainerSize();
+          });
         }
       });
     }

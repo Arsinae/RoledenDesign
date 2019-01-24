@@ -42,16 +42,16 @@ export class CheckBoxComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   setColorOption(option: CheckBoxOptionComponent) {
-    option.color = this.color;
+    Promise.resolve(null).then(() => option.color = this.color);
   }
 
   setDisplay(option: CheckBoxOptionComponent) {
-    option.display = this.display;
+    Promise.resolve(null).then(() => option.display = this.display);
   }
 
   setChecked(option: CheckBoxOptionComponent) {
     if (this.value.indexOf(option.value) !== -1) {
-      option.checked = true;
+      Promise.resolve(null).then(() => option.checked = true);
     }
   }
 

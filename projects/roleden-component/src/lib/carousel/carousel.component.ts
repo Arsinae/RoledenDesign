@@ -68,11 +68,11 @@ export class CarouselComponent implements OnInit, AfterViewInit {
 
   changeView() {
     this.carousels.forEach((carousel) => {
-      carousel.displayed = false;
+      Promise.resolve(null).then(() => carousel.displayed = false);
     });
     this.carousels.forEach((carousel, index) => {
       if (index === this.displayedIndex) {
-        carousel.displayed = true;
+        Promise.resolve(null).then(() => carousel.displayed = true);
       }
     });
     setTimeout(() => {
