@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'rd-tabs',
@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TabsComponent implements OnInit {
 
   @Input() title = '';
+
+  @Output() changeDisplay: EventEmitter<any> = new EventEmitter();
 
   public display = false;
 

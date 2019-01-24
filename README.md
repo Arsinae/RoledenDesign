@@ -18,6 +18,7 @@ Add `RoledenComponent.forRoot()` in your module;
 Add a max value and a roll event on the `rd-dice` Component;\
 Add a flip event on the `rd-flipping-card` Component;\
 Make the animation of the list optionnal;\
+Add a change state event on the `rd-tabs` Component;\
 
 #### 1.1.21
 ##### Corrective

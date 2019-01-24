@@ -4,7 +4,7 @@
 
 <div class="tabContainer">
   <rd-tabs-group [color]="'purple'" (displayedIndexChange)="changeIndex($event)">
-    <rd-tabs *ngFor="let title of tabs" [title]="title">
+    <rd-tabs *ngFor="let title of tabs" [title]="title" (changeDisplay)="changeDisplay($event)">
       <div>{{title}}</div>
     </rd-tabs>
   </rd-tabs-group>
@@ -64,6 +64,10 @@
             <tr>
               <td>@Input() title: string</td>
               <td>Displayed title</td>
+            </tr>
+            <tr>
+              <td>@Output() changeDisplay: {{ '{index: number, state: boolean}' }}</td>
+              <td>Event emitted when the display state of the tab change</td>
             </tr>
           </table>
         </div>

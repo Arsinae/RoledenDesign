@@ -35,7 +35,6 @@ export class DiceComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes) {
-    console.log(changes);
     this.diceSize = Math.max(Math.min(this.diceSize, 100), 6);
   }
 

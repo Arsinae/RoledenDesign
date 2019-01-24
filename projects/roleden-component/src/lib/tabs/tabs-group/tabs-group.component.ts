@@ -110,10 +110,12 @@ export class TabsGroupComponent implements OnInit, AfterViewInit, AfterContentCh
 
   setView() {
     this.tabs.forEach((tab, index) => {
-      if (index === this.displayedIndex) {
+      if (index === this.displayedIndex && tab.display === false) {
         tab.display = true;
-      } else {
+        tab.changeDisplay.emit({index: index, state: true});
+      } else if (index !== this.displayedIndex && tab.display === true) {
         tab.display = false;
+        tab.changeDisplay.emit({index: index, state: false});
       }
     });
   }
