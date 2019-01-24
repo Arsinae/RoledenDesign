@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'rd-carousel-data',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carousel-data.component.scss']
 })
 export class CarouselDataComponent implements OnInit {
+
+  @Output() displayChange: EventEmitter<any> = new EventEmitter();
 
   public displayed = false;
 

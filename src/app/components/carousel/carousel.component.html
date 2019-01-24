@@ -4,13 +4,13 @@
 
 <div class="carousel">
   <rd-carousel>
-    <rd-carousel-data>
+    <rd-carousel-data (displayChange)="changeDisplay($event)">
       <div class="carouselImg">
         <img src="https://stmed.net/sites/default/files/dune-wallpapers-29516-4438731.jpg">
         <span>Arrakis</span>
       </div>
     </rd-carousel-data>
-    <rd-carousel-data>
+    <rd-carousel-data (displayChange)="changeDisplay($event)">
       <div class="carouselImg">
         <img src="https://i.pinimg.com/originals/9c/65/07/9c65071899c8c179adda73ca7ab237b6.jpg">
         <span>Caladan</span>
@@ -75,6 +75,14 @@
 
         <div highlightChildren>
           <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+
+        <div class="titlePart">
+          <span>Typescript</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="tsCode"></code></pre>
         </div>
       </rd-tabs>
     </rd-tabs-group>
