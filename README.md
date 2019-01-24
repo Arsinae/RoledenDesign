@@ -13,7 +13,7 @@ Add `RoledenComponent.forRoot()` in your module;
 
 ### Release Notes
 
-#### 1.2.0
+#### 1.2.1
 ##### Correctives
 Add a max value and a roll event on the `rd-dice` Component;\
 Add a flip event on the `rd-flipping-card` Component;\
