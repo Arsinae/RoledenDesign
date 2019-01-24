@@ -3,7 +3,7 @@
 </div>
 
 <div class="listContainer">
-  <rd-list [data]="data" [search]="true" [sort]="true" (fileSelect)="selectFile($event)"></rd-list>
+  <rd-list [data]="data" [search]="true" [sort]="true" (fileSelect)="selectFile($event)" [listAnimation]="true"></rd-list>
 </div>
 
 
@@ -38,6 +38,10 @@
             <tr>
               <td>@Input() size: number</td>
               <td>Size of the text inside the list; 16 by default</td>
+            </tr>
+            <tr>
+              <td>@Input() listAnimation: boolean</td>
+              <td>Enable / Disable the animation; false by default</td>
             </tr>
             <tr>
               <td>@Output() fileSelect</td>

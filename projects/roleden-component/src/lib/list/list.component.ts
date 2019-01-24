@@ -27,6 +27,7 @@ export class ListComponent implements OnInit {
   @Input() search = false;
   @Input() sort = false;
   @Input() size = 16;
+  @Input() listAnimation = false;
 
   @Output() fileSelect: EventEmitter<any> = new EventEmitter();
 

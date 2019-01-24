@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div [@listAnimation]="currentList.length">
+      <div [@listAnimation]="listAnimation ? currentList.length : false">
         <div *ngFor="let elem of currentList; let i = index">
           <ng-container *ngIf="i !== 0">
             <div class="limiter"></div>
