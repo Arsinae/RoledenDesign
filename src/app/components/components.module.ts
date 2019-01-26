@@ -22,6 +22,7 @@ import { SnackBarComponent } from './snack-bar/snack-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { ListComponent } from './list/list.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
 
 export function hljsLanguages() {
   return [
@@ -52,7 +53,8 @@ export function hljsLanguages() {
     AlertComponent,
     SnackBarComponent,
     CarouselComponent,
-    TabsComponent
+    TabsComponent,
+    TooltipComponent
   ],
   exports: [
     ComponentsComponent

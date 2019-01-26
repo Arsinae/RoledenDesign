@@ -1,0 +1,60 @@
+<div class="titlePart">
+  <span>Tooltip</span>
+</div>
+
+<div class="tooltipContainer">
+  <span>Test Test Test
+    <rd-tooltip>
+      <span text>Bonjour</span>
+      <span explanation>Bonsoir à vous tous</span>
+    </rd-tooltip>
+    Test
+  </span>
+</div>
+
+
+<div class="explanation">
+  <app-explanation>
+    <rd-tabs-group>
+      <rd-tabs [title]="'Information'">
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
+
+        <div><b>rd-tooltip</b></div>
+
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
+
+        <div class="option">
+          <table>
+            <tr>
+              <td>Content Array&lt;rd-tabs&gt;</td>
+              <td>The tabs</td>
+            </tr>
+          </table>
+        </div>
+
+      </rd-tabs>
+
+      <rd-tabs [title]="'Example'">
+        <div class="titlePart">
+          <span>HTML</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+
+        <div class="titlePart">
+            <span>Typescript</span>
+          </div>
+
+          <div highlightChildren>
+            <pre><code [textContent]="tsCode"></code></pre>
+          </div>
+      </rd-tabs>
+    </rd-tabs-group>
+  </app-explanation>
+</div>

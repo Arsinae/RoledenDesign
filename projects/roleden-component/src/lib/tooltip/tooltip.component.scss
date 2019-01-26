@@ -1,0 +1,81 @@
+@import "../style/variables";
+
+.tooltipContainer {
+  position: relative;
+
+  .tooltipText {
+    text-decoration: underline dotted black;
+  }
+
+  .tooltipExplanation {
+    position: absolute;
+    display: none;
+    padding: $margin/2 $margin;
+    background-color: white;
+    box-shadow: $shadow;
+
+    &:after {
+      content: '';
+      position: absolute;
+      border-width: $margin;
+      border-style: solid;
+      border-color: transparent;
+    }
+  }
+
+  &.bottomTooltip .tooltipExplanation {
+    top: calc(100% + 9px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+      bottom: 100%;
+      left: 50%;
+      margin-left: -$margin;
+      border-bottom-color: white;
+    }
+  }
+
+  &.topTooltip .tooltipExplanation {
+    bottom: calc(100% + 9px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+      top: 100%;
+      left: 50%;
+      margin-left: -$margin;
+      border-top-color: white;
+    }
+  }
+
+  &.rightTooltip .tooltipExplanation {
+    left: calc(100% + 9px);
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::after {
+      right: 100%;
+      top: 50%;
+      margin-top: -$margin;
+      border-right-color: white;
+    }
+  }
+
+  &.leftTooltip .tooltipExplanation {
+    right: calc(100% + 9px);
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::after {
+      left: 100%;
+      top: 50%;
+      margin-top: -$margin;
+      border-left-color: white;
+    }
+  }
+
+  &:hover .tooltipExplanation {
+    display: block;
+  }
+}

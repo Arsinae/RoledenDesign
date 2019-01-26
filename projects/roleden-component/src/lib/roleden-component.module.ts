@@ -24,6 +24,7 @@ import { SnackBarService } from './snack-bar/snack-bar.service';
 import { SnackBarModule } from './snack-bar/snack-bar.module';
 import { CarouselModule } from './carousel/carousel.module';
 import { TabsModule } from './tabs/tabs.module';
+import { TooltipComponent } from './tooltip/tooltip.component';
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import { TabsModule } from './tabs/tabs.module';
     FlippingCardComponent,
     InputComponent,
     NotationComponent,
-    InputNumberComponent
+    InputNumberComponent,
+    TooltipComponent
   ],
   exports: [
     DiceComponent,
@@ -62,7 +64,8 @@ import { TabsModule } from './tabs/tabs.module';
     AlertModule,
     SnackBarModule,
     CarouselModule,
-    TabsModule
+    TabsModule,
+    TooltipComponent
   ]
 })
 export class RoledenComponentModule {
