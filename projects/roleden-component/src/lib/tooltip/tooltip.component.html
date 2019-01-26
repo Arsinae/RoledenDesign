@@ -2,7 +2,7 @@
   <span class="tooltipText">
     <ng-content select="[text]"></ng-content>
   </span>
-  <span class="tooltipExplanation">
+  <span class="tooltipExplanation" [style.width.px]="width">
     <ng-content select="[explanation]"></ng-content>
   </span>
 </span>

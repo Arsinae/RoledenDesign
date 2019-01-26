@@ -10,6 +10,7 @@ export class TooltipComponent implements OnInit {
   @Input() position = 'bottom';
   @Input() color = 'black';
   @Input() style = 'dotted';
+  @Input() width: number = null;
 
   constructor() { }
 

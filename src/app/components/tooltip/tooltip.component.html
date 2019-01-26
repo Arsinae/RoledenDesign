@@ -4,7 +4,7 @@
 
 <div class="tooltipContainer">
   <span>Stilgar explains why the choice of "
-    <rd-tooltip [color]="'blue-light'" [position]="'top'">
+    <rd-tooltip [color]="'blue-light'" [position]="'top'" [width]="250">
       <span text>Muad'Dib</span>
       <span explanation>Muad'Dib is wise in the ways of the desert.</span>
     </rd-tooltip>
@@ -48,6 +48,10 @@
             <tr>
               <td>@Input() style: string</td>
               <td>The style of the tooltip's text; dotted(default), underline;</td>
+            </tr>
+            <tr>
+              <td>@Input() width: number</td>
+              <td>The width of the toolbar explanation; null by default</td>
             </tr>
           </table>
         </div>
