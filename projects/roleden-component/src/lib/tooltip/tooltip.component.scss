@@ -2,10 +2,7 @@
 
 .tooltipContainer {
   position: relative;
-
-  .tooltipText {
-    text-decoration: underline dotted black;
-  }
+  --main-color: black;
 
   .tooltipExplanation {
     position: absolute;
@@ -13,6 +10,8 @@
     padding: $margin/2 $margin;
     background-color: white;
     box-shadow: $shadow;
+    color: black;
+    transition: all 0.2s ease-in-out;
 
     &:after {
       content: '';
@@ -75,7 +74,47 @@
     }
   }
 
-  &:hover .tooltipExplanation {
-    display: block;
+  &:hover {
+    color: var(--main-color);
+
+    .tooltipExplanation {
+      display: block;
+    }
+  }
+
+  &.dottedTooltip {
+    text-decoration: underline dotted var(--main-color);
+  }
+
+  &.underlineTooltip {
+    text-decoration: underline var(--main-color);
+  }
+
+  &.blueTooltip {
+    --main-color: #{$colored-blue};
+  }
+
+  &.blue-lightTooltip {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.redTooltip {
+    --main-color: #{$colored-red};
+  }
+
+  &.greenTooltip {
+    --main-color: #{$colored-green};
+  }
+
+  &.orangeTooltip {
+    --main-color: #{$colored-orange};
+  }
+
+  &.purpleTooltip {
+    --main-color: #{$colored-purple};
+  }
+
+  &.goldTooltip {
+    --main-color: #{$gold};
   }
 }

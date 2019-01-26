@@ -4,7 +4,7 @@
 
 <div class="tooltipContainer">
   <span>Test Test Test
-    <rd-tooltip>
+    <rd-tooltip [color]="'blue-light'" [position]="'top'">
       <span text>Bonjour</span>
       <span explanation>Bonsoir à vous tous</span>
     </rd-tooltip>
@@ -30,8 +30,24 @@
         <div class="option">
           <table>
             <tr>
-              <td>Content Array&lt;rd-tabs&gt;</td>
-              <td>The tabs</td>
+              <td>Content text</td>
+              <td>The text displayed</td>
+            </tr>
+            <tr>
+              <td>Content explanation</td>
+              <td>The explantion displayed inside the tooltip</td>
+            </tr>
+            <tr>
+              <td>@Input() position: string</td>
+              <td>The position of th tooltip; 'bottom'(default), 'top', 'left', 'right';</td>
+            </tr>
+            <tr>
+              <td>@Input() color: string</td>
+              <td>The color of the tooltip; black(default), gold, blue, blue-light, red, green, orange, purple</td>
+            </tr>
+            <tr>
+              <td>@Input() style: string</td>
+              <td>The style of the tooltip's text; dotted(default), underline;</td>
             </tr>
           </table>
         </div>
@@ -46,14 +62,6 @@
         <div highlightChildren>
           <pre><code [textContent]="htmlCode"></code></pre>
         </div>
-
-        <div class="titlePart">
-            <span>Typescript</span>
-          </div>
-
-          <div highlightChildren>
-            <pre><code [textContent]="tsCode"></code></pre>
-          </div>
       </rd-tabs>
     </rd-tabs-group>
   </app-explanation>

@@ -1,4 +1,4 @@
-<span class="tooltipContainer {{position}}Tooltip">
+<span [classList]="tooltipClassList()">
   <span class="tooltipText">
     <ng-content select="[text]"></ng-content>
   </span>

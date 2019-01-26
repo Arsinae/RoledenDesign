@@ -7,11 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TooltipComponent implements OnInit {
 
-  @Input() position = 'left';
+  @Input() position = 'bottom';
+  @Input() color = 'black';
+  @Input() style = 'dotted';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  tooltipClassList() {
+    return 'tooltipContainer ' + (this.position + 'Tooltip ') + (this.color + 'Tooltip ') + (this.style + 'Tooltip');
   }
 
 }

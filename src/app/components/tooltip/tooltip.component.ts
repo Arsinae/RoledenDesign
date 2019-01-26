@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TooltipComponent implements OnInit {
 
-  public htmlCode = '';
-  public tsCode = '';
+  public htmlCode = '<rd-tooltip [color]="\'blue-light\'" [position]="\'top\'">\n' +
+    '  <span text>Bonjour</span>\n  <span explanation>Bonsoir à vous tous</span>\n' +
+    '</rd-tooltip>\n';
 
   constructor() { }
 

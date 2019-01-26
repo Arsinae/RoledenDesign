@@ -13,6 +13,10 @@ Add `RoledenComponent.forRoot()` in your module;
 
 ### Release Notes
 
+#### 1.2.2
+##### News
+Add a `rd-tooltip` Component;
+
 #### 1.2.1
 ##### Correctives
 Add a max value and a roll event on the `rd-dice` Component;\
