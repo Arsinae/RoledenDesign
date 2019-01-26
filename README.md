@@ -15,7 +15,8 @@ Add `RoledenComponent.forRoot()` in your module;
 
 #### 1.2.2
 ##### News
-Add a `rd-tooltip` Component;
+Add a `rd-tooltip` Component;\
+Add a `rd-modal` Component;
 
 #### 1.2.1
 ##### Correctives

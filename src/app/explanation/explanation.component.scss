@@ -12,6 +12,7 @@
     text-align: center;
     box-shadow: $shadow;
     cursor: pointer;
+    overflow: hidden;
 
     span {
       padding-left: $margin;

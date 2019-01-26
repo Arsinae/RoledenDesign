@@ -25,6 +25,7 @@ import { SnackBarModule } from './snack-bar/snack-bar.module';
 import { CarouselModule } from './carousel/carousel.module';
 import { TabsModule } from './tabs/tabs.module';
 import { TooltipComponent } from './tooltip/tooltip.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports: [
@@ -42,7 +43,8 @@ import { TooltipComponent } from './tooltip/tooltip.component';
     InputComponent,
     NotationComponent,
     InputNumberComponent,
-    TooltipComponent
+    TooltipComponent,
+    ModalComponent
   ],
   exports: [
     DiceComponent,
@@ -65,7 +67,8 @@ import { TooltipComponent } from './tooltip/tooltip.component';
     SnackBarModule,
     CarouselModule,
     TabsModule,
-    TooltipComponent
+    TooltipComponent,
+    ModalComponent
   ]
 })
 export class RoledenComponentModule {

@@ -23,6 +23,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { ListComponent } from './list/list.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
+import { ModalComponent } from './modal/modal.component';
 
 export function hljsLanguages() {
   return [
@@ -54,7 +55,8 @@ export function hljsLanguages() {
     SnackBarComponent,
     CarouselComponent,
     TabsComponent,
-    TooltipComponent
+    TooltipComponent,
+    ModalComponent
   ],
   exports: [
     ComponentsComponent
