@@ -23,10 +23,10 @@
         </div>
       </div>
     </div>
-    <div class="page">
+    <div class="page" [@routerAnimation]="routeAnimation(outlet)">
       <rd-alert></rd-alert>
       <rd-snack-bar></rd-snack-bar>
-      <router-outlet></router-outlet>
+      <router-outlet #outlet="outlet"></router-outlet>
     </div>
   </div>
 </div>

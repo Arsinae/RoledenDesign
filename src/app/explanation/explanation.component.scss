@@ -28,6 +28,7 @@
     &:not(.expand) {
       overflow: hidden;
       max-height: 0;
+      display: none;
     }
 
     &.expand {

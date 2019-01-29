@@ -1,18 +1,15 @@
 <div class="titlePart">
-  <span>Modal</span>
+  <span>Confirm Modal</span>
 </div>
 
 <div class="modalContainer">
   <span (click)="openModal()">Open Modal</span>
-  <rd-modal [width]="40" (closedModal)="closeModal()" #modal>
+  <rd-confirm-modal #modal (acceptModal)="acceptModal()" (cancelModal)="cancelModal()" (closedModal)="closeModal()">
     <div class="modalContent">
-        <cite (click)="clickOnCitation($event)">I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration.
-          I will face my fear. I will permit it to pass over me and through me. And when it has gone past
-          I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain.
-        </cite>
-        <blockquote>Bene Gesserit Litany Against Fear.</blockquote>
+      <cite>Don’t fear me. Forget mystery and accept love. There’s no mystery about love. It comes from life. Can’t you feel that?</cite>
+      <blockquote>Paul Muad'Dib</blockquote>
     </div>
-  </rd-modal>
+  </rd-confirm-modal>
 </div>
 
 <div class="explanation">
@@ -23,7 +20,7 @@
           <span>HTML Tag</span>
         </div>
 
-        <div><b>rd-modal</b></div>
+        <div><b>rd-confirm-modal</b></div>
 
         <div class="titlePart">
           <span>Parameters:</span>
@@ -44,8 +41,24 @@
               <td>Max height of the modal in percentage; null by default</td>
             </tr>
             <tr>
+              <td>@Input() acceptText: string</td>
+              <td>The text inside the accept button; 'Accept' by default</td>
+            </tr>
+            <tr>
+              <td>@Input() cancelText: string</td>
+              <td>The text inside the cancel button; 'Cancel' by default</td>
+            </tr>
+            <tr>
               <td>@Output() closedModal</td>
               <td>Event emitted when the modal is closed;</td>
+            </tr>
+            <tr>
+              <td>@Output() acceptModal</td>
+              <td>Event emitted by clicking on the accept button</td>
+            </tr>
+            <tr>
+              <td>@Output() cancelModal</td>
+              <td>Event emitted by clicking on the cancel button</td>
             </tr>
           </table>
         </div>

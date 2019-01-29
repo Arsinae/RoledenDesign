@@ -26,6 +26,7 @@ import { CarouselModule } from './carousel/carousel.module';
 import { TabsModule } from './tabs/tabs.module';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { ModalComponent } from './modal/modal.component';
+import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
 
 @NgModule({
   imports: [
@@ -44,7 +45,8 @@ import { ModalComponent } from './modal/modal.component';
     NotationComponent,
     InputNumberComponent,
     TooltipComponent,
-    ModalComponent
+    ModalComponent,
+    ConfirmModalComponent
   ],
   exports: [
     DiceComponent,
@@ -68,7 +70,8 @@ import { ModalComponent } from './modal/modal.component';
     CarouselModule,
     TabsModule,
     TooltipComponent,
-    ModalComponent
+    ModalComponent,
+    ConfirmModalComponent
   ]
 })
 export class RoledenComponentModule {

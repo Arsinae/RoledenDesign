@@ -1,3 +1,3 @@
-<button class="rdButton {{color}}Button" [class.rounded]="rounded" (click)="buttonClick.emit()">
+<button class="rdButton {{color}}Button" [class.rounded]="rounded" (click)="buttonClick.emit($event)">
   <ng-content></ng-content>
 </button>
