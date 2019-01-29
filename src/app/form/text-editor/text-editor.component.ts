@@ -16,4 +16,8 @@ export class TextEditorComponent implements OnInit {
   ngOnInit() {
   }
 
+  getSelection(event) {
+    console.log('Selected value :', event);
+  }
+
 }

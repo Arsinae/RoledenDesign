@@ -3,7 +3,7 @@
 </div>
 
 <div class="editorContainer">
-  <rd-text-editor [height]="150"></rd-text-editor>
+  <rd-text-editor [height]="150" (getSelection)="getSelection($event)"></rd-text-editor>
 </div>
 
 <div class="explanation">
@@ -33,6 +33,10 @@
             <tr>
               <td>@Output() textChange: string</td>
               <td>Event emitted when the text has been changed</td>
+            </tr>
+            <tr>
+              <td>@Output() getSelection: string</td>
+              <td>Event emitted when a part of text is selected</td>
             </tr>
           </table>
         </div>

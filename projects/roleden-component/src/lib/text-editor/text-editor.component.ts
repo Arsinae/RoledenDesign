@@ -12,6 +12,7 @@ export class TextEditorComponent implements OnInit {
   @Input() height = 200;
 
   @Output() textChange: EventEmitter<any> = new EventEmitter();
+  @Output() getSelection: EventEmitter<any> = new EventEmitter();
 
   @ViewChild('textEditor') textArea;
 
@@ -52,6 +53,12 @@ export class TextEditorComponent implements OnInit {
 
   pushText() {
     this.textChange.emit(this.textArea.nativeElement.innerHTML);
+  }
+
+  handleClick(event) {
+    if (event.view.getSelection().type === 'Range')   {
+      this.getSelection.emit(event.view.getSelection().toString());
+    }
   }
 
 }
