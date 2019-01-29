@@ -16,7 +16,12 @@ Add `RoledenComponent.forRoot()` in your module;
 #### 1.2.2
 ##### News
 Add a `rd-tooltip` Component;\
-Add a `rd-modal` Component;
+Add a `rd-modal` Component;\
+Add a `rd-confirm-modal` Component;
+
+##### Corretives
+Add an event on text selection inside the `rd-text-editor` Component;\
+Add a `overflow: hidden` on the `rd-carousel` animation;
 
 #### 1.2.1
 ##### Correctives
