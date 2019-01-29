@@ -7,8 +7,8 @@ import { ComponentsComponent } from './components/components.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/components', pathMatch: 'full'},
-  {path: 'components', component: ComponentsComponent},
-  {path: 'form', component: FormComponent}
+  {path: 'components', component: ComponentsComponent, data: {animation: 'components'}},
+  {path: 'form', component: FormComponent, data: {animation: 'form'}}
 ];
 
 @NgModule({
