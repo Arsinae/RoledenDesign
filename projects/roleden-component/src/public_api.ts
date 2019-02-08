@@ -12,3 +12,5 @@ export * from './lib/list/list-element.directive';
 export * from './lib/button/button.component';
 export * from './lib/snack-bar/snack-bar.service';
 export * from './lib/alert/alert.service';
+export * from './lib/modal/modal.component';
+export * from './lib/confirm-modal/confirm-modal.component';

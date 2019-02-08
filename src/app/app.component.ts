@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {MatDialog} from '@angular/material';
 import {LoginComponent} from './login/login.component';
 import { RouterOutlet } from '@angular/router';
-import { trigger, transition, group, query, animate, keyframes, style, state } from '@angular/animations';
+import { trigger, transition, group, query, animate, keyframes, style } from '@angular/animations';
 
 @Component({
   selector: 'app-root',

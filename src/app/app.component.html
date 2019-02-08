@@ -1,6 +1,6 @@
 <div class="roleden">
   <div class="sideBar" [class.open]="menu">
-    <app-sidebar *ngIf="menu"></app-sidebar>
+    <app-sidebar *ngIf="menu" (darkChange)="changeDark($event)"></app-sidebar>
   </div>
 
   <div class="mainContent">

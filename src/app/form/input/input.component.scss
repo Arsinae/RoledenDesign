@@ -41,14 +41,14 @@
 }
 
 .option {
-
   table, tr {
     width: 100%;
     padding: $margin;
   }
 
   tr:nth-child(odd) {
-    background-color: #f2f2f2;
+    background-color: var(--table-odd);
+    @include defaultTransition();
   }
 
   td {

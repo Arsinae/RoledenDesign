@@ -2,8 +2,11 @@
 
 .explanation {
   width: 100%;
+  color: var(--text-color);
+  background-color: var(--element-background);
+  @include defaultTransition();
 
-  .div {
+  div {
     width: 100%;
   }
 
@@ -13,6 +16,7 @@
     box-shadow: $shadow;
     cursor: pointer;
     overflow: hidden;
+    box-sizing: border-box;
 
     span {
       padding-left: $margin;

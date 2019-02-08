@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  public dark = false;
+
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
+  }
+
+  changeDarkMode() {
+    this.dark = !this.dark;
+    if (this.dark) {
+      this.renderer.addClass(document.body, 'rdDark');
+    } else {
+      this.renderer.removeClass(document.body, 'rdDark');
+    }
   }
 
 }

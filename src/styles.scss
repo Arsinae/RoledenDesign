@@ -2,9 +2,22 @@
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~highlight.js/styles/rainbow.css";
+@import "style/variables";
 
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
+  --background: #{$light-background};
+  --element-background: #{$light-background};
+  --text-color: #{$light-text};
+  --table-odd: #f2f2f2;
+
+  &.rdDark {
+    --background: #{$dark-background};
+    --element-background: #{$dark-blue};
+    --text-color: #{$dark-text};
+    --table-odd: #{$dark-background};
+  }
+
 }

@@ -98,6 +98,8 @@
 
   .page {
     flex: 1;
+    background-color: var(--background);
+    @include defaultTransition();
 
     .title {
       text-transform: uppercase;

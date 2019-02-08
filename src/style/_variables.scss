@@ -9,6 +9,12 @@ $colored-green: #72ba5a;
 $colored-purple: #a25aba;
 $colored-red: #ba5a5a;
 
+$light-background: white;
+$light-text: black;
+
+$dark-background: #0d2a35;
+$dark-text: white;
+
 $margin: 6px;
 
 $shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
@@ -23,4 +29,8 @@ $shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
   position: absolute;
   top: 50%; left: 50%;
   @include transform(translate(-50%, -50%));
+}
+
+@mixin defaultTransition() {
+  transition: all .3s linear;
 }

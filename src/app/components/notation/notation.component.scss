@@ -36,7 +36,8 @@
   }
 
   tr:nth-child(odd) {
-    background-color: #f2f2f2;
+    background-color: var(--table-odd);
+    @include defaultTransition();
   }
 
   td {
@@ -44,27 +45,3 @@
     width: 50%;
   }
 }
-
-@media screen and (min-width: 992px) {
-  .cardList {
-    width: 30%;
-    margin: $margin (10% / 6);
-  }
-}
-
-
-@media screen and (max-width: 992px) {
-  .cardList {
-    width: 45%;
-    margin: $margin 2.5%;
-  }
-}
-
-
-@media screen and (max-width: 650px) {
-  .cardList {
-    width: 90%;
-    margin: $margin 5%;
-  }
-}
-

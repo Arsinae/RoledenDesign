@@ -13,4 +13,8 @@
       <div class="text">Paint</div>
     </a>
   </div>
+
+  <div class="darkMode">
+    <rd-button (buttonClick)="changeDarkMode()" [color]="'blue'">{{dark ? "Light Mode" : "Dark Mode"}}</rd-button>
+  </div>
 </div>

@@ -31,7 +31,7 @@
     "howler": "^2.1.1",
     "ngx-highlightjs": "^3.0.1",
     "path": "^0.12.7",
-    "roleden-component": "^1.0.0",
+    "roleden-component": "^1.2.2",
     "rxjs": "^6.0.0",
     "typescript": "~2.7.2",
     "zone.js": "^0.8.26"
