@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ListElementDirective} from './list-element.directive';
 import { trigger, transition, query, animate, keyframes, style } from '@angular/animations';
+import { DarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-list',
@@ -33,10 +34,18 @@ export class ListComponent implements OnInit {
 
   public searchText = '';
   public sortType = 'nameAsc';
+  public dark = false;
 
-  constructor() { }
+  constructor(private darkService: DarkService) { }
 
   ngOnInit() {
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
+  }
+
+  getListClass() {
+    return 'rdList ' + (this.dark ? 'rdDark' : '');
   }
 
   get currentList() {

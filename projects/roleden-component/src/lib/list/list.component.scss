@@ -1,118 +1,132 @@
 @import "../style/variables";
 
-.searchField {
-  min-width: 250px; width: 30%;
-  float: right;
-  margin-right: 5%;
-  border-bottom: 1px lightgray solid;
-  background: none;
+.rdList {
+  --limit-color: #{$light-gray};
+  --text-color: black;
 
-  input {
+  .searchField {
+    min-width: 250px; width: 30%;
+    float: right;
+    margin-right: 5%;
+    border-bottom: 1px var(--limit-color) solid;
+    background: transparent;
+
+    input {
+      width: 100%;
+      border: none;
+      background-color: transparent;
+      color: var(--text-color)
+    }
+  }
+
+  .noResult {
     width: 100%;
-    border: none;
-  }
-}
-
-.noResult {
-  width: 100%;
-  text-align: center;
-  padding: 3 * $margin;
-}
-
-.limiter {
-  width: 100%;
-  border-top: 2px lightgray solid;
-}
-
-.sortHeader {
-  border-bottom: 3px lightgray solid;
-  width: 100%;
-  padding: $margin;
-  display: flex;
-  box-sizing: border-box;
-
-  .sortName {
-    width: 60%;
-    cursor: pointer;
-    padding: 0 $margin;
+    text-align: center;
+    padding: 3 * $margin;
+    color: var(--text-color);
   }
 
-  .sortArrow {
-    padding: 0 $margin;
+  .limiter {
+    width: 100%;
+    border-top: 2px var(--limit-color) solid;
   }
 
-  .sortAuthor {
-    width: 40%;
-    padding: 0 $margin;
-  }
-}
-
-.elemListContent {
-  width: 100%;
-  padding: $margin;
-  display: flex;
-  cursor: pointer;
-  box-sizing: border-box;
-
-  --main-color: #{$gold};
-
-  * {
-    padding: 0 1px;
-  }
-
-  &:active {
-    background-color: $grey;
-  }
-
-  .elemListIcon, .elemListTitle, .elemListAuthor {
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .elemListIcon {
-    min-width: 30px;
-  }
-
-  .elemListName {
-    width: 60%;
+  .sortHeader {
+    border-bottom: 3px var(--limit-color) solid;
+    width: 100%;
+    padding: $margin;
     display: flex;
     box-sizing: border-box;
+    color: var(--text-color);
+
+    .sortName {
+      width: 60%;
+      cursor: pointer;
+      padding: 0 $margin;
+    }
+
+    .sortArrow {
+      padding: 0 $margin;
+    }
+
+    .sortAuthor {
+      width: 40%;
+      padding: 0 $margin;
+    }
   }
 
-  .elemListAuthor {
-    width: 40%;
+  .elemListContent {
+    width: 100%;
+    padding: $margin;
+    display: flex;
+    cursor: pointer;
     box-sizing: border-box;
+
+    --main-color: #{$gold};
+
+    * {
+      padding: 0 1px;
+    }
+
+    &:active {
+      background-color: $grey;
+    }
+
+    .elemListIcon, .elemListTitle, .elemListAuthor {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--text-color);
+    }
+
+    .elemListIcon {
+      min-width: 30px;
+    }
+
+    .elemListName {
+      width: 60%;
+      display: flex;
+      box-sizing: border-box;
+    }
+
+    .elemListAuthor {
+      width: 40%;
+      box-sizing: border-box;
+    }
+
+    .elemListIcon, .elemListTitle:hover {
+      color: var(--main-color);
+    }
+
+    &.blueList {
+      --main-color: #{$colored-blue};
+    }
+
+    &.greenList {
+      --main-color: #{$colored-green};
+    }
+
+    &.blue-lightList {
+      --main-color: #{$colored-blue-light};
+    }
+
+    &.redList {
+      --main-color: #{$colored-red};
+    }
+
+    &.purpleList {
+      --main-color: #{$colored-purple};
+    }
+
+    &.orangeList {
+      --main-color: #{$colored-orange};
+    }
+
+    &.blackList {
+      --main-color: black;
+    }
   }
 
-  .elemListIcon, .elemListTitle:hover {
-    color: var(--main-color);
-  }
-
-  &.blueList {
-    --main-color: #{$colored-blue};
-  }
-
-  &.greenList {
-    --main-color: #{$colored-green};
-  }
-
-  &.blue-lightList {
-    --main-color: #{$colored-blue-light};
-  }
-
-  &.redList {
-    --main-color: #{$colored-red};
-  }
-
-  &.purpleList {
-    --main-color: #{$colored-purple};
-  }
-
-  &.orangeList {
-    --main-color: #{$colored-orange};
-  }
-
-  &.blackList {
-    --main-color: black;
+  &.rdDark {
+    --text-color: white;
   }
 }
