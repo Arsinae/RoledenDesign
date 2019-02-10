@@ -19,6 +19,8 @@
   box-sizing: border-box;
 
   --main-color: #{$gold};
+  --background-color: #{$light-gray};
+  --text-color: black;
 
   .iconList {
     position: absolute;
@@ -48,42 +50,53 @@
 }
 
 .objectCard {
-  background-color: $light-gray;
-  color: black;
+  background-color: var(--background-color);
+  color: var(--text-color);
   border: 1px solid;
   border-color: var(--main-color);
   border-image: var(--main-color) 1;
+  @include defaultTransition();
 
   .iconList {
     background: var(--main-color);
     color: white;
   }
-}
 
-.objectCard.green {
-  --main-color: #{$colored-green};
-}
+  &.fullCard {
+    background-color: var(--main-color);
+    color: white;
+  }
 
-.objectCard.blue {
-  --main-color: #{$colored-blue};
-}
+  &.greenCard {
+    --main-color: #{$colored-green};
+  }
 
-.objectCard.gradient-blue {
-  --main-color: linear-gradient(45deg, #{$colored-blue-light}, #{$colored-blue});
-}
+  &.blueCard {
+    --main-color: #{$colored-blue};
+  }
 
-.objectCard.blue-light {
-  --main-color: #{$colored-blue-light};
-}
+  &.gradient-blueCard {
+    --main-color: linear-gradient(45deg, #{$colored-blue-light}, #{$colored-blue});
+  }
 
-.objectCard.red {
-  --main-color: #{$colored-red};
-}
+  &.blue-lightCard {
+    --main-color: #{$colored-blue-light};
+  }
 
-.objectCard.purple {
-  --main-color: #{$colored-purple};
-}
+  &.redCard {
+    --main-color: #{$colored-red};
+  }
 
-.objectCard.orange {
-  --main-color: #{$colored-orange};
+  &.purpleCard {
+    --main-color: #{$colored-purple};
+  }
+
+  &.orangeCard {
+    --main-color: #{$colored-orange};
+  }
+
+  &.rdDark {
+    --background-color: transparent;
+    --text-color: white;
+  }
 }

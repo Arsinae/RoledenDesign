@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SmallCardComponent implements OnInit {
 
-  public htmlCode: string = '<rd-small-card [color]="\'orange\'" [icon]="\'fa-edit\'">\n' +
+  public htmlCode: string = '<rd-small-card [color]="\'orange\'" [icon]="\'fa-edit\'" [background]="\'split\'">\n' +
     ' <div role="title">My story - orange</div>\n' +
     ' <div role="type">Script</div>\n' +
     '</rd-small-card>\n';

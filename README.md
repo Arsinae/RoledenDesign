@@ -13,6 +13,10 @@ Add `RoledenComponent.forRoot()` in your module;
 
 ### Release Notes
 
+#### 1.3.0
+##### News
+Add a `background` property on the `rd-small-card`;
+
 #### 1.2.2
 ##### News
 Add a `rd-tooltip` Component;\

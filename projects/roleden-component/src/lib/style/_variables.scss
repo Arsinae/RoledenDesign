@@ -4,6 +4,7 @@ $gold: #ba9e5a;
 $light-gray: #f1f1f1;
 $grey: #e3e3e3;
 $dark-grey: #404040;
+$dark-background: #0d2a35;
 
 $colored-blue-light: #5aa2ba;
 $colored-blue: #5a5aba;
@@ -39,4 +40,8 @@ $big-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
 
 @function darken($color) {
   @return mix($color, black, 90%);
+}
+
+@mixin defaultTransition() {
+  transition: all .3s linear;
 }

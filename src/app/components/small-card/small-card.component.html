@@ -6,7 +6,7 @@
   <div class="elementList">
 
     <div class="cardList">
-      <rd-small-card [color]="'gold'">
+      <rd-small-card [color]="'gold'" [background]="'split'">
         <div role="title">My story - gold</div>
         <div role="type">Script</div>
       </rd-small-card>
@@ -18,7 +18,7 @@
       </rd-small-card>
     </div>
     <div class="cardList">
-      <rd-small-card [color]="'red'">
+      <rd-small-card [color]="'red'" [background]="'split'">
         <div role="title">My story - red</div>
         <div role="type">Script</div>
       </rd-small-card>
@@ -30,7 +30,7 @@
       </rd-small-card>
     </div>
     <div class="cardList">
-      <rd-small-card [color]="'blue-light'">
+      <rd-small-card [color]="'blue-light'" [background]="'split'">
         <div role="title">My story - blue-light</div>
         <div role="type">Script</div>
       </rd-small-card>
@@ -42,7 +42,7 @@
       </rd-small-card>
     </div>
     <div class="cardList">
-      <rd-small-card [color]="'orange'" [icon]="'fa-edit'">
+      <rd-small-card [color]="'orange'" [icon]="'fa-edit'" [background]="'split'">
         <div role="title">My story - orange</div>
         <div role="type">Script</div>
       </rd-small-card>
@@ -81,6 +81,10 @@
               <tr>
                 <td>@Input() icon: string</td>
                 <td>fa-times(default), Any Font Awesome 5 Solid Icon (fas)</td>
+              </tr>
+              <tr>
+                <td>@Input() background: string</td>
+                <td>Make the background color a single color; full(default), split</td>
               </tr>
               <tr>
                 <td>@Output() textClick</td>
