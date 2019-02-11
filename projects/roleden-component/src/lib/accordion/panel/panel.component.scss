@@ -1,10 +1,17 @@
 @import "../../style/variables";
 
 .panel {
+  --main-color: black;
+  --background-color: transparent;
+  --text-color: black;
+
   width: 100%;
   box-shadow: $small-shadow;
   padding: $margin;
-  --main-color: black;
+  box-sizing: border-box;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  @include defaultTransition();
 
   &.open {
     box-shadow: $shadow;
@@ -34,31 +41,36 @@
     padding-right: 30px;
   }
 
-  &.gold {
+  &.goldPanel {
     --main-color: #{$gold};
   }
 
-  &.green {
+  &.greenPanel {
     --main-color: #{$colored-green};
   }
 
-  &.blue {
+  &.bluePanel {
     --main-color: #{$colored-blue};
   }
 
-  &.blue-light {
+  &.blue-lightPanel {
     --main-color: #{$colored-blue-light};
   }
 
-  &.red {
+  &.redPanel {
     --main-color: #{$colored-red};
   }
 
-  &.purple {
+  &.purplePanel {
     --main-color: #{$colored-purple};
   }
 
-  &.orange {
+  &.orangePanel {
     --main-color: #{$colored-orange};
+  }
+
+  &.rdDark {
+    --text-color: white;
+    --background-color: #{$dark-blue};
   }
 }

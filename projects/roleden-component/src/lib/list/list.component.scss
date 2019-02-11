@@ -3,6 +3,7 @@
 .rdList {
   --limit-color: #{$light-gray};
   --text-color: black;
+  @include defaultTransition();
 
   .searchField {
     min-width: 250px; width: 30%;
