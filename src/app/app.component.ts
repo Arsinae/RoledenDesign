@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import {MatDialog} from '@angular/material';
 import {LoginComponent} from './login/login.component';
 import { RouterOutlet } from '@angular/router';
@@ -23,11 +23,30 @@ import { trigger, transition, group, query, animate, keyframes, style } from '@a
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
 
+  @ViewChild('header') header;
+  @ViewChild('page') page;
   public menu = false;
 
   constructor(public dialog: MatDialog) {
+  }
+
+  ngAfterViewInit() {
+    document.addEventListener('scroll', () => {
+      this.setStickyHeader();
+    });
+    this.setStickyHeader();
+  }
+
+  setStickyHeader() {
+    if (window.pageYOffset > 0) {
+      this.header.nativeElement.classList.add('sticky');
+      this.page.nativeElement.style.paddingTop = this.header.nativeElement.clientHeight + 'px';
+    } else {
+      this.header.nativeElement.classList.remove('sticky');
+      this.page.nativeElement.style.paddingTop = 0;
+    }
   }
 
   openLogin() {

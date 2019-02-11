@@ -1,16 +1,10 @@
 <div class="roleden">
   <div class="sideBar" [class.open]="menu">
-    <app-sidebar *ngIf="menu" (darkChange)="changeDark($event)"></app-sidebar>
+    <app-sidebar *ngIf="menu"></app-sidebar>
   </div>
 
   <div class="mainContent">
-    <div class="header">
-      <div class="headerColor">
-        <div class="cyanBlock"></div>
-        <div class="goldBlock contact" (click)="openLogin()">
-          <span><i class="fas fa-user"></i></span>
-        </div>
-      </div>
+    <div class="header" #header>
       <div class="headerBar">
         <div class="menu">
         <span (click)="menu = !menu">
@@ -23,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div class="page" [@routerAnimation]="routeAnimation(outlet)">
+    <div class="page" [@routerAnimation]="routeAnimation(outlet)" #page>
       <rd-alert></rd-alert>
       <rd-snack-bar></rd-snack-bar>
       <router-outlet #outlet="outlet"></router-outlet>

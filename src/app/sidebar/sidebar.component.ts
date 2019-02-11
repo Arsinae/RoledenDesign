@@ -1,17 +1,30 @@
-import { Component, OnInit, EventEmitter, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('navMenu') nav;
 
   public dark = false;
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    document.addEventListener('scroll', () => {
+      this.setMenuPosition();
+    });
+    this.setMenuPosition();
+  }
+
+  setMenuPosition() {
+    this.nav.nativeElement.style.transform = 'translateY(' + window.pageYOffset + 'px)';
   }
 
   changeDarkMode() {

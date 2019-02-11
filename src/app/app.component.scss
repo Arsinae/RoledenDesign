@@ -31,6 +31,14 @@
     padding: $margin;
     position: relative;
     box-shadow: $shadow;
+    @include defaultTransition();
+
+    &.sticky {
+      position: fixed;
+      width: 100%;
+      z-index: 2;
+      box-sizing: border-box;
+    }
 
     .headerBar {
       width: 90%;
@@ -61,45 +69,12 @@
         text-align: center;
       }
     }
-
-    .headerColor {
-      z-index: 0;
-      position: absolute;
-      width: 10%; min-width: 100px;
-      height: 100%;
-      top: 0; right: 0;
-
-      &>* {
-        display: inline-block;
-        width: 50%;
-        height: 100%;
-      }
-
-      .cyanBlock {
-        background-color: $cyan;
-      }
-
-      .goldBlock {
-        background-color: $gold;
-      }
-
-      .contact {
-        position: relative;
-        cursor: pointer;
-
-        span {
-          position: absolute;
-          top: 50%; left: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-    }
   }
 
   .page {
     flex: 1;
     background-color: var(--background);
-    @include defaultTransition();
+    transition: background-color .3s linear;
 
     .title {
       text-transform: uppercase;
