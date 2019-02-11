@@ -3,6 +3,10 @@
 .tabsContainer {
   width: 100%;
   --main-color: #{$gold};
+  --text-color: black;
+  --hover-color: #{$light-gray};
+
+  color: var(--text-color);
 
   .tabsHeader {
     width: 100%;
@@ -33,7 +37,7 @@
         }
 
         &:hover {
-          background-color: $grey;
+          background-color: var(--hover-color);
           color: var(--main-color);
         }
       }
@@ -46,7 +50,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: $grey;
+        background-color: var(--hover-color);
       }
     }
   }
@@ -77,5 +81,10 @@
 
   &.blackTabs {
     --main-color: black;
+  }
+
+  &.rdDark {
+    --text-color: white;
+    --hover-color: #{$dark-blue};
   }
 }

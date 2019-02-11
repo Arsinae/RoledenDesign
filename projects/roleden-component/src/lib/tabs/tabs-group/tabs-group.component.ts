@@ -1,3 +1,4 @@
+import { DarkService } from './../../dark.service';
 import { Component, OnInit, Input, ContentChildren, QueryList, AfterViewInit, OnChanges,
   Output, EventEmitter, AfterContentChecked } from '@angular/core';
 import { trigger, transition, query, animate, keyframes, style, group } from '@angular/animations';
@@ -47,10 +48,14 @@ export class TabsGroupComponent implements OnInit, AfterViewInit, AfterContentCh
   @ContentChildren(TabsComponent) tabs: QueryList<TabsComponent>;
 
   public titleIndex = 0;
+  public dark = false;
 
-  constructor() { }
+  constructor(private darkService: DarkService) { }
 
   ngOnInit() {
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
   }
 
   ngAfterViewInit() {

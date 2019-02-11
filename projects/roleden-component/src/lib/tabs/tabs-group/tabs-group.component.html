@@ -1,4 +1,4 @@
-<div class="tabsContainer {{color}}Tabs">
+<div class="tabsContainer {{color}}Tabs" [class.rdDark]="dark">
   <div class="tabsHeader">
     <div class="arrow" *ngIf="tabs.length > displayedTitleNumber" (click)="changeTitlesIndex(titleIndex - displayedTitleNumber)">
       <span><i class="fas fa-angle-left fa-lg"></i></span>
