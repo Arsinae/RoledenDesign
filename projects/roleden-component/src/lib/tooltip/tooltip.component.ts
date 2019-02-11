@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-tooltip',
@@ -12,13 +13,19 @@ export class TooltipComponent implements OnInit {
   @Input() style = 'dotted';
   @Input() width: number = null;
 
-  constructor() { }
+  public dark = false;
+
+  constructor(private darkService: DarkService) { }
 
   ngOnInit() {
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
   }
 
   tooltipClassList() {
-    return 'tooltipContainer ' + (this.position + 'Tooltip ') + (this.color + 'Tooltip ') + (this.style + 'Tooltip');
+    return 'tooltipContainer ' + (this.position + 'Tooltip ') + (this.color + 'Tooltip ') + (this.style + 'Tooltip')
+      + (this.dark ? ' rdDark' : '');
   }
 
 }

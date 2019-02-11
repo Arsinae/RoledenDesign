@@ -1,16 +1,19 @@
 @import "../style/variables";
 
 .tooltipContainer {
-  position: relative;
   --main-color: black;
+  --text-color: black;
+  --background-color: white;
+
+  position: relative;
 
   .tooltipExplanation {
     position: absolute;
     display: none;
     padding: $margin/2 $margin;
-    background-color: white;
+    background-color: var(--background-color);
     box-shadow: $shadow;
-    color: black;
+    color: var(--text-color);
     transition: all 0.2s ease-in-out;
 
     &:after {
@@ -31,7 +34,7 @@
       bottom: 100%;
       left: 50%;
       margin-left: -$margin;
-      border-bottom-color: white;
+      border-bottom-color: var(--background-color);
     }
   }
 
@@ -44,7 +47,7 @@
       top: 100%;
       left: 50%;
       margin-left: -$margin;
-      border-top-color: white;
+      border-top-color: var(--background-color);
     }
   }
 
@@ -57,7 +60,7 @@
       right: 100%;
       top: 50%;
       margin-top: -$margin;
-      border-right-color: white;
+      border-right-color: var(--background-color);
     }
   }
 
@@ -70,7 +73,7 @@
       left: 100%;
       top: 50%;
       margin-top: -$margin;
-      border-left-color: white;
+      border-left-color: var(--background-color);
     }
   }
 
@@ -116,5 +119,10 @@
 
   &.goldTooltip {
     --main-color: #{$gold};
+  }
+
+  &.rdDark {
+    --text-color: white;
+    --background-color: #{$dark-blue};
   }
 }
