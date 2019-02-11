@@ -26,10 +26,14 @@
 .modalContainer, .explanation {
   width: 80%;
   margin: $margin 10%;
+  cursor: pointer;
+  color: var(--text-color);
+  @include defaultTransition();
 }
 
 .modalContainer .modalContent {
   padding: 3*$margin;
+  background-color: var(--background);
 }
 
 .option {
