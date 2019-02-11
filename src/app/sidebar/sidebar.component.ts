@@ -24,7 +24,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   setMenuPosition() {
-    this.nav.nativeElement.style.transform = 'translateY(' + window.pageYOffset + 'px)';
+    const offset = Math.min(document.body.clientHeight - window.innerHeight, window.pageYOffset);
+    this.nav.nativeElement.style.transform = 'translateY(' + offset + 'px)';
   }
 
   changeDarkMode() {
