@@ -22,6 +22,7 @@ export class ModalComponent implements OnInit {
     this.darkService.getDarkElement().subscribe(() => {
       this.dark = this.darkService.isDark();
     });
+    this.dark = this.darkService.isDark();
   }
 
   openModal() {
