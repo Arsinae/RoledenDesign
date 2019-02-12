@@ -2,11 +2,15 @@
 
 .progressBar {
   --main-color: #{$gold};
+  --background-color: #{$light-gray};
 
   width: 100%;
-  background-color: $light-gray;
+  background-color: var(--background-color);
   border-radius: 13px;
+  box-shadow: $shadow;
+  box-sizing: border-box;
   padding: $margin;
+  @include defaultTransition();
 
   .progression {
     display: block;
@@ -74,6 +78,10 @@
 
   &.purple {
     --main-color: #{$colored-purple};
+  }
+
+  &.rdDark {
+    --background-color: #{$dark-blue};
   }
 }
 
