@@ -1,3 +1,4 @@
+import { DarkService } from './../dark.service';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -17,10 +18,15 @@ export class ConfirmModalComponent implements OnInit {
   @Output() acceptModal: EventEmitter<any> = new EventEmitter();
 
   private open = false;
+  public dark = true;
 
-  constructor() { }
+  constructor(private darkService: DarkService) { }
 
   ngOnInit() {
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
+    this.dark = this.darkService.isDark();
   }
 
   openModal() {
