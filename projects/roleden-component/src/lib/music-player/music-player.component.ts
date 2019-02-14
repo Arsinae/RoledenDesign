@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ChangeDetectorRef, OnChanges } from '@angular/core';
 import { MusicElementDirective } from './music-element.directive';
 import { Howl } from 'howler';
+import { DarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-music-player',
@@ -31,7 +32,9 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   public random = false;
   public volume = 50;
 
-  constructor(private changesDetector: ChangeDetectorRef) { }
+  public dark = false;
+
+  constructor(private changesDetector: ChangeDetectorRef, private darkService: DarkService) { }
 
   ngOnInit() {
     const tag = document.createElement('script');
@@ -48,6 +51,10 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
         }
       }
     };
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
+    this.dark = this.darkService.isDark();
   }
 
   ngOnChanges(changes) {
