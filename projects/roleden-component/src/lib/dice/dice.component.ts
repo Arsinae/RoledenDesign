@@ -1,3 +1,4 @@
+import { DarkService } from './../dark.service';
 import { Component, OnInit, Input, EventEmitter, OnChanges, Output } from '@angular/core';
 import { trigger, transition, animate, keyframes, style} from '@angular/animations';
 
@@ -27,11 +28,16 @@ export class DiceComponent implements OnInit, OnChanges {
 
   public chosenValue = 1;
   public rolling = false;
+  public dark = false;
 
-  constructor() {
+  constructor(private darkService: DarkService) {
   }
 
   ngOnInit() {
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
+    this.dark = this.darkService.isDark();
   }
 
   ngOnChanges(changes) {

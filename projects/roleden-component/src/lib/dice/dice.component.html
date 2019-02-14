@@ -1,4 +1,4 @@
-<div id="wrapper" (click)="rollDice()">
+<div id="wrapper" [class.rdDark]="dark" (click)="rollDice()">
   <div id="dice" #dice [@turnAnimation]="rolling" (@turnAnimation.done)="resetChosenValue()">
     <div class="side front">
       <div class="dot">{{chosenValue}}</div>
