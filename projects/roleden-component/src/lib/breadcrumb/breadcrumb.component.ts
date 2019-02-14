@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {BreadcrumbElementDirective} from './breadcrumb-element.directive';
+import { DarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-breadcrumb',
@@ -13,9 +14,15 @@ export class BreadcrumbComponent implements OnInit {
 
   @Output() fileSelect: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  public dark = false;
+
+  constructor(private darkService: DarkService) { }
 
   ngOnInit() {
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
+    this.dark = this.darkService.isDark();
   }
 
 }

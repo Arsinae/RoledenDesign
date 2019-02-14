@@ -1,12 +1,15 @@
 @import "../style/variables";
 
 .rd-breadcrumb {
+  --main-color: #{$gold};
+  --background-color: #{$light-gray};
+  --text-color: black;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-
-  --main-color: #{$gold};
+  color: var(--text-color);
 
   .stepText {
     padding: $margin;
@@ -25,7 +28,7 @@
   }
 
   .stepText:hover {
-    background-color: lightgray;
+    background-color: var(--background-color);
     color: var(--main-color);
   }
 
@@ -38,32 +41,37 @@
     margin-right: $margin;
     border-color: var(--main-color);
   }
-}
 
-.blue {
-  --main-color: #{$colored-blue};
-}
+  &.blueBreadCrumb {
+    --main-color: #{$colored-blue};
+  }
 
-.green {
-  --main-color: #{$colored-green};
-}
+  &.greenBreadCrumb {
+    --main-color: #{$colored-green};
+  }
 
-.blue-light {
-  --main-color: #{$colored-blue-light};
-}
+  &.blue-lightBreadCrumb {
+    --main-color: #{$colored-blue-light};
+  }
 
-.red {
-  --main-color: #{$colored-red};
-}
+  &.redBreadCrumb {
+    --main-color: #{$colored-red};
+  }
 
-.purple {
-  --main-color: #{$colored-purple};
-}
+  &.purpleBreadCrumb {
+    --main-color: #{$colored-purple};
+  }
 
-.orange {
-  --main-color: #{$colored-orange};
-}
+  &.orangeBreadCrumb {
+    --main-color: #{$colored-orange};
+  }
 
-.black {
-  --main-color: black;
+  &.blackBreadCrumb {
+    --main-color: black;
+  }
+
+  &.rdDark {
+    --background-color: #{$dark-blue};
+    --text-color: white;
+  }
 }
