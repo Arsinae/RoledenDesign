@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { DarkService } from '../../dark.service';
 
 @Component({
   selector: 'rd-radio-button-option',
@@ -14,10 +15,15 @@ export class RadioButtonOptionComponent implements OnInit {
   public checked = false;
   public color = 'gold';
   public display = 'line';
+  public dark = false;
 
-  constructor() { }
+  constructor(private darkService: DarkService) { }
 
   ngOnInit() {
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
+    this.dark = this.darkService.isDark();
   }
 
   changeCheck() {
