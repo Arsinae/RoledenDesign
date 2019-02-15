@@ -1,9 +1,12 @@
 @import "../style/variables";
 
 .selectContainer {
+  --main-color : #{$gold};
+  --text-color: black;
+  --background-color: white;
+
   width: 100%;
   position: relative;
-  --main-color : #{$gold};
 
   .selectValue {
     position: relative;
@@ -11,6 +14,7 @@
     border-bottom: 1px var(--main-color) solid;
     font-size: 16px;
     height: 20px;
+    color: var(--text-color);
 
     .placeholder {
       position: absolute;
@@ -35,7 +39,8 @@
     top: auto;
     left: auto;
     min-width: inherit;
-    background-color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     box-shadow: $shadow;
     padding: $margin 0;
     z-index: 1;
@@ -71,5 +76,10 @@
 
   &.orangeSelect {
     --main-color: #{$colored-orange};
+  }
+
+  &.rdDark {
+    --text-color: white;
+    --background-color: #{$dark-blue};
   }
 }

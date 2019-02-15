@@ -28,6 +28,7 @@
   margin: $margin auto;
   display: flex;
   flex-wrap: wrap;
+  color: var(--text-color);
 
   &>* {
     min-width: 200px;

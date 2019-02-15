@@ -1,4 +1,4 @@
-<div class="selectContainer {{color}}Select" [class.open]="open">
+<div class="selectContainer {{color}}Select" [class.open]="open" [class.rdDark]="dark">
   <div class="selectValue" (click)="open = !open">
     <div class="placeholder" [class.focus]="open || text !== ''">{{placeholder || 'Select'}}</div>
     <div class="input">{{text}}</div>
