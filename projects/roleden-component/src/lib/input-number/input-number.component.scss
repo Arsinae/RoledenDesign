@@ -2,8 +2,11 @@
 
 .inputNumberContainer {
   --main-color: #{$gold};
+  --text-color: black;
+  @include defaultTransition();
 
   .labelInputNumber {
+    color: var(--text-color);
     font-size: 13px;
     padding-left: $margin;
   }
@@ -50,6 +53,7 @@
       border: 1px solid var(--main-color);
       overflow: hidden;
       position: relative;
+      color: var(--text-color);
 
       span {
         @include centered();
@@ -83,5 +87,9 @@
 
   &.orangeInputNumber {
     --main-color: #{$colored-orange};
+  }
+
+  &.rdDark {
+    --text-color: white;
   }
 }

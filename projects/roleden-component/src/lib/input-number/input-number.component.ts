@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { DarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-input-number',
@@ -16,12 +17,17 @@ export class InputNumberComponent implements OnInit {
   @Input() increment = 1;
   @Input() disabled = false;
 
-
   @Output() valueChange: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  public dark = false;
+
+  constructor(private darkService: DarkService) { }
 
   ngOnInit() {
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
+    this.dark = this.darkService.isDark();
   }
 
   incrementValue(increment) {

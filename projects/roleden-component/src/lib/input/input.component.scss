@@ -6,6 +6,7 @@
 
   position: relative;
   margin-top: 20px;
+  @include defaultTransition();
 
   .placeholder {
     position: absolute;
