@@ -14,7 +14,9 @@
     </a>
   </div>
 
-  <div class="darkMode">
-    <rd-button (buttonClick)="changeDarkMode()" [color]="'blue'">{{dark ? "Light Mode" : "Dark Mode"}}</rd-button>
+  <div>
+    <rd-check-box (valueChange)="changeDarkMode()" [color]="'blue'">
+      <rd-check-box-option><span class="darkMode">Dark Mode</span></rd-check-box-option>
+    </rd-check-box>
   </div>
 </div>

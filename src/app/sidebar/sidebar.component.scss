@@ -40,6 +40,11 @@
     }
   }
 
+  .darkMode {
+    color: white;
+    font-size: 11px;
+  }
+
   @media screen and (min-width: 768px) {
     &:hover {
       .navItem .text {
