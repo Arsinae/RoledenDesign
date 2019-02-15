@@ -1,4 +1,4 @@
-<span class="checkBoxContainer {{color}}CheckBox {{display}}" (click)="changeCheck()">
+<span class="checkBoxContainer {{color}}CheckBox {{display}}" [class.rdDark]="dark" (click)="changeCheck()">
   <span class="checkMark" [class.checked]="checked"></span>
   <ng-content></ng-content>
 </span>

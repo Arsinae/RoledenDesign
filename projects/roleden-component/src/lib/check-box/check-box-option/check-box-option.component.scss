@@ -2,13 +2,18 @@
 
 .checkBoxContainer {
   --main-color: #{$gold};
+  --text-color: black;
+  --background-color: #{$light-gray};
+
   cursor: pointer;
   padding: $margin/2;
   position: relative;
   transition: all 0.3s ease-in-out;
+  color: var(--text-color);
+  @include defaultTransition();
 
   &:active {
-    background-color: $grey;
+    background-color: var(--background-color);
   }
 
   &:hover {
@@ -68,6 +73,11 @@
 
   &.orangeCheckBox {
     --main-color: #{$colored-orange};
+  }
+
+  &.rdDark {
+    --text-color: white;
+    --background-color: #{$dark-blue};
   }
 
 }
