@@ -1,3 +1,4 @@
+import { DarkService } from './../dark.service';
 import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 
@@ -16,13 +17,18 @@ export class TextEditorComponent implements OnInit {
 
   @ViewChild('textEditor') textArea;
 
-  textTmp;
-  size = 17;
+  public textTmp;
+  public size = 17;
+  public dark = false;
 
-  constructor(private sanitize: DomSanitizer) { }
+  constructor(private sanitize: DomSanitizer, public darkService: DarkService) { }
 
   ngOnInit() {
     this.textTmp = this.sanitize.bypassSecurityTrustHtml(this.text);
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
+    this.dark = this.darkService.isDark();
   }
 
   addTextStyle(style) {
