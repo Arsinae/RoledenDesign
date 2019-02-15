@@ -1,3 +1,4 @@
+import { DarkService } from './../dark.service';
 import { Component, OnInit, OnChanges, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 
 @Component({
@@ -19,11 +20,16 @@ export class InputComponent implements OnInit, OnChanges {
   @ViewChild('input') input;
 
   public focus = false;
+  public dark = false;
 
-  constructor() { }
+  constructor(private darkService: DarkService) { }
 
   ngOnInit() {
     this.focus = (this.value === '' || this.value === null) ? false : true;
+    this.darkService.getDarkElement().subscribe(() => {
+      this.dark = this.darkService.isDark();
+    });
+    this.darkService.isDark();
   }
 
   ngOnChanges(changes) {

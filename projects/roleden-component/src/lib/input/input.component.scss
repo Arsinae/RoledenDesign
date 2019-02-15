@@ -1,14 +1,17 @@
 @import "../style/variables";
 
 .inputContainer {
+  --main-color: #{$gold};
+  --text-color: black;
+
   position: relative;
   margin-top: 20px;
-  --main-color: #{$gold};
 
   .placeholder {
     position: absolute;
     transition: all 0.2s ease-in;
     z-index: 0;
+    color: var(--text-color);
 
     &.focus {
       font-size: 12px;
@@ -24,6 +27,7 @@
     height: 100%;
     z-index: 1;
     background-color: transparent;
+    color: var(--text-color);
 
     &:focus {
       border-bottom-width: 2px;
@@ -58,5 +62,9 @@
 
   &.orangeInput {
     --main-color: #{$colored-orange};
+  }
+
+  &.rdDark {
+    --text-color: white;
   }
 }
