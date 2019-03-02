@@ -15,7 +15,9 @@ Add `RoledenComponent.forRoot()` in your module;
 
 #### 1.3.0
 ##### News
-Add a `background` property on the `rd-small-card`;
+Add a `background` property on the `rd-small-card`;\
+Add a `timer` property on the `rd-carousel`;\
+Add a Dark Mode for every Component
 
 #### 1.2.2
 ##### News
