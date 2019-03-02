@@ -16,7 +16,12 @@
 
   <div>
     <rd-check-box (valueChange)="changeDarkMode()" [color]="'blue'">
-      <rd-check-box-option><span class="darkMode">Dark Mode</span></rd-check-box-option>
+      <rd-check-box-option>
+        <span class="darkMode"><rd-tooltip>
+          <span text>Dark Mode</span>
+          <span explanation>Add the 'rdDark' class on the body</span>
+        </rd-tooltip></span>
+      </rd-check-box-option>
     </rd-check-box>
   </div>
 </div>

@@ -8,7 +8,7 @@ import { trigger, transition, query, animate, keyframes, style, group } from '@a
   styleUrls: ['./carousel.component.scss'],
   animations: [
     trigger('carouselAnimation', [
-      transition('* => prev', [
+      transition('* => next', [
         group([query(':enter', animate('.5s linear', keyframes([
             style({transform: 'translateX(100%)', offset: 0}),
             style({transform: 'translateX(0)', offset: 1.0}),
@@ -18,7 +18,7 @@ import { trigger, transition, query, animate, keyframes, style, group } from '@a
             style({transform: 'translateX(-100%)', offset: 1.0}),
           ])), {optional: true})])
       ]),
-      transition('* => next', [
+      transition('* => prev', [
         group([query(':enter', animate('.5s linear', keyframes([
             style({transform: 'translateX(-100%)', offset: 0}),
             style({transform: 'translateX(0)', offset: 1.0}),
@@ -34,11 +34,13 @@ import { trigger, transition, query, animate, keyframes, style, group } from '@a
 export class CarouselComponent implements OnInit, AfterViewInit {
 
   @Input() height = 250;
+  @Input() timer = 3000;
 
   @ContentChildren(CarouselDataComponent) carousels: QueryList<CarouselDataComponent>;
 
   public displayedIndex = 0;
   public change = null;
+  public timeout = null;
 
   constructor() { }
 
@@ -67,6 +69,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   }
 
   changeView() {
+    clearTimeout(this.timeout);
     this.carousels.forEach((carousel, index) => {
       if (carousel.displayed === true) {
         Promise.resolve(null).then(() => carousel.displayed = false);
@@ -82,6 +85,9 @@ export class CarouselComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.change = null;
     }, 500);
+    this.timeout = setTimeout(() => {
+      this.changeDisplay(1, 'next');
+    }, this.timer);
   }
 
   get carouselLength() {
