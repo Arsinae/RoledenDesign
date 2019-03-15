@@ -33,9 +33,9 @@ export class InputNumberComponent implements OnInit {
   incrementValue(increment) {
     if (!this.disabled) {
       const newValue = this.value + increment;
-      if (this.min && newValue < this.min) {
+      if (this.min != null && newValue < this.min) {
         this.value = this.min;
-      } else if (this.max && newValue > this.max) {
+      } else if (this.max != null && newValue > this.max) {
         this.value = this.max;
       } else {
         this.value = newValue;

@@ -1,5 +1,5 @@
 import { DarkService } from './../dark.service';
-import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild, OnChanges} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
@@ -7,7 +7,7 @@ import {DomSanitizer} from '@angular/platform-browser';
   templateUrl: './text-editor.component.html',
   styleUrls: ['./text-editor.component.scss']
 })
-export class TextEditorComponent implements OnInit {
+export class TextEditorComponent implements OnInit, OnChanges {
 
   @Input() text = '';
   @Input() height = 200;
@@ -31,6 +31,10 @@ export class TextEditorComponent implements OnInit {
     this.dark = this.darkService.isDark();
   }
 
+  ngOnChanges() {
+    this.textTmp = this.sanitize.bypassSecurityTrustHtml(this.text);
+  }
+
   addTextStyle(style) {
     document.execCommand(style, false, '');
     this.textArea.nativeElement.focus();
@@ -38,10 +42,10 @@ export class TextEditorComponent implements OnInit {
   }
 
   changeEnter(event) {
-    if (event.keyCode === 13) {
+    /*if (event.keyCode === 13) {
       document.execCommand('insertHTML', false, '</br><br>');
       return false;
-    }
+    }*/
   }
 
   changeFontSize() {

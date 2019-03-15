@@ -20,4 +20,8 @@ export class TextEditorComponent implements OnInit {
     console.log('Selected value :', event);
   }
 
+  displayText(event) {
+    console.log(event);
+  }
+
 }

@@ -13,11 +13,18 @@ Add `RoledenComponent.forRoot()` in your module;
 
 ### Release Notes
 
+#### 1.3.1
+##### News
+Add new options for the `rd-text-editor`;
+
+##### Correctives
+Correction on the `min` & `max` property of the `rd-input-number`;
+
 #### 1.3.0
 ##### News
 Add a `background` property on the `rd-small-card`;\
 Add a `timer` property on the `rd-carousel`;\
-Add a Dark Mode for every Component
+Add a Dark Mode for every Component;
 
 #### 1.2.2
 ##### News
@@ -82,3 +89,12 @@ Add `flex-wrap: wrap` on the control panel of the Music Player;
 ##### Corrective
 Modify the color className for `rd-input` & `rd-music-player`;
 
+### Road Map
+
+- [ ] Custom Theme
+- [ ] Auto-Complete Input
+- [ ] Input File
+- [ ] TimeLine
+- [ ] Stepper
+- [ ] Chips
+- [ ] Color Picker
