@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
-  public htmlCode = '<rd-carousel>\n' +
+  public htmlCode = '<rd-carousel [(displayedIndex)]="index">\n' +
   '  <rd-carousel-data (displayChange)="changeDisplay($event)">\n    <img src="Arrakis.jpg">\n  </rd-carousel-data>\n' +
   '  <rd-carousel-data (displayChange)="changeDisplay($event)">\n    <img src="Caladan.jpg">\n' +
   '  </rd-carousel-data>\n</rd-carousel>\n';
 
-  public tsCode = 'changeDisplay(event) {\n  console.log(\'Display change\', event);\n}\n';
+  public tsCode = 'public index = 0;\n\nchangeDisplay(event) {\n  console.log(\'Display change\', event);\n}\n';
+
+  public index = 0;
 
   constructor() { }
 
@@ -21,6 +23,10 @@ export class CarouselComponent implements OnInit {
 
   changeDisplay(event) {
     console.log('Display Change', event);
+  }
+
+  log() {
+    console.log('click');
   }
 
 }

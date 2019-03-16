@@ -1,5 +1,6 @@
 import { CarouselDataComponent } from './carousel-data/carousel-data.component';
-import { Component, OnInit, QueryList, ContentChildren, AfterViewInit, Input } from '@angular/core';
+import { Component, OnInit, QueryList, ContentChildren, AfterViewInit, Input, OnChanges,
+  Output, EventEmitter } from '@angular/core';
 import { trigger, transition, query, animate, keyframes, style, group } from '@angular/animations';
 
 @Component({
@@ -31,20 +32,33 @@ import { trigger, transition, query, animate, keyframes, style, group } from '@a
     ])
   ]
 })
-export class CarouselComponent implements OnInit, AfterViewInit {
+export class CarouselComponent implements OnInit, AfterViewInit, OnChanges {
 
   @Input() height = 250;
   @Input() timer = 3000;
+  @Input() displayedIndex = 0;
+
+  @Output() displayedIndexChange: EventEmitter<any> = new EventEmitter();
 
   @ContentChildren(CarouselDataComponent) carousels: QueryList<CarouselDataComponent>;
 
-  public displayedIndex = 0;
   public change = null;
   public timeout = null;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(changes) {
+    if (this.carousels && changes.displayedIndex) {
+      if (changes.displayedIndex.currentValue < changes.displayedIndex.previousValue) {
+        this.change = 'next';
+      } else if (changes.displayedIndex.currentValue > changes.displayedIndex.previousValue) {
+        this.change = 'prev';
+      }
+      this.changeView();
+    }
   }
 
   ngAfterViewInit() {
@@ -55,6 +69,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
     this.change = change;
     this.displayedIndex = (this.displayedIndex + value) < 0 ? this.carousels.length - 1
     : (this.displayedIndex + value) % this.carousels.length;
+    this.displayedIndexChange.emit(this.displayedIndex);
     this.changeView();
   }
 
@@ -71,7 +86,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   changeView() {
     clearTimeout(this.timeout);
     this.carousels.forEach((carousel, index) => {
-      if (carousel.displayed === true) {
+      if (carousel.displayed === true && index !== this.displayedIndex) {
         Promise.resolve(null).then(() => carousel.displayed = false);
         carousel.displayChange.emit({index: index, state: false});
       }
@@ -85,9 +100,11 @@ export class CarouselComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.change = null;
     }, 500);
-    this.timeout = setTimeout(() => {
-      this.changeDisplay(1, 'next');
-    }, this.timer);
+    if (this.timer !== null) {
+      this.timeout = setTimeout(() => {
+        this.changeDisplay(1, 'next');
+      }, this.timer);
+    }
   }
 
   get carouselLength() {

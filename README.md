@@ -15,15 +15,17 @@ Add `RoledenComponent.forRoot()` in your module;
 
 #### 1.3.1
 ##### News
-Add new options for the `rd-text-editor`;
+Add new options for the `rd-text-editor` Component;\
+Add a `displayedIndex` property for the `rd-carousel` Component;
 
 ##### Correctives
-Correction on the `min` & `max` property of the `rd-input-number`;
+Correction on the `min` & `max` property of the `rd-input-number` Component;\
+Add a null option for the `timer` on the `rd-carousel` Component;
 
 #### 1.3.0
 ##### News
-Add a `background` property on the `rd-small-card`;\
-Add a `timer` property on the `rd-carousel`;\
+Add a `background` property on the `rd-small-card` Component;\
+Add a `timer` property on the `rd-carousel` Component;\
 Add a Dark Mode for every Component;
 
 #### 1.2.2

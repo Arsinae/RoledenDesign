@@ -3,23 +3,21 @@
 </div>
 
 <div class="carousel">
-  <rd-carousel>
+  <rd-carousel [(displayedIndex)]="index">
     <rd-carousel-data (displayChange)="changeDisplay($event)">
-      <div class="carouselImg">
+      <div class="carouselImg" (click)="log()">
         <img src="https://stmed.net/sites/default/files/dune-wallpapers-29516-4438731.jpg">
         <span>Arrakis</span>
       </div>
     </rd-carousel-data>
     <rd-carousel-data (displayChange)="changeDisplay($event)">
-      <div class="carouselImg">
+      <div class="carouselImg" (click)="log()">
         <img src="https://i.pinimg.com/originals/9c/65/07/9c65071899c8c179adda73ca7ab237b6.jpg">
         <span>Caladan</span>
       </div>
     </rd-carousel-data>
   </rd-carousel>
 </div>
-
-
 
 <div class="explanation">
   <app-explanation>
@@ -47,7 +45,15 @@
             </tr>
             <tr>
               <td>@Input() timer: number</td>
-              <td>Timer in milliseconds to change the index; 3000 by default</td>
+              <td>Timer in milliseconds to change the index; 3000 by default; set at null for no timer</td>
+            </tr>
+            <tr>
+              <td>@Input() displayedIndex: number</td>
+              <td>The index currently displayed; 0 by default</td>
+            </tr>
+            <tr>
+              <td>@Output() displayedIndexChange</td>
+              <td>Event emitted when the displayed index has changed</td>
             </tr>
           </table>
         </div>
@@ -67,6 +73,10 @@
             <tr>
               <td>Content</td>
               <td>Page data</td>
+            </tr>
+            <tr>
+              <td>@Output() displayChange</td>
+              <td>Event emitted when the display of this index changed</td>
             </tr>
           </table>
         </div>
