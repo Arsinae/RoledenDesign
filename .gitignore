@@ -8,6 +8,7 @@
 # dependencies
 /node_modules
 /projects/roleden-component/node_modules
+/projects/roleden-component/dist
 
 # IDEs and editors
 /.idea

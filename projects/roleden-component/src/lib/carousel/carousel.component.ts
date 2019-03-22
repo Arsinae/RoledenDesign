@@ -9,7 +9,7 @@ import { trigger, transition, query, animate, keyframes, style, group } from '@a
   styleUrls: ['./carousel.component.scss'],
   animations: [
     trigger('carouselAnimation', [
-      transition('* => next', [
+      transition('* => prev', [
         group([query(':enter', animate('.5s linear', keyframes([
             style({transform: 'translateX(100%)', offset: 0}),
             style({transform: 'translateX(0)', offset: 1.0}),
@@ -19,7 +19,7 @@ import { trigger, transition, query, animate, keyframes, style, group } from '@a
             style({transform: 'translateX(-100%)', offset: 1.0}),
           ])), {optional: true})])
       ]),
-      transition('* => prev', [
+      transition('* => next', [
         group([query(':enter', animate('.5s linear', keyframes([
             style({transform: 'translateX(-100%)', offset: 0}),
             style({transform: 'translateX(0)', offset: 1.0}),

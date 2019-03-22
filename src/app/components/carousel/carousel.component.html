@@ -16,6 +16,12 @@
         <span>Caladan</span>
       </div>
     </rd-carousel-data>
+    <rd-carousel-data (displayChange)="changeDisplay($event)">
+      <div class="carouselImg" (click)="log()">
+        <img src="http://gallery.burrowowl.net/index.php?q=/image/10161.jpg">
+        <span>Arrakis Map</span>
+      </div>
+    </rd-carousel-data>
   </rd-carousel>
 </div>
 
