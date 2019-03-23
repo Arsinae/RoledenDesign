@@ -56,14 +56,16 @@ export class CheckBoxComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   subscribeToChecked(option: CheckBoxOptionComponent) {
-    option.checkedChange.subscribe(check => {
-      if (check) {
-        this.value.push(option.value);
-      } else if (!check && this.value.indexOf(option.value) !== -1) {
-        this.value.splice(this.value.indexOf(option.value), 1);
-      }
-      this.valueChange.emit(this.value);
-    });
+    if (option.checkedChange.observers.length === 0) {
+      option.checkedChange.subscribe(check => {
+        if (check) {
+          this.value.push(option.value);
+        } else if (!check && this.value.indexOf(option.value) !== -1) {
+          this.value.splice(this.value.indexOf(option.value), 1);
+        }
+        this.valueChange.emit(this.value);
+      });
+    }
   }
 
 }

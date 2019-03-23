@@ -56,19 +56,21 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   subscribeToChecked(option: RadioButtonOptionComponent) {
-    option.checkedChange.subscribe(check => {
-      if (check) {
-        this.value = option.value;
-        this.options.forEach(otherOptions => {
-          if (option !== otherOptions) {
-            otherOptions.checked = false;
-          }
-        });
-      } else if (!check) {
-        this.value = '';
-      }
-      this.valueChange.emit(this.value);
-    });
+    if (option.checkedChange.observers.length === 0) {
+      option.checkedChange.subscribe(check => {
+        if (check) {
+          this.value = option.value;
+          this.options.forEach(otherOptions => {
+            if (option !== otherOptions) {
+              otherOptions.checked = false;
+            }
+          });
+        } else if (!check) {
+          this.value = '';
+        }
+        this.valueChange.emit(this.value);
+      });
+    }
   }
 
 }
