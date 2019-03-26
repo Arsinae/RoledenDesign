@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {BreadcrumbElementDirective} from './breadcrumb-element.directive';
+import {BreadcrumbElement} from './breadcrumb-element.class';
 import { DarkService } from '../dark.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { DarkService } from '../dark.service';
 })
 export class BreadcrumbComponent implements OnInit {
 
-  @Input() data: Array<BreadcrumbElementDirective> = [];
+  @Input() data: Array<BreadcrumbElement> = [];
   @Input() color = 'gold';
 
   @Output() fileSelect: EventEmitter<any> = new EventEmitter();

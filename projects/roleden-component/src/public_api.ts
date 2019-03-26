@@ -2,8 +2,8 @@
  * Public API Surface of roleden-component
  */
 //    ROLEDEN
-export * from './lib/roleden-component.service';
 export * from './lib/roleden-component.module';
+export * from './lib/roleden-component.service';
 
 //    ACCORDION
 export * from './lib/accordion/accordion.module';
@@ -19,7 +19,7 @@ export * from './lib/alert/alert.class';
 //    BREADCRUMB
 export * from './lib/breadcrumb/breadcrumb.module';
 export * from './lib/breadcrumb/breadcrumb.component';
-export * from './lib/breadcrumb/breadcrumb-element.directive';
+export * from './lib/breadcrumb/breadcrumb-element.class';
 
 //    BUTTON
 export * from './lib/button/button.component';

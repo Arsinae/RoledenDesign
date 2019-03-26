@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BreadcrumbComponent} from './breadcrumb.component';
-import {BreadcrumbElementDirective} from './breadcrumb-element.directive';
 
 @NgModule({
   imports: [
@@ -11,12 +10,10 @@ import {BreadcrumbElementDirective} from './breadcrumb-element.directive';
     ReactiveFormsModule
   ],
   declarations: [
-    BreadcrumbComponent,
-    BreadcrumbElementDirective
+    BreadcrumbComponent
   ],
   exports: [
-    BreadcrumbComponent,
-    BreadcrumbElementDirective
+    BreadcrumbComponent
   ]
 })
 export class BreadcrumbModule { }
