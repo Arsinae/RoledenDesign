@@ -77,6 +77,7 @@ export * from './lib/notation/notation.module';
 export * from './lib/notation/notation.component';
 
 //    PROGRESS-BAR
+export * from './lib/progress-bar/progress-bar.module';
 export * from './lib/progress-bar/progress-bar.component';
 
 //    RADIO-BUTTON

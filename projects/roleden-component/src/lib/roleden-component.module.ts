@@ -9,7 +9,7 @@ import { ListModule } from './list/list.module';
 import { ButtonModule } from './button/button.module';
 import { MusicPlayerModule } from './music-player/music-player.module';
 import { BreadcrumbModule } from './breadcrumb/breadcrumb.module';
-import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { ProgressBarModule } from './progress-bar/progress-bar.module';
 import { FlippingCardModule } from './flipping-card/flipping-card.module';
 import { AccordionModule } from './accordion/accordion.module';
 import { InputModule } from './input/input.module';
@@ -37,7 +37,6 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
   declarations: [
     SmallCardComponent,
     TextEditorComponent,
-    ProgressBarComponent,
     TooltipComponent
   ],
   exports: [
@@ -56,7 +55,7 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     ModalModule,
     MusicPlayerModule,
     NotationModule,
-    ProgressBarComponent,
+    ProgressBarModule,
     RadioButtonModule,
     SelectModule,
     SmallCardComponent,
