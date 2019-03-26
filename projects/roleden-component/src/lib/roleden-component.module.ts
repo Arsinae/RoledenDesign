@@ -24,9 +24,9 @@ import { RDSelectModule } from './select/select.module';
 import { RDSmallCardModule } from './small-card/small-card.module';
 import { RDSnackBarModule } from './snack-bar/snack-bar.module';
 import { RDSnackBarService } from './snack-bar/snack-bar.service';
-import { TabsModule } from './tabs/tabs.module';
-import { TextEditorModule } from './text-editor/text-editor.module';
-import { TooltipModule } from './tooltip/tooltip.module';
+import { RDTabsModule } from './tabs/tabs.module';
+import { RDTextEditorModule } from './text-editor/text-editor.module';
+import { RDTooltipModule } from './tooltip/tooltip.module';
 
 @NgModule({
   imports: [
@@ -57,9 +57,9 @@ import { TooltipModule } from './tooltip/tooltip.module';
     RDSelectModule,
     RDSmallCardModule,
     RDSnackBarModule,
-    TabsModule,
-    TextEditorModule,
-    TooltipModule
+    RDTabsModule,
+    RDTextEditorModule,
+    RDTooltipModule
   ]
 })
 export class RoledenComponentModule {

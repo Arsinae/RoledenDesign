@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TextEditorComponent } from './text-editor.component';
+import { RDTextEditorComponent } from './text-editor.component';
 
 @NgModule({
   imports: [
@@ -9,7 +9,7 @@ import { TextEditorComponent } from './text-editor.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [TextEditorComponent],
-  exports: [TextEditorComponent]
+  declarations: [RDTextEditorComponent],
+  exports: [RDTextEditorComponent]
 })
-export class TextEditorModule { }
+export class RDTextEditorModule { }

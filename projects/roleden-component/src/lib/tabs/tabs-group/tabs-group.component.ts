@@ -2,7 +2,7 @@ import { DarkService } from './../../dark.service';
 import { Component, OnInit, Input, ContentChildren, QueryList, AfterViewInit, OnChanges,
   Output, EventEmitter, AfterContentChecked } from '@angular/core';
 import { trigger, transition, query, animate, keyframes, style, group } from '@angular/animations';
-import { TabsComponent } from './../tabs.component';
+import { RDTabsComponent } from './../tabs.component';
 
 @Component({
   selector: 'rd-tabs-group',
@@ -37,7 +37,7 @@ import { TabsComponent } from './../tabs.component';
     ])
   ]
 })
-export class TabsGroupComponent implements OnInit, AfterViewInit, AfterContentChecked, OnChanges {
+export class RDTabsGroupComponent implements OnInit, AfterViewInit, AfterContentChecked, OnChanges {
 
   @Input() displayedTitleNumber = 5;
   @Input() displayedIndex = 0;
@@ -45,7 +45,7 @@ export class TabsGroupComponent implements OnInit, AfterViewInit, AfterContentCh
 
   @Output() displayedIndexChange: EventEmitter<any> = new EventEmitter();
 
-  @ContentChildren(TabsComponent) tabs: QueryList<TabsComponent>;
+  @ContentChildren(RDTabsComponent) tabs: QueryList<RDTabsComponent>;
 
   public titleIndex = 0;
   public dark = false;

@@ -7,7 +7,7 @@ import {DomSanitizer} from '@angular/platform-browser';
   templateUrl: './text-editor.component.html',
   styleUrls: ['./text-editor.component.scss']
 })
-export class TextEditorComponent implements OnInit, OnChanges {
+export class RDTextEditorComponent implements OnInit, OnChanges {
 
   @Input() text = '';
   @Input() height = 200;
@@ -39,13 +39,6 @@ export class TextEditorComponent implements OnInit, OnChanges {
     document.execCommand(style, false, '');
     this.textArea.nativeElement.focus();
     this.textChange.emit(this.textArea.nativeElement.innerHTML);
-  }
-
-  changeEnter(event) {
-    /*if (event.keyCode === 13) {
-      document.execCommand('insertHTML', false, '</br><br>');
-      return false;
-    }*/
   }
 
   changeFontSize() {

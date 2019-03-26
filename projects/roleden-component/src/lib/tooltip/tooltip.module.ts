@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TooltipComponent } from './tooltip.component';
+import { RDTooltipComponent } from './tooltip.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [TooltipComponent],
-  exports: [TooltipComponent]
+  declarations: [RDTooltipComponent],
+  exports: [RDTooltipComponent]
 })
-export class TooltipModule { }
+export class RDTooltipModule { }

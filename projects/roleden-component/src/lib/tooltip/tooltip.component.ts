@@ -6,7 +6,7 @@ import { DarkService } from '../dark.service';
   templateUrl: './tooltip.component.html',
   styleUrls: ['./tooltip.component.scss']
 })
-export class TooltipComponent implements OnInit {
+export class RDTooltipComponent implements OnInit {
 
   @Input() position = 'bottom';
   @Input() color = 'black';
