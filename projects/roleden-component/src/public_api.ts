@@ -5,6 +5,9 @@
 export * from './lib/roleden-component.module';
 export * from './lib/roleden-component.service';
 
+//    DARK SERVICE
+export * from './lib/dark.service';
+
 //    ACCORDION
 export * from './lib/accordion/accordion.module';
 export * from './lib/accordion/accordion.component';
@@ -40,6 +43,7 @@ export * from './lib/confirm-modal/confirm-modal.module';
 export * from './lib/confirm-modal/confirm-modal.component';
 
 //    DICE
+export * from './lib/dice/dice.component';
 export * from './lib/dice/dice.component';
 
 //    FLIPPING-CARD

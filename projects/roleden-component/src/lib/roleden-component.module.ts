@@ -2,13 +2,13 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 
-import { DiceComponent } from './dice/dice.component';
+import { DiceModule } from './dice/dice.module';
 import { SmallCardComponent } from './small-card/small-card.component';
 import { TextEditorComponent } from './text-editor/text-editor.component';
-import {ListModule} from './list/list.module';
+import { ListModule } from './list/list.module';
 import { ButtonModule } from './button/button.module';
-import {MusicPlayerModule} from './music-player/music-player.module';
-import {BreadcrumbModule} from './breadcrumb/breadcrumb.module';
+import { MusicPlayerModule } from './music-player/music-player.module';
+import { BreadcrumbModule } from './breadcrumb/breadcrumb.module';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FlippingCardComponent } from './flipping-card/flipping-card.component';
 import { AccordionModule } from './accordion/accordion.module';
@@ -35,7 +35,6 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     ReactiveFormsModule
   ],
   declarations: [
-    DiceComponent,
     SmallCardComponent,
     TextEditorComponent,
     ProgressBarComponent,
@@ -52,7 +51,7 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     BreadcrumbModule,
     ButtonModule,
     ConfirmModalModule,
-    DiceComponent,
+    DiceModule,
     SmallCardComponent,
     ListModule,
     MusicPlayerModule,
