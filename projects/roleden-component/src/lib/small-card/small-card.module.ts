@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SmallCardComponent } from './small-card.component';
+import { RDSmallCardComponent } from './small-card.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [SmallCardComponent],
-  exports: [SmallCardComponent]
+  declarations: [RDSmallCardComponent],
+  exports: [RDSmallCardComponent]
 })
-export class SmallCardModule { }
+export class RDSmallCardModule { }

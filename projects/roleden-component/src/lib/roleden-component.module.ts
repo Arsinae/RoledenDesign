@@ -20,10 +20,10 @@ import { RDMusicPlayerModule } from './music-player/music-player.module';
 import { RDNotationModule } from './notation/notation.module';
 import { RDProgressBarModule } from './progress-bar/progress-bar.module';
 import { RDRadioButtonModule } from './radio-button/radio-button.module';
-import { SelectModule } from './select/select.module';
-import { SmallCardModule } from './small-card/small-card.module';
-import { SnackBarModule } from './snack-bar/snack-bar.module';
-import { SnackBarService } from './snack-bar/snack-bar.service';
+import { RDSelectModule } from './select/select.module';
+import { RDSmallCardModule } from './small-card/small-card.module';
+import { RDSnackBarModule } from './snack-bar/snack-bar.module';
+import { RDSnackBarService } from './snack-bar/snack-bar.service';
 import { TabsModule } from './tabs/tabs.module';
 import { TextEditorModule } from './text-editor/text-editor.module';
 import { TooltipModule } from './tooltip/tooltip.module';
@@ -54,9 +54,9 @@ import { TooltipModule } from './tooltip/tooltip.module';
     RDNotationModule,
     RDProgressBarModule,
     RDRadioButtonModule,
-    SelectModule,
-    SmallCardModule,
-    SnackBarModule,
+    RDSelectModule,
+    RDSmallCardModule,
+    RDSnackBarModule,
     TabsModule,
     TextEditorModule,
     TooltipModule
@@ -68,7 +68,7 @@ export class RoledenComponentModule {
       ngModule: RoledenComponentModule,
       providers: [
         RDAlertService,
-        SnackBarService
+        RDSnackBarService
       ]
     };
   }

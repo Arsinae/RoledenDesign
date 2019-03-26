@@ -5,7 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './select-option.component.html',
   styleUrls: ['./select-option.component.scss']
 })
-export class SelectOptionComponent implements OnInit {
+export class RDSelectOptionComponent implements OnInit {
 
   @Input() value = '';
   @Input() text = '';

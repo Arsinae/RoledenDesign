@@ -1,20 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SnackBarComponent } from './snack-bar.component';
-import { SnackBarService } from './snack-bar.service';
+import { RDSnackBarComponent } from './snack-bar.component';
+import { RDSnackBarService } from './snack-bar.service';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [
-    SnackBarComponent
-  ],
-  providers: [
-    SnackBarService
-  ],
-  exports: [
-    SnackBarComponent
-  ]
+  declarations: [RDSnackBarComponent],
+  providers: [RDSnackBarService],
+  exports: [RDSnackBarComponent]
 })
-export class SnackBarModule { }
+export class RDSnackBarModule { }

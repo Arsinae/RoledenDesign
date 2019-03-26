@@ -1,4 +1,4 @@
-import { SnackBarService } from 'projects/roleden-component/src/lib/snack-bar/snack-bar.service';
+import { RDSnackBarService } from 'projects/roleden-component/src/lib/snack-bar/snack-bar.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,7 +13,7 @@ export class SnackBarComponent implements OnInit {
     '  constructor(private snackBarService: SnackBarService) { }\n\n' +
     '  addSnackBar(type, title, text){\n    this.snackBarService.addSnackBar(type, title, text);\n  }\n}\n';
 
-  constructor(private snackBarService: SnackBarService) { }
+  constructor(private snackBarService: RDSnackBarService) { }
 
   ngOnInit() {
   }

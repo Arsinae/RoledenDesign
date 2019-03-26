@@ -1,6 +1,6 @@
-import { SnackBarService } from './snack-bar.service';
+import { RDSnackBarService } from './snack-bar.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { SnackBar } from './snack-bar.class';
+import { RDSnackBar } from './snack-bar.class';
 import { trigger, transition, query, stagger, animate, keyframes, style } from '@angular/animations';
 
 @Component({
@@ -24,13 +24,13 @@ import { trigger, transition, query, stagger, animate, keyframes, style } from '
     ])
   ]
 })
-export class SnackBarComponent implements OnInit {
+export class RDSnackBarComponent implements OnInit {
 
   @Input() timer = 5;
 
-  public snackBars: Array<{snack: SnackBar, timer: any}> = [];
+  public snackBars: Array<{snack: RDSnackBar, timer: any}> = [];
 
-  constructor(private snackBarService: SnackBarService) { }
+  constructor(private snackBarService: RDSnackBarService) { }
 
   ngOnInit() {
     this.snackBarService.getSnackBar().subscribe(snackBar => {

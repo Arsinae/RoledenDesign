@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './small-card.component.html',
   styleUrls: ['./small-card.component.scss']
 })
-export class SmallCardComponent implements OnInit {
+export class RDSmallCardComponent implements OnInit {
 
 
   @Input() color = 'gold';

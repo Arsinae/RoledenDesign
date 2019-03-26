@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ContentChildren, QueryList, AfterViewInit, OnChanges } from '@angular/core';
-import { SelectOptionComponent } from './select-option/select-option.component';
+import { RDSelectOptionComponent } from './select-option/select-option.component';
 import { DarkService } from '../dark.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { DarkService } from '../dark.service';
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.scss']
 })
-export class SelectComponent implements OnInit, AfterViewInit, OnChanges {
+export class RDSelectComponent implements OnInit, AfterViewInit, OnChanges {
 
   @Input() value = '';
   @Input() placeholder = '';
@@ -15,7 +15,7 @@ export class SelectComponent implements OnInit, AfterViewInit, OnChanges {
 
   @Output() valueChange: EventEmitter<any> = new EventEmitter<any>();
 
-  @ContentChildren(SelectOptionComponent) options: QueryList<SelectOptionComponent>;
+  @ContentChildren(RDSelectOptionComponent) options: QueryList<RDSelectOptionComponent>;
 
   public open = false;
   public text = '';

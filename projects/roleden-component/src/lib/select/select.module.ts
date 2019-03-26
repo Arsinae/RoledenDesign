@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SelectComponent } from './select.component';
-import { SelectOptionComponent } from './select-option/select-option.component';
+import { RDSelectComponent } from './select.component';
+import { RDSelectOptionComponent } from './select-option/select-option.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [
-    SelectComponent,
-    SelectOptionComponent
-  ],
-  exports: [
-    SelectComponent,
-    SelectOptionComponent
-  ]
+  declarations: [RDSelectComponent, RDSelectOptionComponent],
+  exports: [RDSelectComponent, RDSelectOptionComponent]
 })
-export class SelectModule { }
+export class RDSelectModule { }

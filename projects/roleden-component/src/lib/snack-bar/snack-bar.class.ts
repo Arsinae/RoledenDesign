@@ -1,4 +1,4 @@
-export class SnackBar {
+export class RDSnackBar {
   type = 'danger';
   title = '';
   text = '';
