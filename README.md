@@ -13,6 +13,10 @@ Add `RoledenComponent.forRoot()` in your module;
 
 ### Release Notes
 
+#### 1.4.1
+##### Correctives
+Modify the name of every components to match `RD*`;
+
 #### 1.4.0
 ##### News
 Add `ngModule` for each component;
