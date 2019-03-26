@@ -1,18 +1,14 @@
-import { ButtonModule } from './../button/button.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ConfirmModalComponent } from './confirm-modal.component';
+import { RDConfirmModalComponent } from './confirm-modal.component';
+import { RDButtonModule } from './../button/button.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    ButtonModule
+    RDButtonModule
   ],
-  declarations: [
-    ConfirmModalComponent
-  ],
-  exports: [
-    ConfirmModalComponent
-  ]
+  declarations: [RDConfirmModalComponent],
+  exports: [RDConfirmModalComponent]
 })
-export class ConfirmModalModule { }
+export class RDConfirmModalModule { }

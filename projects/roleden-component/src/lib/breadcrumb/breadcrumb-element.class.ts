@@ -1,4 +1,4 @@
-export class BreadcrumbElement {
+export class RDBreadcrumbElement {
 
   public name = '';
   public file = '';

@@ -5,7 +5,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class RDButtonComponent implements OnInit {
 
   @Input() color = 'gold';
   @Input() rounded = false;

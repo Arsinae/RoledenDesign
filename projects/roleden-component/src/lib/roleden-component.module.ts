@@ -5,11 +5,11 @@ import {CommonModule} from '@angular/common';
 import { RDAccordionModule } from './accordion/accordion.module';
 import { RDAlertModule } from './alert/alert.module';
 import { RDAlertService } from './alert/alert.service';
-import { BreadcrumbModule } from './breadcrumb/breadcrumb.module';
-import { ButtonModule } from './button/button.module';
+import { RDBreadcrumbModule } from './breadcrumb/breadcrumb.module';
+import { RDButtonModule } from './button/button.module';
 import { CarouselModule } from './carousel/carousel.module';
 import { CheckBoxModule } from './check-box/check-box.module';
-import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
+import { RDConfirmModalModule } from './confirm-modal/confirm-modal.module';
 import { DiceModule } from './dice/dice.module';
 import { FlippingCardModule } from './flipping-card/flipping-card.module';
 import { InputModule } from './input/input.module';
@@ -39,11 +39,11 @@ import { TooltipModule } from './tooltip/tooltip.module';
   exports: [
     RDAccordionModule,
     RDAlertModule,
-    BreadcrumbModule,
-    ButtonModule,
+    RDBreadcrumbModule,
+    RDButtonModule,
     CarouselModule,
     CheckBoxModule,
-    ConfirmModalModule,
+    RDConfirmModalModule,
     DiceModule,
     FlippingCardModule,
     InputModule,

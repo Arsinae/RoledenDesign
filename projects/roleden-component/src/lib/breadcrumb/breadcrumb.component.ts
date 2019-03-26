@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {BreadcrumbElement} from './breadcrumb-element.class';
+import {RDBreadcrumbElement} from './breadcrumb-element.class';
 import { DarkService } from '../dark.service';
 
 @Component({
@@ -7,9 +7,9 @@ import { DarkService } from '../dark.service';
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss']
 })
-export class BreadcrumbComponent implements OnInit {
+export class RDBreadcrumbComponent implements OnInit {
 
-  @Input() data: Array<BreadcrumbElement> = [];
+  @Input() data: Array<RDBreadcrumbElement> = [];
   @Input() color = 'gold';
 
   @Output() fileSelect: EventEmitter<any> = new EventEmitter();

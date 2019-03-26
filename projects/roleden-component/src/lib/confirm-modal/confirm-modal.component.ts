@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './confirm-modal.component.html',
   styleUrls: ['./confirm-modal.component.scss']
 })
-export class ConfirmModalComponent implements OnInit {
+export class RDConfirmModalComponent implements OnInit {
 
   @Input() width = 50;
   @Input() maxHeight: number = null;

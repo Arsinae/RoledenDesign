@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { ButtonComponent } from './button.component';
+import { RDButtonComponent } from './button.component';
 
 @NgModule({
   imports: [
@@ -9,11 +9,7 @@ import { ButtonComponent } from './button.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [
-    ButtonComponent
-  ],
-  exports: [
-    ButtonComponent
-  ]
+  declarations: [RDButtonComponent],
+  exports: [RDButtonComponent]
 })
-export class ButtonModule { }
+export class RDButtonModule { }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {BreadcrumbComponent} from './breadcrumb.component';
+import {RDBreadcrumbComponent} from './breadcrumb.component';
 
 @NgModule({
   imports: [
@@ -9,11 +9,7 @@ import {BreadcrumbComponent} from './breadcrumb.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [
-    BreadcrumbComponent
-  ],
-  exports: [
-    BreadcrumbComponent
-  ]
+  declarations: [RDBreadcrumbComponent],
+  exports: [RDBreadcrumbComponent]
 })
-export class BreadcrumbModule { }
+export class RDBreadcrumbModule { }
