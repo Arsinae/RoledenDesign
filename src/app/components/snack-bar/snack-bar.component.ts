@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class SnackBarComponent implements OnInit {
 
   public htmlCode = '<!-- Inside de app.component.html -->\n<rd-snack-bar></rd-snack-bar>\n';
-  public tsCode = 'import { SnackBarService } from \'roleden-component\';\n\nexport class MyComponent implements OnInit {\n\n' +
-    '  constructor(private snackBarService: SnackBarService) { }\n\n' +
+  public tsCode = 'import { RDSnackBarService } from \'roleden-component\';\n\nexport class MyComponent implements OnInit {\n\n' +
+    '  constructor(private snackBarService: RDSnackBarService) { }\n\n' +
     '  addSnackBar(type, title, text){\n    this.snackBarService.addSnackBar(type, title, text);\n  }\n}\n';
 
   constructor(private snackBarService: RDSnackBarService) { }

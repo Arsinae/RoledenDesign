@@ -11,7 +11,7 @@ export class DiceComponent implements OnInit {
 
   public htmlCode = '<rd-dice [diceSize]="100" (rollValue)="rollValue($event)"></rd-dice>\n' +
     '<span>You roll a {{value}} on 100</span>\n';
-  public tsCode = 'public value = 0;\nrollValue(event){\n  this.value = event;\n}\n';
+  public tsCode = 'public value = 0;\n\nrollValue(event){\n  this.value = event;\n}\n';
 
   constructor() { }
 

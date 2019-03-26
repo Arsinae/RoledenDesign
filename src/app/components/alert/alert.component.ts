@@ -9,8 +9,8 @@ import { RDAlertService } from 'projects/roleden-component/src/lib/alert/alert.s
 export class AlertComponent implements OnInit {
 
   public htmlCode = '<!-- Inside de app.component.html -->\n<rd-alert></rd-alert>\n';
-  public tsCode = 'import { AlertService } from \'roleden-component\';\n\nexport class MyComponent implements OnInit {\n\n' +
-    '  constructor(private alertService: AlertService) { }\n\n' +
+  public tsCode = 'import { RDAlertService } from \'roleden-component\';\n\nexport class MyComponent implements OnInit {\n\n' +
+    '  constructor(private alertService: RDAlertService) { }\n\n' +
     '  addAlert(type, title, text){\n    this.alertService.addAlert(type, title, text);\n  }\n}\n';
 
   constructor(private alertService: RDAlertService) { }

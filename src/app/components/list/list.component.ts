@@ -13,7 +13,7 @@ export class ListComponent implements OnInit {
 
   public htmlCode = '<rd-list [data]="data" [search]="true" [sort]="true" (fileSelect)="selectFile($event)"' +
   ' [listAnimation]="true"></rd-list>\n';
-  public tsCode = 'public data: Array<ListElement> = [\n' +
+  public tsCode = 'public data: Array<RDListElement> = [\n' +
     ' {color: \'blue\', title: \'Super Character\', file: \'\', icon: \'fas fa-male\', author: \'me\'},\n' +
     ' {color: \'red\', title: \'Awesome Adventure\', file: \'\', icon: \'fas fa-file\', author: \'me\'},\n' +
     ' new RDListElement()];\n\n' +
