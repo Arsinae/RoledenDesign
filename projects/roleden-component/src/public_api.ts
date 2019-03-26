@@ -106,6 +106,7 @@ export * from './lib/tabs/tabs.component';
 export * from './lib/tabs/tabs-group/tabs-group.component';
 
 //    TEXT-EDITOR
+export * from './lib/text-editor/text-editor.module';
 export * from './lib/text-editor/text-editor.component';
 
 //    TOOLTIP

@@ -4,7 +4,7 @@ import {CommonModule} from '@angular/common';
 
 import { DiceModule } from './dice/dice.module';
 import { SmallCardModule } from './small-card/small-card.module';
-import { TextEditorComponent } from './text-editor/text-editor.component';
+import { TextEditorModule } from './text-editor/text-editor.module';
 import { ListModule } from './list/list.module';
 import { ButtonModule } from './button/button.module';
 import { MusicPlayerModule } from './music-player/music-player.module';
@@ -35,7 +35,6 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     ReactiveFormsModule
   ],
   declarations: [
-    TextEditorComponent,
     TooltipComponent
   ],
   exports: [
@@ -60,7 +59,7 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     SmallCardModule,
     SnackBarModule,
     TabsModule,
-    TextEditorComponent,
+    TextEditorModule,
     TooltipComponent
   ]
 })
