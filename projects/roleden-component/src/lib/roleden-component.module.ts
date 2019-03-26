@@ -14,7 +14,7 @@ import { FlippingCardModule } from './flipping-card/flipping-card.module';
 import { AccordionModule } from './accordion/accordion.module';
 import { InputModule } from './input/input.module';
 import { InputNumberModule } from './input-number/input-number.module';
-import { NotationComponent } from './notation/notation.component';
+import { NotationModule } from './notation/notation.module';
 import { SelectModule } from './select/select.module';
 import { CheckBoxModule } from './check-box/check-box.module';
 import { RadioButtonModule } from './radio-button/radio-button.module';
@@ -38,7 +38,6 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     SmallCardComponent,
     TextEditorComponent,
     ProgressBarComponent,
-    NotationComponent,
     TooltipComponent
   ],
   exports: [
@@ -56,7 +55,7 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     ListModule,
     ModalModule,
     MusicPlayerModule,
-    NotationComponent,
+    NotationModule,
     ProgressBarComponent,
     RadioButtonModule,
     SelectModule,

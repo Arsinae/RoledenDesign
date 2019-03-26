@@ -73,6 +73,7 @@ export * from './lib/music-player/music-player.component';
 export * from './lib/music-player/music-element.class';
 
 //    NOTATION
+export * from './lib/notation/notation.module';
 export * from './lib/notation/notation.component';
 
 //    PROGRESS-BAR
