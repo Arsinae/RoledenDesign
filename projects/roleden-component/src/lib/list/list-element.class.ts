@@ -1,9 +1,4 @@
-import { Directive } from '@angular/core';
-
-@Directive({
-  selector: '[rdListElement]'
-})
-export class ListElementDirective {
+export class ListElement {
 
   public color = 'gold';
   public title = 'title';

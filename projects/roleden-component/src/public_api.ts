@@ -61,7 +61,7 @@ export * from './lib/input-number/input-number.component';
 //    LIST
 export * from './lib/list/list.module';
 export * from './lib/list/list.component';
-export * from './lib/list/list-element.directive';
+export * from './lib/list/list-element.class';
 
 //    MODAL
 export * from './lib/modal/modal.component';

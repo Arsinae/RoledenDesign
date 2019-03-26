@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ListElementDirective} from './list-element.directive';
+import {ListElement} from './list-element.class';
 import { trigger, transition, query, animate, keyframes, style } from '@angular/animations';
 import { DarkService } from '../dark.service';
 
@@ -24,7 +24,7 @@ import { DarkService } from '../dark.service';
 })
 export class ListComponent implements OnInit {
 
-  @Input() data: Array<ListElementDirective> = [];
+  @Input() data: Array<ListElement> = [];
   @Input() search = false;
   @Input() sort = false;
   @Input() size = 16;
