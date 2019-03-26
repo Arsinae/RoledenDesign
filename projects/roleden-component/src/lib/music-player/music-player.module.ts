@@ -2,7 +2,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MusicPlayerComponent } from './music-player.component';
-import { MusicElementDirective } from './music-element.directive';
 
 @NgModule({
   imports: [
@@ -10,7 +9,7 @@ import { MusicElementDirective } from './music-element.directive';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [MusicPlayerComponent, MusicElementDirective],
-  exports: [MusicPlayerComponent, MusicElementDirective]
+  declarations: [MusicPlayerComponent],
+  exports: [MusicPlayerComponent]
 })
 export class MusicPlayerModule { }

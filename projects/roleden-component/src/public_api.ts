@@ -70,7 +70,7 @@ export * from './lib/modal/modal.component';
 //    MUSIC-PLAYER
 export * from './lib/music-player/music-player.module';
 export * from './lib/music-player/music-player.component';
-export * from './lib/music-player/music-element.directive';
+export * from './lib/music-player/music-element.class';
 
 //    NOTATION
 export * from './lib/notation/notation.component';
