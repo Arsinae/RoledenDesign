@@ -1,4 +1,4 @@
-export class MusicElement {
+export class RDMusicElement {
 
   title: string;
   channel: string;

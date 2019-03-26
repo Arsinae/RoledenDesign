@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModalComponent } from './modal.component';
+import { RDModalComponent } from './modal.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [ ModalComponent ],
-  exports: [ ModalComponent ]
+  declarations: [ RDModalComponent ],
+  exports: [ RDModalComponent ]
 })
-export class ModalModule { }
+export class RDModalModule { }

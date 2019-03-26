@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild, ChangeDetectorRef, OnChanges } from '@angular/core';
-import { MusicElement } from './music-element.class';
+import { RDMusicElement } from './music-element.class';
 import { Howl } from 'howler';
 import { DarkService } from '../dark.service';
 
@@ -8,9 +8,9 @@ import { DarkService } from '../dark.service';
   templateUrl: './music-player.component.html',
   styleUrls: ['./music-player.component.scss']
 })
-export class MusicPlayerComponent implements OnInit, OnChanges {
+export class RDMusicPlayerComponent implements OnInit, OnChanges {
 
-  @Input() playlist: Array<MusicElement> = [];
+  @Input() playlist: Array<RDMusicElement> = [];
   @Input() color = 'gold';
 
   @ViewChild('videoContainer') videoContainer;
@@ -18,7 +18,7 @@ export class MusicPlayerComponent implements OnInit, OnChanges {
   @ViewChild('playlistMenu') playlistMenu;
   @ViewChild('progressBar') progressBar;
 
-  public localPlaylist: Array<MusicElement> = [];
+  public localPlaylist: Array<RDMusicElement> = [];
   public cursor = 0;
 
   public player: any = null;

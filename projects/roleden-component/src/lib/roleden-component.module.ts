@@ -14,9 +14,9 @@ import { RDDiceModule } from './dice/dice.module';
 import { RDFlippingCardModule } from './flipping-card/flipping-card.module';
 import { RDInputModule } from './input/input.module';
 import { RDInputNumberModule } from './input-number/input-number.module';
-import { ListModule } from './list/list.module';
-import { ModalModule } from './modal/modal.module';
-import { MusicPlayerModule } from './music-player/music-player.module';
+import { RDListModule } from './list/list.module';
+import { RDModalModule } from './modal/modal.module';
+import { RDMusicPlayerModule } from './music-player/music-player.module';
 import { NotationModule } from './notation/notation.module';
 import { ProgressBarModule } from './progress-bar/progress-bar.module';
 import { RadioButtonModule } from './radio-button/radio-button.module';
@@ -48,9 +48,9 @@ import { TooltipModule } from './tooltip/tooltip.module';
     RDFlippingCardModule,
     RDInputModule,
     RDInputNumberModule,
-    ListModule,
-    ModalModule,
-    MusicPlayerModule,
+    RDListModule,
+    RDModalModule,
+    RDMusicPlayerModule,
     NotationModule,
     ProgressBarModule,
     RadioButtonModule,

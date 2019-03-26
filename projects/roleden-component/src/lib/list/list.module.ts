@@ -12,4 +12,4 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   declarations: [RDListComponent],
   exports: [RDListComponent]
 })
-export class ListModule { }
+export class RDListModule { }

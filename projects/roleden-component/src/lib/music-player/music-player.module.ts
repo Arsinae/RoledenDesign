@@ -1,7 +1,7 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MusicPlayerComponent } from './music-player.component';
+import { RDMusicPlayerComponent } from './music-player.component';
 
 @NgModule({
   imports: [
@@ -9,7 +9,7 @@ import { MusicPlayerComponent } from './music-player.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [MusicPlayerComponent],
-  exports: [MusicPlayerComponent]
+  declarations: [RDMusicPlayerComponent],
+  exports: [RDMusicPlayerComponent]
 })
-export class MusicPlayerModule { }
+export class RDMusicPlayerModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MusicElement } from 'projects/roleden-component/src/lib/music-player/music-element.class';
+import { RDMusicElement } from 'projects/roleden-component/src/lib/music-player/music-element.class';
 
 @Component({
   selector: 'app-music-player',
@@ -8,7 +8,7 @@ import { MusicElement } from 'projects/roleden-component/src/lib/music-player/mu
 })
 export class MusicPlayerComponent implements OnInit {
 
-  public playlist: Array<MusicElement> = [
+  public playlist: Array<RDMusicElement> = [
     {title: 'Fight Back', imageurl: 'https://i.ytimg.com/vi/CYDP_8UTAus/default.jpg',
       channel: 'Neffex', url: '6vfP_4u7zik', type: 'youTube'},
     {title: 'Numb', imageurl: 'https://i.ytimg.com/vi/lJkEF0_QigU/default.jpg',
@@ -22,7 +22,7 @@ export class MusicPlayerComponent implements OnInit {
   ];
 
   public htmlCode = '<rd-music-player [playlist]="playlist" [color]="\'red\'"></rd-music-player>';
-  public tsCode = 'public playlist: Array<MusicElement> = [\n' +
+  public tsCode = 'public playlist: Array<RDMusicElement> = [\n' +
     '  {title: \'Fight Back\', imageurl: \'https://i.ytimg.com/vi/CYDP_8UTAus/default.jpg\',' +
     ' channel: \'Neffex\', url: \'6vfP_4u7zik\', type: \'youTube\'},\n' +
     '  {title: \'Numb\', imageurl: \'https://i.ytimg.com/vi/lJkEF0_QigU/default.jpg\',' +
