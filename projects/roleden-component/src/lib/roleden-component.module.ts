@@ -10,7 +10,7 @@ import { ButtonModule } from './button/button.module';
 import { MusicPlayerModule } from './music-player/music-player.module';
 import { BreadcrumbModule } from './breadcrumb/breadcrumb.module';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
-import { FlippingCardComponent } from './flipping-card/flipping-card.component';
+import { FlippingCardModule } from './flipping-card/flipping-card.module';
 import { AccordionModule } from './accordion/accordion.module';
 import { InputComponent } from './input/input.component';
 import { InputNumberComponent } from './input-number/input-number.component';
@@ -38,7 +38,6 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     SmallCardComponent,
     TextEditorComponent,
     ProgressBarComponent,
-    FlippingCardComponent,
     InputComponent,
     NotationComponent,
     InputNumberComponent,
@@ -50,25 +49,25 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     AlertModule,
     BreadcrumbModule,
     ButtonModule,
+    CarouselModule,
+    CheckBoxModule,
     ConfirmModalModule,
     DiceModule,
-    SmallCardComponent,
-    ListModule,
-    MusicPlayerModule,
-    TextEditorComponent,
-    ProgressBarComponent,
-    FlippingCardComponent,
+    FlippingCardModule,
     InputComponent,
     InputNumberComponent,
+    ListModule,
+    ModalComponent,
+    MusicPlayerModule,
     NotationComponent,
-    SelectModule,
-    CheckBoxModule,
+    ProgressBarComponent,
     RadioButtonModule,
+    SelectModule,
+    SmallCardComponent,
     SnackBarModule,
-    CarouselModule,
     TabsModule,
-    TooltipComponent,
-    ModalComponent
+    TextEditorComponent,
+    TooltipComponent
   ]
 })
 export class RoledenComponentModule {

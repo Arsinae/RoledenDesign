@@ -47,6 +47,7 @@ export * from './lib/dice/dice.component';
 export * from './lib/dice/dice.component';
 
 //    FLIPPING-CARD
+export * from './lib/flipping-card/flipping-card.module';
 export * from './lib/flipping-card/flipping-card.component';
 
 //    INPUT
