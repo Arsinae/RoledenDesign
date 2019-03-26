@@ -50,7 +50,7 @@ export class ListComponent implements OnInit {
   }
 
   get currentList() {
-    let list: Array<ListElementDirective> = [];
+    let list: Array<ListElement> = [];
     if (this.search) {
       for (const elem of this.data) {
         if (elem.title.toLowerCase().match(this.searchText.toLowerCase()) ||

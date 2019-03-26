@@ -13,6 +13,14 @@ Add `RoledenComponent.forRoot()` in your module;
 
 ### Release Notes
 
+#### 1.4.0
+##### News
+Add `ngModule` for each component;
+
+##### Correctives
+Correction on the output from `rd-check-box` & `rd-radio-button`;\
+Correction of the rotation of the `rd-carousel`;
+
 #### 1.3.1
 ##### News
 Add new options for the `rd-text-editor` Component;\
