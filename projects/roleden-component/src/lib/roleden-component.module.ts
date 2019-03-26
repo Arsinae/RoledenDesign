@@ -17,9 +17,9 @@ import { RDInputNumberModule } from './input-number/input-number.module';
 import { RDListModule } from './list/list.module';
 import { RDModalModule } from './modal/modal.module';
 import { RDMusicPlayerModule } from './music-player/music-player.module';
-import { NotationModule } from './notation/notation.module';
-import { ProgressBarModule } from './progress-bar/progress-bar.module';
-import { RadioButtonModule } from './radio-button/radio-button.module';
+import { RDNotationModule } from './notation/notation.module';
+import { RDProgressBarModule } from './progress-bar/progress-bar.module';
+import { RDRadioButtonModule } from './radio-button/radio-button.module';
 import { SelectModule } from './select/select.module';
 import { SmallCardModule } from './small-card/small-card.module';
 import { SnackBarModule } from './snack-bar/snack-bar.module';
@@ -51,9 +51,9 @@ import { TooltipModule } from './tooltip/tooltip.module';
     RDListModule,
     RDModalModule,
     RDMusicPlayerModule,
-    NotationModule,
-    ProgressBarModule,
-    RadioButtonModule,
+    RDNotationModule,
+    RDProgressBarModule,
+    RDRadioButtonModule,
     SelectModule,
     SmallCardModule,
     SnackBarModule,

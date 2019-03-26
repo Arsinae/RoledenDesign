@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NotationComponent } from './notation.component';
+import { RDNotationComponent } from './notation.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [NotationComponent],
-  exports: [NotationComponent]
+  declarations: [RDNotationComponent],
+  exports: [RDNotationComponent]
 })
-export class NotationModule { }
+export class RDNotationModule { }

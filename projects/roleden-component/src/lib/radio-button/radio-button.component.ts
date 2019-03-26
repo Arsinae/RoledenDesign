@@ -1,14 +1,14 @@
 import { Component, OnInit, ContentChildren, Input, Output, EventEmitter, AfterViewInit, OnChanges, QueryList } from '@angular/core';
-import { RadioButtonOptionComponent } from './radio-button-option/radio-button-option.component';
+import { RDRadioButtonOptionComponent } from './radio-button-option/radio-button-option.component';
 
 @Component({
   selector: 'rd-radio-button',
   templateUrl: './radio-button.component.html',
   styleUrls: ['./radio-button.component.scss']
 })
-export class RadioButtonComponent implements OnInit, AfterViewInit, OnChanges {
+export class RDRadioButtonComponent implements OnInit, AfterViewInit, OnChanges {
 
-  @ContentChildren(RadioButtonOptionComponent) options: QueryList<RadioButtonOptionComponent>;
+  @ContentChildren(RDRadioButtonOptionComponent) options: QueryList<RDRadioButtonOptionComponent>;
 
   @Input() color = 'gold';
   @Input() value = '';
@@ -41,21 +41,21 @@ export class RadioButtonComponent implements OnInit, AfterViewInit, OnChanges {
     }
   }
 
-  setColorOption(option: RadioButtonOptionComponent) {
+  setColorOption(option: RDRadioButtonOptionComponent) {
     Promise.resolve(null).then(() => option.color = this.color);
   }
 
-  setDisplay(option: RadioButtonOptionComponent) {
+  setDisplay(option: RDRadioButtonOptionComponent) {
     Promise.resolve(null).then(() => option.display = this.display);
   }
 
-  setChecked(option: RadioButtonOptionComponent) {
+  setChecked(option: RDRadioButtonOptionComponent) {
     if (this.value === option.value) {
       Promise.resolve(null).then(() => option.checked = true);
     }
   }
 
-  subscribeToChecked(option: RadioButtonOptionComponent) {
+  subscribeToChecked(option: RDRadioButtonOptionComponent) {
     if (option.checkedChange.observers.length === 0) {
       option.checkedChange.subscribe(check => {
         if (check) {

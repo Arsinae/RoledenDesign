@@ -6,7 +6,7 @@ import { DarkService } from '../dark.service';
   templateUrl: './progress-bar.component.html',
   styleUrls: ['./progress-bar.component.scss']
 })
-export class ProgressBarComponent implements OnInit {
+export class RDProgressBarComponent implements OnInit {
 
   @Input() width = 50;
   @Input() height = 15;

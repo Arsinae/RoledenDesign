@@ -6,7 +6,7 @@ import { ValueTransformer } from '@angular/compiler/src/util';
   templateUrl: './notation.component.html',
   styleUrls: ['./notation.component.scss']
 })
-export class NotationComponent implements OnInit {
+export class RDNotationComponent implements OnInit {
 
   @Input() number = 5;
   @Input() value = 0;

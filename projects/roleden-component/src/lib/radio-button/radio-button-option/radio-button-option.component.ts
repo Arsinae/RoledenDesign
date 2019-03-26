@@ -6,7 +6,7 @@ import { DarkService } from '../../dark.service';
   templateUrl: './radio-button-option.component.html',
   styleUrls: ['./radio-button-option.component.scss']
 })
-export class RadioButtonOptionComponent implements OnInit {
+export class RDRadioButtonOptionComponent implements OnInit {
 
   @Input() value = '';
 
