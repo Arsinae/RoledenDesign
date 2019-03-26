@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ListElement } from 'projects/roleden-component/src/lib/list/list-element.class';
+import { RDListElement } from 'projects/roleden-component/src/lib/list/list-element.class';
 
 @Component({
   selector: 'app-list',
@@ -9,14 +9,14 @@ import { ListElement } from 'projects/roleden-component/src/lib/list/list-elemen
 export class ListComponent implements OnInit {
 
   public data = [{color: 'blue', title: 'Super Character', file: '', icon: 'fas fa-male', author: 'me'},
-{color: 'red', title: 'Awesome Adventure', file: '', icon: 'fas fa-file', author: 'me'}, new ListElement()];
+{color: 'red', title: 'Awesome Adventure', file: '', icon: 'fas fa-file', author: 'me'}, new RDListElement()];
 
   public htmlCode = '<rd-list [data]="data" [search]="true" [sort]="true" (fileSelect)="selectFile($event)"' +
   ' [listAnimation]="true"></rd-list>\n';
   public tsCode = 'public data: Array<ListElement> = [\n' +
     ' {color: \'blue\', title: \'Super Character\', file: \'\', icon: \'fas fa-male\', author: \'me\'},\n' +
     ' {color: \'red\', title: \'Awesome Adventure\', file: \'\', icon: \'fas fa-file\', author: \'me\'},\n' +
-    ' new ListElement()];\n\n' +
+    ' new RDListElement()];\n\n' +
     'selectFile(file){\n' +
     ' console.log(\'File selected: \', file);\n' +
     '}\n';

@@ -7,13 +7,13 @@ import { RDAlertModule } from './alert/alert.module';
 import { RDAlertService } from './alert/alert.service';
 import { RDBreadcrumbModule } from './breadcrumb/breadcrumb.module';
 import { RDButtonModule } from './button/button.module';
-import { CarouselModule } from './carousel/carousel.module';
-import { CheckBoxModule } from './check-box/check-box.module';
+import { RDCarouselModule } from './carousel/carousel.module';
+import { RDCheckBoxModule } from './check-box/check-box.module';
 import { RDConfirmModalModule } from './confirm-modal/confirm-modal.module';
-import { DiceModule } from './dice/dice.module';
-import { FlippingCardModule } from './flipping-card/flipping-card.module';
-import { InputModule } from './input/input.module';
-import { InputNumberModule } from './input-number/input-number.module';
+import { RDDiceModule } from './dice/dice.module';
+import { RDFlippingCardModule } from './flipping-card/flipping-card.module';
+import { RDInputModule } from './input/input.module';
+import { RDInputNumberModule } from './input-number/input-number.module';
 import { ListModule } from './list/list.module';
 import { ModalModule } from './modal/modal.module';
 import { MusicPlayerModule } from './music-player/music-player.module';
@@ -41,13 +41,13 @@ import { TooltipModule } from './tooltip/tooltip.module';
     RDAlertModule,
     RDBreadcrumbModule,
     RDButtonModule,
-    CarouselModule,
-    CheckBoxModule,
+    RDCarouselModule,
+    RDCheckBoxModule,
     RDConfirmModalModule,
-    DiceModule,
-    FlippingCardModule,
-    InputModule,
-    InputNumberModule,
+    RDDiceModule,
+    RDFlippingCardModule,
+    RDInputModule,
+    RDInputNumberModule,
     ListModule,
     ModalModule,
     MusicPlayerModule,

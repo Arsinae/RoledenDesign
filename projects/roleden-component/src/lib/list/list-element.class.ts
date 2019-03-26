@@ -1,4 +1,4 @@
-export class ListElement {
+export class RDListElement {
 
   public color = 'gold';
   public title = 'title';

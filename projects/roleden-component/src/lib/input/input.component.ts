@@ -6,7 +6,7 @@ import { Component, OnInit, OnChanges, Input, Output, EventEmitter, ViewChild } 
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss']
 })
-export class InputComponent implements OnInit, OnChanges {
+export class RDInputComponent implements OnInit, OnChanges {
 
   @Input() value = '';
   @Input() placeholder = '';

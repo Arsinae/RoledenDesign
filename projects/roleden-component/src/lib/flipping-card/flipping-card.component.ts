@@ -5,7 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './flipping-card.component.html',
   styleUrls: ['./flipping-card.component.scss']
 })
-export class FlippingCardComponent implements OnInit {
+export class RDFlippingCardComponent implements OnInit {
 
   @Input() rounded = false;
   @Input() bounce = false;

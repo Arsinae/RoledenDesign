@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ListComponent} from './list.component';
+import {RDListComponent} from './list.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -9,7 +9,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [ListComponent],
-  exports: [ListComponent]
+  declarations: [RDListComponent],
+  exports: [RDListComponent]
 })
 export class ListModule { }

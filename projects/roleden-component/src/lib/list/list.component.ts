@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ListElement} from './list-element.class';
+import { RDListElement } from './list-element.class';
 import { trigger, transition, query, animate, keyframes, style } from '@angular/animations';
 import { DarkService } from '../dark.service';
 
@@ -22,9 +22,9 @@ import { DarkService } from '../dark.service';
     ])
   ]
 })
-export class ListComponent implements OnInit {
+export class RDListComponent implements OnInit {
 
-  @Input() data: Array<ListElement> = [];
+  @Input() data: Array<RDListElement> = [];
   @Input() search = false;
   @Input() sort = false;
   @Input() size = 16;
@@ -50,7 +50,7 @@ export class ListComponent implements OnInit {
   }
 
   get currentList() {
-    let list: Array<ListElement> = [];
+    let list: Array<RDListElement> = [];
     if (this.search) {
       for (const elem of this.data) {
         if (elem.title.toLowerCase().match(this.searchText.toLowerCase()) ||

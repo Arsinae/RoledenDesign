@@ -6,7 +6,7 @@ import { DarkService } from '../dark.service';
   templateUrl: './input-number.component.html',
   styleUrls: ['./input-number.component.scss']
 })
-export class InputNumberComponent implements OnInit {
+export class RDInputNumberComponent implements OnInit {
 
   @Input() value = 1;
   @Input() label = null;

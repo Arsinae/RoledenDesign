@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { InputComponent } from './input.component';
+import { RDInputComponent } from './input.component';
 
 @NgModule({
   imports: [
@@ -9,11 +9,7 @@ import { InputComponent } from './input.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [
-    InputComponent
-  ],
-  exports: [
-    InputComponent
-  ]
+  declarations: [RDInputComponent],
+  exports: [RDInputComponent]
 })
-export class InputModule { }
+export class RDInputModule { }
