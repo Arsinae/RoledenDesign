@@ -1,4 +1,4 @@
-export class Alert {
+export class RDAlert {
   type = 'danger';
   title = '';
   text = '';

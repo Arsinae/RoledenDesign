@@ -1,16 +1,16 @@
 import { Component, OnInit, ContentChildren, AfterViewInit, QueryList, Input } from '@angular/core';
-import { PanelComponent } from './panel/panel.component';
+import { RDPanelComponent } from './panel/panel.component';
 
 @Component({
   selector: 'rd-accordion',
   templateUrl: './accordion.component.html',
   styleUrls: ['./accordion.component.scss']
 })
-export class AccordionComponent implements OnInit, AfterViewInit {
+export class RDAccordionComponent implements OnInit, AfterViewInit {
 
   @Input() autoClose = true;
 
-  @ContentChildren(PanelComponent) panels: QueryList<PanelComponent>;
+  @ContentChildren(RDPanelComponent) panels: QueryList<RDPanelComponent>;
 
   constructor() { }
 

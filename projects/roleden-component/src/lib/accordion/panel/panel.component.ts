@@ -7,7 +7,7 @@ import { DarkService } from '../../dark.service';
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.scss']
 })
-export class PanelComponent implements OnInit {
+export class RDPanelComponent implements OnInit {
 
   @Input() color = 'black';
 

@@ -1,20 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AccordionComponent } from './accordion.component';
-import { PanelComponent } from './panel/panel.component';
+import { RDAccordionComponent } from './accordion.component';
+import { RDPanelComponent } from './panel/panel.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [
-    AccordionComponent,
-    PanelComponent
-  ],
-  exports: [
-    AccordionComponent,
-    PanelComponent
-  ]
+  declarations: [RDAccordionComponent, RDPanelComponent],
+  exports: [RDAccordionComponent, RDPanelComponent]
 })
-export class AccordionModule { }
+export class RDAccordionModule { }

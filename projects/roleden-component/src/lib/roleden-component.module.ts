@@ -2,9 +2,9 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 
-import { AccordionModule } from './accordion/accordion.module';
-import { AlertModule } from './alert/alert.module';
-import { AlertService } from './alert/alert.service';
+import { RDAccordionModule } from './accordion/accordion.module';
+import { RDAlertModule } from './alert/alert.module';
+import { RDAlertService } from './alert/alert.service';
 import { BreadcrumbModule } from './breadcrumb/breadcrumb.module';
 import { ButtonModule } from './button/button.module';
 import { CarouselModule } from './carousel/carousel.module';
@@ -37,8 +37,8 @@ import { TooltipModule } from './tooltip/tooltip.module';
   declarations: [
   ],
   exports: [
-    AccordionModule,
-    AlertModule,
+    RDAccordionModule,
+    RDAlertModule,
     BreadcrumbModule,
     ButtonModule,
     CarouselModule,
@@ -67,7 +67,7 @@ export class RoledenComponentModule {
     return {
       ngModule: RoledenComponentModule,
       providers: [
-        AlertService,
+        RDAlertService,
         SnackBarService
       ]
     };

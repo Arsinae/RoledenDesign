@@ -1,6 +1,6 @@
-import { Alert } from './alert.class';
+import { RDAlert } from './alert.class';
 import { Component, OnInit, Input } from '@angular/core';
-import { AlertService } from './alert.service';
+import { RDAlertService } from './alert.service';
 import { trigger, transition, query, stagger, animate, keyframes, style } from '@angular/animations';
 
 @Component({
@@ -24,16 +24,16 @@ import { trigger, transition, query, stagger, animate, keyframes, style } from '
     ])
   ]
 })
-export class AlertComponent implements OnInit {
+export class RDAlertComponent implements OnInit {
 
   @Input() timer = 5;
 
-  public alerts: Array<{alert: Alert, timer: any}> = [];
+  public alerts: Array<{alert: RDAlert, timer: any}> = [];
 
-  constructor(private alertService: AlertService) { }
+  constructor(private alertService: RDAlertService) { }
 
   ngOnInit() {
-    this.alertService.getAlert().subscribe((alert: Alert) => {
+    this.alertService.getAlert().subscribe((alert: RDAlert) => {
       const newAlert = {alert: alert, timer: setTimeout(() => {
         this.deleteOnTimer(newAlert);
       }, this.timer * 1000)};

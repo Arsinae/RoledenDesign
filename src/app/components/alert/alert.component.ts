@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertService } from 'projects/roleden-component/src/lib/alert/alert.service';
+import { RDAlertService } from 'projects/roleden-component/src/lib/alert/alert.service';
 
 @Component({
   selector: 'app-alert',
@@ -13,7 +13,7 @@ export class AlertComponent implements OnInit {
     '  constructor(private alertService: AlertService) { }\n\n' +
     '  addAlert(type, title, text){\n    this.alertService.addAlert(type, title, text);\n  }\n}\n';
 
-  constructor(private alertService: AlertService) { }
+  constructor(private alertService: RDAlertService) { }
 
   ngOnInit() {
   }

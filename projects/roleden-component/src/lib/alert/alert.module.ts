@@ -1,21 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AlertComponent } from './alert.component';
-import { AlertService } from './alert.service';
+import { RDAlertComponent } from './alert.component';
+import { RDAlertService } from './alert.service';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [
-    AlertComponent
-  ],
-  providers: [
-    AlertService
-  ],
-  exports: [
-    AlertComponent
-  ]
+  declarations: [RDAlertComponent],
+  providers: [RDAlertService],
+  exports: [RDAlertComponent]
 })
-export class AlertModule {
+export class RDAlertModule {
 }
