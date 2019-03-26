@@ -51,6 +51,7 @@ export * from './lib/flipping-card/flipping-card.module';
 export * from './lib/flipping-card/flipping-card.component';
 
 //    INPUT
+export * from './lib/input/input.module';
 export * from './lib/input/input.component';
 
 //    INPUT-NUMBER

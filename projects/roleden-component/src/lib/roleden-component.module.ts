@@ -12,7 +12,7 @@ import { BreadcrumbModule } from './breadcrumb/breadcrumb.module';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FlippingCardModule } from './flipping-card/flipping-card.module';
 import { AccordionModule } from './accordion/accordion.module';
-import { InputComponent } from './input/input.component';
+import { InputModule } from './input/input.module';
 import { InputNumberComponent } from './input-number/input-number.component';
 import { NotationComponent } from './notation/notation.component';
 import { SelectModule } from './select/select.module';
@@ -38,7 +38,6 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     SmallCardComponent,
     TextEditorComponent,
     ProgressBarComponent,
-    InputComponent,
     NotationComponent,
     InputNumberComponent,
     TooltipComponent,
@@ -54,7 +53,7 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     ConfirmModalModule,
     DiceModule,
     FlippingCardModule,
-    InputComponent,
+    InputModule,
     InputNumberComponent,
     ListModule,
     ModalComponent,
