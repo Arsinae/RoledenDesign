@@ -64,6 +64,7 @@ export * from './lib/list/list.component';
 export * from './lib/list/list-element.class';
 
 //    MODAL
+export * from './lib/modal/modal.module';
 export * from './lib/modal/modal.component';
 
 //    MUSIC-PLAYER

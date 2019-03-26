@@ -25,7 +25,7 @@ import { SnackBarModule } from './snack-bar/snack-bar.module';
 import { CarouselModule } from './carousel/carousel.module';
 import { TabsModule } from './tabs/tabs.module';
 import { TooltipComponent } from './tooltip/tooltip.component';
-import { ModalComponent } from './modal/modal.component';
+import { ModalModule } from './modal/modal.module';
 import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
 
 @NgModule({
@@ -39,8 +39,7 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     TextEditorComponent,
     ProgressBarComponent,
     NotationComponent,
-    TooltipComponent,
-    ModalComponent,
+    TooltipComponent
   ],
   exports: [
     AccordionModule,
@@ -55,7 +54,7 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     InputModule,
     InputNumberModule,
     ListModule,
-    ModalComponent,
+    ModalModule,
     MusicPlayerModule,
     NotationComponent,
     ProgressBarComponent,
