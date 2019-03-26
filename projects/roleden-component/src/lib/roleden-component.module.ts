@@ -13,7 +13,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { FlippingCardModule } from './flipping-card/flipping-card.module';
 import { AccordionModule } from './accordion/accordion.module';
 import { InputModule } from './input/input.module';
-import { InputNumberComponent } from './input-number/input-number.component';
+import { InputNumberModule } from './input-number/input-number.module';
 import { NotationComponent } from './notation/notation.component';
 import { SelectModule } from './select/select.module';
 import { CheckBoxModule } from './check-box/check-box.module';
@@ -39,7 +39,6 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     TextEditorComponent,
     ProgressBarComponent,
     NotationComponent,
-    InputNumberComponent,
     TooltipComponent,
     ModalComponent,
   ],
@@ -54,7 +53,7 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     DiceModule,
     FlippingCardModule,
     InputModule,
-    InputNumberComponent,
+    InputNumberModule,
     ListModule,
     ModalComponent,
     MusicPlayerModule,
