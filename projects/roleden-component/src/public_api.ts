@@ -91,6 +91,7 @@ export * from './lib/select/select.component';
 export * from './lib/select/select-option/select-option.component';
 
 //    SMALL-CARD
+export * from './lib/small-card/small-card.module';
 export * from './lib/small-card/small-card.component';
 
 //    SNACK-BAR

@@ -3,7 +3,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 
 import { DiceModule } from './dice/dice.module';
-import { SmallCardComponent } from './small-card/small-card.component';
+import { SmallCardModule } from './small-card/small-card.module';
 import { TextEditorComponent } from './text-editor/text-editor.component';
 import { ListModule } from './list/list.module';
 import { ButtonModule } from './button/button.module';
@@ -35,7 +35,6 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     ReactiveFormsModule
   ],
   declarations: [
-    SmallCardComponent,
     TextEditorComponent,
     TooltipComponent
   ],
@@ -58,7 +57,7 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     ProgressBarModule,
     RadioButtonModule,
     SelectModule,
-    SmallCardComponent,
+    SmallCardModule,
     SnackBarModule,
     TabsModule,
     TextEditorComponent,
