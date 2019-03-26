@@ -110,4 +110,5 @@ export * from './lib/text-editor/text-editor.module';
 export * from './lib/text-editor/text-editor.component';
 
 //    TOOLTIP
+export * from './lib/tooltip/tooltip.module';
 export * from './lib/tooltip/tooltip.component';

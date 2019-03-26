@@ -2,31 +2,31 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 
-import { DiceModule } from './dice/dice.module';
-import { SmallCardModule } from './small-card/small-card.module';
-import { TextEditorModule } from './text-editor/text-editor.module';
-import { ListModule } from './list/list.module';
-import { ButtonModule } from './button/button.module';
-import { MusicPlayerModule } from './music-player/music-player.module';
-import { BreadcrumbModule } from './breadcrumb/breadcrumb.module';
-import { ProgressBarModule } from './progress-bar/progress-bar.module';
-import { FlippingCardModule } from './flipping-card/flipping-card.module';
 import { AccordionModule } from './accordion/accordion.module';
-import { InputModule } from './input/input.module';
-import { InputNumberModule } from './input-number/input-number.module';
-import { NotationModule } from './notation/notation.module';
-import { SelectModule } from './select/select.module';
-import { CheckBoxModule } from './check-box/check-box.module';
-import { RadioButtonModule } from './radio-button/radio-button.module';
 import { AlertModule } from './alert/alert.module';
 import { AlertService } from './alert/alert.service';
-import { SnackBarService } from './snack-bar/snack-bar.service';
-import { SnackBarModule } from './snack-bar/snack-bar.module';
+import { BreadcrumbModule } from './breadcrumb/breadcrumb.module';
+import { ButtonModule } from './button/button.module';
 import { CarouselModule } from './carousel/carousel.module';
-import { TabsModule } from './tabs/tabs.module';
-import { TooltipComponent } from './tooltip/tooltip.component';
-import { ModalModule } from './modal/modal.module';
+import { CheckBoxModule } from './check-box/check-box.module';
 import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
+import { DiceModule } from './dice/dice.module';
+import { FlippingCardModule } from './flipping-card/flipping-card.module';
+import { InputModule } from './input/input.module';
+import { InputNumberModule } from './input-number/input-number.module';
+import { ListModule } from './list/list.module';
+import { ModalModule } from './modal/modal.module';
+import { MusicPlayerModule } from './music-player/music-player.module';
+import { NotationModule } from './notation/notation.module';
+import { ProgressBarModule } from './progress-bar/progress-bar.module';
+import { RadioButtonModule } from './radio-button/radio-button.module';
+import { SelectModule } from './select/select.module';
+import { SmallCardModule } from './small-card/small-card.module';
+import { SnackBarModule } from './snack-bar/snack-bar.module';
+import { SnackBarService } from './snack-bar/snack-bar.service';
+import { TabsModule } from './tabs/tabs.module';
+import { TextEditorModule } from './text-editor/text-editor.module';
+import { TooltipModule } from './tooltip/tooltip.module';
 
 @NgModule({
   imports: [
@@ -35,7 +35,6 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     ReactiveFormsModule
   ],
   declarations: [
-    TooltipComponent
   ],
   exports: [
     AccordionModule,
@@ -60,7 +59,7 @@ import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
     SnackBarModule,
     TabsModule,
     TextEditorModule,
-    TooltipComponent
+    TooltipModule
   ]
 })
 export class RoledenComponentModule {
