@@ -1,6 +1,6 @@
-import { DarkService } from './../dark.service';
 import { Component, OnInit, Input, EventEmitter, OnChanges, Output } from '@angular/core';
 import { trigger, transition, animate, keyframes, style} from '@angular/animations';
+import { RDDarkService } from './../dark.service';
 
 @Component({
   selector: 'rd-dice',
@@ -30,7 +30,7 @@ export class RDDiceComponent implements OnInit, OnChanges {
   public rolling = false;
   public dark = false;
 
-  constructor(private darkService: DarkService) {
+  constructor(private darkService: RDDarkService) {
   }
 
   ngOnInit() {

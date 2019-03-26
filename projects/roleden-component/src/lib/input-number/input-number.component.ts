@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { DarkService } from '../dark.service';
+import { RDDarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-input-number',
@@ -21,7 +21,7 @@ export class RDInputNumberComponent implements OnInit {
 
   public dark = false;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {

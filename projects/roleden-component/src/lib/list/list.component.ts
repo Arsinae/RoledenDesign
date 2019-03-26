@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { RDListElement } from './list-element.class';
 import { trigger, transition, query, animate, keyframes, style } from '@angular/animations';
-import { DarkService } from '../dark.service';
+import { RDDarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-list',
@@ -36,7 +36,7 @@ export class RDListComponent implements OnInit {
   public sortType = 'nameAsc';
   public dark = false;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {

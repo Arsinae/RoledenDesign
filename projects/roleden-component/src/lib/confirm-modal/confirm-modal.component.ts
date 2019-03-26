@@ -1,5 +1,5 @@
-import { DarkService } from './../dark.service';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { RDDarkService } from './../dark.service';
 
 @Component({
   selector: 'rd-confirm-modal',
@@ -20,7 +20,7 @@ export class RDConfirmModalComponent implements OnInit {
   private open = false;
   public dark = true;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {

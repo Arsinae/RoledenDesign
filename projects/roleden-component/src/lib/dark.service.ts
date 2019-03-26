@@ -4,7 +4,7 @@ import { Subject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class DarkService {
+export class RDDarkService {
 
   private dark = new Subject<boolean>();
 

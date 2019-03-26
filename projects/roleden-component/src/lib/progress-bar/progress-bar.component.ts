@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DarkService } from '../dark.service';
+import { RDDarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-progress-bar',
@@ -15,7 +15,7 @@ export class RDProgressBarComponent implements OnInit {
 
   public dark = false;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {

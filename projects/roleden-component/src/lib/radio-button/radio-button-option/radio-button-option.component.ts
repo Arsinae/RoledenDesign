@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { DarkService } from '../../dark.service';
+import { RDDarkService } from '../../dark.service';
 
 @Component({
   selector: 'rd-radio-button-option',
@@ -17,7 +17,7 @@ export class RDRadioButtonOptionComponent implements OnInit {
   public display = 'line';
   public dark = false;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {

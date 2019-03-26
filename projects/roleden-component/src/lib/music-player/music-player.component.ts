@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ChangeDetectorRef, OnChanges } from '@angular/core';
 import { RDMusicElement } from './music-element.class';
 import { Howl } from 'howler';
-import { DarkService } from '../dark.service';
+import { RDDarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-music-player',
@@ -34,7 +34,7 @@ export class RDMusicPlayerComponent implements OnInit, OnChanges {
 
   public dark = false;
 
-  constructor(private changesDetector: ChangeDetectorRef, private darkService: DarkService) { }
+  constructor(private changesDetector: ChangeDetectorRef, private darkService: RDDarkService) { }
 
   ngOnInit() {
     const tag = document.createElement('script');

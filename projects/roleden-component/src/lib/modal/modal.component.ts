@@ -1,5 +1,5 @@
-import { DarkService } from './../dark.service';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { RDDarkService } from './../dark.service';
 
 @Component({
   selector: 'rd-modal',
@@ -16,7 +16,7 @@ export class RDModalComponent implements OnInit {
   private open = false;
   public dark = false;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {

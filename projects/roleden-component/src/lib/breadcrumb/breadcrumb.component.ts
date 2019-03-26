@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {RDBreadcrumbElement} from './breadcrumb-element.class';
-import { DarkService } from '../dark.service';
+import { RDDarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-breadcrumb',
@@ -16,7 +16,7 @@ export class RDBreadcrumbComponent implements OnInit {
 
   public dark = false;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {

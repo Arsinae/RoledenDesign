@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild, OnChanges } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import { DarkService } from '../../dark.service';
+import { RDDarkService } from '../../dark.service';
 
 @Component({
   selector: 'rd-panel',
@@ -19,7 +19,7 @@ export class RDPanelComponent implements OnInit {
   open = false;
   public dark = false;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {

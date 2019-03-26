@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ContentChildren, QueryList, AfterViewInit, OnChanges } from '@angular/core';
 import { RDSelectOptionComponent } from './select-option/select-option.component';
-import { DarkService } from '../dark.service';
+import { RDDarkService } from '../dark.service';
 
 @Component({
   selector: 'rd-select',
@@ -21,7 +21,7 @@ export class RDSelectComponent implements OnInit, AfterViewInit, OnChanges {
   public text = '';
   public dark = false;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {

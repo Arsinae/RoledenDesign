@@ -1,6 +1,6 @@
-import { DarkService } from './../dark.service';
 import {Component, EventEmitter, Input, OnInit, Output, ViewChild, OnChanges} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
+import { RDDarkService } from './../dark.service';
 
 @Component({
   selector: 'rd-text-editor',
@@ -21,7 +21,7 @@ export class RDTextEditorComponent implements OnInit, OnChanges {
   public size = 17;
   public dark = false;
 
-  constructor(private sanitize: DomSanitizer, public darkService: DarkService) { }
+  constructor(private sanitize: DomSanitizer, public darkService: RDDarkService) { }
 
   ngOnInit() {
     this.textTmp = this.sanitize.bypassSecurityTrustHtml(this.text);

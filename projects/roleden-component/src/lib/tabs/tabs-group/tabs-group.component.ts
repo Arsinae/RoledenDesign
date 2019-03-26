@@ -1,8 +1,8 @@
-import { DarkService } from './../../dark.service';
 import { Component, OnInit, Input, ContentChildren, QueryList, AfterViewInit, OnChanges,
   Output, EventEmitter, AfterContentChecked } from '@angular/core';
 import { trigger, transition, query, animate, keyframes, style, group } from '@angular/animations';
 import { RDTabsComponent } from './../tabs.component';
+import { RDDarkService } from './../../dark.service';
 
 @Component({
   selector: 'rd-tabs-group',
@@ -50,7 +50,7 @@ export class RDTabsGroupComponent implements OnInit, AfterViewInit, AfterContent
   public titleIndex = 0;
   public dark = false;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {

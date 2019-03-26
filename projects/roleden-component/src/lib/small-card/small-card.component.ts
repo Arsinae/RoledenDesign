@@ -1,5 +1,5 @@
-import { DarkService } from './../dark.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { RDDarkService } from './../dark.service';
 
 @Component({
   selector: 'rd-small-card',
@@ -18,7 +18,7 @@ export class RDSmallCardComponent implements OnInit {
 
   private dark = false;
 
-  constructor(private darkService: DarkService) { }
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
     this.darkService.getDarkElement().subscribe(() => {
