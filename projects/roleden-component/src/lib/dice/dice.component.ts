@@ -20,7 +20,7 @@ import { trigger, transition, animate, keyframes, style} from '@angular/animatio
     ])
   ]
 })
-export class DiceComponent implements OnInit, OnChanges {
+export class RDDiceComponent implements OnInit, OnChanges {
 
   @Input() diceSize = 6;
 

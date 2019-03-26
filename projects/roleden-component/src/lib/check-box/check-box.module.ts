@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CheckBoxComponent } from './check-box.component';
-import { CheckBoxOptionComponent } from './check-box-option/check-box-option.component';
+import { RDCheckBoxComponent } from './check-box.component';
+import { RDCheckBoxOptionComponent } from './check-box-option/check-box-option.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [
-    CheckBoxComponent,
-    CheckBoxOptionComponent
-  ],
-  exports: [
-    CheckBoxComponent,
-    CheckBoxOptionComponent
-  ]
+  declarations: [RDCheckBoxComponent, RDCheckBoxOptionComponent],
+  exports: [RDCheckBoxComponent, RDCheckBoxOptionComponent]
 })
-export class CheckBoxModule { }
+export class RDCheckBoxModule { }

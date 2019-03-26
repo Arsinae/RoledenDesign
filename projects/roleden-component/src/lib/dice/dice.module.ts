@@ -1,4 +1,4 @@
-import { DiceComponent } from './dice.component';
+import { RDDiceComponent } from './dice.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -6,11 +6,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule
   ],
-  declarations: [
-    DiceComponent
-  ],
-  exports: [
-    DiceComponent
-  ]
+  declarations: [RDDiceComponent],
+  exports: [RDDiceComponent]
 })
-export class DiceModule { }
+export class RDDiceModule { }

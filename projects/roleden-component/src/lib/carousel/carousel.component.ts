@@ -1,4 +1,4 @@
-import { CarouselDataComponent } from './carousel-data/carousel-data.component';
+import { RDCarouselDataComponent } from './carousel-data/carousel-data.component';
 import { Component, OnInit, QueryList, ContentChildren, AfterViewInit, Input, OnChanges,
   Output, EventEmitter } from '@angular/core';
 import { trigger, transition, query, animate, keyframes, style, group } from '@angular/animations';
@@ -32,7 +32,7 @@ import { trigger, transition, query, animate, keyframes, style, group } from '@a
     ])
   ]
 })
-export class CarouselComponent implements OnInit, AfterViewInit, OnChanges {
+export class RDCarouselComponent implements OnInit, AfterViewInit, OnChanges {
 
   @Input() height = 250;
   @Input() timer = 3000;
@@ -40,7 +40,7 @@ export class CarouselComponent implements OnInit, AfterViewInit, OnChanges {
 
   @Output() displayedIndexChange: EventEmitter<any> = new EventEmitter();
 
-  @ContentChildren(CarouselDataComponent) carousels: QueryList<CarouselDataComponent>;
+  @ContentChildren(RDCarouselDataComponent) carousels: QueryList<RDCarouselDataComponent>;
 
   public change = null;
   public timeout = null;

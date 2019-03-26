@@ -6,7 +6,7 @@ import { DarkService } from './../../dark.service';
   templateUrl: './check-box-option.component.html',
   styleUrls: ['./check-box-option.component.scss']
 })
-export class CheckBoxOptionComponent implements OnInit {
+export class RDCheckBoxOptionComponent implements OnInit {
 
   @Input() value = '';
 

@@ -1,14 +1,14 @@
 import { Component, OnInit, AfterViewInit, ContentChildren, QueryList, Input, OnChanges, Output, EventEmitter } from '@angular/core';
-import { CheckBoxOptionComponent } from './check-box-option/check-box-option.component';
+import { RDCheckBoxOptionComponent } from './check-box-option/check-box-option.component';
 
 @Component({
   selector: 'rd-check-box',
   templateUrl: './check-box.component.html',
   styleUrls: ['./check-box.component.scss']
 })
-export class CheckBoxComponent implements OnInit, AfterViewInit, OnChanges {
+export class RDCheckBoxComponent implements OnInit, AfterViewInit, OnChanges {
 
-  @ContentChildren(CheckBoxOptionComponent) options: QueryList<CheckBoxOptionComponent>;
+  @ContentChildren(RDCheckBoxOptionComponent) options: QueryList<RDCheckBoxOptionComponent>;
 
   @Input() color = 'gold';
   @Input() value: Array<string> = [];
@@ -41,21 +41,21 @@ export class CheckBoxComponent implements OnInit, AfterViewInit, OnChanges {
     }
   }
 
-  setColorOption(option: CheckBoxOptionComponent) {
+  setColorOption(option: RDCheckBoxOptionComponent) {
     Promise.resolve(null).then(() => option.color = this.color);
   }
 
-  setDisplay(option: CheckBoxOptionComponent) {
+  setDisplay(option: RDCheckBoxOptionComponent) {
     Promise.resolve(null).then(() => option.display = this.display);
   }
 
-  setChecked(option: CheckBoxOptionComponent) {
+  setChecked(option: RDCheckBoxOptionComponent) {
     if (this.value.indexOf(option.value) !== -1) {
       Promise.resolve(null).then(() => option.checked = true);
     }
   }
 
-  subscribeToChecked(option: CheckBoxOptionComponent) {
+  subscribeToChecked(option: RDCheckBoxOptionComponent) {
     if (option.checkedChange.observers.length === 0) {
       option.checkedChange.subscribe(check => {
         if (check) {
