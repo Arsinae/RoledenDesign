@@ -7,6 +7,7 @@ import { RDAlertModule } from './alert/alert.module';
 import { RDAlertService } from './alert/alert.service';
 import { RDBreadcrumbModule } from './breadcrumb/breadcrumb.module';
 import { RDButtonModule } from './button/button.module';
+import { RDCardModule } from './card/card.module';
 import { RDCarouselModule } from './carousel/carousel.module';
 import { RDCheckBoxModule } from './check-box/check-box.module';
 import { RDConfirmModalModule } from './confirm-modal/confirm-modal.module';
@@ -41,6 +42,7 @@ import { RDTooltipModule } from './tooltip/tooltip.module';
     RDAlertModule,
     RDBreadcrumbModule,
     RDButtonModule,
+    RDCardModule,
     RDCarouselModule,
     RDCheckBoxModule,
     RDConfirmModalModule,

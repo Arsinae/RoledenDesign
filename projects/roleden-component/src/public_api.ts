@@ -28,6 +28,10 @@ export * from './lib/breadcrumb/breadcrumb-element.class';
 export * from './lib/button/button.module';
 export * from './lib/button/button.component';
 
+//    CARD
+export * from './lib/card/card.module';
+export * from './lib/card/card.component';
+
 //    CAROUSEL
 export * from './lib/carousel/carousel.module';
 export * from './lib/carousel/carousel.component';

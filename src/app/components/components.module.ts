@@ -25,6 +25,7 @@ import { ListComponent } from './list/list.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { ModalComponent } from './modal/modal.component';
 import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
+import { CardComponent } from './card/card.component';
 
 export function hljsLanguages() {
   return [
@@ -58,7 +59,8 @@ export function hljsLanguages() {
     TabsComponent,
     TooltipComponent,
     ModalComponent,
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    CardComponent
   ],
   exports: [
     ComponentsComponent

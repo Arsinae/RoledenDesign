@@ -1,0 +1,98 @@
+@import "../../../style/variables";
+
+.titlePart {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $gold;
+  margin-bottom: 2 * $margin;
+  margin-top: 3 * $margin;
+
+  span {
+    position: relative;
+    margin-left: calc(5% + 6px);
+
+    &:after {
+      content: '';
+      width: 120%;
+      height: 2px;
+      background-color: $gold;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+    }
+  }
+}
+
+.elementList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow-y: auto;
+  width: 80%;
+  margin: $margin 10%;
+
+  .cardList {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+
+    .card {
+      padding: $margin;
+      text-align: center;
+
+      img {
+        width: 150px; height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.explanation {
+  width: 80%;
+  margin: $margin 10%;
+}
+
+.option {
+
+  table, tr {
+    width: 100%;
+    padding: $margin;
+  }
+
+  tr:nth-child(odd) {
+    background-color: var(--table-odd);
+    @include defaultTransition();
+  }
+
+  td {
+    padding: $margin;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  .cardList {
+    width: 30%;
+    margin: $margin (10% / 6);
+  }
+}
+
+
+@media screen and (max-width: 670px) {
+  .cardList {
+    width: 45%;
+    margin: $margin 2.5%;
+  }
+}
+
+
+@media screen and (max-width: 470px) {
+  .cardList {
+    width: 90%;
+    margin: $margin 5%;
+  }
+}
+
