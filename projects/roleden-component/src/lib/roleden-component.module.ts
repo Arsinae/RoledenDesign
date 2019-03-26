@@ -6,7 +6,7 @@ import { DiceComponent } from './dice/dice.component';
 import { SmallCardComponent } from './small-card/small-card.component';
 import { TextEditorComponent } from './text-editor/text-editor.component';
 import {ListModule} from './list/list.module';
-import { ButtonComponent } from './button/button.component';
+import { ButtonModule } from './button/button.module';
 import {MusicPlayerModule} from './music-player/music-player.module';
 import {BreadcrumbModule} from './breadcrumb/breadcrumb.module';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
@@ -26,7 +26,7 @@ import { CarouselModule } from './carousel/carousel.module';
 import { TabsModule } from './tabs/tabs.module';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { ModalComponent } from './modal/modal.component';
-import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
+import { ConfirmModalModule } from './confirm-modal/confirm-modal.module';
 
 @NgModule({
   imports: [
@@ -38,7 +38,6 @@ import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
     DiceComponent,
     SmallCardComponent,
     TextEditorComponent,
-    ButtonComponent,
     ProgressBarComponent,
     FlippingCardComponent,
     InputComponent,
@@ -46,32 +45,31 @@ import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
     InputNumberComponent,
     TooltipComponent,
     ModalComponent,
-    ConfirmModalComponent
   ],
   exports: [
+    AccordionModule,
+    AlertModule,
+    BreadcrumbModule,
+    ButtonModule,
+    ConfirmModalModule,
     DiceComponent,
     SmallCardComponent,
     ListModule,
     MusicPlayerModule,
     TextEditorComponent,
-    ButtonComponent,
-    BreadcrumbModule,
     ProgressBarComponent,
     FlippingCardComponent,
-    AccordionModule,
     InputComponent,
     InputNumberComponent,
     NotationComponent,
     SelectModule,
     CheckBoxModule,
     RadioButtonModule,
-    AlertModule,
     SnackBarModule,
     CarouselModule,
     TabsModule,
     TooltipComponent,
-    ModalComponent,
-    ConfirmModalComponent
+    ModalComponent
   ]
 })
 export class RoledenComponentModule {

@@ -22,6 +22,7 @@ export * from './lib/breadcrumb/breadcrumb.component';
 export * from './lib/breadcrumb/breadcrumb-element.class';
 
 //    BUTTON
+export * from './lib/button/button.module';
 export * from './lib/button/button.component';
 
 //    CAROUSEL
@@ -35,6 +36,7 @@ export * from './lib/check-box/check-box.component';
 export * from './lib/check-box/check-box-option/check-box-option.component';
 
 //    CONFIRM-MODAL
+export * from './lib/confirm-modal/confirm-modal.module';
 export * from './lib/confirm-modal/confirm-modal.component';
 
 //    DICE
