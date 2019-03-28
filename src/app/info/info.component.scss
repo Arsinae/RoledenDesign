@@ -1,0 +1,121 @@
+@import "../../style/variables";
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $gold;
+  margin-bottom: 2 * $margin;
+  padding-top: 3 * $margin;
+  text-align: center;
+  font-size: 28px;
+}
+
+.infos {
+  width: 80%;
+  margin-left: 10%;
+  color: var(--text-color);
+
+  &>div {
+    padding-bottom: 3*$margin;
+  }
+
+  .titlePart {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $gold;
+    margin-bottom: 2 * $margin;
+    margin-top: 3 * $margin;
+
+    span {
+      position: relative;
+      margin-left: calc(5% + 6px);
+
+      &:after {
+        content: '';
+        width: 120%;
+        height: 2px;
+        background-color: $gold;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+      }
+    }
+  }
+
+  .colorPalette {
+    width: 90%;
+    margin-left: 5%;
+
+    .colorList {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      &>* {
+        margin: $margin;
+      }
+
+      .colorBlock {
+        position: relative;
+        width: 100px; height: 100px;
+
+        &>* {
+          @include centered();
+        }
+
+        &.gold {
+          background-color: $gold;
+        }
+
+        &.darkBlue {
+          background-color: $dark-blue;
+        }
+
+        &.cyan {
+          background-color: $cyan;
+        }
+
+        &.grey {
+          background-color: $grey;
+        }
+
+        &.lightGrey {
+          background-color: $light-gray;
+        }
+
+        &.blue {
+          background-color: $colored-blue;
+        }
+
+        &.blueLight {
+          background-color: $colored-blue-light;
+        }
+
+        &.purple {
+          background-color: $colored-purple;
+        }
+
+        &.red {
+          background-color: $colored-red;
+        }
+
+        &.orange {
+          background-color: $colored-orange;
+        }
+
+        &.green {
+          background-color: $colored-green;
+        }
+
+        &.darkBackground {
+          background-color: $dark-background
+        }
+
+        &.darkGrey {
+          background-color: $dark-grey
+        }
+      }
+    }
+  }
+}

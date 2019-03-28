@@ -7,6 +7,10 @@
     <span class="icon"><i class="fab fa-wpforms"></i></span>
     <div class="text">Form Component</div>
   </div>
+  <div class="navItem" routerLink="info">
+      <span class="icon"><i class="fas fa-info-circle"></i></span>
+      <div class="text">Info</div>
+    </div>
   <div class="navItem">
     <a href="https://ng-paint.herokuapp.com/">
       <span class="icon"><i class="fas fa-paint-brush"></i></span>
@@ -15,13 +19,8 @@
   </div>
 
   <div>
-    <rd-check-box (valueChange)="changeDarkMode()" [color]="'blue'">
-      <rd-check-box-option>
-        <span class="darkMode"><rd-tooltip>
-          <span text>Dark Mode</span>
-          <span explanation>Add the 'rdDark' class on the body</span>
-        </rd-tooltip></span>
-      </rd-check-box-option>
-    </rd-check-box>
+    <rd-button (buttonClick)="changeDarkMode()" [color]="'blue'">
+      {{dark? 'Light Mode' : 'Dark Mode'}}
+    </rd-button>
   </div>
 </div>

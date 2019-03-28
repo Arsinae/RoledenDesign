@@ -13,12 +13,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { FormModule } from './form/form.module';
 import { ComponentsModule } from './components/components.module';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SidebarComponent,
+    InfoComponent,
   ],
   imports: [
     BrowserModule,
