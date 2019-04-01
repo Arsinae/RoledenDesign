@@ -1,0 +1,56 @@
+<div class="titlePart">
+    <span>Input File</span>
+  </div>
+
+  <div class="inputContainer">
+    <rd-input-file [accept]="'image/*'"></rd-input-file>
+  </div>
+
+  <div class="explanation">
+    <app-explanation>
+      <rd-tabs-group>
+        <rd-tabs [title]="'Information'">
+          <div class="titlePart">
+            <span>HTML Tag</span>
+          </div>
+
+          <div><b>rd-input-file</b></div>
+
+          <div class="titlePart">
+            <span>Parameters:</span>
+          </div>
+
+          <div class="option">
+            <table>
+              <tr>
+                <td>@Input() label: string</td>
+                <td>Text of the Label</td>
+              </tr>
+              <tr>
+                <td>@Input() accept: string</td>
+                <td>One or more unique file type specifiers describing file types to allow</td>
+              </tr>
+              <tr>
+                <td>@Input() multiple: boolean</td>
+                <td>false by default</td>
+              </tr>
+              <tr>
+                <td>@Output() fileChange: FileList</td>
+                <td>Event emitted when the selected files has been changed</td>
+              </tr>
+            </table>
+          </div>
+        </rd-tabs>
+
+        <rd-tabs [title]="'Example'">
+          <div class="titlePart">
+            <span>HTML</span>
+          </div>
+
+          <div highlightChildren>
+            <pre><code [textContent]="htmlCode"></code></pre>
+          </div>
+        </rd-tabs>
+      </rd-tabs-group>
+    </app-explanation>
+  </div>

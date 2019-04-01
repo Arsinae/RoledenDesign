@@ -14,6 +14,7 @@ import { RDConfirmModalModule } from './confirm-modal/confirm-modal.module';
 import { RDDiceModule } from './dice/dice.module';
 import { RDFlippingCardModule } from './flipping-card/flipping-card.module';
 import { RDInputModule } from './input/input.module';
+import { RDInputFileModule } from './input-file/input-file.module';
 import { RDInputNumberModule } from './input-number/input-number.module';
 import { RDListModule } from './list/list.module';
 import { RDModalModule } from './modal/modal.module';
@@ -49,6 +50,7 @@ import { RDTooltipModule } from './tooltip/tooltip.module';
     RDDiceModule,
     RDFlippingCardModule,
     RDInputModule,
+    RDInputFileModule,
     RDInputNumberModule,
     RDListModule,
     RDModalModule,

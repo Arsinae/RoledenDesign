@@ -1,0 +1,20 @@
+<div class="rdFileInputContainer" [class.rdDark]="dark">
+  <ng-container *ngIf="!files">
+    <label class="rdFileInputLabel">
+      <input type="file" name="rdFileInput" class="rdFileInput" [multiple]="multiple" [accept]="accept" (change)="changeValue($event)" />
+      <span><i class="fas fa-upload"></i></span>
+      <span>{{label}}</span>
+    </label>
+  </ng-container>
+  <ng-container *ngIf="files">
+    <span class="fileNames">
+      <ng-container *ngFor="let file of files; let i = index">
+        <ng-container *ngIf="i != 0">,</ng-container>
+        {{file.name}}
+      </ng-container>
+    </span>
+    <span class="fileRemover" (click)="removeFile()">
+      <i class="fas fa-times"></i>
+    </span>
+  </ng-container>
+</div>
