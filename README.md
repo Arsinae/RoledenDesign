@@ -16,7 +16,9 @@ Add `RoledenComponent.forRoot()` in your module;
 
 #### 1.4.2
 
-Add a `rd-card` Component;
+Add a `rd-card` Component;\
+Add a `rd-input-file` Component;\
+Disable close on click on `rd-modal` & `rd-confirm-modal`;
 
 #### 1.4.1
 

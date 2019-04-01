@@ -29,7 +29,7 @@ export class RDInputComponent implements OnInit, OnChanges {
     this.darkService.getDarkElement().subscribe(() => {
       this.dark = this.darkService.isDark();
     });
-    this.darkService.isDark();
+    this.dark = this.darkService.isDark();
   }
 
   ngOnChanges(changes) {
