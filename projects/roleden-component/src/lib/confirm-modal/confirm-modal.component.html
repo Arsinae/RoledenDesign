@@ -1,5 +1,5 @@
 <div class="modalContainer" [class.open]="isOpen()" [class.rdDark]="dark" (click)="closeModal()">
-  <div class="modalPanel" [style.width.%]="width" [style.maxHeight.%]="maxHeight">
+  <div class="modalPanel" [style.width.%]="width" [style.maxHeight.%]="maxHeight" (click)="clickOnModal($event)">
     <ng-content></ng-content>
     <div class="buttonLine">
       <rd-button [color]="'red'" (buttonClick)="cancel($event)">{{cancelText}}</rd-button>

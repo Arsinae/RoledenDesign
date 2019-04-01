@@ -38,6 +38,10 @@ export class RDConfirmModalComponent implements OnInit {
     this.closedModal.emit();
   }
 
+  clickOnModal(event) {
+    event.stopPropagation();
+  }
+
   accept(event) {
     event.stopPropagation();
     this.acceptModal.emit(event);

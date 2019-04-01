@@ -22,11 +22,9 @@ export class CarouselComponent implements OnInit {
   }
 
   changeDisplay(event) {
-    console.log('Display Change', event);
   }
 
   log() {
-    console.log('click');
   }
 
 }

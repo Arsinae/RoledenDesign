@@ -38,4 +38,7 @@ export class RDModalComponent implements OnInit {
     return this.open;
   }
 
+  clickOnModal(event) {
+    event.stopPropagation();
+  }
 }

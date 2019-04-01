@@ -4,13 +4,13 @@
 
 <div class="modalContainer">
   <span (click)="openModal()">Open Modal</span>
-  <rd-modal [width]="40" (closedModal)="closeModal()" #modal>
+  <rd-modal [width]="40"  #modal>
     <div class="modalContent">
         <cite (click)="clickOnCitation($event)">I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration.
           I will face my fear. I will permit it to pass over me and through me. And when it has gone past
           I will turn the inner eye to see its path. Where the fear has gone there will be nothing. Only I will remain.
         </cite>
-        <blockquote>Bene Gesserit Litany Against Fear.</blockquote>
+        <blockquote (click)="closeModal()">Bene Gesserit Litany Against Fear.</blockquote>
     </div>
   </rd-modal>
 </div>
