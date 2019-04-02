@@ -1,5 +1,6 @@
 <div class="carouselWrapper">
-  <div class="dataContainer" [@carouselAnimation]="change" [style.height.px]="height">
+  <div class="dataContainer" [@carouselAnimation]="change" [style.height.px]="height"
+  (swipeLeft)="changeDisplay(1, 'next')" (swipeRight)="changeDisplay(-1, 'prev')">
     <ng-content></ng-content>
   </div>
 

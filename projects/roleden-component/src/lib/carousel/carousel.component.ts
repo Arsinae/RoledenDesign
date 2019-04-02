@@ -2,6 +2,7 @@ import { RDCarouselDataComponent } from './carousel-data/carousel-data.component
 import { Component, OnInit, QueryList, ContentChildren, AfterViewInit, Input, OnChanges,
   Output, EventEmitter } from '@angular/core';
 import { trigger, transition, query, animate, keyframes, style, group } from '@angular/animations';
+import 'hammerjs';
 
 @Component({
   selector: 'rd-carousel',
