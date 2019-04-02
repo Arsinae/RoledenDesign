@@ -14,6 +14,10 @@ Add `RoledenComponent.forRoot()` in your module;
 
 ### Release Notes
 
+#### 1.4.3
+
+Enhance mobile compatibility;
+
 #### 1.4.2
 
 Add a `rd-card` Component;\

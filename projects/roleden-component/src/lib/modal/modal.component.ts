@@ -9,7 +9,7 @@ import { RDDarkService } from './../dark.service';
 export class RDModalComponent implements OnInit {
 
   @Input() width = 50;
-  @Input() maxHeight: number = null;
+  @Input() maxHeight = 80;
 
   @Output() closedModal: EventEmitter<any> = new EventEmitter();
 

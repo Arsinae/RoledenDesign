@@ -9,7 +9,7 @@ import { RDDarkService } from './../dark.service';
 export class RDConfirmModalComponent implements OnInit {
 
   @Input() width = 50;
-  @Input() maxHeight: number = null;
+  @Input() maxHeight = 80;
   @Input() acceptText = 'Accept';
   @Input() cancelText = 'Cancel';
 

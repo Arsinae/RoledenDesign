@@ -20,7 +20,8 @@
     @include centered();
     background-color: white;
     box-shadow: $shadow;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   &.rdDark {
