@@ -3,7 +3,8 @@
 .snackbarContainer {
   position: fixed;
   bottom: 5%;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50%;
   display: flex;
   flex-direction: column-reverse;
@@ -46,5 +47,12 @@
     &.infoSnackBar {
       background-color: $colored-blue;
     }
+  }
+}
+
+@media (max-width: 650px) {
+  .snackbarContainer {
+    width: 50%;
+    min-width: 250px;
   }
 }
