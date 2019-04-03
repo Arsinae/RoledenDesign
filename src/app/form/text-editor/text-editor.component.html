@@ -3,7 +3,8 @@
 </div>
 
 <div class="editorContainer">
-  <rd-text-editor [height]="150" (getSelection)="getSelection($event)"></rd-text-editor>
+  <rd-text-editor [height]="150" (getSelection)="getSelection($event)" [(text)]="text">
+  </rd-text-editor>
 </div>
 
 <div class="explanation">

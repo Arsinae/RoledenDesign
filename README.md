@@ -16,7 +16,8 @@ Add `RoledenComponent.forRoot()` in your module;
 
 #### 1.4.3
 
-Enhance mobile compatibility;
+Enhance mobile compatibility;\
+Correction on `rd-text-editor`;
 
 #### 1.4.2
 

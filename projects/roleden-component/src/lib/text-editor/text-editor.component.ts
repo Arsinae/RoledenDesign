@@ -1,4 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewChild, OnChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild, OnChanges,
+  ChangeDetectorRef, AfterViewInit  } from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import { RDDarkService } from './../dark.service';
 
@@ -7,7 +8,7 @@ import { RDDarkService } from './../dark.service';
   templateUrl: './text-editor.component.html',
   styleUrls: ['./text-editor.component.scss']
 })
-export class RDTextEditorComponent implements OnInit, OnChanges {
+export class RDTextEditorComponent implements OnInit, OnChanges, AfterViewInit {
 
   @Input() text = '';
   @Input() height = 200;
@@ -21,18 +22,24 @@ export class RDTextEditorComponent implements OnInit, OnChanges {
   public size = 17;
   public dark = false;
 
-  constructor(private sanitize: DomSanitizer, public darkService: RDDarkService) { }
+  constructor(private sanitize: DomSanitizer, public darkService: RDDarkService,
+    private cd: ChangeDetectorRef) { }
 
   ngOnInit() {
-    this.textTmp = this.sanitize.bypassSecurityTrustHtml(this.text);
     this.darkService.getDarkElement().subscribe(() => {
       this.dark = this.darkService.isDark();
     });
     this.dark = this.darkService.isDark();
   }
 
-  ngOnChanges() {
-    this.textTmp = this.sanitize.bypassSecurityTrustHtml(this.text);
+  ngAfterViewInit() {
+    this.cd.detach();
+  }
+
+   ngOnChanges(changes) {
+    if (changes.text.currentValue !== this.textTmp) {
+      this.textTmp = this.sanitize.bypassSecurityTrustHtml(this.text.slice());
+    }
   }
 
   addTextStyle(style) {
@@ -51,10 +58,12 @@ export class RDTextEditorComponent implements OnInit, OnChanges {
       }
     }
     this.textArea.focus();
+    this.textTmp = this.textArea.nativeElement.innerHTML;
     this.textChange.emit(this.textArea.nativeElement.innerHTML);
   }
 
   pushText() {
+    this.textTmp = this.textArea.nativeElement.innerHTML;
     this.textChange.emit(this.textArea.nativeElement.innerHTML);
   }
 
