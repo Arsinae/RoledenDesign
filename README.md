@@ -16,6 +16,7 @@ Add `RoledenComponent.forRoot()` in your module;
 
 #### 1.4.3
 
+Add a `rd-input-autocomplete` Component;\
 Enhance mobile compatibility;\
 Correction on `rd-text-editor`;
 
