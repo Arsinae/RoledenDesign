@@ -58,6 +58,10 @@ export * from './lib/flipping-card/flipping-card.component';
 export * from './lib/input/input.module';
 export * from './lib/input/input.component';
 
+//    INPUT-AUTOCOMPLETE
+export * from './lib/input-autocomplete/input-autocomplete.module';
+export * from './lib/input-autocomplete/input-autocomplete.component';
+
 //    INPUT-FILE
 export * from './lib/input-file/input-file.module';
 export * from './lib/input-file/input-file.component';

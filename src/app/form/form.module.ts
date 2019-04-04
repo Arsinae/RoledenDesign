@@ -18,6 +18,7 @@ import { ExplanationModule } from './../explanation/explanation.module';
 import { TextEditorComponent } from './text-editor/text-editor.component';
 import { ButtonComponent } from './button/button.component';
 import { InputFileComponent } from './input-file/input-file.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 
 
 export function hljsLanguages() {
@@ -44,7 +45,8 @@ export function hljsLanguages() {
     CheckBoxComponent,
     RadioButtonComponent,
     InputNumberComponent,
-    InputFileComponent
+    InputFileComponent,
+    AutocompleteComponent
   ],
   exports: [FormComponent]
 })

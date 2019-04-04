@@ -1,0 +1,82 @@
+<div class="titlePart">
+  <span>Input-Autocomplete</span>
+</div>
+
+<div class="autoCompleteContainer">
+  <rd-input-autocomplete [(value)]="character" [placeholder]="'Kwisatz Haderach'" [color]="'orange'" [completeValues]="values">
+  </rd-input-autocomplete>
+  <span>Value : {{character}}</span>
+</div>
+
+<div class="explanation">
+  <app-explanation>
+    <rd-tabs-group>
+      <rd-tabs [title]="'Informations'">
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
+
+        <div><b>rd-input-autocomplete</b></div>
+
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
+
+        <div class="option">
+          <table>
+            <tr>
+              <td>@Input() value: string</td>
+              <td>Default value of the Input</td>
+            </tr>
+            <tr>
+              <td>@Input() placeholder: string</td>
+              <td>Text of the Placeholder</td>
+            </tr>
+            <tr>
+              <td>@Input() color: string</td>
+              <td>gold(default), green, red, blue, blue-light, purple, orange, black</td>
+            </tr>
+            <tr>
+              <td>@Input() disabled: boolean</td>
+              <td>Disable the input; false by default</td>
+            </tr>
+            <tr>
+              <td>@Input() completeValues: Array&lt;string&gt;</td>
+              <td>Values displayed in the Menu</td>
+            </tr>
+            <tr>
+              <td>@Input() noMatchingText: string</td>
+              <td>Value display when no matching value is found; 'No matching value' by default</td>
+            </tr>
+            <tr>
+              <td>@Output() valueChange: string</td>
+              <td>Event emitted when the text has been changed</td>
+            </tr>
+            <tr>
+              <td>@Output() pressEnter: null</td>
+              <td>Event emitted when the Enter Key is pressed</td>
+            </tr>
+          </table>
+        </div>
+      </rd-tabs>
+
+      <rd-tabs [title]="'Example'">
+        <div class="titlePart">
+          <span>HTML</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+
+        <div class="titlePart">
+          <span>Typescript</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="tsCode"></code></pre>
+        </div>
+      </rd-tabs>
+    </rd-tabs-group>
+  </app-explanation>
+</div>
