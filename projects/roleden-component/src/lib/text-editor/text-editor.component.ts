@@ -36,9 +36,13 @@ export class RDTextEditorComponent implements OnInit, OnChanges, AfterViewInit {
     this.cd.detach();
   }
 
-   ngOnChanges(changes) {
-    if (changes.text.currentValue !== this.textTmp) {
-      this.textTmp = this.sanitize.bypassSecurityTrustHtml(this.text.slice());
+  ngOnChanges(changes) {
+    if (changes.text) {
+      if (changes.text.currentValue !== this.textTmp) {
+        this.textTmp = this.sanitize.bypassSecurityTrustHtml(this.text.slice());
+        this.cd.detectChanges();
+      }
+    } else {
       this.cd.detectChanges();
     }
   }
