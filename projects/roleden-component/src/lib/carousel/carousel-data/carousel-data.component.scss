@@ -2,6 +2,7 @@
   width: 100%;
   overflow: hidden;
   height: 100%;
+  z-index: 1;
 
   &::ng-deep * {
     position: absolute;

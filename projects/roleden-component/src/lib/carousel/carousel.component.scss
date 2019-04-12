@@ -14,6 +14,7 @@
     position: absolute;
     top: 50%;
     left: 0;
+    z-index: 2;
     transform: translateY(-50%);
     padding: $margin*3 $margin*2;
     color: $grey;
@@ -34,6 +35,7 @@
     position: absolute;
     bottom: 5%;
     left: 50%;
+    z-index: 2;
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;

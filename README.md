@@ -14,6 +14,10 @@ Add `RoledenComponent.forRoot()` in your module;
 
 ### Release Notes
 
+#### 1.4.6
+
+- Z-Index correction on the `rd-carousel` to make the data clickable
+
 #### 1.4.5
 
 - Leveshtein distance for the suggestions of the `rd-input-autocomplete`

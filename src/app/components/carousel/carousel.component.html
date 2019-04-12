@@ -5,19 +5,19 @@
 <div class="carousel">
   <rd-carousel [(displayedIndex)]="index">
     <rd-carousel-data (displayChange)="changeDisplay($event)">
-      <div class="carouselImg" (click)="log()">
+      <div class="carouselImg" (click)="log('a')">
         <img src="https://stmed.net/sites/default/files/dune-wallpapers-29516-4438731.jpg">
         <span>Arrakis</span>
       </div>
     </rd-carousel-data>
     <rd-carousel-data (displayChange)="changeDisplay($event)">
-      <div class="carouselImg" (click)="log()">
+      <div class="carouselImg" (click)="log('b')">
         <img src="https://i.pinimg.com/originals/9c/65/07/9c65071899c8c179adda73ca7ab237b6.jpg">
         <span>Caladan</span>
       </div>
     </rd-carousel-data>
     <rd-carousel-data (displayChange)="changeDisplay($event)">
-      <div class="carouselImg" (click)="log()">
+      <div class="carouselImg" (click)="log('c')">
         <img src="http://gallery.burrowowl.net/index.php?q=/image/10161.jpg">
         <span>Arrakis Map</span>
       </div>

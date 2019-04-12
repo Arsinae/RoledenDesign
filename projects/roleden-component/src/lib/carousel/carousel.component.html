@@ -4,17 +4,17 @@
     <ng-content></ng-content>
   </div>
 
-  <div class="arrow leftArrow" (click)="changeDisplay(-1, 'prev')">
+  <div class="arrow leftArrow" (click)="changeDisplayByClick($event, -1, 'prev')">
     <span><i class="fas fa-chevron-left fa-2x"></i></span>
   </div>
 
-  <div class="arrow rightArrow" (click)="changeDisplay(1, 'next')">
+  <div class="arrow rightArrow" (click)="changeDisplayByClick($event, 1, 'next')">
     <span><i class="fas fa-chevron-right fa-2x"></i></span>
   </div>
 
   <div class="stepper">
     <div class="step" *ngFor="let i of carouselLength" [class.active]="i === displayedIndex"
-    (click)="changeStep(i)">
+    (click)="changeStep($event, i)">
     </div>
   </div>
 </div>

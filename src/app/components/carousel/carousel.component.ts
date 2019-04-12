@@ -24,7 +24,7 @@ export class CarouselComponent implements OnInit {
   changeDisplay(event) {
   }
 
-  log() {
+  log(letter) {
   }
 
 }

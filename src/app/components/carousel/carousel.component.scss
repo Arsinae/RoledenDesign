@@ -29,6 +29,7 @@
 
   .carouselImg {
     display: flex;
+    z-index: 1;
 
     span {
       @include centered();

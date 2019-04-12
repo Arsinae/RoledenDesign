@@ -66,6 +66,11 @@ export class RDCarouselComponent implements OnInit, AfterViewInit, OnChanges {
     this.changeView();
   }
 
+  changeDisplayByClick(event, value, change) {
+    event.stopPropagation();
+    this.changeDisplay(value, change);
+  }
+
   changeDisplay(value, change) {
     this.change = change;
     this.displayedIndex = (this.displayedIndex + value) < 0 ? this.carousels.length - 1
@@ -74,7 +79,7 @@ export class RDCarouselComponent implements OnInit, AfterViewInit, OnChanges {
     this.changeView();
   }
 
-  changeStep(index) {
+  changeStep(event, index) {
     if (index < this.displayedIndex) {
       this.change = 'next';
     } else if (index > this.displayedIndex) {
