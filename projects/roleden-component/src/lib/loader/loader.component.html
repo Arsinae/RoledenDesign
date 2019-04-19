@@ -1,0 +1,6 @@
+<div class="loaderContainer {{color}}Loader {{animation}}Animation">
+  <ng-container *ngIf="type === 'circle'">
+    <div class="circleLoader" [style.width.px]="width*.9" [style.height.px]="width*.9"
+    [style.borderSize.px]="width*.1"></div>
+  </ng-container>
+</div>

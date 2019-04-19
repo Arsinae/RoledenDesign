@@ -1,0 +1,25 @@
+@import '../style/variables';
+
+.loaderContainer {
+
+  --main-color: #{$gold};
+
+  .circleLoader {
+    border: 10px solid transparent;
+    border-top-color: var(--main-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  &.linearAnimation>div {
+    animation-timing-function: linear;
+  }
+
+  &.hilltopAnimation>div {
+    animation-timing-function: ease;
+  }
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
