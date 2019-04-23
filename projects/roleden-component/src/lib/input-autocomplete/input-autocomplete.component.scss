@@ -4,6 +4,7 @@
   --main-color: #{$gold};
   --text-color: black;
   --background-color: white;
+  --hover-color: #{$light-gray};
 
   position: relative;
   margin-top: 20px;
@@ -42,13 +43,21 @@
     position: absolute;
     top: auto;
     left: auto;
-    min-width: inherit;
+    min-width: inherit; width: 100%;
     background-color: var(--background-color);
     color: var(--text-color);
     box-shadow: $shadow;
     padding: $margin $margin;
     z-index: 1;
     cursor: pointer;
+
+    .matchingValue {
+      padding: $margin $margin/2;
+
+      &:hover {
+        background-color: var(--hover-color);
+      }
+    }
 
     .separator {
       width: 100%;
@@ -92,5 +101,6 @@
   &.rdDark {
     --text-color: white;
     --background-color: #{$dark-blue};
+    --hover-color: #{$cyan};
   }
 }

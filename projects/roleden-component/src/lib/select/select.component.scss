@@ -38,7 +38,7 @@
     position: absolute;
     top: auto;
     left: auto;
-    min-width: inherit;
+    min-width: inherit; width: 100%;
     background-color: var(--background-color);
     color: var(--text-color);
     box-shadow: $shadow;

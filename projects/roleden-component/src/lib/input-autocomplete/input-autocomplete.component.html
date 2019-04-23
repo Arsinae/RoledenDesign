@@ -4,7 +4,7 @@
     (keydown)="pressKey($event)" (focus)="focusInput()" (focusout)="unfocusInput()" [disabled]="disabled">
   <div class="autoCompleteMenu">
     <ng-container *ngFor="let completeValue of getMatchingValues(); let last = last">
-      <div (click)="clickValue(completeValue)">{{completeValue}}</div>
+      <div class="matchingValue" (click)="clickValue(completeValue)">{{completeValue}}</div>
       <div class="separator" *ngIf="!last"></div>
     </ng-container>
     <ng-container *ngIf="getMatchingValues().length === 0">
