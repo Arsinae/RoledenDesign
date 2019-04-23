@@ -32,7 +32,12 @@
 
 .loaderContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+
+  &>* {
+    min-width: 150px;
+  }
 }
 
 .option {

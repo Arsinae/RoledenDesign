@@ -8,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RDLoaderComponent implements OnInit {
 
-  @Input() width = 120;
+  @Input() size = 120;
+  @Input() borderPercentage = 10;
   @Input() type = 'circle';
   @Input() color = 'gold';
   @Input() animation = 'linear';

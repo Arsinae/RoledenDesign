@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoaderComponent implements OnInit {
 
-  public htmlCode = '<rd-loader [number]="10" [(value)]="value" [size]="25" [color]="\'blue\'"></rd-loader>\n';
+  public htmlCode = '<rd-loader [size]="50" [borderPercentage]="50" [animation]="\'hilltop\'"></rd-loader>\n';
 
   constructor() { }
 

@@ -4,7 +4,8 @@
 
 <div class="loaderContainer">
   <rd-loader [animation]="'hilltop'"></rd-loader>
-  <rd-loader [type]="'dot'"></rd-loader>
+  <rd-loader [type]="'dot'" [color]="'red'"></rd-loader>
+  <rd-loader [size]="50" [borderPercentage]="50"></rd-loader>
 </div>
 
 
@@ -26,11 +27,23 @@
           <table>
             <tr>
               <td>@Input() size: Integer</td>
-              <td>Size of the stars; 20 by default</td>
+              <td>Size of the loader; 120 by default</td>
+            </tr>
+            <tr>
+              <td>@Input() borderPercentage: Integer</td>
+              <td>Percentage of the border; 10 by default</td>
+            </tr>
+            <tr>
+              <td>@Input() type: String</td>
+              <td>'circle'(default) or 'dot'</td>
+            </tr>
+            <tr>
+              <td>@Input() animation: String</td>
+              <td>'linear'(default) or 'hilltop'</td>
             </tr>
             <tr>
               <td>@Input() color: String</td>
-              <td>gold(default), green, red, blue, blue-light purple, orange, black</td>
+              <td>gold(default), green, red, blue, blue-light, purple, orange, black</td>
             </tr>
           </table>
         </div>
