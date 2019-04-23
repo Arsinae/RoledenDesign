@@ -75,6 +75,10 @@ export * from './lib/list/list.module';
 export * from './lib/list/list.component';
 export * from './lib/list/list-element.class';
 
+//    LOADER
+export * from './lib/loader/loader.module';
+export * from './lib/loader/loader.component';
+
 //    MODAL
 export * from './lib/modal/modal.module';
 export * from './lib/modal/modal.component';

@@ -26,6 +26,7 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { ModalComponent } from './modal/modal.component';
 import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
 import { CardComponent } from './card/card.component';
+import { LoaderComponent } from './loader/loader.component';
 
 export function hljsLanguages() {
   return [
@@ -60,7 +61,8 @@ export function hljsLanguages() {
     TooltipComponent,
     ModalComponent,
     ConfirmModalComponent,
-    CardComponent
+    CardComponent,
+    LoaderComponent
   ],
   exports: [
     ComponentsComponent

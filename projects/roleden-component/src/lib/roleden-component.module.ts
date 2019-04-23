@@ -18,6 +18,7 @@ import { RDInputAutocompleteModule } from './input-autocomplete/input-autocomple
 import { RDInputFileModule } from './input-file/input-file.module';
 import { RDInputNumberModule } from './input-number/input-number.module';
 import { RDListModule } from './list/list.module';
+import { RDLoaderModule } from './loader/loader.module';
 import { RDModalModule } from './modal/modal.module';
 import { RDMusicPlayerModule } from './music-player/music-player.module';
 import { RDNotationModule } from './notation/notation.module';
@@ -55,6 +56,7 @@ import { RDTooltipModule } from './tooltip/tooltip.module';
     RDInputFileModule,
     RDInputNumberModule,
     RDListModule,
+    RDLoaderModule,
     RDModalModule,
     RDMusicPlayerModule,
     RDNotationModule,

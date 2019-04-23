@@ -1,0 +1,64 @@
+<div class="titlePart">
+  <span>Loader</span>
+</div>
+
+<div class="loaderContainer">
+  <rd-loader [animation]="'hilltop'"></rd-loader>
+  <rd-loader [type]="'dot'" [color]="'red'"></rd-loader>
+  <rd-loader [size]="50" [borderPercentage]="50"></rd-loader>
+</div>
+
+
+<div class="explanation">
+  <app-explanation>
+    <rd-tabs-group>
+      <rd-tabs [title]="'Information'">
+        <div class="titlePart">
+          <span>HTML Tag</span>
+        </div>
+
+        <div><b>rd-loader</b></div>
+
+        <div class="titlePart">
+          <span>Parameters:</span>
+        </div>
+
+        <div class="option">
+          <table>
+            <tr>
+              <td>@Input() size: Integer</td>
+              <td>Size of the loader; 120 by default</td>
+            </tr>
+            <tr>
+              <td>@Input() borderPercentage: Integer</td>
+              <td>Percentage of the border; 10 by default</td>
+            </tr>
+            <tr>
+              <td>@Input() type: String</td>
+              <td>'circle'(default) or 'dot'</td>
+            </tr>
+            <tr>
+              <td>@Input() animation: String</td>
+              <td>'linear'(default) or 'hilltop'</td>
+            </tr>
+            <tr>
+              <td>@Input() color: String</td>
+              <td>gold(default), green, red, blue, blue-light, purple, orange, black</td>
+            </tr>
+          </table>
+        </div>
+      </rd-tabs>
+
+      <rd-tabs [title]="'Example'">
+        <div class="titlePart">
+          <span>HTML</span>
+        </div>
+
+        <div highlightChildren>
+          <pre><code [textContent]="htmlCode"></code></pre>
+        </div>
+      </rd-tabs>
+    </rd-tabs-group>
+
+  </app-explanation>
+</div>
