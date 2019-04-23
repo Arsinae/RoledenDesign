@@ -1,6 +1,10 @@
-<div class="loaderContainer {{color}}Loader {{animation}}Animation">
-  <ng-container *ngIf="type === 'circle'">
+<div class="loaderContainer {{color}}Loader {{animation}}Animation" [class.rdDark]="dark">
+  <ng-container *ngIf="type === 'circle'; else dot">
     <div class="circleLoader" [style.width.px]="width*.9" [style.height.px]="width*.9"
     [style.borderSize.px]="width*.1"></div>
   </ng-container>
+  <ng-template #dot>
+    <div class="dotLoader" [style.width.px]="width*.9" [style.height.px]="width*.9"
+    [style.borderSize.px]="width*.1"></div>
+  </ng-template>
 </div>

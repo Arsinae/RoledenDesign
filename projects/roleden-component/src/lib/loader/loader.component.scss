@@ -11,15 +11,51 @@
     animation: spin 1s linear infinite;
   }
 
+  .dotLoader {
+    background-color: var(--main-color);
+    border-radius: 50%;
+    animation: grow 1s linear infinite;
+  }
+
   &.linearAnimation>div {
     animation-timing-function: linear;
   }
 
   &.hilltopAnimation>div {
-    animation-timing-function: ease;
+    animation-timing-function: cubic-bezier(0.3, 0.1, 0.3, 0.85);
+  }
+
+  &.greenLoader {
+    --main-color: #{$colored-green};
+  }
+
+  &.blueLoader {
+    --main-color: #{$colored-blue};
+  }
+
+  &.blue-lightLoader {
+    --main-color: #{$colored-blue-light};
+  }
+
+  &.redLoader {
+    --main-color: #{$colored-red};
+  }
+
+  &.purpleLoader {
+    --main-color: #{$colored-purple};
+  }
+
+  &.orangeLoader {
+    --main-color: #{$colored-orange};
   }
 }
 
 @keyframes spin {
   100% { transform: rotate(360deg); }
+}
+
+@keyframes grow {
+  0% { transform: scale(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: scale(1); opacity: 0;}
 }

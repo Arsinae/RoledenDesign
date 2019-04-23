@@ -30,6 +30,11 @@
   @include defaultTransition();
 }
 
+.loaderContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
 .option {
 
   table, tr {

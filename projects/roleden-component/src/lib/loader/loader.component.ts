@@ -1,3 +1,4 @@
+import { RDDarkService } from './../dark.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -8,14 +9,19 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RDLoaderComponent implements OnInit {
 
   @Input() width = 120;
-  @Input() height = 120;
   @Input() type = 'circle';
   @Input() color = 'gold';
   @Input() animation = 'linear';
 
-  constructor() { }
+  public dark = false;
+
+  constructor(private darkService: RDDarkService) { }
 
   ngOnInit() {
+    this.darkService.getDarkElement().subscribe(res => {
+      this.dark = this.darkService.isDark();
+    });
+    this.dark = this.darkService.isDark();
   }
 
 }
