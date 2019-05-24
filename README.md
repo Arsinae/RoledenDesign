@@ -14,6 +14,10 @@ Add `RoledenComponent.forRoot()` in your module;
 
 ### Release Notes
 
+#### 1.4.7
+
+- Overflow correction on the `rd-tabs`
+
 #### 1.4.6
 
 - Z-Index correction on the `rd-carousel` to make the data clickable
